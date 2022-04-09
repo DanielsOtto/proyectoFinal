@@ -1,0 +1,688 @@
+/*Detalles gráficos
+colores HEXA:
+    coral #FF7F50
+    moccasin #FFDEB5
+    morado oscuro #470147
+    blanco #FFFAFA
+tipografías:
+    font-family: 'Righteous', cursive;
+    font-family: 'Kanit', sans-serif;
+*/
+@font-face {
+    font-family: Righteous;
+    src: url(../assets/fonts/Righteous-Regular.ttf); 
+}
+@font-face {
+    font-family: Kanit;
+    src: url(../assets/fonts/Kanit-Italic.ttf);
+}
+/*AFECTA TODAS LAS PAGINAS*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: Righteous;
+    background-color: #FFDEB5;
+    display: grid;
+    grid-template-columns: 1fr auto auto 1fr;
+    grid-template-rows: 1fr 4fr 4fr 1fr;
+    grid-template-areas: 
+    "header header header header"
+    "main main main main"
+    "main main main main"
+    "footer footer footer footer";
+}
+header{
+    background-color: #FF7F50; 
+    grid-area: header;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 30vh;
+}
+.tituloEmpresa{
+    margin-left: 5%;
+    font-size: 5rem;
+    color: #470147;
+    width: 50%;
+    height: 45%;   
+}
+.logoEmpresa, .logoCompra{
+    margin: 2%;
+}
+.boxC{
+    height: 35%;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.search input{
+    border: 3px solid #470147;
+    border-radius: 10%;
+}
+.menu{
+    width: 90%;
+    height: 28%;
+    margin-bottom: 1%;
+}
+.menu ul{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.menu ul li{
+    list-style: none;
+    display: inline;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-left: 7%;
+}
+.menu ul li a{
+    text-decoration: none;
+}
+.menu ul li a:hover{
+    padding: 10px;
+    border-radius: 30%;
+    box-shadow: 0rem 0rem 2rem #470147;
+}
+header img, header form input, header nav ul li{
+    padding: 3px;
+}
+main{
+    grid-area: main;
+   /* position: relative;*/
+}
+/* SECCION INDEX */
+.initial article{
+    margin: 1%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.initial__h img, .initial__m img{
+    height: 45%;
+    margin-top: 1.8rem;
+}
+.initial__h img:hover{
+    animation: moveH 3s;
+}
+@keyframes moveH{
+    25%{
+        transform: scale(1.2);
+    }
+    50%{
+        transform: translateX(45%);
+    }
+    75%{
+        transform: scale(0.8);
+    }
+}
+.initial__m img:hover{
+    animation: moveM 3s;
+}
+@keyframes moveM{
+    25%{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: translateX(-45%);
+    }
+    75%{
+        transform: scale(1.2);
+    }
+}
+/*AFECTA A SECCIONES: HOMBRE Y MUJER*/
+.indumentaria section article div img{
+    margin-top: 0.3rem;
+    border-radius: 30%;
+    border: 2px solid #470147;
+}
+.indumentaria section article div p{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: #470147;
+}
+.shirt__info form{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.shirt__info form select{
+    margin: 3px;
+    font-size: 0.875rem;
+    color: #470147;
+}
+.shirt__info form input{
+    font-size: 1.05rem;
+    border-radius: 20%;
+    width: 54%;
+    height: 45%;
+    margin: 0 0 0.4% 0.2%;
+    padding: 0.4rem;
+    color: #FFFAFA;
+    background-color: #470147;
+}
+/*posicionamiento indumentaria, paginas hombre y mujer*/
+.indumentaria__h, .indumentaria__m{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.indumentaria__h article, .indumentaria__m article{
+    width: 100%;
+    margin-top: 0.8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.shirt{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.shirt__info{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.shirt__info p{
+    text-align: center;
+    width: 27.5rem;
+    height: 4.375rem;
+    margin: 1.3%;
+}
+.upButton{
+    margin: 1.6%;
+}
+.upButton a{
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+.upButton:hover{
+    transform: scale(2.3);
+}
+/* MODIFICACIONES  CONTACTO*/
+.contactMain{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "form"
+    "form"
+    "map";
+    justify-content: center;
+}
+.contactMain form{
+    grid-area: form;
+    background-color: green;    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "first first first first"
+    "second second second second"
+    "message message message message";
+}
+.first{
+    grid-area: first;
+    height: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+.first label, .second label{
+    width: 50%;
+}
+.first input, .second input, .second select{
+    width: 40%;
+    height: 22%;
+}
+.second{
+    grid-area: second;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.second__optional{
+    font-size: 0.9rem;
+    font-weight: lighter;
+}
+.message{
+    grid-area: message;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    ". message . ."
+    "text text text btnClear"
+    "text text text btnSend"
+    ". . . ."
+    ;
+}
+.message__label{
+    grid-area: message;
+}
+.message textarea{
+    grid-area: text;
+    background-image: url(../assets/images/logo/cartag.jpg);
+    background-size: contain;
+    background-position: center;
+    background-clip: content-box;
+    background-attachment: scroll;
+    font-weight: bold;
+    font-variant-caps: petite-caps;
+    letter-spacing: 1px;
+    color: #FF7F50;
+    width: 100%;
+    height: 100%;
+}
+.clearButton{
+    grid-area: btnClear;
+    font-size: 1.2rem;
+    width: 30%;
+    height: 20%;
+    font-weight: bold;
+    color: #FFFAFA;
+    background-color: #470147;
+}
+.sendButton{
+    grid-area: btnSend;
+    font-size: 1.2rem;
+    width: 30%;
+    height: 20%;
+    font-weight: bold;
+    color: #FFFAFA;
+    background-color: #470147;
+}
+.ubication{
+    grid-area: map;
+}
+/*
+.message{
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+}
+.contactMain textarea{
+    background-image: url(../assets/images/logo/cartag.jpg);
+    background-size: contain;
+    background-position: center;
+    background-clip: content-box;
+    background-attachment: scroll;
+    font-weight: bold;
+    font-variant-caps: petite-caps;
+    letter-spacing: 1px;
+    color: #FF7F50;
+    position: absolute;
+    top: 37%;
+    left: 10%;
+}
+.clearButton{
+    font-size: 1.2rem;
+    width: 6%;
+    height: 2%;
+    font-weight: bold;
+    color: #FFFAFA;
+    background-color: #470147;
+}
+.sendButton{
+    position: absolute;
+    bottom: 47%;
+    right: 17%;
+    font-size: 1.2rem;
+    width: 6%;
+    height: 2%;
+    font-weight: bold;
+    color: #FFFAFA;
+    background-color: #470147;
+}
+.ubication{
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 6%;
+    left: 10%;
+    margin: 2%;
+}
+*/
+/* Inicio CARRITO*/
+.bodyCarrito{
+    height: 1600px;
+}
+.menuCarrito{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    " .   title  title   .   ."
+    "item quantity subtotal   .   ."
+    " .  .  .  purchase  purchase"
+    " .  .  .  purchase  purchase"
+    " .  buying  buying .  ."
+    " .  buying  buying .  ."
+    ;
+    align-items: center;
+    justify-items:center;
+}
+.shopping{
+    grid-area: title;
+    color: #470147;
+    font-size: 2.5rem;
+    width: 100%;
+}
+.item{
+    grid-area: item;
+}
+.quantity{
+    grid-area: quantity;
+}
+.subtotal{
+    grid-area: subtotal;
+}
+.purchase{
+    grid-area: purchase;
+    width: 70%;
+    height: 45%;
+    border: 7px double #470147;
+    background-color: #FF7F50;
+    border-radius: 10%;
+    position: relative;
+}
+.purchase__total{
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    color: #470147;
+}
+.purchase__btn{
+    font-weight: bold;
+    width: 42%;
+    height: 20%;
+    border-radius: 15%;
+    background-color: #470147;
+    color: #FFFAFA;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+}
+.buying{
+    grid-area: buying;
+    border: 5px double #FF7F50;
+    border-radius: 15%;
+    padding: 2.3%;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.buying h4{
+    width: 90%;
+    height: 25%;
+}
+.buying a{
+    width: 30%;
+    height: 25%;
+    margin: 2.3%;
+    border-style: none;
+    color: #470147;
+    text-decoration: none;
+}
+/*Inicio FOOTER*/
+footer{
+    grid-area: footer;
+    background-color: #470147;
+    font-family: Kanit;
+    color: #FFFAFA;
+    bottom: 0;
+    margin-top: auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer p{
+    letter-spacing: 0.8px;
+}
+.delivery{
+    margin: 2% 1%;
+    width: 40%;
+    text-align: center;
+}
+.createdBy{
+    order: 4;
+    width: 45%;
+}
+.socialMedia{
+    margin: 1.5% 1%;
+    width: 15%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.socialMedia img:hover{
+    transform: scale(1.4);
+}
+.payment img{
+    margin-left: 5%;
+}
+.payment{
+    margin: 2.5%;
+    width: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MEDIA QUERY  TABLET */
+@media only screen and (max-width: 768px){
+    body{
+        grid-template-rows: 1fr 5fr 1fr;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+    .classA{
+        width: 100vw;
+        height: 100vh;
+    }
+    .tituloEmpresa{
+        width: 80%;
+    }
+    .search{
+        width: 100%;
+        display: flex;
+    }
+    .menu ul li{
+        font-size: 1.5rem;
+    }
+    /*Seccion Hombres y Mujeres*/
+    .indumentaria__h article, .indumentaria__m article{
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    .shirt{
+        margin-bottom: 5rem;
+    }
+    /*Seccion Carrito*/
+    .menuCarrito{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+        " .  title  title ."
+        "item item  quantity  subt"
+        " .  .      .       ."
+        " .  .      .       ."
+        "buying buying purchase purchase"
+        "buying buying purchase purchase";
+    }
+    .shopping{
+        grid-area: title;
+    }
+    .item{
+        grid-area: item;
+    }
+    .quantity{
+        grid-area: quantity;
+    }
+    .subtotal{
+        grid-area: subt;
+    }
+    .purchase{
+        grid-area: purchase;
+        width: 70%;
+        height: 60%;
+        justify-content: flex-start;
+    }
+    .purchase__btn{
+        width: 70%;
+        height: 20%;
+        left: 20%;
+    }
+    .buying{
+        grid-area: buying;
+        width: 60%;
+        height: 40%;
+    }
+    /*Seccion Contactos*/
+    .first, .second{
+        width: 80%;
+    }
+    .first{
+        top: 0%;
+    }
+    .second{
+        top: 16%;
+    }
+    .first input, .second input, .second select{
+        width: 40%;
+    }
+    .message{
+        top: 30%;
+    }
+    .contactMain textarea{
+        width: 80%;
+        top: 32%;
+    }
+    .clearButton{
+        width: 12%;
+        left: 30%;
+        top: 55%;
+    }
+    .sendButton{
+        width: 12%;
+        right: 30%;
+        top: 55%;
+    }
+    .ubication iframe{
+        width: 190%;
+    }
+    /*Seccion FOOTER*/
+    footer{
+        width: 100vw;
+        height: 100%;
+        flex-flow: column wrap;
+    }
+    .delivery{
+        width: 70%;
+    }
+    .createdBy{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 2%;
+    }
+}
+
+/*MEDIA QUERY  PHONE*/
+@media only screen and (max-width: 480px){
+    body{
+        grid-template-rows: 1fr 4fr 1fr;
+        grid-area: 
+        "header"
+        "main"
+        "footer";
+    }
+    .tituloEmpresa{
+        text-align: center;
+        width: 90%;
+        font-size: 4rem;
+    }
+    .logoEmpresa{
+        display: none;
+    }
+    .boxC{
+        width: 80%;
+    }
+    .search input{
+        width: 75%;
+    }
+    .menu ul li{
+        font-size: 0.8rem;
+    }
+    /*pagina Index */
+    .initial img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    /*Seccion Contactos*/ 
+    .contactMain label{
+        font-size: smaller;
+    }
+    .first, .second{
+        width: 80%;
+    }
+    .first input, .second input, .second select{
+        width: 40%;
+        height: 20%;
+    }
+    .contactMain textarea{
+        width: 80%;
+    }
+    .clearButton{
+        width: 20%;
+        height: 3%;
+        top: 70%;
+        left: 25%;
+    }
+    .sendButton{
+        width: 20%;
+        height: 3%;
+        right: 25%;
+        top: 70%;
+    }
+    .ubication h3{
+        font-size: small;
+        font-weight: lighter;
+    }
+    .ubication iframe{
+        width: 110%;
+        height: 20%;
+    }
+    /*FOOTER*/
+    footer p{
+        font-size: 0.7rem;
+    }
+    footer img{
+        width: 75%;
+        height: 75%;
+        margin: 3% 0 6%;
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="LaTiendita icon" href="../assets/images/logo/logo.png">
+	<title>Contactanos</title>
+</head>
+
+<body class="contact">
+	<!-- MENU + USER + LOGO + BUSCAR + CARRITO -->
+	<header class="contactHeader">
+		<h1 class="tituloEmpresa">La Tiendita</h1>
+		<a href="../index.html"><img class="logoEmpresa" src="../assets/images/logo/logo.png" alt="logo la tiendita"
+				title="logo de la empresa"></a>
+		<div class="boxC">
+			<a href="carrito.html"><img class="logoCompra" src="../assets/images/logo/cartera-mocca.png"
+					alt="logo bolso" title="logo de un bolso"></a>
+			<form class="search">
+				<input type="text" placeholder="Ingrese su búsqueda..">
+				<input type="submit" value="BUSCAR">
+			</form>
+		</div>
+		<nav class="menu">
+			<ul>
+				<li> <a href="../index.html">Inicio</a> </li>
+				<li> <a href="hombres.html">Hombre</a> </li>
+				<li> <a href="mujeres.html">Mujer</a> </li>
+				<li> <a href="carrito.html">Carrito</a> </li>
+				<li> <a href="#"></a>Contacto</li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- inicio main-->
+	<main class="contactMain">
+			<form>
+				<fieldset class="first">
+					<legend>Datos personales</legend>
+					<label for="nombre_apellido">Nombre y apellido:</label>
+					<input type="text" name="nombre_apellido" placeholder="Juan Perez" />
+
+					<label for="email">Correo electrónico:</label>
+					<input type="email" name="email" placeholder="juanperez@gmail.com" />
+
+					<label for="celular">Ingrese un número de contacto:</label>
+					<input type="number" name="celular" placeholder="223 5 123456">
+				</fieldset>
+				<article class="second">
+					<label for="seleccion">Seleccione el tipo de consulta:</label>
+					<select name="seleccion" title="seleccionDeOpciones">
+						<option value="consulta">Consulta de producto (disponibilidad, características, etc)</option>
+						<option value="estado">Estado de mi pedido</option>
+						<option value="cambios">Cambios y devoluciones</option>
+						<option value="anulacion">Anulación de pedido</option>
+						<option value="error">Error/conflicto con el pedido</option>
+						<option value="prob_pago">Problemas con el pago</option>
+						<option value="otro">Otro</option>
+					</select>
+					<label for="numero_pedido">Número del pedido:</label>
+					<input type="number" name="numero_pedido" placeholder="135246" />
+					<p class="second__optional">Opcional, son 6 digitos.</p>
+				</article>
+				<article class="message">
+					<label class="message__label" for="mensaje">Mensaje:</label>
+					<textarea name="mensaje" maxlength="600" rows="20" cols="130"
+						placeholder="Escribe aquí tus comentarios.."></textarea>
+					<input class="clearButton" type="reset" value="Borrar" />
+					<input class="sendButton" type="submit" value="Enviar" />
+				</article>
+			</form>
+			<article class="ubication">
+				<h3>Nuestra ubicacion:</h3>
+				<iframe class="ubication__map"
+					src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50293.511853061216!2d-57.545621385998544!3d-38.	01574766265546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1648236568437!5m2!1ses-419!2sar"
+					width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</article>
+	</main>
+	<!-- INICIO DE FOOTER -->
+	<footer class="finalDePagina">
+		<p class="delivery">ENVIOS GRATIS A PARTIR DE $10.000 PESOS.</p>
+		<div class="createdBy">
+			<p>Copyright La Tiendita 2022. Todos los derechos reservados.</p>
+			<p>Created by Otto Daniels</p>
+		</div>
+		<div class="socialMedia">
+			<a href="https://es-la.facebook.com/" target="_blank"><img src="../assets/images/logo/facebook logo.jpg"
+					alt="facebook" title="logo de facebook"></a>
+			<a href="https://www.instagram.com/" target="_blank"><img src="../assets/images/logo/instagram-logo.png"
+					alt="instagram" title="logo de instagram"></a>
+		</div>
+		<div class="payment">
+			<img src="../assets/images/logo/visa.png" alt="visa card" title="logo de visa">
+			<img src="../assets/images/logo/mastercard.png" alt="mastercard" title="logo de mastercard">
+			<img src="../assets/images/logo/payp.png" alt="paypal" title="logo de paypal">
+			<img src="../assets/images/logo/americanexpress.png" alt="american" title="logo de american">
+			<img src="../assets/images/logo/mercadopago.jpg" alt="mercadopago" title="logo de mercadopago">
+		</div>
+	</footer>
+	<!-- FINAL DE FOOTER-->
+</body>
+
+</html>
