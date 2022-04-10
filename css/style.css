@@ -55,6 +55,30 @@ header{
     width: 50%;
     height: 45%;   
 }
+.logoEmpresa:hover{
+    animation: iconEmpresa 3s;
+}
+@keyframes iconEmpresa{
+    20%{
+        transform: skew(50deg,15deg);
+    }
+    25%{
+        transform: scale(2);
+        box-shadow: 1rem 1rem 2rem #470147;
+    }
+    40%{
+        transform: rotateZ(125deg);
+    }
+    60%{
+        transform: skew(20deg,40deg);
+    }
+    80%{
+        transform: skewX(20deg);
+    }
+    95%{
+        transform: skewY(40deg);
+    }
+}
 .logoEmpresa, .logoCompra{
     margin: 2%;
 }
@@ -142,7 +166,7 @@ main{
 /*AFECTA A SECCIONES: HOMBRE Y MUJER*/
 .indumentaria section article div img{
     margin-top: 0.3rem;
-    border-radius: 30%;
+    border-radius: 10%;
     border: 2px solid #470147;
 }
 .indumentaria section article div p{
@@ -150,6 +174,9 @@ main{
     text-align: center;
     font-weight: bold;
     color: #470147;
+}
+.shirt img:hover{
+    transform: scale(1.8);
 }
 .shirt__info form{
     width: 60%;
@@ -244,13 +271,14 @@ main{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding-left: 2%;
 }
 .first label, .second label{
     width: 50%;
     height: 20%;
 }
 .first input, .second input, .second select{
-    width: 50%;
+    width: 40%;
     height: 17%;
 }
 .message{
@@ -292,6 +320,12 @@ main{
     position: absolute;
     top: 50%;
     right: 5%;
+}
+.clearButton:hover, .sendButton:hover{
+    transition: all, 3s;
+    background-color: #FFFAFA;
+    color: #470147;
+    transform: skew(22deg);
 }
 .ubication{
     display: flex;
@@ -461,6 +495,12 @@ footer p{
     .shirt{
         margin-bottom: 5rem;
     }
+    .shirt form select:focus{
+        transition: all 4s;
+        background-color: #470147;
+        font-weight: bold;
+        color: #FFFAFA;
+    }
     /*Seccion Carrito*/
     .menuCarrito{
         grid-template-columns: repeat(4,1fr);
@@ -496,6 +536,13 @@ footer p{
         width: 70%;
         height: 20%;
         left: 20%;
+    }
+    .purchase__btn:focus{
+        transition: all 2s;
+        background-color:#FF7F50;
+        color: #FFDEB5;
+        border-style: inset;
+        width: 60%;
     }
     .buying{
         grid-area: buying;
@@ -545,6 +592,9 @@ footer p{
         "header"
         "main"
         "footer";
+    }    
+    header{
+        background-image: linear-gradient(to left,#FF7F50,#FFDEB5);
     }
     .tituloEmpresa{
         text-align: center;
@@ -575,6 +625,9 @@ footer p{
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+    }
+    .menuCarrito h2{
+        font-size: 2rem;
     }
     /*Seccion Contactos*/ 
     .contactMain label, .first legend{
