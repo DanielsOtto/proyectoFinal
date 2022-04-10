@@ -23,7 +23,10 @@ tipografías:
     box-sizing: border-box;
 }
 body{
-    font-family: Righteous;
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+    font-family: Righteous, sans-serif;
     background-color: #FFDEB5;
     display: grid;
     grid-template-columns: 1fr auto auto 1fr;
@@ -32,7 +35,8 @@ body{
     "header header header header"
     "main main main main"
     "main main main main"
-    "footer footer footer footer";
+    "footer footer footer footer"
+    ;
 }
 header{
     background-color: #FF7F50; 
@@ -73,7 +77,7 @@ header{
 .menu ul{
     display: flex;
     flex-flow: row nowrap;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-around;
 }
 .menu ul li{
@@ -81,7 +85,6 @@ header{
     display: inline;
     text-transform: uppercase;
     font-size: 3rem;
-    margin-left: 7%;
 }
 .menu ul li a{
     text-decoration: none;
@@ -96,7 +99,6 @@ header img, header form input, header nav ul li{
 }
 main{
     grid-area: main;
-   /* position: relative;*/
 }
 /* SECCION INDEX */
 .initial article{
@@ -215,110 +217,49 @@ main{
 /* MODIFICACIONES  CONTACTO*/
 .contactMain{
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: 
+    grid-template-rows: repeat(3, 2fr);
+    grid-template-areas:
     "form"
     "form"
-    "map";
+    "map"
+    ;
+    align-items: center;
     justify-content: center;
 }
 .contactMain form{
     grid-area: form;
-    background-color: green;    
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-    "first first first first"
-    "second second second second"
-    "message message message message";
-}
-.first{
-    grid-area: first;
-    height: 50%;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-}
-.first label, .second label{
-    width: 50%;
-}
-.first input, .second input, .second select{
-    width: 40%;
-    height: 22%;
-}
-.second{
-    grid-area: second;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
-.second__optional{
-    font-size: 0.9rem;
-    font-weight: lighter;
-}
-.message{
-    grid-area: message;
-    text-transform: uppercase;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: 
-    ". message . ."
-    "text text text btnClear"
-    "text text text btnSend"
-    ". . . ."
-    ;
-}
-.message__label{
-    grid-area: message;
-}
-.message textarea{
-    grid-area: text;
-    background-image: url(../assets/images/logo/cartag.jpg);
-    background-size: contain;
-    background-position: center;
-    background-clip: content-box;
-    background-attachment: scroll;
-    font-weight: bold;
-    font-variant-caps: petite-caps;
-    letter-spacing: 1px;
-    color: #FF7F50;
-    width: 100%;
-    height: 100%;
-}
-.clearButton{
-    grid-area: btnClear;
-    font-size: 1.2rem;
-    width: 30%;
-    height: 20%;
-    font-weight: bold;
-    color: #FFFAFA;
-    background-color: #470147;
-}
-.sendButton{
-    grid-area: btnSend;
-    font-size: 1.2rem;
-    width: 30%;
-    height: 20%;
-    font-weight: bold;
-    color: #FFFAFA;
-    background-color: #470147;
-}
 .ubication{
     grid-area: map;
 }
-/*
-.message{
-    text-transform: uppercase;
-    position: absolute;
-    top: 35%;
-    left: 10%;
+.first, .second{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
-.contactMain textarea{
+.first label, .second label{
+    width: 50%;
+    height: 20%;
+}
+.first input, .second input, .second select{
+    width: 50%;
+    height: 17%;
+}
+.message{
+    width: 90%;
+    height: 35%;
+    display: flex;
+    position: relative;
+}
+.message textarea{
     background-image: url(../assets/images/logo/cartag.jpg);
     background-size: contain;
     background-position: center;
@@ -328,37 +269,35 @@ main{
     font-variant-caps: petite-caps;
     letter-spacing: 1px;
     color: #FF7F50;
-    position: absolute;
-    top: 37%;
-    left: 10%;
+    width: 80%;
 }
 .clearButton{
     font-size: 1.2rem;
-    width: 6%;
-    height: 2%;
+    width: 10%;
+    height: 10%;
     font-weight: bold;
     color: #FFFAFA;
     background-color: #470147;
+    position: absolute;
+    top: 30%;
+    right: 5%;
 }
 .sendButton{
-    position: absolute;
-    bottom: 47%;
-    right: 17%;
     font-size: 1.2rem;
-    width: 6%;
-    height: 2%;
+    width: 10%;
+    height: 10%;
     font-weight: bold;
     color: #FFFAFA;
     background-color: #470147;
+    position: absolute;
+    top: 50%;
+    right: 5%;
 }
 .ubication{
-    text-transform: uppercase;
-    position: absolute;
-    bottom: 6%;
-    left: 10%;
-    margin: 2%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 }
-*/
 /* Inicio CARRITO*/
 .bodyCarrito{
     height: 1600px;
@@ -527,7 +466,7 @@ footer p{
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
-        " .  title  title ."
+        " title  title  title title"
         "item item  quantity  subt"
         " .  .      .       ."
         " .  .      .       ."
@@ -536,6 +475,7 @@ footer p{
     }
     .shopping{
         grid-area: title;
+        grid-column-start: 2;
     }
     .item{
         grid-area: item;
@@ -559,41 +499,27 @@ footer p{
     }
     .buying{
         grid-area: buying;
-        width: 60%;
+        width: 65%;
         height: 40%;
     }
     /*Seccion Contactos*/
-    .first, .second{
-        width: 80%;
-    }
-    .first{
-        top: 0%;
-    }
-    .second{
-        top: 16%;
-    }
-    .first input, .second input, .second select{
-        width: 40%;
-    }
-    .message{
-        top: 30%;
-    }
-    .contactMain textarea{
-        width: 80%;
-        top: 32%;
-    }
     .clearButton{
-        width: 12%;
-        left: 30%;
-        top: 55%;
+        width: 13%;
+        top: 10%;
+        background-color: #FF7F50;
     }
     .sendButton{
-        width: 12%;
-        right: 30%;
-        top: 55%;
+        width: 13%;
+        top: 80%;
+        background-color: #FF7F50;
+    }
+    .ubication{
+        height: 100%;
+        width: 100%;
     }
     .ubication iframe{
-        width: 190%;
+        width: 80%;
+        height: 80%;
     }
     /*Seccion FOOTER*/
     footer{
@@ -642,39 +568,38 @@ footer p{
         max-width: 100%;
         max-height: 100%;
     }
+    /*Seccion Carrito*/
+    .buying{
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
     /*Seccion Contactos*/ 
-    .contactMain label{
+    .contactMain label, .first legend{
+        font-weight: bold;
         font-size: smaller;
+        color: #470147;
     }
-    .first, .second{
-        width: 80%;
+    .second p{
+        font-size: small;
+        color: #470147;
     }
-    .first input, .second input, .second select{
-        width: 40%;
-        height: 20%;
-    }
-    .contactMain textarea{
-        width: 80%;
-    }
-    .clearButton{
-        width: 20%;
-        height: 3%;
-        top: 70%;
-        left: 25%;
-    }
-    .sendButton{
-        width: 20%;
-        height: 3%;
-        right: 25%;
-        top: 70%;
+    .clearButton, .sendButton{
+        width: 17%;
+        height: 17%;
+        right: 0;
+        color: #470147;
     }
     .ubication h3{
         font-size: small;
         font-weight: lighter;
+        color: #470147;
     }
     .ubication iframe{
-        width: 110%;
-        height: 20%;
+        width: 90%;
+        height: 90%;
     }
     /*FOOTER*/
     footer p{
