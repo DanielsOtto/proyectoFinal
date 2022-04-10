@@ -392,6 +392,33 @@ main{
     bottom: 10%;
     left: 50%;
 }
+.purchase__btn:hover{
+    animation: growUp 5s;
+}
+@keyframes growUp{
+    18%{
+        width: 37%;
+        height: 25%;
+    }
+    25%{
+        background-color: #FFFAFA;
+        color: #470147;
+    }
+    40%{
+        transform: skew(50deg);
+    }
+    50%{
+        transform: skew(-50deg);
+    }
+    75%{
+        width: 37%;
+        height: 25%;
+        transform: translateX(-50%);
+    }
+    90%{
+        transform: scale(-2);
+    }
+}
 .buying{
     grid-area: buying;
     border: 5px double #FF7F50;
