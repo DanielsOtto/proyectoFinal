@@ -23,147 +23,103 @@ tipografías:
     box-sizing: border-box;
 }
 body{
-    min-height: 100vh;
-    overflow-x: hidden;
-    width: 100%;
     font-family: Righteous, sans-serif;
     background-color: #FFDEB5;
-    display: grid;
-    grid-template-columns: 1fr auto auto 1fr;
-    grid-template-rows: 1fr 4fr 4fr 1fr;
-    grid-template-areas: 
-    "header header header header"
-    "main main main main"
-    "main main main main"
-    "footer footer footer footer"
-    ;
 }
 header{
     background-color: #FF7F50; 
-    grid-area: header;
+}
+.tituloEmpresa{
+    margin-left: 2%;
+    font-size: 5rem;
+    color: #470147; 
+}
+.logoEmpresa, .logoCompra{
+    margin:5%;
+}
+.titleBox, .logoBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar{
+    background-color: #FF7F50 !important;
+}
+.navbar-nav li a{
+    color: #470147 !important ;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+}
+/*AFECTA SECCION INDEX*/
+.imagenHombre, .imagenMujer{
+    margin: 2%;
+}
+.imageBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*AFECTA SECCION HOMBRE*/
+.shirt{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 4%;
+    padding: 1%;
+}
+.shirt img{
+    width: 220px;
+    height: 250px;
+}
+.shirt__info{
+    width: 50%;
+    padding: 2%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: flex-start;
+}
+.shirt__info p{
+    padding: 2%;
+    width: 100%;
+    letter-spacing: 25%;
+    font-weight: bold;
+    color: #470147;
+    text-align: center;
+}
+.shirt__info form{
+    width: 100%;
+    margin-left: 4%;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-evenly;
-    width: 100vw;
-    height: 30vh;
 }
-.tituloEmpresa{
-    margin-left: 5%;
-    font-size: 5rem;
-    color: #470147;
-    width: 50%;
-    height: 45%;   
-}
-.logoEmpresa:hover{
-    animation: iconEmpresa 3s;
-}
-@keyframes iconEmpresa{
-    20%{
-        transform: skew(50deg,15deg);
-    }
-    25%{
-        transform: scale(2);
-        box-shadow: 1rem 1rem 2rem #470147;
-    }
-    40%{
-        transform: rotateZ(125deg);
-    }
-    60%{
-        transform: skew(20deg,40deg);
-    }
-    80%{
-        transform: skewX(20deg);
-    }
-    95%{
-        transform: skewY(40deg);
-    }
-}
-.logoEmpresa, .logoCompra{
-    margin: 2%;
-}
-.boxC{
-    height: 35%;
-    width: 35%;
+.shirt__info form fieldset{
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-wrap: nowrap;
 }
-.search input{
-    border: 3px solid #470147;
-    border-radius: 10%;
+.shirt__info form fieldset label{
+    margin: 0 10%;
 }
-.menu{
-    width: 90%;
-    height: 28%;
-    margin-bottom: 1%;
-}
-.menu ul{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-around;
-}
-.menu ul li{
-    list-style: none;
-    display: inline;
-    text-transform: uppercase;
-    font-size: 3rem;
-}
-.menu ul li a{
-    text-decoration: none;
-}
-.menu ul li a:hover{
-    padding: 10px;
-    border-radius: 30%;
-    box-shadow: 0rem 0rem 2rem #470147;
-}
-header img, header form input, header nav ul li{
-    padding: 3px;
-}
-main{
-    grid-area: main;
-}
-/* SECCION INDEX */
-.initial article{
+.shirt__info form input, .shirt__info form select {
+    height: 25%;
+    width: 48%;
+    padding: 1%;
     margin: 1%;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
+    background-color: #470147;
+    color: #FFFAFA;
 }
-.initial__h img, .initial__m img{
-    height: 45%;
-    margin-top: 1.8rem;
+.upBtn{
+    padding: 5%;
+    text-align: center;
 }
-.initial__h img:hover{
-    animation: moveH 3s;
+.upBtn a{
+    font-size: 1.5rem;  
 }
-@keyframes moveH{
-    25%{
-        transform: scale(1.2);
-    }
-    50%{
-        transform: translateX(45%);
-    }
-    75%{
-        transform: scale(0.8);
-    }
-}
-.initial__m img:hover{
-    animation: moveM 3s;
-}
-@keyframes moveM{
-    25%{
-        transform: scale(0.8);
-    }
-    50%{
-        transform: translateX(-45%);
-    }
-    75%{
-        transform: scale(1.2);
-    }
-}
-/*AFECTA A SECCIONES: HOMBRE Y MUJER*/
+/*AFECTA A SECCIONES: HOMBRE Y MUJER
 .indumentaria section article div img{
     margin-top: 0.3rem;
     border-radius: 10%;
@@ -174,6 +130,7 @@ main{
     text-align: center;
     font-weight: bold;
     color: #470147;
+    padding: 1%;
 }
 .shirt img:hover{
     transform: scale(1.8);
@@ -199,7 +156,7 @@ main{
     color: #FFFAFA;
     background-color: #470147;
 }
-/*posicionamiento indumentaria, paginas hombre y mujer*/
+posicionamiento indumentaria, paginas hombre y mujer
 .indumentaria__h, .indumentaria__m{
     display: flex;
     flex-flow: column wrap;
@@ -445,6 +402,32 @@ main{
 }
 /*Inicio FOOTER*/
 footer{
+    background-color: #470147;
+    font-family: Kanit;
+    color: #FFFAFA;
+    bottom: 0;
+    margin-top: auto;
+}
+footer p{
+    letter-spacing: 0.8px;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+.delivery, .createdBy{
+    text-align: center;
+    margin: 5%;
+}
+.socialMedia, .payment{
+    text-align: center;
+    margin: 5%;
+}
+.socialMedia a, .payment img{
+    margin-right: 1%;
+}
+
+
+/* ANTES DE BOOTSTRAP
+footer{
     grid-area: footer;
     background-color: #470147;
     font-family: Kanit;
@@ -492,8 +475,9 @@ footer p{
 }
 
 /* MEDIA QUERY  TABLET */
-@media only screen and (max-width: 768px){
+/*@media only screen and (max-width: 768px){
     body{
+        overflow-x: hidden;
         grid-template-rows: 1fr 5fr 1fr;
         grid-template-areas:
         "header"
@@ -515,7 +499,7 @@ footer p{
         font-size: 1.5rem;
     }
     /*Seccion Hombres y Mujeres*/
-    .indumentaria__h article, .indumentaria__m article{
+    /*.indumentaria__h article, .indumentaria__m article{
         flex-flow: column wrap;
         align-items: center;
     }
@@ -532,7 +516,7 @@ footer p{
         background-image: linear-gradient(to bottom,#470147,#FF7F50);
     }
     /*Seccion Carrito*/
-    .menuCarrito{
+    /*.menuCarrito{
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
@@ -580,7 +564,7 @@ footer p{
         height: 40%;
     }
     /*Seccion Contactos*/
-    .clearButton{
+   /* .clearButton{
         width: 13%;
         top: 10%;
         background-image: linear-gradient(to bottom,#470147,#FF7F50);
@@ -599,7 +583,7 @@ footer p{
         height: 80%;
     }
     /*Seccion FOOTER*/
-    footer{
+   /* footer{
         width: 100vw;
         height: 100%;
         flex-flow: column wrap;
@@ -615,7 +599,7 @@ footer p{
 }
 
 /*MEDIA QUERY  PHONE*/
-@media only screen and (max-width: 480px){
+/*@media only screen and (max-width: 480px){
     body{
         grid-template-rows: 1fr 4fr 1fr;
         grid-area: 
@@ -644,12 +628,12 @@ footer p{
         font-size: 0.8rem;
     }
     /*pagina Index */
-    .initial img{
+   /* .initial img{
         max-width: 100%;
         max-height: 100%;
     }
     /*Seccion Carrito*/
-    .buying{
+/*    .buying{
         height: 60%;
         display: flex;
         flex-direction: column;
@@ -660,7 +644,7 @@ footer p{
         font-size: 2rem;
     }
     /*Seccion Contactos*/ 
-    .contactMain label, .first legend{
+ /*   .contactMain label, .first legend{
         font-weight: bold;
         font-size: smaller;
         color: #470147;
@@ -684,7 +668,7 @@ footer p{
         height: 90%;
     }
     /*FOOTER*/
-    footer p{
+/*    footer p{
         font-size: 0.7rem;
     }
     footer img{
@@ -692,4 +676,4 @@ footer p{
         height: 75%;
         margin: 3% 0 6%;
     }
-}
+}*/
