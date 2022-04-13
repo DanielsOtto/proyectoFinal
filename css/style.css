@@ -31,7 +31,7 @@ header{
 }
 .tituloEmpresa{
     margin-left: 2%;
-    font-size: 5rem;
+    font-size: 4.5rem;
     color: #470147; 
 }
 .logoEmpresa, .logoCompra{
@@ -46,7 +46,6 @@ header{
     background-color: #FF7F50 !important;
 }
 .navbar-nav li a{
-    color: #470147 !important ;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1rem;
@@ -60,7 +59,7 @@ header{
     align-items: center;
     justify-content: center;
 }
-/*AFECTA SECCION HOMBRE*/
+/*AFECTA SECCION HOMBRE y MUJER*/
 .shirt{
     display: flex;
     align-items: center;
@@ -105,12 +104,14 @@ header{
     margin: 0 10%;
 }
 .shirt__info form input, .shirt__info form select {
-    height: 25%;
-    width: 48%;
-    padding: 1%;
+    height: 30%;
+    width: 47%;
+    padding: 0.6%;
     margin: 1%;
     background-color: #470147;
     color: #FFFAFA;
+    font-size: 0.7rem;
+    text-align: center;
 }
 .upBtn{
     padding: 5%;
@@ -119,87 +120,155 @@ header{
 .upBtn a{
     font-size: 1.5rem;  
 }
-/*AFECTA A SECCIONES: HOMBRE Y MUJER
-.indumentaria section article div img{
-    margin-top: 0.3rem;
-    border-radius: 10%;
-    border: 2px solid #470147;
+/* Inicio CARRITO*/
+.carrito__fila{
+    padding: 5px;
+    margin: 5px;
+    height: 170px;
 }
-.indumentaria section article div p{
-    font-size: 1rem;
-    text-align: center;
-    font-weight: bold;
+.carrito__fila div{
+    padding: 5px;
+    height: 200px;
+}
+.secondRow{
+    height: 500px;
+}
+.shopping{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #470147;
+    font-size: 2.5rem;
+}
+.purchase, .buying{
+    border: 6px double #470147;
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+}
+.purchase h2, .buying h4{
+    color: #470147;
+    width: 100%;
     padding: 1%;
 }
-.shirt img:hover{
-    transform: scale(1.8);
+.purchase__btn, .buying a{
+    width: 70%;
+    margin: 2%;
+    text-align: center;
 }
-.shirt__info form{
-    width: 60%;
-    display: flex;
+
+/*.bodyCarrito{
+    height: 1600px;
+}
+.menuCarrito{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    " .   title  title   .   ."
+    "item quantity subtotal   .   ."
+    " .  .  .  purchase  purchase"
+    " .  .  .  purchase  purchase"
+    " .  buying  buying .  ."
+    " .  buying  buying .  ."
+    ;
     align-items: center;
-    justify-content: space-evenly;
+    justify-items:center;
 }
-.shirt__info form select{
-    margin: 3px;
-    font-size: 0.875rem;
+
+.item{
+    grid-area: item;
+}
+.quantity{
+    grid-area: quantity;
+}
+.subtotal{
+    grid-area: subtotal;
+}
+.purchase{
+    grid-area: purchase;
+    width: 70%;
+    height: 45%;
+    border: 7px double #470147;
+    background-color: #FF7F50;
+    border-radius: 10%;
+    position: relative;
+}
+.purchase__total{
+    position: absolute;
+    top: 5%;
+    left: 7%;
     color: #470147;
 }
-.shirt__info form input{
-    font-size: 1.05rem;
-    border-radius: 20%;
-    width: 44%;
-    height: 45%;
-    margin: 0 0 0.4% 0.2%;
-    padding: 0.4rem;
-    color: #FFFAFA;
+.purchase__btn{
+    font-weight: bold;
+    width: 42%;
+    height: 20%;
+    border-radius: 15%;
     background-color: #470147;
+    color: #FFFAFA;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
 }
-posicionamiento indumentaria, paginas hombre y mujer
-.indumentaria__h, .indumentaria__m{
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-around;
+.purchase__btn:hover{
+    animation: growUp 5s;
 }
-.indumentaria__h article, .indumentaria__m article{
-    width: 100%;
-    margin-top: 0.8%;
+@keyframes growUp{
+    18%{
+        width: 37%;
+        height: 25%;
+    }
+    25%{
+        background-color: #FFFAFA;
+        color: #470147;
+    }
+    40%{
+        transform: skew(50deg);
+    }
+    50%{
+        transform: skew(-50deg);
+    }
+    75%{
+        width: 37%;
+        height: 25%;
+        transform: translateX(-50%);
+    }
+    90%{
+        transform: scale(-2);
+    }
+}
+.buying{
+    grid-area: buying;
+    border: 5px double #FF7F50;
+    border-radius: 15%;
+    padding: 2.3%;
+    width: 40%;
+    height: 40%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
-.shirt{
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-between;
+.buying h4{
+    width: 90%;
+    height: 25%;
 }
-.shirt__info{
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-around;
-}
-.shirt__info p{
-    text-align: center;
-    width: 27.5rem;
-    height: 4.375rem;
-    margin: 1.3%;
-}
-.upButton{
-    margin: 1.6%;
-}
-.upButton a{
-    font-size: 1.6rem;
+.buying a{
+    width: 30%;
+    height: 25%;
+    margin: 2.3%;
+    border-style: none;
+    color: #470147;
     text-decoration: none;
 }
-.upButton:hover{
-    transform: scale(2.3);
-}
 /* MODIFICACIONES  CONTACTO*/
-.contactMain{
+/*.contactMain{
     display: grid;
     grid-template-rows: repeat(3, 2fr);
     grid-template-areas:
@@ -289,117 +358,6 @@ posicionamiento indumentaria, paginas hombre y mujer
     flex-flow: column wrap;
     align-items: center;
 }
-/* Inicio CARRITO*/
-.bodyCarrito{
-    height: 1600px;
-}
-.menuCarrito{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: 
-    " .   title  title   .   ."
-    "item quantity subtotal   .   ."
-    " .  .  .  purchase  purchase"
-    " .  .  .  purchase  purchase"
-    " .  buying  buying .  ."
-    " .  buying  buying .  ."
-    ;
-    align-items: center;
-    justify-items:center;
-}
-.shopping{
-    grid-area: title;
-    color: #470147;
-    font-size: 2.5rem;
-    width: 100%;
-}
-.item{
-    grid-area: item;
-}
-.quantity{
-    grid-area: quantity;
-}
-.subtotal{
-    grid-area: subtotal;
-}
-.purchase{
-    grid-area: purchase;
-    width: 70%;
-    height: 45%;
-    border: 7px double #470147;
-    background-color: #FF7F50;
-    border-radius: 10%;
-    position: relative;
-}
-.purchase__total{
-    position: absolute;
-    top: 5%;
-    left: 7%;
-    color: #470147;
-}
-.purchase__btn{
-    font-weight: bold;
-    width: 42%;
-    height: 20%;
-    border-radius: 15%;
-    background-color: #470147;
-    color: #FFFAFA;
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-}
-.purchase__btn:hover{
-    animation: growUp 5s;
-}
-@keyframes growUp{
-    18%{
-        width: 37%;
-        height: 25%;
-    }
-    25%{
-        background-color: #FFFAFA;
-        color: #470147;
-    }
-    40%{
-        transform: skew(50deg);
-    }
-    50%{
-        transform: skew(-50deg);
-    }
-    75%{
-        width: 37%;
-        height: 25%;
-        transform: translateX(-50%);
-    }
-    90%{
-        transform: scale(-2);
-    }
-}
-.buying{
-    grid-area: buying;
-    border: 5px double #FF7F50;
-    border-radius: 15%;
-    padding: 2.3%;
-    width: 40%;
-    height: 40%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.buying h4{
-    width: 90%;
-    height: 25%;
-}
-.buying a{
-    width: 30%;
-    height: 25%;
-    margin: 2.3%;
-    border-style: none;
-    color: #470147;
-    text-decoration: none;
-}
 /*Inicio FOOTER*/
 footer{
     background-color: #470147;
@@ -409,271 +367,18 @@ footer{
     margin-top: auto;
 }
 footer p{
-    letter-spacing: 0.8px;
+    letter-spacing: 0.7px;
     font-size: 1rem;
     font-weight: lighter;
 }
 .delivery, .createdBy{
     text-align: center;
-    margin: 5%;
+    margin: 5% 2%;
 }
 .socialMedia, .payment{
     text-align: center;
-    margin: 5%;
+    margin: 5% 2%;
 }
 .socialMedia a, .payment img{
-    margin-right: 1%;
+    margin-right: 0.5%;
 }
-
-
-/* ANTES DE BOOTSTRAP
-footer{
-    grid-area: footer;
-    background-color: #470147;
-    font-family: Kanit;
-    color: #FFFAFA;
-    bottom: 0;
-    margin-top: auto;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-evenly;
-}
-footer p{
-    letter-spacing: 0.8px;
-}
-.delivery{
-    margin: 2% 1%;
-    width: 40%;
-    text-align: center;
-}
-.createdBy{
-    order: 4;
-    width: 45%;
-}
-.socialMedia{
-    margin: 1.5% 1%;
-    width: 15%;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.socialMedia img:hover{
-    transform: scale(1.4);
-}
-.payment img{
-    margin-left: 5%;
-}
-.payment{
-    margin: 2.5%;
-    width: 50%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-/* MEDIA QUERY  TABLET */
-/*@media only screen and (max-width: 768px){
-    body{
-        overflow-x: hidden;
-        grid-template-rows: 1fr 5fr 1fr;
-        grid-template-areas:
-        "header"
-        "main"
-        "footer";
-    }
-    .classA{
-        width: 100vw;
-        height: 100vh;
-    }
-    .tituloEmpresa{
-        width: 80%;
-    }
-    .search{
-        width: 100%;
-        display: flex;
-    }
-    .menu ul li{
-        font-size: 1.5rem;
-    }
-    /*Seccion Hombres y Mujeres*/
-    /*.indumentaria__h article, .indumentaria__m article{
-        flex-flow: column wrap;
-        align-items: center;
-    }
-    .shirt{
-        margin-bottom: 5rem;
-    }
-    .shirt form select:focus{
-        transition: all 4s;
-        background-color: #470147;
-        font-weight: bold;
-        color: #FFFAFA;
-    }
-    .shirt form input{
-        background-image: linear-gradient(to bottom,#470147,#FF7F50);
-    }
-    /*Seccion Carrito*/
-    /*.menuCarrito{
-        grid-template-columns: repeat(4,1fr);
-        grid-template-rows: repeat(6, 1fr);
-        grid-template-areas:
-        " title  title  title title"
-        "item item  quantity  subt"
-        " .  .      .       ."
-        " .  .      .       ."
-        "buying buying purchase purchase"
-        "buying buying purchase purchase";
-    }
-    .shopping{
-        grid-area: title;
-        grid-column-start: 2;
-    }
-    .item{
-        grid-area: item;
-    }
-    .quantity{
-        grid-area: quantity;
-    }
-    .subtotal{
-        grid-area: subt;
-    }
-    .purchase{
-        grid-area: purchase;
-        width: 70%;
-        height: 60%;
-        justify-content: flex-start;
-    }
-    .purchase__btn{
-        width: 70%;
-        height: 20%;
-        left: 20%;
-    }
-    .purchase__btn:focus{
-        transition: all 2s;
-        background-color:#FF7F50;
-        color: #FFDEB5;
-        border-style: inset;
-        width: 60%;
-    }
-    .buying{
-        grid-area: buying;
-        width: 65%;
-        height: 40%;
-    }
-    /*Seccion Contactos*/
-   /* .clearButton{
-        width: 13%;
-        top: 10%;
-        background-image: linear-gradient(to bottom,#470147,#FF7F50);
-    }
-    .sendButton{
-        width: 13%;
-        top: 80%;
-        background-image: linear-gradient(to bottom,#470147,#FF7F50);
-    }
-    .ubication{
-        height: 100%;
-        width: 100%;
-    }
-    .ubication iframe{
-        width: 80%;
-        height: 80%;
-    }
-    /*Seccion FOOTER*/
-   /* footer{
-        width: 100vw;
-        height: 100%;
-        flex-flow: column wrap;
-    }
-    .delivery{
-        width: 70%;
-    }
-    .createdBy{
-        text-align: center;
-        width: 80%;
-        margin-bottom: 2%;
-    }
-}
-
-/*MEDIA QUERY  PHONE*/
-/*@media only screen and (max-width: 480px){
-    body{
-        grid-template-rows: 1fr 4fr 1fr;
-        grid-area: 
-        "header"
-        "main"
-        "footer";
-    }    
-    header{
-        background-image: linear-gradient(to left,#FF7F50,#FFDEB5);
-    }
-    .tituloEmpresa{
-        text-align: center;
-        width: 90%;
-        font-size: 4rem;
-    }
-    .logoEmpresa{
-        display: none;
-    }
-    .boxC{
-        width: 80%;
-    }
-    .search input{
-        width: 75%;
-    }
-    .menu ul li{
-        font-size: 0.8rem;
-    }
-    /*pagina Index */
-   /* .initial img{
-        max-width: 100%;
-        max-height: 100%;
-    }
-    /*Seccion Carrito*/
-/*    .buying{
-        height: 60%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    .menuCarrito h2{
-        font-size: 2rem;
-    }
-    /*Seccion Contactos*/ 
- /*   .contactMain label, .first legend{
-        font-weight: bold;
-        font-size: smaller;
-        color: #470147;
-    }
-    .second p{
-        font-size: small;
-        color: #470147;
-    }
-    .clearButton, .sendButton{
-        width: 17%;
-        height: 17%;
-        right: 0;
-    }
-    .ubication h3{
-        font-size: small;
-        font-weight: lighter;
-        color: #470147;
-    }
-    .ubication iframe{
-        width: 90%;
-        height: 90%;
-    }
-    /*FOOTER*/
-/*    footer p{
-        font-size: 0.7rem;
-    }
-    footer img{
-        width: 75%;
-        height: 75%;
-        margin: 3% 0 6%;
-    }
-}*/

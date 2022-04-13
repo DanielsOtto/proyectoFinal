@@ -5,73 +5,148 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--BOOTSTRAP-->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<title>Carrito</title>
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="LaTiendita icon" href="../assets/images/logo/logo.png">
-	<title>Carrito</title>
+
 </head>
 
-<body class="bodyCarrito">
-	<!-- MENU + USER + LOGO + BUSCAR + CARRITO -->
-	<header class="carritoHeader">
-		<h1 class="tituloEmpresa">La Tiendita</h1>
-		<a href="../index.html"><img class="logoEmpresa" src="../assets/images/logo/logo.png" alt="logo la tiendita"
-				title="logo de la empresa"></a>
-		<div class="boxC">
-			<img class="logoCompra" src="../assets/images/logo/cartera-mocca.png" alt="logo bolso"
-				title="logo de un bolso">
-			<form class="search">
-				<input type="text" placeholder="Ingrese su búsqueda..">
-				<input type="submit" value="BUSCAR">
-			</form>
+<body>
+	<!-- HEADER -->
+	<header class="container-fluid">
+		<div class="row">
+			<div class="col-md-7 col-12 titleBox">
+				<h1 class="tituloEmpresa">La Tiendita</h1>
+			</div>
+			<div class="col-md-3 col-6 logoBox">
+				<a href="../index.html"> <img class="logoEmpresa" src="../assets/images/logo/logo.png" alt="logo"> </a>
+			</div>
+			<div class="col-md-2 col-4 logoBox">
+				<a href="carrito.html"> <img class="logoCompra" src="../assets/images/logo/cartera-mocca.png"
+						alt="logo_carrito"> </a>
+			</div>
 		</div>
-		<nav class="menu">
-			<ul>
-				<li> <a href="../index.html">Inicio</a> </li>
-				<li> <a href="hombres.html">Hombre</a> </li>
-				<li> <a href="mujeres.html">Mujer</a> </li>
-				<li> <a href="#"></a>Carrito</li>
-				<li> <a href="contacto.html">Contacto</a> </li>
-			</ul>
-		</nav>
 	</header>
-	<!--ANDA-->
-	<main class="menuCarrito">
+	<!--FIN header // INICIO nav-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<section class="container-fluid">
+			<a class="navbar-brand" href="#"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="../index.html">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="hombres.html">
+							Hombre
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="mujeres.html">
+							Mujer
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="carrito.html">
+							Carrito
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contacto.html">
+							Contacto
+						</a>
+					</li>
+				</ul>
+				<form class="d-flex">
+					<input class="form-control me-2" type="search" placeholder="Ingrese su busqueda.."
+						aria-label="Search">
+					<button class="btn btn-outline-dark" type="button">Buscar</button>
+				</form>
+			</div>
+		</section>
+	</nav>
+	<!-- FIN nav // INICIO main-->
+	<main class="container">
+		<div class="row carrito__fila">
+			<div class="col-lg-12 col-12">
 				<h2 class="shopping">Carrito de compras</h2>
+			</div>
+		</div>
+		<div class="row carrito__fila align-items-start secondRow">
+			<div class="col-lg-6 col-4">
 				<h3 class="item">Items</h3>
+			</div>
+			<div class="col-lg-3 col-4">
 				<h3 class="quantity">Cantidad</h3>
+			</div>
+			<div class="col-lg-3 col-4">
 				<h3 class="subtotal">Subtotal</h3>
-				<div class="purchase">
+			</div>
+		</div>
+		<div class="row carrito__fila">
+			<div class="col-lg-4 col-4">
+				<section class="buying">
+					<h4>Continuar comprando</h4>
+					<a href="hombres.html">HOMBRE</a>
+					<a href="mujeres.html">MUJER</a>
+				</section>
+			</div>
+			<div class="offset-lg-4 col-lg-4 offset-4 col-4 ">
+				<section class="purchase">
 					<h2 class="purchase__total">TOTAL:</h2>
 					<button class="purchase__btn">FINALIZAR PEDIDO</button>
-				</div>
-			<article class="buying">
-				<h4>Continuar comprando</h4>
-				<a href="hombres.html">HOMBRE</a>
-				<a href="mujeres.html">MUJER</a>
-			</article>
+				</section>
+			</div>
+		</div>
 	</main>
 	<!-- INICIO DE FOOTER -->
-	<footer class="finalDePagina">
-		<p class="delivery">ENVIOS GRATIS A PARTIR DE $10.000 PESOS.</p>
-		<div class="createdBy">
-			<p>Copyright La Tiendita 2022. Todos los derechos reservados.</p>
-			<p>Created by Otto Daniels</p>
-		</div>
-		<div class="socialMedia">
-			<a href="https://es-la.facebook.com/" target="_blank"><img src="../assets/images/logo/facebook logo.jpg"
-					alt="facebook" title="logo de facebook"></a>
-			<a href="https://www.instagram.com/" target="_blank"><img src="../assets/images/logo/instagram-logo.png"
-					alt="instagram" title="logo de instagram"></a>
-		</div>
-		<div class="payment">
-			<img src="../assets/images/logo/visa.png" alt="visa card" title="logo de visa">
-			<img src="../assets/images/logo/mastercard.png" alt="mastercard" title="logo de mastercard">
-			<img src="../assets/images/logo/payp.png" alt="paypal" title="logo de paypal">
-			<img src="../assets/images/logo/americanexpress.png" alt="american" title="logo de american">
-			<img src="../assets/images/logo/mercadopago.jpg" alt="mercadopago" title="logo de mercadopago">
+	<footer class="container-fluid">
+		<div class="row">
+			<div class="col-lg-6 col-sm-12 col-12">
+				<p class="delivery">ENVIOS GRATIS A PARTIR DE $10.000 PESOS.</p>
+			</div>
+			<div class="col-lg-6 col-sm-12 col-12">
+				<div class="socialMedia">
+					<a href="https://es-la.facebook.com/" target="_blank"><img class="img-fluid"
+							src="../assets/images/logo/facebook logo.jpg" alt="facebook" title="logo de facebook">
+					</a>
+					<a href="https://www.instagram.com/" target="_blank"><img class="img-fluid"
+							src="../assets/images/logo/instagram-logo.png" alt="instagram" title="logo de instagram">
+					</a>
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12 col-12">
+				<div class="payment">
+					<img class="visa img-fluid img-thumbnail" src="../assets/images/logo/visa.png" alt="visa card"
+						title="logo de visa">
+					<img class="master img-fluid img-thumbnail" src="../assets/images/logo/mastercard.png"
+						alt="mastercard" title="logo de mastercard">
+					<img class="payp img-fluid img-thumbnail" src="../assets/images/logo/payp.png" alt="paypal"
+						title="logo de paypal">
+					<img class="img-fluid img-thumbnail" src="../assets/images/logo/americanexpress.png" alt="american"
+						title="logo de american">
+					<img class="img-fluid img-thumbnail" src="../assets/images/logo/mercadopago.jpg" alt="mercadopago"
+						title="logo de mercadopago">
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12 col-12">
+				<div class="createdBy">
+					<p>Copyright La Tiendita 2022. Todos los derechos reservados.</p>
+					<p>Created by Otto Daniels</p>
+				</div>
+			</div>
 		</div>
 	</footer>
 	<!-- FINAL DE FOOTER-->
+	<!-- JS Bootstrap local-->
+	<script src="../js/bootstrap.js"></script>
 </body>
 
 </html>
