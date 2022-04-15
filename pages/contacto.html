@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 	<meta charset="UTF-8">
@@ -10,7 +10,6 @@
 	<title>Contactanos</title>
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="LaTiendita icon" href="../assets/images/logo/logo.png">
-
 </head>
 
 <body>
@@ -32,7 +31,7 @@
 	<!--FIN header // INICIO nav-->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<section class="container-fluid">
-			<a class="navbar-brand" href="#"></a>
+			<a class="navbar-brand" href=#></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 				aria-label="Toggle navigation">
@@ -73,50 +72,79 @@
 		</section>
 	</nav>
 	<!-- FIN nav // INICIO main-->
-	<main class="contactMain">
-		<form>
-			<fieldset class="first">
-				<legend>Datos personales</legend>
-				<label for="nombre_apellido">Nombre y apellido:</label>
-				<input type="text" name="nombre_apellido" placeholder="Juan Perez" />
-
-				<label for="email">Correo electrónico:</label>
-				<input type="email" name="email" placeholder="juanperez@gmail.com" />
-
-				<label for="celular">Ingrese un número de contacto:</label>
-				<input type="number" name="celular" placeholder="223 5 123456">
-			</fieldset>
-			<article class="second">
-				<label for="seleccion">Seleccione el tipo de consulta:</label>
-				<select name="seleccion" title="seleccionDeOpciones">
-					<option value="consulta">Consulta de producto (disponibilidad, características, etc)</option>
-					<option value="estado">Estado de mi pedido</option>
-					<option value="cambios">Cambios y devoluciones</option>
-					<option value="anulacion">Anulación de pedido</option>
-					<option value="error">Error/conflicto con el pedido</option>
-					<option value="prob_pago">Problemas con el pago</option>
-					<option value="otro">Otro</option>
-				</select>
-				<label for="numero_pedido">Número del pedido:</label>
-				<input type="number" name="numero_pedido" placeholder="135246" />
-				<p class="second__optional">Opcional, son 6 digitos.</p>
-			</article>
-			<article class="message">
-				<label class="message__label" for="mensaje"></label>
-				<textarea name="mensaje" maxlength="600" rows="20" cols="130"
-					placeholder="Escribe aquí tus comentarios.."></textarea>
-				<input class="clearButton" type="reset" value="Borrar" />
-				<input class="sendButton" type="submit" value="Enviar" />
-			</article>
+	<main>
+		<form class="row rowContact g-2">
+			<div class="offset-lg-1 col-lg-5 col-md-6">
+				<article class="form-floating mb-3">
+					<input type="text" class="form-control" id="floatingInput" placeholder="Nombre/s" required>
+					<label for="floatingInput">Nombre/s</label>
+				</article>
+			</div>
+			<div class="col-lg-5 col-md-6">
+				<article class="form-floating mb-3">
+					<input type="text" class="form-control" id="floatingInput" placeholder="Apellido/s" required>
+					<label for="floatingInput">Apellido/s</label>
+				</article>
+			</div>
+			<div class="offset-lg-1 col-lg-5 col-md-6">
+				<article class="form-floating mb-3">
+					<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+					<label for="floatingInput">ejemplo@gmail.com</label>
+				</article>
+			</div>
+			<div class="col-lg-5 col-md-6">
+				<article class="form-floating">
+					<input type="number" class="form-control" id="floatingPassword" placeholder="223 5 123456" required>
+					<label for="floatingPassword">Telefono</label>
+				</article>
+			</div>
+			<div class="offset-lg-2 col-lg-8 col-md-8 offset-md-2">
+				<article class="form-floating">
+					<select class="form-select" id="floatingSelect" aria-label="Floating label select example"
+						name="seleccion" title="seleccionDeOpciones">
+						<option value="consulta">Consulta de producto (disponibilidad, características, etc)
+						</option>
+						<option value="estado">Estado de mi pedido</option>
+						<option value="cambios">Cambios y devoluciones</option>
+						<option value="anulacion">Anulación de pedido</option>
+						<option value="error">Error/conflicto con el pedido</option>
+						<option value="prob_pago">Problemas con el pago</option>
+						<option value="otro">Otro</option>
+					</select>
+					<label for="floatingSelect">Seleccione el tipo de consulta:</label>
+				</article>
+			</div>
+			<div class="offset-lg-4 col-lg-4 col-md-6 offset-md-3">
+				<article class="form-floating mb-3">
+					<input type="number" class="form-control" id="floatingInput" name="numero_pedido"
+						placeholder="135246 (Opcional)" value="135246 (Opcional)" />
+					<label for="floatingInput">Número del pedido (Opcional)</label>
+				</article>
+			</div>
+			<div class="col-lg-10 offset-lg-1">
+				<article class="message mb-3">
+					<label for="mensaje"></label>
+					<textarea name="mensaje" class="form-control"
+						placeholder="Escribe aquí tus comentarios.."></textarea>
+				</article>
+			</div>
+			<div class="col-lg-4 offset-lg-4">
+				<article class="btn btn__form">
+					<input class="clearButton btn-outline-warning btn-lg" type="reset" value="Borrar" />
+					<input class="sendButton btn-outline-success btn-lg" type="submit" value="Enviar" />
+				</article>
+			</div>
 		</form>
-		<article class="ubication">
-			<h3>Nuestra ubicacion:</h3>
-			<iframe class="ubication__map"
-				src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50293.511853061216!2d-57.545621385998544!3d-38.	01574766265546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1648236568437!5m2!1ses-419!2sar"
-				width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-				referrerpolicy="no-referrer-when-downgrade">
-			</iframe>
-		</article>
+		<section class="row rowContact">
+			<div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-sm-6">
+				<article class="ubication container-fluid">
+					<iframe class="ubication__map"
+						src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50293.511853061216!2d-57.545621385998544!3d-38.	01574766265546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1648236568437!5m2!1ses-419!2sar"
+						style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+					</iframe>
+				</article>
+			</div>
+		</section>
 	</main>
 	<!-- INICIO DE FOOTER -->
 	<footer class="container-fluid">

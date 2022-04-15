@@ -1,9 +1,11 @@
 /*Detalles gráficos
+
 colores HEXA:
     coral #FF7F50
     moccasin #FFDEB5
     morado oscuro #470147
     blanco #FFFAFA
+
 tipografías:
     font-family: 'Righteous', cursive;
     font-family: 'Kanit', sans-serif;
@@ -23,6 +25,7 @@ tipografías:
     box-sizing: border-box;
 }
 body{
+    overflow-x: hidden;
     font-family: Righteous, sans-serif;
     background-color: #FFDEB5;
 }
@@ -122,7 +125,6 @@ header{
 }
 /* Inicio CARRITO*/
 .carrito__fila{
-    padding: 5px;
     margin: 5px;
     height: 170px;
 }
@@ -141,15 +143,13 @@ header{
     font-size: 2.5rem;
 }
 .purchase, .buying{
-    border: 6px double #470147;
     margin: 1%;
-    padding: 1%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 80%;
+    height: 90%;
 }
 .purchase h2, .buying h4{
     color: #470147;
@@ -160,125 +160,46 @@ header{
     width: 70%;
     margin: 2%;
     text-align: center;
-}
-
-/*.bodyCarrito{
-    height: 1600px;
-}
-.menuCarrito{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: 
-    " .   title  title   .   ."
-    "item quantity subtotal   .   ."
-    " .  .  .  purchase  purchase"
-    " .  .  .  purchase  purchase"
-    " .  buying  buying .  ."
-    " .  buying  buying .  ."
-    ;
-    align-items: center;
-    justify-items:center;
-}
-
-.item{
-    grid-area: item;
-}
-.quantity{
-    grid-area: quantity;
-}
-.subtotal{
-    grid-area: subtotal;
+    background-color: #470147;
+    color: #FFFAFA;
+    text-decoration: none;
 }
 .purchase{
-    grid-area: purchase;
-    width: 70%;
-    height: 45%;
-    border: 7px double #470147;
-    background-color: #FF7F50;
-    border-radius: 10%;
     position: relative;
 }
 .purchase__total{
     position: absolute;
     top: 5%;
-    left: 7%;
-    color: #470147;
+    left: 5%;
 }
 .purchase__btn{
-    font-weight: bold;
-    width: 42%;
-    height: 20%;
-    border-radius: 15%;
-    background-color: #470147;
-    color: #FFFAFA;
     position: absolute;
-    bottom: 10%;
-    left: 50%;
+    bottom: 5%;
 }
-.purchase__btn:hover{
-    animation: growUp 5s;
+/*INICIO CONTACTO*/
+.g-2{
+    margin: 1%;
 }
-@keyframes growUp{
-    18%{
-        width: 37%;
-        height: 25%;
-    }
-    25%{
-        background-color: #FFFAFA;
-        color: #470147;
-    }
-    40%{
-        transform: skew(50deg);
-    }
-    50%{
-        transform: skew(-50deg);
-    }
-    75%{
-        width: 37%;
-        height: 25%;
-        transform: translateX(-50%);
-    }
-    90%{
-        transform: scale(-2);
-    }
+.rowContact div article{
+    margin: 2%;
 }
-.buying{
-    grid-area: buying;
-    border: 5px double #FF7F50;
-    border-radius: 15%;
-    padding: 2.3%;
-    width: 40%;
-    height: 40%;
+.message textarea{
+    font-weight: bold;
+    font-variant-caps: petite-caps;
+    letter-spacing: 1px;
+}
+.btn{
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
-.buying h4{
-    width: 90%;
-    height: 25%;
-}
-.buying a{
-    width: 30%;
-    height: 25%;
-    margin: 2.3%;
-    border-style: none;
-    color: #470147;
-    text-decoration: none;
+.ubication{
+    text-align: center;
+    margin: 5%;
 }
 /* MODIFICACIONES  CONTACTO*/
-/*.contactMain{
-    display: grid;
-    grid-template-rows: repeat(3, 2fr);
-    grid-template-areas:
-    "form"
-    "form"
-    "map"
-    ;
-    align-items: center;
-    justify-content: center;
-}
+/*
 .contactMain form{
     grid-area: form;
     width: 100%;
@@ -323,7 +244,6 @@ header{
     font-variant-caps: petite-caps;
     letter-spacing: 1px;
     color: #FF7F50;
-    width: 80%;
 }
 .clearButton{
     font-size: 1.2rem;
