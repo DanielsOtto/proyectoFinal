@@ -27,7 +27,7 @@ tipografías:
 body{
     overflow-x: hidden;
     font-family: Righteous, sans-serif;
-    background-color: #FFDEB5;
+    background-color: #ffdeb5 ;
 }
 header{
     background-color: #FF7F50; 
@@ -40,13 +40,36 @@ header{
 .logoEmpresa, .logoCompra{
     margin:5%;
 }
+.logoCompra{
+    animation: desaparecer 4s;
+}
+@keyframes desaparecer{
+    25%{
+        transform: translate(400%);
+    }
+    45%{
+        transform: translate(400%);
+    }
+    60%{
+        transform: translate(400%);
+    }
+    80%{
+        transform: rotate(-360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.logoEmpresa:hover{
+    transform: translate(-43%,28%);
+}
 .titleBox, .logoBox{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.navbar{
-    background-color: #FF7F50 !important;
+.backg-nav{
+    background-color: #FF7F50;
 }
 .navbar-nav li a{
     text-transform: uppercase;
@@ -74,6 +97,9 @@ header{
     width: 220px;
     height: 250px;
 }
+.shirt img:hover{
+    transform: scale(1.7);
+}
 .shirt__info{
     width: 50%;
     padding: 2%;
@@ -88,7 +114,7 @@ header{
     letter-spacing: 25%;
     font-weight: bold;
     color: #470147;
-    text-align: center;
+    text-align: justify;
 }
 .shirt__info form{
     width: 100%;
@@ -120,10 +146,10 @@ header{
     padding: 5%;
     text-align: center;
 }
-.upBtn a{
-    font-size: 1.5rem;  
+.upBtn svg:hover{
+    transform: scale(1.7);
 }
-/* Inicio CARRITO*/
+/* Seccion CARRITO*/
 .carrito__fila{
     margin: 5px;
     height: 170px;
@@ -176,7 +202,7 @@ header{
     position: absolute;
     bottom: 5%;
 }
-/*INICIO CONTACTO*/
+/*Seccion CONTACTO*/
 .g-2{
     margin: 1%;
 }
@@ -219,6 +245,6 @@ footer p{
     text-align: center;
     margin: 5% 2%;
 }
-.socialMedia a, .payment img{
+.socialMedia a, .payment img, .payment svg{
     margin-right: 0.5%;
 }
