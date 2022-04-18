@@ -85,6 +85,38 @@ header{
     align-items: center;
     justify-content: center;
 }
+.imagenHombre:hover{
+    animation: lateralH 3s;
+    animation-delay: 2s;
+}
+@keyframes lateralH{
+    25%{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(1.2);
+        border: #FF7F50 1rem double;
+    }
+    75%{
+        transform: translateX(100px);
+    }
+}
+.imagenMujer:hover{
+    animation: lateralM 3s;
+    animation-delay: 2s;
+}
+@keyframes lateralM{
+    25%{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(1.2);
+        border: #470147 1.2rem double;
+    }
+    75%{
+        transform: translateX(-100px);
+    }
+}
 /*AFECTA SECCION HOMBRE y MUJER*/
 .shirt{
     display: flex;
@@ -245,6 +277,9 @@ footer p{
     text-align: center;
     margin: 5% 2%;
 }
-.socialMedia a, .payment img, .payment svg{
-    margin-right: 0.5%;
+.socialMedia a, .payment img, .socialMedia svg{
+    margin-right: 0.7%;
+}
+.socialMedia img:hover, .socialMedia svg:hover{
+    transform: scale(2);
 }
