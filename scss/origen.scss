@@ -1,3 +1,4 @@
+
 /*Detalles gráficos
 
 colores HEXA:
@@ -71,10 +72,14 @@ header{
 .backg-nav{
     background-color: #FF7F50;
 }
-.navbar-nav li a{
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1rem;
+.navbar-nav{
+    li{
+        a{
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    }
 }
 /*AFECTA SECCION INDEX*/
 .imagenHombre, .imagenMujer{
@@ -125,12 +130,16 @@ header{
     margin: 4%;
     padding: 1%;
 }
-.shirt img{
+.shirt{
+    img{
     width: 220px;
     height: 250px;
+    }
 }
-.shirt img:hover{
+.shirt{
+    img:hover{
     transform: scale(1.7);
+    }
 }
 .shirt__info{
     width: 50%;
@@ -140,55 +149,77 @@ header{
     align-items: center;
     align-content: flex-start;
 }
-.shirt__info p{
-    padding: 2%;
-    width: 100%;
-    letter-spacing: 25%;
-    font-weight: bold;
-    color: #470147;
-    text-align: justify;
+.shirt__info{
+    p{
+        padding: 2%;
+        width: 100%;
+        letter-spacing: 25%;
+        font-weight: bold;
+        color: #470147;
+        text-align: justify;
+    }
 }
-.shirt__info form{
-    width: 100%;
-    margin-left: 4%;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-evenly;
+.shirt__info{
+    form{
+        width: 100%;
+        margin-left: 4%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
 }
-.shirt__info form fieldset{
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
+.shirt__info{
+    form{
+        fieldset{
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+    }
 }
-.shirt__info form fieldset label{
-    margin: 0 10%;
+.shirt__info{
+    form{
+        fieldset{
+            label{
+            margin: 0 10%;
+            }
+        }
+    }
 }
-.shirt__info form input, .shirt__info form select {
-    height: 30%;
-    width: 47%;
-    padding: 0.6%;
-    margin: 1%;
-    background-color: #470147;
-    color: #FFFAFA;
-    font-size: 0.7rem;
-    text-align: center;
+.shirt__info{
+    form{
+        input, select{
+            height: 30%;
+            width: 47%;
+            padding: 0.6%;
+            margin: 1%;
+            background-color: #470147;
+            color: #FFFAFA;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+    }
 }
 .upBtn{
     padding: 5%;
     text-align: center;
 }
-.upBtn svg:hover{
-    transform: scale(1.7);
+.upBtn{
+    svg:hover{
+        transform: scale(1.7);
+    }
 }
 /* Seccion CARRITO*/
 .carrito__fila{
     margin: 5px;
     height: 170px;
 }
-.carrito__fila div{
-    padding: 5px;
-    height: 200px;
+.carrito__fila{
+    div{
+        padding: 5px;
+        height: 200px;
+    }
 }
 .secondRow{
     height: 500px;
@@ -209,18 +240,37 @@ header{
     width: 100%;
     height: 90%;
 }
-.purchase h2, .buying h4{
-    color: #470147;
-    width: 100%;
-    padding: 1%;
+.purchase{
+    h2{
+        color: #470147;
+        width: 100%;
+        padding: 1%;
+    }
 }
-.purchase__btn, .buying a{
+.buying{
+    h4{
+        color: #470147;
+        width: 100%;
+        padding: 1%;
+    }
+}
+.purchase__btn{
     width: 70%;
     margin: 2%;
     text-align: center;
     background-color: #470147;
     color: #FFFAFA;
     text-decoration: none;
+}
+.buying{
+    a{
+        width: 70%;
+        margin: 2%;
+        text-align: center;
+        background-color: #470147;
+        color: #FFFAFA;
+        text-decoration: none;
+    }
 }
 .purchase{
     position: relative;
@@ -238,13 +288,19 @@ header{
 .g-2{
     margin: 1%;
 }
-.rowContact div article{
-    margin: 2%;
+.rowContact{
+    div{
+        article{
+            margin: 2%;
+        }
+    }
 }
-.message textarea{
-    font-weight: bold;
-    font-variant-caps: petite-caps;
-    letter-spacing: 1px;
+.message{
+    textarea{
+        font-weight: bold;
+        font-variant-caps: petite-caps;
+        letter-spacing: 1px;
+    }
 }
 .btn{
     width: 100%;
@@ -264,10 +320,12 @@ footer{
     bottom: 0;
     margin-top: auto;
 }
-footer p{
-    letter-spacing: 0.7px;
-    font-size: 1rem;
-    font-weight: lighter;
+footer{
+    p{
+        letter-spacing: 0.7px;
+        font-size: 1rem;
+        font-weight: lighter;
+    }
 }
 .delivery, .createdBy{
     text-align: center;
@@ -277,9 +335,18 @@ footer p{
     text-align: center;
     margin: 5% 2%;
 }
-.socialMedia a, .payment img, .socialMedia svg{
-    margin-right: 0.7%;
+.socialMedia{
+    a, svg{
+        margin-right: 0.7%;
+    }
 }
-.socialMedia img:hover, .socialMedia svg:hover{
-    transform: scale(2);
+.payment{
+    img{
+        margin-right: 0.7%;
+    }
+}
+.socialMedia{
+    img:hover, svg:hover{
+        transform: scale(2);
+    }
 }
