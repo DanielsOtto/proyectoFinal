@@ -45,8 +45,8 @@ header{
     align-items: center;
     justify-content: center;
 }
-.navbar{
-    background-color: #FF7F50 !important;
+.navbar-bg{
+    background-color: #FF7F50;
 }
 .navbar-nav li a{
     text-transform: uppercase;
@@ -219,6 +219,6 @@ footer p{
     text-align: center;
     margin: 5% 2%;
 }
-.socialMedia a, .payment img{
+.socialMedia a, .payment img, .socialMedia svg{
     margin-right: 0.5%;
 }
