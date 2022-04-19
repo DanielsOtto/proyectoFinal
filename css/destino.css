@@ -57,6 +57,50 @@ footer p {
   font-weight: lighter;
 }
 
+.btn {
+  width: 30%;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 0.17rem;
+}
+
+.shirt__info form input, .shirt__info form select {
+  height: 30%;
+  width: 47%;
+  padding: 0.6%;
+  margin: 1%;
+  background-color: #470147;
+  color: #FFFAFA;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.upBtn {
+  padding: 5%;
+  text-align: center;
+}
+.upBtn svg:hover {
+  transform: scale(1.7);
+}
+
+.purchase__btn {
+  position: absolute;
+  bottom: 5%;
+  width: 70%;
+  margin: 2%;
+  text-align: center;
+  background-color: #470147;
+  color: #FFFAFA;
+  text-decoration: none;
+}
+
+.btnCajita {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 /* ESTRUCTURAS GLOBALES */
 body {
   overflow-x: hidden;
@@ -192,7 +236,6 @@ footer {
   margin: 5%;
 }
 
-/*AFECTA SECCION INDEX*/
 .imagenHombre {
   margin: 2%;
 }
@@ -233,13 +276,19 @@ footer {
     transform: translateX(-100px);
   }
 }
-/*AFECTA SECCIONES HOMBRE Y MUJERES*/
 .imgRopa {
   width: 220px;
   height: 250px;
 }
 .imgRopa:hover {
   transform: scale(1.7);
+}
+
+.btn {
+  width: 30%;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 0.17rem;
 }
 
 .shirt__info form input, .shirt__info form select {
@@ -272,7 +321,7 @@ footer {
   text-decoration: none;
 }
 
-.btn {
+.btnCajita {
   width: 100%;
   display: flex;
   align-items: center;

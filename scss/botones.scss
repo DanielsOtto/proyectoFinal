@@ -1,6 +1,13 @@
 // IMPORTAR 
 @import "colores";
 
+//AFECTA AL NAV
+.btn{
+    width: 30%;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 0.17rem;
+}
 // AFECTA SECCIONES HOMBRES Y MUJERES
 .shirt__info{
     form{
@@ -37,7 +44,7 @@
     text-decoration: none;
 }
 //AFECTA CONTACTOS
-.btn{
+.btnCajita{
     width: 100%;
     display: flex;
     align-items: center;

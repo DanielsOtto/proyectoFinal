@@ -1,7 +1,7 @@
 // IMPORTAR 
 @import "colores";
 
-/*AFECTA SECCION INDEX*/
+// AFECTA SECCION INDEX
 .imagenHombre{
     margin: 2%;
     &:hover{
@@ -41,8 +41,7 @@
     }
 }
 
-/*AFECTA SECCIONES HOMBRE Y MUJERES*/
-
+// AFECTA SECCIONES HOMBRES Y MUJERES
 .imgRopa{
     width: 220px;
     height: 250px;
