@@ -20,8 +20,8 @@ tipografías:
 }
 /*AFECTA TODAS LAS PAGINAS*/
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 body{
@@ -43,23 +43,28 @@ header{
 .logoCompra{
     animation: desaparecer 4s;
 }
-@keyframes desaparecer{
-    25%{
-        transform: translate(400%);
+@keyframes desaparecer {
+    25% {
+      animation-timing-function: ease-out;
+      transform: translate(400%);
     }
-    45%{
-        transform: translate(400%);
+    45% {
+      transform: translate(400%);
     }
-    60%{
-        transform: translate(400%);
+    60% {
+      transform: translate(400%);
     }
-    80%{
-        transform: rotate(-360deg);
+    80% {
+      animation-timing-function: cubic-bezier(0.9, 0.65, 0.75, 0.75);
+      transform: rotate(-360deg);
+      opacity: 0.2;
     }
-    100%{
-        transform: rotate(360deg);
+    100% {
+      animation-timing-function: linear;
+      opacity: 0.8;
+      transform: rotate(360deg);
     }
-}
+  }
 .logoEmpresa:hover{
     transform: translate(-43%,28%);
 }
@@ -126,8 +131,8 @@ header{
     padding: 1%;
 }
 .shirt img{
-    width: 220px;
-    height: 250px;
+    width: 13.75rem;
+    height: 15.625rem;
 }
 .shirt img:hover{
     transform: scale(1.7);
@@ -147,6 +152,9 @@ header{
     font-weight: bold;
     color: #470147;
     text-align: justify;
+}
+.shirt__info p:not(:first-child){
+    text-align: center;
 }
 .shirt__info form{
     width: 100%;
@@ -183,15 +191,17 @@ header{
 }
 /* Seccion CARRITO*/
 .carrito__fila{
-    margin: 5px;
-    height: 170px;
+    margin: 2%;
+    height: 10.625rem;
 }
 .carrito__fila div{
-    padding: 5px;
-    height: 200px;
+    padding: 2%;
 }
 .secondRow{
-    height: 500px;
+    height: 31.25rem;
+}
+.thirdRow{
+    height: 12rem;
 }
 .shopping{
     display: flex;
@@ -201,7 +211,7 @@ header{
     font-size: 2.5rem;
 }
 .purchase, .buying{
-    margin: 1%;
+    margin: 2%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
