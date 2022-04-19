@@ -1,0 +1,45 @@
+// IMPORTAR 
+@import "colores";
+
+// AFECTA SECCIONES HOMBRES Y MUJERES
+.shirt__info{
+    form{
+        input, select{
+            height: 30%;
+            width: 47%;
+            padding: 0.6%;
+            margin: 1%;
+            background-color: $morado;
+            color: $snow;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+    }
+}
+.upBtn{
+    padding: 5%;
+    text-align: center;
+    svg{
+        &:hover{
+        transform: scale(1.7);
+        }
+    }
+}
+// AFECTA A CARRITO
+.purchase__btn{
+    position: absolute;
+    bottom: 5%;
+    width: 70%;
+    margin: 2%;
+    text-align: center;
+    background-color: $morado;
+    color: $snow;
+    text-decoration: none;
+}
+//AFECTA CONTACTOS
+.btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,52 @@
+// IMPORTAR 
+@import "colores";
+
+/*AFECTA SECCION INDEX*/
+.imagenHombre{
+    margin: 2%;
+    &:hover{
+        animation: lateralH 3s;
+        animation-delay: 2s;
+    }
+}
+@keyframes lateralH{
+    25%{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(1.2);
+        border: $mocasin 1rem double;
+    }
+    75%{
+        transform: translateX(100px);
+    }
+}
+.imagenMujer{
+    margin: 2%;
+    &:hover{
+        animation: lateralM 3s;
+        animation-delay: 2s;
+    }
+}
+@keyframes lateralM{
+    25%{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(1.2);
+        border: $morado 1.2rem double;
+    }
+    75%{
+        transform: translateX(-100px);
+    }
+}
+
+/*AFECTA SECCIONES HOMBRE Y MUJERES*/
+
+.imgRopa{
+    width: 220px;
+    height: 250px;
+    &:hover{
+        transform: scale(1.7);
+    }
+}

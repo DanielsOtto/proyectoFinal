@@ -1,12 +1,6 @@
 @charset "UTF-8";
 /*Detalles gráficos
 
-colores HEXA:
-    coral #FF7F50
-    moccasin #FFDEB5
-    morado oscuro #470147
-    blanco #FFFAFA
-
 tipografías:
     font-family: 'Righteous', cursive;
     font-family: 'Kanit', sans-serif;
@@ -19,65 +13,58 @@ tipografías:
   font-family: Kanit;
   src: url(../assets/fonts/Kanit-Italic.ttf);
 }
-/*AFECTA TODAS LAS PAGINAS*/
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-body {
-  overflow-x: hidden;
-  font-family: Righteous, sans-serif;
-  background-color: #ffdeb5;
-}
-
-header {
-  background-color: #FF7F50;
-}
-
 .tituloEmpresa {
   margin-left: 2%;
   font-size: 4.5rem;
   color: #470147;
 }
 
-.logoEmpresa, .logoCompra {
-  margin: 5%;
+h2, h4 {
+  color: #470147;
+  width: 100%;
+  padding: 1%;
 }
 
-.logoCompra {
-  animation: desaparecer 4s;
+p {
+  padding: 2%;
+  width: 100%;
+  letter-spacing: 25%;
+  font-weight: bold;
+  text-align: justify;
+  font-size: 1rem;
 }
 
-@keyframes desaparecer {
-  25% {
-    transform: translate(400%);
-  }
-  45% {
-    transform: translate(400%);
-  }
-  60% {
-    transform: translate(400%);
-  }
-  80% {
-    transform: rotate(-360deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.logoEmpresa:hover {
-  transform: translate(-43%, 28%);
+.shirt__info p {
+  color: #470147;
 }
 
-.titleBox, .logoBox {
+.shopping {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #470147;
+  font-size: 2.5rem;
 }
 
-.backg-nav {
+.purchase__total {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+footer p {
+  color: #FFFAFA;
+  font-weight: lighter;
+}
+
+/* ESTRUCTURAS GLOBALES */
+body {
+  overflow-x: hidden;
+  font-family: Righteous, sans-serif;
+  background-color: #FFDEB5;
+}
+
+header, .backg-nav {
   background-color: #FF7F50;
 }
 
@@ -87,17 +74,128 @@ header {
   font-size: 1rem;
 }
 
-/*AFECTA SECCION INDEX*/
-.imagenHombre, .imagenMujer {
-  margin: 2%;
+.titleBox, .logoBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/*Inicio FOOTER*/
+footer {
+  background-color: #470147;
+  font-family: Kanit;
+  color: #FFFAFA;
+  bottom: 0;
+  margin-top: auto;
+}
+
+.delivery, .createdBy, .socialMedia, .payment {
+  text-align: center;
+  margin: 5% 2%;
+}
+
+/*AFECTA SECCION INDEX*/
 .imageBox {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* AFECTA SECCIONES HOMBRES Y MUJERES */
+.shirt {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 4%;
+  padding: 1%;
+}
+
+.shirt__info {
+  width: 50%;
+  padding: 2%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  align-content: flex-start;
+}
+.shirt__info form {
+  width: 100%;
+  margin-left: 4%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.shirt__info form fieldset {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.shirt__info form fieldset label {
+  margin: 0 10%;
+}
+
+/* Seccion CARRITO*/
+.carrito__fila {
+  margin: 5px;
+  height: 170px;
+}
+.carrito__fila div {
+  padding: 5px;
+  height: 200px;
+}
+
+.secondRow {
+  height: 500px;
+}
+
+.purchase, .buying {
+  margin: 1%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90%;
+}
+
+.purchase {
+  position: relative;
+}
+
+.buying a {
+  width: 70%;
+  margin: 2%;
+  text-align: center;
+  background-color: #470147;
+  color: #FFFAFA;
+  text-decoration: none;
+}
+
+/* AFECTA SECCION CONTACTO*/
+.formContacto {
+  margin: 1%;
+}
+
+.rowContact div article {
+  margin: 2%;
+}
+
+.message textarea {
+  font-weight: bold;
+  font-variant-caps: petite-caps;
+  letter-spacing: 1px;
+}
+
+.ubication {
+  text-align: center;
+  margin: 5%;
+}
+
+/*AFECTA SECCION INDEX*/
+.imagenHombre {
+  margin: 2%;
+}
 .imagenHombre:hover {
   animation: lateralH 3s;
   animation-delay: 2s;
@@ -109,11 +207,14 @@ header {
   }
   50% {
     transform: scale(1.2);
-    border: #FF7F50 1rem double;
+    border: #FFDEB5 1rem double;
   }
   75% {
     transform: translateX(100px);
   }
+}
+.imagenMujer {
+  margin: 2%;
 }
 .imagenMujer:hover {
   animation: lateralM 3s;
@@ -132,59 +233,13 @@ header {
     transform: translateX(-100px);
   }
 }
-/*AFECTA SECCION HOMBRE y MUJER*/
-.shirt {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin: 4%;
-  padding: 1%;
-}
-
-.shirt img {
+/*AFECTA SECCIONES HOMBRE Y MUJERES*/
+.imgRopa {
   width: 220px;
   height: 250px;
 }
-
-.shirt img:hover {
+.imgRopa:hover {
   transform: scale(1.7);
-}
-
-.shirt__info {
-  width: 50%;
-  padding: 2%;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  align-content: flex-start;
-}
-
-.shirt__info p {
-  padding: 2%;
-  width: 100%;
-  letter-spacing: 25%;
-  font-weight: bold;
-  color: #470147;
-  text-align: justify;
-}
-
-.shirt__info form {
-  width: 100%;
-  margin-left: 4%;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.shirt__info form fieldset {
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.shirt__info form fieldset label {
-  margin: 0 10%;
 }
 
 .shirt__info form input, .shirt__info form select {
@@ -202,102 +257,19 @@ header {
   padding: 5%;
   text-align: center;
 }
-
 .upBtn svg:hover {
   transform: scale(1.7);
-}
-
-/* Seccion CARRITO*/
-.carrito__fila {
-  margin: 5px;
-  height: 170px;
-}
-
-.carrito__fila div {
-  padding: 5px;
-  height: 200px;
-}
-
-.secondRow {
-  height: 500px;
-}
-
-.shopping {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #470147;
-  font-size: 2.5rem;
-}
-
-.purchase, .buying {
-  margin: 1%;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 90%;
-}
-
-.purchase h2 {
-  color: #470147;
-  width: 100%;
-  padding: 1%;
-}
-
-.buying h4 {
-  color: #470147;
-  width: 100%;
-  padding: 1%;
-}
-
-.purchase__btn {
-  width: 70%;
-  margin: 2%;
-  text-align: center;
-  background-color: #470147;
-  color: #FFFAFA;
-  text-decoration: none;
-}
-
-.buying a {
-  width: 70%;
-  margin: 2%;
-  text-align: center;
-  background-color: #470147;
-  color: #FFFAFA;
-  text-decoration: none;
-}
-
-.purchase {
-  position: relative;
-}
-
-.purchase__total {
-  position: absolute;
-  top: 5%;
-  left: 5%;
 }
 
 .purchase__btn {
   position: absolute;
   bottom: 5%;
-}
-
-/*Seccion CONTACTO*/
-.g-2 {
-  margin: 1%;
-}
-
-.rowContact div article {
+  width: 70%;
   margin: 2%;
-}
-
-.message textarea {
-  font-weight: bold;
-  font-variant-caps: petite-caps;
-  letter-spacing: 1px;
+  text-align: center;
+  background-color: #470147;
+  color: #FFFAFA;
+  text-decoration: none;
 }
 
 .btn {
@@ -307,46 +279,50 @@ header {
   justify-content: space-evenly;
 }
 
-.ubication {
-  text-align: center;
+.logoCompra {
+  margin: 5%;
+  animation: desaparecer 4s;
+  animation-delay: 4s;
+}
+
+@keyframes desaparecer {
+  25% {
+    animation-timing-function: ease-out;
+    transform: translate(400%);
+  }
+  45% {
+    transform: translate(400%);
+  }
+  60% {
+    transform: translate(400%);
+  }
+  80% {
+    animation-timing-function: cubic-bezier(0, 0, 0.6, 1);
+    transform: rotate(-360deg);
+    opacity: 0.2;
+  }
+  100% {
+    animation-timing-function: linear;
+    opacity: 0.8;
+    transform: rotate(360deg);
+  }
+}
+.logoEmpresa {
   margin: 5%;
 }
-
-/*Inicio FOOTER*/
-footer {
-  background-color: #470147;
-  font-family: Kanit;
-  color: #FFFAFA;
-  bottom: 0;
-  margin-top: auto;
-}
-
-footer p {
-  letter-spacing: 0.7px;
-  font-size: 1rem;
-  font-weight: lighter;
-}
-
-.delivery, .createdBy {
-  text-align: center;
-  margin: 5% 2%;
-}
-
-.socialMedia, .payment {
-  text-align: center;
-  margin: 5% 2%;
+.logoEmpresa:hover {
+  transform: translate(-43%, 28%);
 }
 
 .socialMedia a, .socialMedia svg {
   margin-right: 0.7%;
 }
+.socialMedia a:hover, .socialMedia svg:hover {
+  transform: scale(2);
+}
 
 .payment img {
   margin-right: 0.7%;
-}
-
-.socialMedia img:hover, .socialMedia svg:hover {
-  transform: scale(2);
 }
 
 /*# sourceMappingURL=destino.css.map */

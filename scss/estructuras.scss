@@ -1,0 +1,139 @@
+// IMPORTAR
+@import "colores";
+@import "tipografias";
+
+/* ESTRUCTURAS GLOBALES */
+body{
+    overflow-x: hidden;
+    font-family: $Righteous, sans-serif;
+    background-color: $mocasin ;
+}
+header, .backg-nav{
+    background-color: $coral; 
+}
+.navbar-nav{
+    li{
+        a{
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    }
+}
+.titleBox, .logoBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Inicio FOOTER*/
+footer{
+    background-color: $morado;
+    font-family: $Kanit;
+    color: $snow;
+    bottom: 0;
+    margin-top: auto;
+}
+.delivery, .createdBy, .socialMedia, .payment{
+    text-align: center;
+    margin: 5% 2%;
+}
+
+// Paginas por separado 
+/*AFECTA SECCION INDEX*/
+.imageBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* AFECTA SECCIONES HOMBRES Y MUJERES */
+.shirt{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 4%;
+    padding: 1%;
+}
+.shirt__info{
+    width: 50%;
+    padding: 2%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: flex-start;
+    form{
+        width: 100%;
+        margin-left: 4%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        fieldset{
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            label{
+                margin: 0 10%;
+            }
+        }
+    }
+}
+
+/* Seccion CARRITO*/
+.carrito__fila{
+    margin: 5px;
+    height: 170px;
+    div{
+        padding: 5px;
+        height: 200px;
+    }
+}
+.secondRow{
+    height: 500px;
+}
+.purchase, .buying{
+    margin: 1%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+}
+.purchase{
+    position: relative;
+}
+.buying{
+    a{
+        width: 70%;
+        margin: 2%;
+        text-align: center;
+        background-color: $morado;
+        color: $snow;
+        text-decoration: none;
+    }
+}
+
+/* AFECTA SECCION CONTACTO*/
+.formContacto{
+    margin: 1%;
+}
+.rowContact{
+    div{
+        article{
+            margin: 2%;
+        }
+    }
+}
+.message{
+    textarea{
+        font-weight: bold;
+        font-variant-caps: petite-caps;
+        letter-spacing: 1px;
+    }
+}
+.ubication{
+    text-align: center;
+    margin: 5%;
+}

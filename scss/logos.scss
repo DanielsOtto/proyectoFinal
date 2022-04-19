@@ -1,0 +1,49 @@
+// MENU GLOBAL
+.logoCompra{
+    margin:5%;
+    animation: desaparecer 4s;
+    animation-delay: 4s;
+}
+@keyframes desaparecer{
+    25%{
+        animation-timing-function: ease-out;
+        transform: translate(400%);
+    }
+    45%{
+        transform: translate(400%);
+    }
+    60%{
+        transform: translate(400%);
+    }
+    80%{
+        animation-timing-function: cubic-bezier(0, 0, 0.6, 1);
+        transform: rotate(-360deg);
+        opacity: 0.2;
+    }
+    100%{
+        animation-timing-function: linear;
+        opacity: 0.8;
+        transform: rotate(360deg);
+    }
+}
+.logoEmpresa{
+    margin:5%;
+    &:hover{
+        transform: translate(-43%,28%);
+    }
+}
+
+// FOOTER
+.socialMedia{
+    a, svg{
+        margin-right: 0.7%;
+        &:hover{
+            transform: scale(2);
+        }
+    }
+}
+.payment{
+    img{
+        margin-right: 0.7%;
+    }
+}

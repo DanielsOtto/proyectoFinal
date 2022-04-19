@@ -1,0 +1,71 @@
+// IMPORTAR
+
+@import "colores";
+
+/*Detalles gráficos
+
+tipografías:
+    font-family: 'Righteous', cursive;
+    font-family: 'Kanit', sans-serif;
+*/
+
+@font-face {
+    font-family: Righteous;
+    src: url(../assets/fonts/Righteous-Regular.ttf); 
+}
+@font-face {
+    font-family: Kanit;
+    src: url(../assets/fonts/Kanit-Italic.ttf);
+}
+
+// Variables TIPOGRAFIA
+$Righteous: Righteous;
+$Kanit: Kanit;
+
+// H1 -- Titulo Empresa
+.tituloEmpresa{
+    margin-left: 2%;
+    font-size: 4.5rem;
+    color: $morado; 
+}
+h2, h4{
+    color: $morado;
+    width: 100%;
+    padding: 1%;
+}
+// PARRAFO
+p{
+    padding: 2%;
+    width: 100%;
+    letter-spacing: 25%;
+    font-weight: bold;
+    text-align: justify;
+    font-size: 1rem;
+}
+//Seccion Hombres y mujeres
+.shirt__info{
+    p{
+        color: $morado;
+    }
+}
+// seccion carrito
+.shopping{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $morado;
+    font-size: 2.5rem;
+}
+.purchase__total{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+//FOOTER 
+footer{
+    p{
+        color: $snow;
+        font-weight: lighter;
+    }
+}
