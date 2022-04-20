@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/*AFECTA TODAS LAS PAGINAS*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 /*Detalles gráficos
 
 tipografías:
@@ -236,6 +243,52 @@ footer {
   margin: 5%;
 }
 
+.logoCompra {
+  margin: 5%;
+  animation: desaparecer 4s;
+  animation-delay: 4s;
+}
+
+@keyframes desaparecer {
+  25% {
+    animation-timing-function: ease-out;
+    transform: translate(400%);
+  }
+  45% {
+    transform: translate(400%);
+  }
+  60% {
+    transform: translate(400%);
+  }
+  80% {
+    animation-timing-function: cubic-bezier(0, 0, 0.6, 1);
+    transform: rotate(-360deg);
+    opacity: 0.2;
+  }
+  100% {
+    animation-timing-function: linear;
+    opacity: 0.8;
+    transform: rotate(360deg);
+  }
+}
+.logoEmpresa {
+  margin: 5%;
+}
+.logoEmpresa:hover {
+  transform: translate(-43%, 28%);
+}
+
+.socialMedia a, .socialMedia svg {
+  margin-right: 0.7%;
+}
+.socialMedia a:hover, .socialMedia svg:hover {
+  transform: scale(2);
+}
+
+.payment img {
+  margin-right: 0.7%;
+}
+
 .imagenHombre {
   margin: 2%;
 }
@@ -326,52 +379,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-}
-
-.logoCompra {
-  margin: 5%;
-  animation: desaparecer 4s;
-  animation-delay: 4s;
-}
-
-@keyframes desaparecer {
-  25% {
-    animation-timing-function: ease-out;
-    transform: translate(400%);
-  }
-  45% {
-    transform: translate(400%);
-  }
-  60% {
-    transform: translate(400%);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 0, 0.6, 1);
-    transform: rotate(-360deg);
-    opacity: 0.2;
-  }
-  100% {
-    animation-timing-function: linear;
-    opacity: 0.8;
-    transform: rotate(360deg);
-  }
-}
-.logoEmpresa {
-  margin: 5%;
-}
-.logoEmpresa:hover {
-  transform: translate(-43%, 28%);
-}
-
-.socialMedia a, .socialMedia svg {
-  margin-right: 0.7%;
-}
-.socialMedia a:hover, .socialMedia svg:hover {
-  transform: scale(2);
-}
-
-.payment img {
-  margin-right: 0.7%;
 }
 
 /*# sourceMappingURL=destino.css.map */
