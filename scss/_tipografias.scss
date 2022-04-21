@@ -57,12 +57,56 @@ p{
     color: $morado;
     font-size: 2.5rem;
 }
-.purchase__total{
-    position: absolute;
-    top: 5%;
-    left: 5%;
+.secondRow{
+    h3{
+        font-size: large;
+        letter-spacing: 0.1rem;
+    }
 }
-
+.sellRow{
+    div{
+        form{
+            input{
+                width: 30%;
+                text-align: center;
+                background-color: $morado;
+                color: $snow;
+            }
+        }
+        p{
+            font-size: large;
+            font-weight: bold;
+            letter-spacing: 0.2rem;
+        }
+    }
+}
+.buying{
+    h4{
+        width: 83%;
+        align-items: center;
+        margin-left: 2%;
+        font-size: x-large;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+    }
+}
+.purchase{
+    .purchase__total{
+        font-size: xx-large;
+        font-weight: bolder;
+        letter-spacing: 0.1rem;
+        width: 50%;
+        text-align: right;
+        margin: 1%;
+    }
+    .purchase__selling{
+        font-size: x-large;
+        font-weight: bolder;
+        letter-spacing: 0.2rem;
+        width: 40%;
+        text-align: right;
+    }
+}
 //FOOTER 
 footer{
     p{

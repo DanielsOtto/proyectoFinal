@@ -53,10 +53,46 @@ p {
   font-size: 2.5rem;
 }
 
-.purchase__total {
-  position: absolute;
-  top: 5%;
-  left: 5%;
+.secondRow h3 {
+  font-size: large;
+  letter-spacing: 0.1rem;
+}
+
+.sellRow div form input {
+  width: 30%;
+  text-align: center;
+  background-color: #470147;
+  color: #FFFAFA;
+}
+.sellRow div p {
+  font-size: large;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+.buying h4 {
+  width: 83%;
+  align-items: center;
+  margin-left: 2%;
+  font-size: x-large;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.purchase .purchase__total {
+  font-size: xx-large;
+  font-weight: bolder;
+  letter-spacing: 0.1rem;
+  width: 50%;
+  text-align: right;
+  margin: 1%;
+}
+.purchase .purchase__selling {
+  font-size: x-large;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+  width: 40%;
+  text-align: right;
 }
 
 footer p {
@@ -91,9 +127,8 @@ footer p {
 }
 
 .purchase__btn {
-  position: absolute;
-  bottom: 5%;
-  width: 70%;
+  width: 90%;
+  height: 18%;
   margin: 2%;
   text-align: center;
   background-color: #470147;
@@ -108,6 +143,77 @@ footer p {
   justify-content: space-evenly;
 }
 
+.imagenHombre {
+  margin: 2%;
+}
+.imagenHombre:hover {
+  animation: lateralH 3s;
+  animation-delay: 2s;
+}
+
+@keyframes lateralH {
+  25% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    border: #FF7F50 1rem double;
+  }
+  75% {
+    transform: translateX(100px);
+  }
+}
+.imagenMujer {
+  margin: 2%;
+}
+.imagenMujer:hover {
+  animation: lateralM 3s;
+  animation-delay: 2s;
+}
+
+@keyframes lateralM {
+  25% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    border: #470147 1.2rem double;
+  }
+  75% {
+    transform: translateX(-100px);
+  }
+}
+.imgRopa {
+  width: 220px;
+  height: 250px;
+}
+.imgRopa:hover {
+  transform: scale(1.7);
+}
+
+.sellRow div img {
+  width: 160px;
+  height: 160px;
+}
+
+.navbar-nav li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.lastRow div a {
+  width: 50%;
+  height: 10%;
+  margin: 2%;
+  text-align: center;
+  text-decoration: none;
+  color: #470147;
+  font-size: x-large;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+}
+
 /* ESTRUCTURAS GLOBALES */
 body {
   overflow-x: hidden;
@@ -117,12 +223,6 @@ body {
 
 header, .backg-nav {
   background-color: #FF7F50;
-}
-
-.navbar-nav li a {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1rem;
 }
 
 .titleBox, .logoBox {
@@ -188,39 +288,43 @@ footer {
 
 /* Seccion CARRITO*/
 .carrito__fila {
-  margin: 5px;
-  height: 170px;
-}
-.carrito__fila div {
-  padding: 5px;
-  height: 200px;
+  margin: 1%;
+  padding: 2%;
+  height: 7rem;
 }
 
 .secondRow {
-  height: 500px;
+  height: 4rem;
+  display: flex;
+  align-items: center;
 }
 
-.purchase, .buying {
-  margin: 1%;
+.sellRow {
+  height: 15rem;
+}
+
+.lastRow {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buying {
+  height: 100%;
+  width: 125%;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 90%;
+  justify-content: space-evenly;
 }
 
 .purchase {
-  position: relative;
-}
-
-.buying a {
-  width: 70%;
-  margin: 2%;
-  text-align: center;
-  background-color: #470147;
-  color: #FFFAFA;
-  text-decoration: none;
+  height: 100%;
+  width: 125%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
 }
 
 /* AFECTA SECCION CONTACTO*/
@@ -246,7 +350,6 @@ footer {
 .logoCompra {
   margin: 5%;
   animation: desaparecer 4s;
-  animation-delay: 4s;
 }
 
 @keyframes desaparecer {
@@ -303,7 +406,7 @@ footer {
   }
   50% {
     transform: scale(1.2);
-    border: #FFDEB5 1rem double;
+    border: #FF7F50 1rem double;
   }
   75% {
     transform: translateX(100px);
@@ -337,6 +440,11 @@ footer {
   transform: scale(1.7);
 }
 
+.sellRow div img {
+  width: 160px;
+  height: 160px;
+}
+
 .btn {
   width: 30%;
   text-transform: uppercase;
@@ -364,9 +472,8 @@ footer {
 }
 
 .purchase__btn {
-  position: absolute;
-  bottom: 5%;
-  width: 70%;
+  width: 90%;
+  height: 18%;
   margin: 2%;
   text-align: center;
   background-color: #470147;
