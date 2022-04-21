@@ -42,6 +42,7 @@ header{
 }
 .logoCompra{
     animation: desaparecer 4s;
+    animation-delay: 2s;
 }
 @keyframes desaparecer {
     25% {
@@ -192,16 +193,37 @@ header{
 /* Seccion CARRITO*/
 .carrito__fila{
     margin: 2%;
-    height: 10.625rem;
-}
-.carrito__fila div{
     padding: 2%;
 }
-.secondRow{
-    height: 31.25rem;
+.firstRow{
+    height: 7rem;
 }
-.thirdRow{
-    height: 12rem;
+.secondRow{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+.secondRow h3{
+    font-size: medium;
+}
+.sellRow{
+    height: 15rem;
+}
+.sellRow img{
+    height: 180px;
+    width: 180px;
+}
+.columnB, .columnC{
+    display: flex;
+    align-items: center;
+}
+.columnB form{
+    width: 40%;
+}
+.subPrice{
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: 0.1rem;
 }
 .shopping{
     display: flex;
@@ -210,19 +232,40 @@ header{
     color: #470147;
     font-size: 2.5rem;
 }
-.purchase, .buying{
-    margin: 2%;
+.lastRow{
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    justify-content: space-around;
+}
+.buying{
+    width: 120%;
+    height: 95%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 90%;
 }
+.purchase{
+    width: 120%;
+    height: 95%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .purchase h2, .buying h4{
     color: #470147;
-    width: 100%;
-    padding: 1%;
+    width: 70%;
+    margin: 2%;
+    padding: 2%;
+}
+.purchase__selling{
+    font-size: xx-large;
+    font-weight: bolder;
+    letter-spacing: 0.3rem;
+    margin: 5%;
 }
 .purchase__btn, .buying a{
     width: 70%;
@@ -232,18 +275,7 @@ header{
     color: #FFFAFA;
     text-decoration: none;
 }
-.purchase{
-    position: relative;
-}
-.purchase__total{
-    position: absolute;
-    top: 5%;
-    left: 5%;
-}
-.purchase__btn{
-    position: absolute;
-    bottom: 5%;
-}
+
 /*Seccion CONTACTO*/
 .g-2{
     margin: 1%;

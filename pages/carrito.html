@@ -80,23 +80,53 @@
 	</nav>
 	<!-- FIN nav // INICIO main-->
 	<main class="container">
-		<div class="row carrito__fila">
+		<div class="row carrito__fila firstRow">
 			<div class="col-lg-12 col-12">
 				<h2 class="shopping">Carrito de compras</h2>
 			</div>
 		</div>
-		<div class="row carrito__fila align-items-start secondRow">
-			<div class="col-lg-6 col-4">
+
+		<div class="row carrito__fila secondRow">
+			<div class="col-lg-6 col-6">
 				<h3 class="item">Items</h3>
 			</div>
-			<div class="col-lg-3 col-4">
-				<h3 class="quantity">Cantidad</h3>
+			<div class="col-lg-3 col-3">
+				<h3 class="quantity">Cant.</h3>
 			</div>
-			<div class="col-lg-3 col-4">
+			<div class="col-lg-3 col-3">
 				<h3 class="subtotal">Subtotal</h3>
 			</div>
 		</div>
-		<div class="row carrito__fila thirdRow">
+
+		<div class="row carrito__fila sellRow">
+			<div class="col-lg-6 col-6 columnA">
+				<img src="../assets/images/hombre/remera_moon.jpg" alt="remera espacial">
+			</div>
+			<div class="col-lg-3 col-4 columnB">
+				<form>
+					<input type="number" class="form-control" placeholder="1" value="3">
+				</form>
+			</div>
+			<div class="col-lg-3 col-2 columnC">
+				<p class="subPrice">$9.400</h3>
+			</div>
+		</div>
+
+		<div class="row carrito__fila sellRow">
+			<div class="col-lg-6 col-6 columnA">
+				<img src="../assets/images/mujer/cheshire.jpg" alt="remera espacial">
+			</div>
+			<div class="col-lg-3 col-4 columnB">
+				<form>
+					<input type="number" class="form-control" placeholder="1" value="2">
+				</form>
+			</div>
+			<div class="col-lg-3 col-2 columnC">
+				<p class="subPrice">$8.000</h3>
+			</div>
+		</div>
+
+		<div class="row carrito__fila lastRow">
 			<div class="col-lg-4 col-4">
 				<section class="buying">
 					<h4>Continuar comprando</h4>
@@ -104,9 +134,10 @@
 					<a href="mujeres.html">MUJER</a>
 				</section>
 			</div>
-			<div class="offset-lg-4 col-lg-4 offset-4 col-4 ">
+			<div class="col-lg-4 col-4 ">
 				<section class="purchase">
 					<h2 class="purchase__total">TOTAL:</h2>
+					<p class="purchase__selling"> $17.400 </p>
 					<button class="purchase__btn">FINALIZAR PEDIDO</button>
 				</section>
 			</div>
