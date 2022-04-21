@@ -10,3 +10,6 @@ En la página Index, el titulo principal es afectado por una animación externa.
 acceder a las secciones Hombre y Mujer se moveran, debido a animaciones internas (lateralH / lateralM).
 
 Por último, en la seccion Hombre, las imágenes de las prendas y el botón que se encuentra en la parte inferior del main, se agrandarán ya que poseen un scale.
+
+
+V 4.2 Actualizada la sección "Carro de compras". Ahora contiene una simulación de compra.
