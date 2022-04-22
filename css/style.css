@@ -140,6 +140,7 @@ header{
 }
 .shirt img:hover{
     transform: scale(1.7);
+    box-shadow: 0 0 0.8rem #FF7F50;
 }
 .shirt__info{
     width: 50%;
@@ -271,12 +272,15 @@ header{
     margin: 5%;
 }
 .purchase__btn, .buying a{
-    width: 70%;
     margin: 2%;
-    text-align: center;
+    text-align: center;   
+    color: #470147;
+    text-decoration: none;
+}
+
+.purchase__btn:hover, .buying a:hover{
     background-color: #470147;
     color: #FFFAFA;
-    text-decoration: none;
 }
 
 /*Seccion CONTACTO*/
@@ -291,7 +295,7 @@ header{
     font-variant-caps: petite-caps;
     letter-spacing: 1px;
 }
-.btn{
+.btnOptions{
     width: 100%;
     display: flex;
     align-items: center;
