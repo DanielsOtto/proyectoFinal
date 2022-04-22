@@ -1,0 +1,37 @@
+/* AFECTA SECCIONES HOMBRES Y MUJERES */
+.indumentaria__h, .indumentaria__m{
+    .row{
+        margin: 3% 1%;
+    }
+}
+.shirt{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 4%;
+    padding: 1%;
+}
+.shirt__info{
+    width: 50%;
+    padding: 2%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: flex-start;
+    form{
+        width: 100%;
+        margin-left: 4%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        fieldset{
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            label{
+                margin: 0 10%;
+            }
+        }
+    }
+}

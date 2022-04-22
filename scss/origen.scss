@@ -1,7 +1,14 @@
-// IMPORTAR 
-@import "reset";
-@import "estructuras";
-@import "logos";
-@import "imagenes";
-@import "botones";
+// IMPORTAR
 
+@import "../scss/utilities.scss/reset";
+@import "../scss/utilities.scss/colores";
+@import "../scss/utilities.scss/tipografias";
+@import "../scss/components.scss/imagenes";
+@import "../scss/components.scss/logos";
+@import "../scss/components.scss/botones";
+
+@import "../scss/components.scss/sharedStructures";
+@import "../scss/components.scss/indexMain";
+@import "../scss/components.scss/menAndWomen";
+@import "../scss/components.scss/carrito";
+@import "../scss/components.scss/contactos";

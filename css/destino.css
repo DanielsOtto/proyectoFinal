@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*AFECTA TODAS LAS PAGINAS*/
+/* RESET: AFECTA TODAS LAS PAGINAS*/
 * {
   margin: 0px;
   padding: 0px;
@@ -7,6 +7,14 @@
 }
 
 /*Detalles gráficos
+
+colores HEXA:
+    coral #FF7F50
+    moccasin #FFDEB5
+    morado oscuro #470147
+    blanco #FFFAFA
+*/
+/* Detalles gráficos
 
 tipografías:
     font-family: 'Righteous', cursive;
@@ -100,6 +108,107 @@ footer p {
   font-weight: lighter;
 }
 
+/* AFECTA  IMAGENES */
+.imagenHombre {
+  margin: 2%;
+}
+.imagenHombre:hover {
+  animation: lateralH 3s;
+  animation-delay: 2s;
+}
+
+@keyframes lateralH {
+  25% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    border: #FF7F50 1rem double;
+  }
+  75% {
+    transform: translateX(100px);
+  }
+}
+.imagenMujer {
+  margin: 2%;
+}
+.imagenMujer:hover {
+  animation: lateralM 3s;
+  animation-delay: 2s;
+}
+
+@keyframes lateralM {
+  25% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    border: #470147 1.2rem double;
+  }
+  75% {
+    transform: translateX(-100px);
+  }
+}
+.imgRopa {
+  width: 220px;
+  height: 220px;
+}
+.imgRopa:hover {
+  transform: scale(1.7);
+}
+
+.sellRow div img {
+  width: 160px;
+  height: 160px;
+}
+
+/* INICIO  LOGOS */
+.logoCompra {
+  margin: 5%;
+  animation: desaparecer 4s;
+}
+
+@keyframes desaparecer {
+  25% {
+    animation-timing-function: ease-out;
+    transform: translate(400%);
+  }
+  45% {
+    transform: translate(400%);
+  }
+  60% {
+    transform: translate(400%);
+  }
+  80% {
+    animation-timing-function: cubic-bezier(0, 0, 0.6, 1);
+    transform: rotate(-360deg);
+    opacity: 0.2;
+  }
+  100% {
+    animation-timing-function: linear;
+    opacity: 0.8;
+    transform: rotate(360deg);
+  }
+}
+.logoEmpresa {
+  margin: 5%;
+}
+.logoEmpresa:hover {
+  transform: translate(-43%, 28%);
+}
+
+.socialMedia a, .socialMedia svg {
+  margin-right: 0.7%;
+}
+.socialMedia a:hover, .socialMedia svg:hover {
+  transform: scale(2);
+}
+
+.payment img {
+  margin-right: 0.7%;
+}
+
+/* INICIO  BOTONES */
 .btn {
   width: 30%;
   text-transform: uppercase;
@@ -143,84 +252,15 @@ footer p {
   justify-content: space-evenly;
 }
 
-.imagenHombre {
-  margin: 2%;
-}
-.imagenHombre:hover {
-  animation: lateralH 3s;
-  animation-delay: 2s;
-}
-
-@keyframes lateralH {
-  25% {
-    transform: scale(0.5);
-  }
-  50% {
-    transform: scale(1.2);
-    border: #FF7F50 1rem double;
-  }
-  75% {
-    transform: translateX(100px);
-  }
-}
-.imagenMujer {
-  margin: 2%;
-}
-.imagenMujer:hover {
-  animation: lateralM 3s;
-  animation-delay: 2s;
-}
-
-@keyframes lateralM {
-  25% {
-    transform: scale(0.5);
-  }
-  50% {
-    transform: scale(1.2);
-    border: #470147 1.2rem double;
-  }
-  75% {
-    transform: translateX(-100px);
-  }
-}
-.imgRopa {
-  width: 220px;
-  height: 250px;
-}
-.imgRopa:hover {
-  transform: scale(1.7);
-}
-
-.sellRow div img {
-  width: 160px;
-  height: 160px;
-}
-
-.navbar-nav li a {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.lastRow div a {
-  width: 50%;
-  height: 10%;
-  margin: 2%;
-  text-align: center;
-  text-decoration: none;
-  color: #470147;
-  font-size: x-large;
-  font-weight: bolder;
-  letter-spacing: 0.2rem;
-}
-
 /* ESTRUCTURAS GLOBALES */
+/* BODY */
 body {
   overflow-x: hidden;
   font-family: Righteous, sans-serif;
   background-color: #FFDEB5;
 }
 
+/* HEADER */
 header, .backg-nav {
   background-color: #FF7F50;
 }
@@ -231,7 +271,14 @@ header, .backg-nav {
   justify-content: center;
 }
 
-/*Inicio FOOTER*/
+/* NAV */
+.navbar-nav li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* FOOTER */
 footer {
   background-color: #470147;
   font-family: Kanit;
@@ -245,6 +292,7 @@ footer {
   margin: 5% 2%;
 }
 
+/* FIN ESTRUCTURAS GLOBALES*/
 /*AFECTA SECCION INDEX*/
 .imageBox {
   display: flex;
@@ -253,6 +301,10 @@ footer {
 }
 
 /* AFECTA SECCIONES HOMBRES Y MUJERES */
+.indumentaria__h .row, .indumentaria__m .row {
+  margin: 3% 1%;
+}
+
 .shirt {
   display: flex;
   align-items: center;
@@ -310,6 +362,18 @@ footer {
   justify-content: space-around;
 }
 
+.lastRow div a {
+  width: 50%;
+  height: 10%;
+  margin: 2%;
+  text-align: center;
+  text-decoration: none;
+  color: #470147;
+  font-size: x-large;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+}
+
 .buying {
   height: 100%;
   width: 125%;
@@ -345,147 +409,6 @@ footer {
 .ubication {
   text-align: center;
   margin: 5%;
-}
-
-.logoCompra {
-  margin: 5%;
-  animation: desaparecer 4s;
-}
-
-@keyframes desaparecer {
-  25% {
-    animation-timing-function: ease-out;
-    transform: translate(400%);
-  }
-  45% {
-    transform: translate(400%);
-  }
-  60% {
-    transform: translate(400%);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 0, 0.6, 1);
-    transform: rotate(-360deg);
-    opacity: 0.2;
-  }
-  100% {
-    animation-timing-function: linear;
-    opacity: 0.8;
-    transform: rotate(360deg);
-  }
-}
-.logoEmpresa {
-  margin: 5%;
-}
-.logoEmpresa:hover {
-  transform: translate(-43%, 28%);
-}
-
-.socialMedia a, .socialMedia svg {
-  margin-right: 0.7%;
-}
-.socialMedia a:hover, .socialMedia svg:hover {
-  transform: scale(2);
-}
-
-.payment img {
-  margin-right: 0.7%;
-}
-
-.imagenHombre {
-  margin: 2%;
-}
-.imagenHombre:hover {
-  animation: lateralH 3s;
-  animation-delay: 2s;
-}
-
-@keyframes lateralH {
-  25% {
-    transform: scale(0.5);
-  }
-  50% {
-    transform: scale(1.2);
-    border: #FF7F50 1rem double;
-  }
-  75% {
-    transform: translateX(100px);
-  }
-}
-.imagenMujer {
-  margin: 2%;
-}
-.imagenMujer:hover {
-  animation: lateralM 3s;
-  animation-delay: 2s;
-}
-
-@keyframes lateralM {
-  25% {
-    transform: scale(0.5);
-  }
-  50% {
-    transform: scale(1.2);
-    border: #470147 1.2rem double;
-  }
-  75% {
-    transform: translateX(-100px);
-  }
-}
-.imgRopa {
-  width: 220px;
-  height: 250px;
-}
-.imgRopa:hover {
-  transform: scale(1.7);
-}
-
-.sellRow div img {
-  width: 160px;
-  height: 160px;
-}
-
-.btn {
-  width: 30%;
-  text-transform: uppercase;
-  font-weight: bolder;
-  letter-spacing: 0.17rem;
-}
-
-.shirt__info form input, .shirt__info form select {
-  height: 30%;
-  width: 47%;
-  padding: 0.6%;
-  margin: 1%;
-  background-color: #470147;
-  color: #FFFAFA;
-  font-size: 0.7rem;
-  text-align: center;
-}
-
-.upBtn {
-  padding: 5%;
-  text-align: center;
-}
-.upBtn svg:hover {
-  transform: scale(1.7);
-}
-
-.purchase__btn {
-  width: 90%;
-  height: 18%;
-  margin: 2%;
-  text-align: center;
-  background-color: #470147;
-  color: #FFFAFA;
-  text-decoration: none;
-}
-
-.btnCajita {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
 }
 
 /*# sourceMappingURL=destino.css.map */

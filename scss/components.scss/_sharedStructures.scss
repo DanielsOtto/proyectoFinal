@@ -1,0 +1,40 @@
+/* ESTRUCTURAS GLOBALES */
+
+/* BODY */
+body{
+    overflow-x: hidden;
+    font-family: $Righteous, sans-serif;
+    background-color: $mocasin ;
+}
+/* HEADER */
+header, .backg-nav{
+    background-color: $coral; 
+}
+.titleBox, .logoBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* NAV */
+.navbar-nav{
+    li{
+        a{
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    }
+}
+/* FOOTER */
+footer{
+    background-color: $morado;
+    font-family: $Kanit;
+    color: $snow;
+    bottom: 0;
+    margin-top: auto;
+}
+.delivery, .createdBy, .socialMedia, .payment{
+    text-align: center;
+    margin: 5% 2%;
+}
+/* FIN ESTRUCTURAS GLOBALES*/
