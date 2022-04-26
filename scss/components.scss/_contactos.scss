@@ -1,6 +1,6 @@
 /* AFECTA SECCION CONTACTO*/
 .formContacto{
-    margin: 1%;
+    margin: map-get($styleBoxs, onePercent);
 }
 .rowContact{
     div{
@@ -11,12 +11,12 @@
 }
 .message{
     textarea{
-        font-weight: bold;
+        font-weight: map-get($stylesFont, fontWeight);
         font-variant-caps: petite-caps;
-        letter-spacing: 1px;
+        letter-spacing: map-get($stylesFont, letterSpaceXS);
     }
 }
 .ubication{
-    text-align: center;
+    text-align: map-get($styleBoxs, textCentro);
     margin: 5%;
 }

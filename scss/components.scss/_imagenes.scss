@@ -41,8 +41,7 @@
 
 // AFECTA SECCIONES HOMBRES Y MUJERES
 .imgRopa{
-    width: 220px;
-    height: 220px;
+    @include medidasGlobal(220px, 220px);
     &:hover{
         transform: scale(1.7);
     }
@@ -52,8 +51,7 @@
 .sellRow{
     div{
         img{
-            width: 160px;
-            height: 160px;
+            @include medidasGlobal(160px, 160px);
         }
     }
 }

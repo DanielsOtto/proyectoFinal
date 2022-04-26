@@ -1,12 +1,17 @@
 // IMPORTAR
 
+// Imports Utilities
 @import "../scss/utilities.scss/reset";
 @import "../scss/utilities.scss/colores";
+@import "../scss/utilities.scss/funciones";
 @import "../scss/utilities.scss/tipografias";
+
+// Imports Components 
 @import "../scss/components.scss/imagenes";
 @import "../scss/components.scss/logos";
 @import "../scss/components.scss/botones";
 
+// Imports Components ESTRUCTURAS
 @import "../scss/components.scss/sharedStructures";
 @import "../scss/components.scss/indexMain";
 @import "../scss/components.scss/menAndWomen";

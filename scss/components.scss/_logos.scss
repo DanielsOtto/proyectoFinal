@@ -35,8 +35,11 @@
 
 // FOOTER
 .socialMedia{
-    a, svg{
-        margin-right: 0.7%;
+    a{
+        margin: 0.7%;
+        text-decoration: none;
+    }
+    svg{
         &:hover{
             transform: scale(2);
         }

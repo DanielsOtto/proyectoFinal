@@ -14,6 +14,7 @@ colores HEXA:
     morado oscuro #470147
     blanco #FFFAFA
 */
+/* FUNCIONES */
 /* Detalles gráficos
 
 tipografías:
@@ -29,7 +30,7 @@ tipografías:
   src: url(../assets/fonts/Kanit-Italic.ttf);
 }
 .tituloEmpresa {
-  margin-left: 2%;
+  margin: 1% 2%;
   font-size: 4.5rem;
   color: #470147;
 }
@@ -43,7 +44,7 @@ h2, h4 {
 p {
   padding: 2%;
   width: 100%;
-  letter-spacing: 25%;
+  letter-spacing: 0.18rem;
   font-weight: bold;
   text-align: justify;
   font-size: 1rem;
@@ -55,6 +56,8 @@ p {
 
 .shopping {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   color: #470147;
@@ -63,7 +66,7 @@ p {
 
 .secondRow h3 {
   font-size: large;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.08rem;
 }
 
 .sellRow div form input {
@@ -75,35 +78,36 @@ p {
 .sellRow div p {
   font-size: large;
   font-weight: bold;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.18rem;
 }
 
 .buying h4 {
   width: 83%;
   align-items: center;
   margin-left: 2%;
-  font-size: x-large;
+  font-size: large;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.18rem;
 }
 
-.purchase .purchase__total {
+.purchase .purchase__total, .buying .purchase__total {
   font-size: xx-large;
   font-weight: bolder;
-  letter-spacing: 0.1rem;
-  width: 50%;
+  letter-spacing: 0.08rem;
+  width: auto;
   text-align: right;
   margin: 1%;
 }
-.purchase .purchase__selling {
+.purchase .purchase__selling, .buying .purchase__selling {
   font-size: x-large;
   font-weight: bolder;
-  letter-spacing: 0.2rem;
-  width: 40%;
+  letter-spacing: 0.18rem;
+  width: auto;
   text-align: right;
 }
 
 footer p {
+  font-family: Kanit;
   color: #FFFAFA;
   font-weight: lighter;
 }
@@ -197,10 +201,11 @@ footer p {
   transform: translate(-43%, 28%);
 }
 
-.socialMedia a, .socialMedia svg {
-  margin-right: 0.7%;
+.socialMedia a {
+  margin: 0.7%;
+  text-decoration: none;
 }
-.socialMedia a:hover, .socialMedia svg:hover {
+.socialMedia svg:hover {
   transform: scale(2);
 }
 
@@ -209,21 +214,21 @@ footer p {
 }
 
 /* INICIO  BOTONES */
-.btn {
+.btnNav {
   width: 30%;
   text-transform: uppercase;
   font-weight: bolder;
-  letter-spacing: 0.17rem;
+  letter-spacing: 0.18rem;
 }
 
-.shirt__info form input, .shirt__info form select {
-  height: 30%;
+.btnCompras, .listaTalles {
   width: 47%;
-  padding: 0.6%;
+  height: 30%;
   margin: 1%;
-  background-color: #470147;
   color: #FFFAFA;
-  font-size: 0.7rem;
+  padding: 0.6%;
+  background-color: #470147;
+  font-size: 0.75rem;
   text-align: center;
 }
 
@@ -235,21 +240,34 @@ footer p {
   transform: scale(1.7);
 }
 
+.buying__a {
+  width: 60%;
+  height: 12%;
+  margin: 1% 2%;
+  color: #470147;
+  text-align: center;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bolder;
+  letter-spacing: 0.18rem;
+}
+
 .purchase__btn {
-  width: 90%;
+  width: auto;
   height: 18%;
   margin: 2%;
-  text-align: center;
-  background-color: #470147;
   color: #FFFAFA;
-  text-decoration: none;
+  background-color: #470147;
 }
 
 .btnCajita {
   width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 /* ESTRUCTURAS GLOBALES */
@@ -261,12 +279,18 @@ body {
 }
 
 /* HEADER */
-header, .backg-nav {
+header {
+  background-color: #FF7F50;
+}
+
+.backg-nav {
   background-color: #FF7F50;
 }
 
 .titleBox, .logoBox {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
 }
@@ -281,13 +305,11 @@ header, .backg-nav {
 /* FOOTER */
 footer {
   background-color: #470147;
-  font-family: Kanit;
-  color: #FFFAFA;
   bottom: 0;
   margin-top: auto;
 }
 
-.delivery, .createdBy, .socialMedia, .payment {
+.delivery, .payment, .socialMedia, .createdBy {
   text-align: center;
   margin: 5% 2%;
 }
@@ -296,17 +318,22 @@ footer {
 /*AFECTA SECCION INDEX*/
 .imageBox {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
 /* AFECTA SECCIONES HOMBRES Y MUJERES */
-.indumentaria__h .row, .indumentaria__m .row {
+.rowShirts {
   margin: 3% 1%;
+  box-shadow: 0 0 0.3rem #FF7F50;
 }
 
 .shirt {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-around;
   margin: 4%;
@@ -317,25 +344,19 @@ footer {
   width: 50%;
   padding: 2%;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  align-content: flex-start;
+  justify-content: flex-start;
 }
 .shirt__info form {
   width: 100%;
-  margin-left: 4%;
+  margin-left: 3%;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-}
-.shirt__info form fieldset {
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-}
-.shirt__info form fieldset label {
-  margin: 0 10%;
 }
 
 /* Seccion CARRITO*/
@@ -347,8 +368,6 @@ footer {
 
 .secondRow {
   height: 4rem;
-  display: flex;
-  align-items: center;
 }
 
 .sellRow {
@@ -359,36 +378,24 @@ footer {
   width: 100%;
   height: 20rem;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.lastRow div a {
-  width: 50%;
-  height: 10%;
-  margin: 2%;
-  text-align: center;
-  text-decoration: none;
-  color: #470147;
-  font-size: x-large;
-  font-weight: bolder;
-  letter-spacing: 0.2rem;
+.purchase, .buying {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .buying {
-  height: 100%;
-  width: 125%;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
   justify-content: space-evenly;
-}
-
-.purchase {
-  height: 100%;
-  width: 125%;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
 }
 
 /* AFECTA SECCION CONTACTO*/
@@ -403,11 +410,10 @@ footer {
 .message textarea {
   font-weight: bold;
   font-variant-caps: petite-caps;
-  letter-spacing: 1px;
+  letter-spacing: 0.08rem;
 }
 
 .ubication {
-  text-align: center;
   margin: 5%;
 }
 

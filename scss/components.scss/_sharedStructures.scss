@@ -4,23 +4,28 @@
 body{
     overflow-x: hidden;
     font-family: $Righteous, sans-serif;
-    background-color: $mocasin ;
+    background-color: $mocasin;
 }
 /* HEADER */
-header, .backg-nav{
+header{
     background-color: $coral; 
 }
-.titleBox, .logoBox{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.backg-nav{
+    background-color: $coral;
 }
+.titleBox{
+    @include displayFlex (flex, row, nowrap, center, center);
+}
+.logoBox{
+    @extend .titleBox;
+}
+// NAV deberia ir en tipografias, pero lo dejo aca para mantener cierto orden
 /* NAV */
 .navbar-nav{
     li{
         a{
             text-transform: uppercase;
-            font-weight: bold;
+            font-weight:  map-get($stylesFont, fontWeight);
             font-size: 1rem;
         }
     }
@@ -28,13 +33,21 @@ header, .backg-nav{
 /* FOOTER */
 footer{
     background-color: $morado;
-    font-family: $Kanit;
-    color: $snow;
     bottom: 0;
     margin-top: auto;
 }
-.delivery, .createdBy, .socialMedia, .payment{
-    text-align: center;
+.delivery{
+    text-align: map-get($stylesFont, textCentro);
     margin: 5% 2%;
 }
+.createdBy{
+    @extend .delivery;
+}
+.socialMedia{
+    @extend .delivery;
+}
+.payment{
+    @extend .delivery;
+}
+
 /* FIN ESTRUCTURAS GLOBALES*/

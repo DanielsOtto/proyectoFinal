@@ -1,0 +1,50 @@
+/* FUNCIONES */
+
+// Mixins 
+
+
+// Función básica
+@mixin medidasGlobal ($widthG, $heightG) {
+    width: $widthG;
+    height: $heightG;
+}
+
+@mixin displayFlex ($displayF, $directionF, $wrapF, $alignIF, $justifyCF) {
+    display: $displayF;
+    flex-direction: $directionF;
+    flex-wrap: $wrapF;
+    align-items: $alignIF;
+    justify-content: $justifyCF;
+}
+
+// Se ejecuta en las secciones Carrito / Hombres / Mujeres
+// Ajustes Boton + Enlaces
+@mixin settingsBtnEns ($widthSett, $heightSett, $marginSett, $colorSett){
+    width: $widthSett;
+    height: $heightSett;
+    margin: $marginSett;
+    color: $colorSett;
+}
+
+// Estilos con Maps 
+
+$styleBoxs:(
+    margiN: 3% 1%,
+    onePercent: 1%,
+    widthSmall: 30%,
+    widthMed: 50%,
+    widhBig: 75%,
+);
+
+$stylesFont:(
+    textCentro: center,
+    textRight: right,
+    fontWeight: bold,
+    fontBolder: bolder,
+    fontLighter: lighter,
+    colorM: $morado,
+    colorS: $snow,
+    letterSpaceBig: 0.75rem,
+    letterSpaceSmall: 0.18rem,
+    letterSpaceXS: 0.08rem,
+);
