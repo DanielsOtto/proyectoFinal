@@ -7,3 +7,4 @@
               → Agregados MIXINS - medidasGlobal y displayFlex - medidasGlobal obtiene los valores de ancho y alto, se utiliza en fragmentos como _imágenes, _botones, _carrito. - displayFlex obtiene los valores para display, flex-direction, flex-wrap, align-items y justify-content. Se utiliza en fragmentos como _botones, _carrito, _indexMain, _MenAndWomen y _sharedStructures.
               → Agregados estilos con MAPS, creados: styleBoxs y stileFonts. Se utilizan en las fragmentos: _tipografía, _botones, _carrito, _contactos, _menAndWomen y _sharedStructures. 
 - Version 2.1 → Arreglado un error en la seccion Carrito, con la posición de la ubicación.
+- Version 2.2 → Arreglado los errores en las carpetas components y utilities.
