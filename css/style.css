@@ -39,6 +39,8 @@ header{
 }
 .logoEmpresa, .logoCompra{
     margin:5%;
+    width: 60px;
+    height: 60px;
 }
 .logoCompra{
     animation: desaparecer 4s;
@@ -326,6 +328,10 @@ footer p{
 .socialMedia, .payment{
     text-align: center;
     margin: 5% 2%;
+}
+.socialMedia a{
+    text-decoration: none;
+    font-style: none;
 }
 .socialMedia a, .payment img, .socialMedia svg{
     margin-right: 0.7%;
