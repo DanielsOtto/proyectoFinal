@@ -1,19 +1,19 @@
 // IMPORTAR
 
 // Imports Utilities
-@import "../scss/utilities.scss/reset";
-@import "../scss/utilities.scss/colores";
-@import "../scss/utilities.scss/funciones";
-@import "../scss/utilities.scss/tipografias";
+@import "../scss/utilities/reset";
+@import "../scss/utilities/colores";
+@import "../scss/utilities/funciones";
+@import "../scss/utilities/tipografias";
 
 // Imports Components 
-@import "../scss/components.scss/imagenes";
-@import "../scss/components.scss/logos";
-@import "../scss/components.scss/botones";
+@import "../scss/components/imagenes";
+@import "../scss/components/logos";
+@import "../scss/components/botones";
 
 // Imports Components ESTRUCTURAS
-@import "../scss/components.scss/sharedStructures";
-@import "../scss/components.scss/indexMain";
-@import "../scss/components.scss/menAndWomen";
-@import "../scss/components.scss/carrito";
-@import "../scss/components.scss/contactos";
+@import "../scss/components/sharedStructures";
+@import "../scss/components/indexMain";
+@import "../scss/components/menAndWomen";
+@import "../scss/components/carrito";
+@import "../scss/components/contactos";

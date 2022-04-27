@@ -9,17 +9,16 @@
 /*Detalles gráficos
 
 colores HEXA:
-    coral #FF7F50
-    moccasin #FFDEB5
-    morado oscuro #470147
-    blanco #FFFAFA
+    coral: #FF7F50
+    moccasin: #FFDEB5
+    morado: oscuro #470147
+    blanco: #FFFAFA
 */
-/* FUNCIONES */
 /* Detalles gráficos
 
 tipografías:
-    font-family: 'Righteous', cursive;
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Righteous', cursive
+    font-family: 'Kanit', sans-serif
 */
 @font-face {
   font-family: Righteous;
