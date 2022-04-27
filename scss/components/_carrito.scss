@@ -7,13 +7,37 @@
 }
 .secondRow{
     height: 4rem;
+    .colItem{
+        @include displayFlex (flex, row, nowrap, center, center);
+    }
+    .colCant{
+        @include displayFlex (flex, row, nowrap, center, center);
+    }
+    .colSbt{
+        @include displayFlex (flex, row, nowrap, center, center);
+    }
 }
 .sellRow{
     height: 15rem;
+    box-shadow: 0 0 1rem $morado;
+    margin: map-get($styleBoxs, margiN);
 }
 .lastRow{
     @include medidasGlobal (100%, 20rem);
     @include displayFlex (flex, row, nowrap, center, space-between);
+}
+.columnA{
+    @include displayFlex (flex, row, nowrap, center, space-around);
+}
+.columnB{
+    @include displayFlex (flex, row, nowrap, center, center);
+    form{
+        @include medidasGlobal (auto, auto);
+        @include displayFlex (flex, row, nowrap, center, space-between);
+    }
+}
+.columnC{
+    @include displayFlex (flex, row, nowrap, center, center);
 }
 .purchase{
     @include medidasGlobal (100%, 100%);

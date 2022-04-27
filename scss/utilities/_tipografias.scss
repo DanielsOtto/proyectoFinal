@@ -61,16 +61,17 @@ p{
     div{
         form{
             input{
-                width: 30%;
+                width: 50%;
                 text-align: map-get($stylesFont, textCentro);
                 background-color: map-get($stylesFont, colorM);
                 color: map-get($stylesFont, colorS);
             }
         }
         p{
+            width: auto;
             font-size: large;
             font-weight: map-get($stylesFont, fontWeight);
-            letter-spacing: map-get($stylesFont, letterSpaceSmall);
+            letter-spacing: map-get($stylesFont, letterSpaceXS);
         }
     }
 }

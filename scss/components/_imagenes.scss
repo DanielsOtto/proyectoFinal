@@ -1,4 +1,8 @@
 /* AFECTA  IMAGENES */
+// AFECTA HEADER
+.logoEmpresa{
+    @include medidasGlobal (60px, 60px);
+}
 // AFECTA SECCION INDEX
 .imagenHombre{
     margin: 2%;

@@ -69,15 +69,16 @@ p {
 }
 
 .sellRow div form input {
-  width: 30%;
+  width: 50%;
   text-align: center;
   background-color: #470147;
   color: #FFFAFA;
 }
 .sellRow div p {
+  width: auto;
   font-size: large;
   font-weight: bold;
-  letter-spacing: 0.18rem;
+  letter-spacing: 0.08rem;
 }
 
 .buying h4 {
@@ -112,6 +113,11 @@ footer p {
 }
 
 /* AFECTA  IMAGENES */
+.logoEmpresa {
+  width: 60px;
+  height: 60px;
+}
+
 .imagenHombre {
   margin: 2%;
 }
@@ -368,9 +374,32 @@ footer {
 .secondRow {
   height: 4rem;
 }
+.secondRow .colItem {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.secondRow .colCant {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.secondRow .colSbt {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
 
 .sellRow {
   height: 15rem;
+  box-shadow: 0 0 1rem #470147;
+  margin: 3% 1%;
 }
 
 .lastRow {
@@ -381,6 +410,39 @@ footer {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+}
+
+.columnA {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.columnB {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.columnB form {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.columnC {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .purchase, .buying {
