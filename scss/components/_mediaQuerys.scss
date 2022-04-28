@@ -49,8 +49,17 @@
     }
         // Afecta carro de compras
         .columnB{
+            form{
+                width: $widthMax;
+            }
             svg{
                 @include medidasGlobal ($widthLogoXS, $heightLogoXS);
             }
+        }
+
+        //  Afecta footer 
+
+        .payment{
+            margin: 3% 0.5%;
         }
 }

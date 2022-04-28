@@ -573,9 +573,16 @@ aside {
     justify-content: center;
   }
 
+  .columnB form {
+    width: 100%;
+  }
   .columnB svg {
     width: 30px;
     height: 30px;
+  }
+
+  .payment {
+    margin: 3% 0.5%;
   }
 }
 
