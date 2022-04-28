@@ -7,3 +7,4 @@ En esta actualización las paginas Index + Sección Hombres fueron modificadas.E
 - V 4.22 > Modificadas las secciones Hombre/Mujer + Carrito + Contacto. En las secciones H/M las imagenes tienen aplicadas un box shadow. Mientras que en las secciones Carrito y Contacto, fueron revisadas las clases. 
 - V 4.22a > Modificadas las secciones H/M, cambiados márgenes y anchos.
 - V 4.3 > Actualizado el nombre de la empresa.
+- V 4.4 > Agregado el carousel a la sección inicio.
