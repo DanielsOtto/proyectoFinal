@@ -13,3 +13,6 @@
               → Imágenes comprimidas. 
               → Agregados los meta keywords y description. Actualizados los titles de las páginas web.
 - Version 2.3b → Arreglado errores del cambio de nombre.
+- Version 3.0 → Agregado el carousel en inicio, muetra las prendas más vendidas. 
+              → Agregado los fragmentos _variables (contiene anchos y altos utilizados en imágenes) + _mediaQuerys ( contiene ajustes para las medidas 768px y 480px).
+      
