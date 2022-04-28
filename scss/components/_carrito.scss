@@ -19,7 +19,7 @@
 }
 .sellRow{
     height: 15rem;
-    box-shadow: 0 0 1rem $morado;
+    box-shadow: map-get($styleBoxs, shadowBoxMorado);
     margin: map-get($styleBoxs, margiN);
 }
 .lastRow{

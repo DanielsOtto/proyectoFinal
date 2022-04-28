@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+/*  VARIABLES  */
 /*Detalles gráficos
 
 colores HEXA:
@@ -51,6 +52,7 @@ p {
 
 .shirt__info p {
   color: #470147;
+  letter-spacing: 0.08rem;
 }
 
 .shopping {
@@ -112,7 +114,7 @@ footer p {
   font-weight: lighter;
 }
 
-/* AFECTA  IMAGENES */
+/* | IMAGENES | */
 .logoEmpresa {
   width: 60px;
   height: 60px;
@@ -171,7 +173,7 @@ footer p {
   height: 160px;
 }
 
-/* INICIO  LOGOS */
+/* | LOGOS | */
 .logoCompra {
   margin: 5%;
   animation: desaparecer 4s;
@@ -218,7 +220,7 @@ footer p {
   margin-right: 0.7%;
 }
 
-/* INICIO  BOTONES */
+/* | BOTONES | */
 .btnNav {
   width: 30%;
   text-transform: uppercase;
@@ -227,8 +229,8 @@ footer p {
 }
 
 .btnCompras, .listaTalles {
-  width: 47%;
-  height: 30%;
+  width: 25%;
+  height: 23%;
   margin: 1%;
   color: #FFFAFA;
   padding: 0.6%;
@@ -329,10 +331,38 @@ footer {
   justify-content: center;
 }
 
+.articleMan, .articleWoman {
+  padding: 1%;
+}
+
+aside {
+  box-shadow: 0 0 0.6rem #FF7F50;
+  margin: 2.5%;
+}
+
+.colCarouselTitle, .colCarousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+}
+
+.colCarouselTitle h2, .colCarousel h2 {
+  width: 50%;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.editCarousel {
+  width: 30%;
+}
+
 /* AFECTA SECCIONES HOMBRES Y MUJERES */
 .rowShirts {
   margin: 3% 1%;
-  box-shadow: 0 0 0.3rem #FF7F50;
+  box-shadow: 0 0 0.6rem #FF7F50;
 }
 
 .shirt {
@@ -346,8 +376,8 @@ footer {
 }
 
 .shirt__info {
-  width: 50%;
-  padding: 2%;
+  width: 70%;
+  padding: 1%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -477,6 +507,76 @@ footer {
 .ubication {
   text-align: center;
   margin: 5%;
+}
+
+/* MEDIA QUERYS */
+@media (max-width: 768px) {
+  .editCarousel {
+    width: 50%;
+  }
+
+  .rowShirts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imgRopa {
+    width: 160px;
+    height: 160px;
+  }
+
+  .btnCompras, .listaTalles {
+    width: 35%;
+    height: 28%;
+    margin: 1%;
+    color: #FFFAFA;
+  }
+
+  .columnB {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .columnB form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+  }
+  .columnB svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .editCarousel {
+    width: 60%;
+  }
+
+  .colCarouselTitle h2, .colCarousel h2 {
+    width: 75%;
+    font-size: large;
+  }
+
+  .shirt {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .columnB svg {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 /*# sourceMappingURL=destino.css.map */

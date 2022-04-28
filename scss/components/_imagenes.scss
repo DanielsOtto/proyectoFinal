@@ -1,7 +1,7 @@
-/* AFECTA  IMAGENES */
+/* | IMAGENES | */
 // AFECTA HEADER
 .logoEmpresa{
-    @include medidasGlobal (60px, 60px);
+    @include medidasGlobal ($widthLogo, $heightLogo);
 }
 // AFECTA SECCION INDEX
 .imagenHombre{
@@ -45,7 +45,7 @@
 
 // AFECTA SECCIONES HOMBRES Y MUJERES
 .imgRopa{
-    @include medidasGlobal(220px, 220px);
+    @include medidasGlobal($widthImageBig, $heightImageBig);
     &:hover{
         transform: scale(1.7);
     }
@@ -55,7 +55,7 @@
 .sellRow{
     div{
         img{
-            @include medidasGlobal(160px, 160px);
+            @include medidasGlobal($widthImageMedium, $heightImageMedium);
         }
     }
 }

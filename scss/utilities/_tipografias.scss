@@ -43,6 +43,7 @@ p{
 .shirt__info{
     p{
         color: map-get($stylesFont, colorM);
+        letter-spacing: map-get($stylesFont, letterSpaceXS);
     }
 }
 // seccion carrito

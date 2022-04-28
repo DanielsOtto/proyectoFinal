@@ -1,0 +1,56 @@
+/* MEDIA QUERYS */
+
+// MEDIA QUERY  x  768px
+
+@media ( max-width: 768px){
+    // Afecta Inicio
+    .editCarousel{
+        width: map-get($styleBoxs, widthMed);
+    }
+    // Afecta Hombre|Mujer
+    .rowShirts{
+        @include displayFlex (flex, row, wrap, center, center);
+    }
+    .imgRopa{
+        @include medidasGlobal ($widthImageMedium, $heightImageMedium)
+    }
+    .btnCompras{
+        @include settingsBtnEns (35%, 28%, 1%, $snow);
+    }
+    // Afecta carro de compras
+    .columnB{
+        @include displayFlex (flex, column, wrap, center, space-around);
+        form{
+            @include displayFlex (flex, row, wrap, center, center);
+            margin: 5px;
+        }
+        svg{
+            @include medidasGlobal ($widthLogoXS, $heightLogoXS);
+        }
+    }
+}
+
+// MEDIA QUERY  x  480px 
+
+@media ( max-width: 480px){
+    // Afecta Inicio
+    .editCarousel{
+        width: map-get($styleBoxs, widthSixty);
+    }
+    .colCarouselTitle{
+        h2{
+            width: map-get($styleBoxs, widhBig);
+            font-size: large;
+        }
+    }
+    // Afecta Hombre|Mujer
+    .shirt{
+        @include displayFlex (flex, column, wrap, center, center);
+    }
+        // Afecta carro de compras
+        .columnB{
+            svg{
+                @include medidasGlobal ($widthLogoXS, $heightLogoXS);
+            }
+        }
+}

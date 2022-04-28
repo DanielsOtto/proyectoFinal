@@ -3,3 +3,30 @@
 .imageBox{
     @include displayFlex (flex, column, wrap, center, center);
 }
+.articleMan{
+    padding: map-get($styleBoxs, onePercent);
+}
+.articleWoman{
+    @extend .articleMan;
+}
+aside{
+    box-shadow: map-get($styleBoxs, shadowBoxCoral);
+    margin: 2.5%;
+}
+.colCarouselTitle{
+    @include displayFlex (flex, row, nowrap, center, center);
+    margin: map-get($styleBoxs, onePercent);
+}
+.colCarousel{
+    @extend .colCarouselTitle;
+}
+.colCarouselTitle{
+    h2{
+        width: map-get($styleBoxs, widthMed);
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+}
+.editCarousel{
+    width: map-get($styleBoxs, widthSmall);
+}

@@ -1,4 +1,4 @@
-/* INICIO  BOTONES */
+/* | BOTONES | */
 
 // AFECTA NAV
 .btnNav{
@@ -11,7 +11,7 @@
 // AFECTA SECCIONES HOMBRES Y MUJERES
 
 .btnCompras{
-    @include settingsBtnEns (47%, 30%, 1%, $snow);
+    @include settingsBtnEns (25%, 23%, 1%, $snow);
     padding: 0.6%;
     background-color: $morado;
     font-size:  map-get($stylesFont, letterSpaceBig);

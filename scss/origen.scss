@@ -2,6 +2,7 @@
 
 // Imports Utilities
 @import "../scss/utilities/reset";
+@import "../scss/utilities/variables";
 @import "../scss/utilities/colores";
 @import "../scss/utilities/funciones";
 @import "../scss/utilities/tipografias";
@@ -17,3 +18,4 @@
 @import "../scss/components/menAndWomen";
 @import "../scss/components/carrito";
 @import "../scss/components/contactos";
+@import "../scss/components/mediaQuerys";
