@@ -125,6 +125,24 @@ header{
     transform: translateX(-100px);
     }
 }
+aside{
+    box-shadow: 0 0 0.3rem #FF7F50;
+    margin: 3%;
+}
+.colCarousel, .colCarouselTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+}
+.colCarouselTitle h2{
+    width: 50%;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.editCarousel{
+    width: 25%;
+}
 /*AFECTA SECCION HOMBRE y MUJER*/
 .indumentaria .row{
     margin: 5% 1%;
@@ -338,4 +356,21 @@ footer p{
 }
 .socialMedia img:hover, .socialMedia svg:hover{
     transform: scale(2);
+}
+
+/* MEDIA QUERYS*/
+
+@media ( max-width: 768px){
+    .editCarousel{
+        width: 50%;
+    }
+}
+@media ( max-width: 480px){
+    .editCarousel{
+        width: 60%;
+    }
+    .colCarouselTitle h2{
+        width: 70%;
+        font-size: large;
+    }
 }
