@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-/*  VARIABLES  */
 /*Detalles gráficos
 
 colores HEXA:
@@ -15,12 +14,13 @@ colores HEXA:
     morado: oscuro #470147
     blanco: #FFFAFA
 */
-/* Detalles gráficos
+/* Detalles gráficos 
 
 tipografías:
     font-family: 'Righteous', cursive
     font-family: 'Kanit', sans-serif
 */
+/* | TIPOGRAFÍA | */
 @font-face {
   font-family: Righteous;
   src: url(../assets/fonts/Righteous-Regular.ttf);
@@ -278,14 +278,12 @@ footer p {
 }
 
 /* ESTRUCTURAS GLOBALES */
-/* BODY */
 body {
   overflow-x: hidden;
   font-family: Righteous, sans-serif;
   background-color: #FFDEB5;
 }
 
-/* HEADER */
 header {
   background-color: #FF7F50;
 }
@@ -302,14 +300,12 @@ header {
   justify-content: center;
 }
 
-/* NAV */
 .navbar-nav li a {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1rem;
 }
 
-/* FOOTER */
 footer {
   background-color: #470147;
   bottom: 0;
@@ -321,7 +317,6 @@ footer {
   margin: 5% 2%;
 }
 
-/* FIN ESTRUCTURAS GLOBALES*/
 /*AFECTA SECCION INDEX*/
 .imageBox {
   display: flex;

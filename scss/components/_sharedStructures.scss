@@ -1,12 +1,12 @@
 /* ESTRUCTURAS GLOBALES */
 
-/* BODY */
+// BODY
 body{
     overflow-x: hidden;
     font-family: $Righteous, sans-serif;
     background-color: $mocasin;
 }
-/* HEADER */
+// HEADER
 header{
     background-color: $coral; 
 }
@@ -20,7 +20,7 @@ header{
     @extend .titleBox;
 }
 // NAV deberia ir en tipografias, pero lo dejo aca para mantener cierto orden
-/* NAV */
+// NAV
 .navbar-nav{
     li{
         a{
@@ -30,7 +30,7 @@ header{
         }
     }
 }
-/* FOOTER */
+// FOOTER
 footer{
     background-color: $morado;
     bottom: 0;
@@ -49,5 +49,3 @@ footer{
 .payment{
     @extend .delivery;
 }
-
-/* FIN ESTRUCTURAS GLOBALES*/
