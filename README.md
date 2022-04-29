@@ -16,4 +16,4 @@
 - Version 3.0 → Agregado el carousel en inicio, muetra las prendas más vendidas. 
               → Agregado los fragmentos _variables (contiene anchos y altos utilizados en imágenes) + _mediaQuerys ( contiene ajustes para las medidas 768px y 480px).
 - Version 3.0a → Solucionado errores de anchos. 
-      
+- Version 3.ab → Ajustes.
