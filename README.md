@@ -9,7 +9,7 @@
 - Version 2.1 → Arreglado un error en la seccion Carrito, con la posición de la ubicación.
 - Version 2.2 → Arreglado los errores en las carpetas components y utilities.
 
-// Entrega SASS2 + SEO 
+// Entrega SASS II + SEO 
 - Version 2.3 → Cambio de nombre de la marca. 
               → Agregado icono de tacho de basura en la sección Carro de compras. Futuro botón para cancelar la compra.
               → Imágenes comprimidas. 
