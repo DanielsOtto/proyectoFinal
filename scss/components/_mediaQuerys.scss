@@ -12,7 +12,7 @@
         @include displayFlex (flex, row, wrap, center, center);
     }
     .imgRopa{
-        @include medidasGlobal ($widthImageMedium, $heightImageMedium)
+        @include medidasGlobal ($sizeImgM, $sizeImgM)
     }
     .btnCompras{
         @include settingsBtnEns (35%, 28%, 1%, $snow);
@@ -25,7 +25,7 @@
             margin: 5px;
         }
         svg{
-            @include medidasGlobal ($widthLogoXS, $heightLogoXS);
+            @include medidasGlobal ($sizeLogoS, $sizeImgS);
         }
     }
 }
@@ -53,7 +53,7 @@
                 width: $widthMax;
             }
             svg{
-                @include medidasGlobal ($widthLogoXS, $heightLogoXS);
+                @include medidasGlobal ($sizeLogoS, $sizeLogoS);
             }
         }
 

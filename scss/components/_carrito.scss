@@ -23,7 +23,7 @@
     margin: map-get($styleBoxs, margiN);
 }
 .lastRow{
-    @include medidasGlobal (100%, 20rem);
+    @include medidasGlobal ($widthMax, 20rem);
     @include displayFlex (flex, row, nowrap, center, space-between);
 }
 .columnA{
@@ -40,7 +40,7 @@
     @include displayFlex (flex, row, nowrap, center, center);
 }
 .purchase{
-    @include medidasGlobal (100%, 100%);
+    @include medidasGlobal ($widthMax, $widthMax);
     @include displayFlex (flex, column, wrap, center, space-around);
 }
 .buying{

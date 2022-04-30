@@ -1,26 +1,39 @@
 // VARIABLES
-// Logo empresa
+// Logo
 
-$widthLogo: 60px;
-$heightLogo: 60px;
-
-$widthLogoSmall: 48px;
-$heightLogoSmall: 48px;
-
-$widthLogoXS: 30px;
-$heightLogoXS: 30px;
-
+$sizeLogoB: 60px;
+$sizeLogoM: 48px;
+$sizeLogoS: 30px;
 // Imágenes
 
-$widthImageBig: 220px;
-$heightImageBig: 220px;
-
-$widthImageMedium: 160px;
-$heightImageMedium: 160px;
-
-$widthImgSmall: 100px;
-$heightImgSmall: 100px;
-
+$sizeImgB: 220px;
+$sizeImgM: 160px;
+$sizeImgS: 100px;
 // Anchos 
 
 $widthMax: 100%; 
+// Estilos con Maps 
+
+$styleBoxs:(
+    margiN: 3% 1%,
+    onePercent: 1%,
+    widthSmall: 30%,
+    widthMed: 50%,
+    widthSixty: 60%,
+    widhBig: 75%,
+    shadowBoxCoral: 0 0 0.6rem $coral,
+    shadowBoxMorado: 0 0 1rem $morado
+);
+
+$stylesFont:(
+    textCentro: center,
+    textRight: right,
+    fontWeight: bold,
+    fontBolder: bolder,
+    fontLighter: lighter,
+    colorM: $morado,
+    colorS: $snow,
+    letterSpaceBig: 0.75rem,
+    letterSpaceSmall: 0.18rem,
+    letterSpaceXS: 0.08rem,
+);

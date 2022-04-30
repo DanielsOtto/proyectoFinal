@@ -547,7 +547,7 @@ aside {
   }
   .columnB svg {
     width: 30px;
-    height: 30px;
+    height: 100px;
   }
 }
 @media (max-width: 480px) {

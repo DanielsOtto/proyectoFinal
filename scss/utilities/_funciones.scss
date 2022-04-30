@@ -1,7 +1,6 @@
 // FUNCIONES
 // Mixins 
 
-
 // Función básica
 @mixin medidasGlobal ($widthG, $heightG) {
     width: $widthG;
@@ -24,29 +23,3 @@
     margin: $marginSett;
     color: $colorSett;
 }
-
-// Estilos con Maps 
-
-$styleBoxs:(
-    margiN: 3% 1%,
-    onePercent: 1%,
-    widthSmall: 30%,
-    widthMed: 50%,
-    widthSixty: 60%,
-    widhBig: 75%,
-    shadowBoxCoral: 0 0 0.6rem $coral,
-    shadowBoxMorado: 0 0 1rem $morado
-);
-
-$stylesFont:(
-    textCentro: center,
-    textRight: right,
-    fontWeight: bold,
-    fontBolder: bolder,
-    fontLighter: lighter,
-    colorM: $morado,
-    colorS: $snow,
-    letterSpaceBig: 0.75rem,
-    letterSpaceSmall: 0.18rem,
-    letterSpaceXS: 0.08rem,
-);
