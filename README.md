@@ -20,3 +20,4 @@
 - Version 3.0a → Solucionado errores de anchos. 
 - Version 3.0b → Ajustes.
 - Version 3.0c → Comprimida la imágen de la marca. 
+- Version 3.0d → Reducida la cantidad de variables. Los maps dejaron de estar en el fragmento _funciones y pasaron al de _variables.
