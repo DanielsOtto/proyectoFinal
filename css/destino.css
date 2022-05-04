@@ -1,21 +1,19 @@
 @charset "UTF-8";
-/* RESET: AFECTA TODAS LAS PAGINAS*/
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
 /*Detalles gráficos
-
 colores HEXA:
     coral: #FF7F50
     moccasin: #FFDEB5
     morado: oscuro #470147
     blanco: #FFFAFA
 */
-/* Detalles gráficos 
+/* RESET: AFECTA TODAS LAS PAGINAS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Detalles gráficos 
 tipografías:
     font-family: 'Righteous', cursive
     font-family: 'Kanit', sans-serif
@@ -47,15 +45,14 @@ p {
   letter-spacing: 0.18rem;
   font-weight: bold;
   text-align: justify;
-  font-size: 1rem;
+  font-size: medium;
 }
 
 .shirt__info p {
-  color: #470147;
   letter-spacing: 0.08rem;
 }
 
-.shopping {
+.shoppingT {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -84,7 +81,7 @@ p {
 }
 
 .buying h4 {
-  width: 83%;
+  width: 80%;
   align-items: center;
   margin-left: 2%;
   font-size: large;
@@ -154,7 +151,7 @@ footer p {
   }
   50% {
     transform: scale(1.2);
-    border: #470147 1.2rem double;
+    border: #470147 1rem double;
   }
   75% {
     transform: translateX(-100px);
@@ -202,6 +199,7 @@ footer p {
   }
 }
 .logoEmpresa {
+  border-radius: 50%;
   margin: 5%;
 }
 .logoEmpresa:hover {
@@ -209,7 +207,7 @@ footer p {
 }
 
 .socialMedia a {
-  margin: 0.7%;
+  margin: 1%;
   text-decoration: none;
 }
 .socialMedia svg:hover {
@@ -217,7 +215,7 @@ footer p {
 }
 
 .payment img {
-  margin-right: 0.7%;
+  margin-right: 0.5%;
 }
 
 /* | BOTONES | */
@@ -230,7 +228,7 @@ footer p {
 
 .btnCompras, .listaTalles {
   width: 25%;
-  height: 23%;
+  height: 25%;
   margin: 1%;
   color: #FFFAFA;
   padding: 0.6%;
@@ -240,7 +238,8 @@ footer p {
 }
 
 .upBtn {
-  padding: 5%;
+  margin: 1%;
+  padding: 3%;
   text-align: center;
 }
 .upBtn svg:hover {
@@ -249,7 +248,7 @@ footer p {
 
 .buying__a {
   width: 60%;
-  height: 12%;
+  height: 15%;
   margin: 1% 2%;
   color: #470147;
   text-align: center;
@@ -261,7 +260,7 @@ footer p {
 
 .purchase__btn {
   width: auto;
-  height: 18%;
+  height: 15%;
   margin: 2%;
   color: #FFFAFA;
   background-color: #470147;
@@ -303,7 +302,7 @@ header {
 .navbar-nav li a {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: large;
 }
 
 footer {
@@ -332,7 +331,7 @@ footer {
 
 aside {
   box-shadow: 0 0 0.6rem #FF7F50;
-  margin: 2.5%;
+  margin: 2%;
 }
 
 .colCarouselTitle, .colCarousel {
@@ -344,7 +343,7 @@ aside {
   margin: 1%;
 }
 
-.colCarouselTitle h2, .colCarousel h2 {
+.colCarouselTitle h2, .colCarousel h2, .colCarouselTitle h4, .colCarousel h4 {
   width: 50%;
   text-transform: uppercase;
   font-weight: 100;
@@ -366,12 +365,12 @@ aside {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-around;
-  margin: 4%;
+  margin: 3%;
   padding: 1%;
 }
 
 .shirt__info {
-  width: 70%;
+  width: 100%;
   padding: 1%;
   display: flex;
   flex-direction: column;
@@ -555,7 +554,7 @@ aside {
     width: 60%;
   }
 
-  .colCarouselTitle h2, .colCarousel h2 {
+  .colCarouselTitle h2, .colCarousel h2, .colCarouselTitle h4, .colCarousel h4 {
     width: 75%;
     font-size: large;
   }

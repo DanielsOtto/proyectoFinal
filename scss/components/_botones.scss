@@ -1,17 +1,14 @@
 /* | BOTONES | */
-
 // AFECTA NAV
 .btnNav{
-    width: 30%;
-    text-transform: uppercase;
+    width: $sizeSmall;
+    text-transform: map-get($sizeFont, uppercaseV);
     font-weight:  map-get($stylesFont, fontBolder);
     letter-spacing:  map-get($stylesFont, letterSpaceSmall);
 }
-
 // AFECTA SECCIONES HOMBRES Y MUJERES
-
 .btnCompras{
-    @include settingsBtnEns (25%, 23%, 1%, $snow);
+    @include settingsBtnEns ($sizeCuarter, $sizeCuarter, 1%, $snow);
     padding: 0.6%;
     background-color: $morado;
     font-size:  map-get($stylesFont, letterSpaceBig);
@@ -20,9 +17,8 @@
 .listaTalles{
     @extend .btnCompras;
 }
-
 .upBtn{
-    padding: 5%;
+    @include marginAndPadding (map-get($styleBoxs, onePercent), map-get($styleBoxs, threePercent));
     text-align:  map-get($stylesFont, textCentro);
     svg{
         &:hover{
@@ -32,20 +28,19 @@
 }
 // AFECTA A CARRITO
 .buying__a{
-    @include settingsBtnEns (60%, 12%, 1% 2%, $morado);
+    @include settingsBtnEns ($sizeSixty, $sizeFift, 1% 2%, $morado);
     text-align:  map-get($stylesFont, textCentro);
     text-decoration: none;
-    font-size: large;
+    font-size: map-get($sizeFont, largeV);
     font-weight:  map-get($stylesFont, fontBolder);
     letter-spacing:  map-get($stylesFont, letterSpaceSmall);
 }
 .purchase__btn{
-    @include settingsBtnEns (auto, 18%, 2%, $snow);
-    background-color: $morado;
+    @include settingsBtnEns (auto, $sizeFift, 2%, $snow);
+    background-color: $morado
 }
-
 //AFECTA CONTACTOS
 .btnCajita{
-    @include medidasGlobal (100%, 100%);
+    @include medidasGlobal ($sizeMax, $sizeMax);
     @include displayFlex (flex, row, nowrap, center, space-around);
 }

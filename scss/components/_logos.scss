@@ -1,7 +1,7 @@
 /* | LOGOS | */
 // HEADER
 .logoCompra{
-    margin:5%;
+    margin: map-get($styleBoxs, fivePercent);
     animation: desaparecer 4s;
 }
 @keyframes desaparecer{
@@ -27,16 +27,16 @@
     }
 }
 .logoEmpresa{
-    margin:5%;
+    border-radius: $sizeHalf;
+    margin: map-get($styleBoxs, fivePercent);
     &:hover{
         transform: translate(-43%,28%);
     }
 }
-
 // FOOTER
 .socialMedia{
     a{
-        margin: 0.7%;
+        margin: map-get($styleBoxs, onePercent);
         text-decoration: none;
     }
     svg{
@@ -47,6 +47,6 @@
 }
 .payment{
     img{
-        margin-right: 0.7%;
+        margin-right: map-get($styleBoxs, halfPercent);
     }
 }

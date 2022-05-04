@@ -6,16 +6,16 @@
 }
 .shirt{
     @include displayFlex (flex, row, nowrap, center, space-around);
-    margin: 4%;
+    margin: map-get($styleBoxs, threePercent);
     padding: map-get($styleBoxs, onePercent);
 }
 .shirt__info{
-    width: 70%;
+    width: $sizeMax;
     padding: map-get($styleBoxs, onePercent);
     @include displayFlex (flex, column, wrap, center, flex-start);
     form{
-        width: 100%;
-        margin-left:  3%;
+        width: $sizeMax;
+        margin-left:  map-get($styleBoxs, threePercent);
         @include displayFlex (flex, row, wrap, center, space-evenly);
     }
 }

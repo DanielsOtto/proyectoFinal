@@ -1,17 +1,15 @@
 // IMPORTAR
 
 // Imports Utilities
-@import "../scss/utilities/reset";
 @import "../scss/utilities/colores";
 @import "../scss/utilities/variables";
+@import "../scss/utilities/reset";
 @import "../scss/utilities/funciones";
 @import "../scss/utilities/tipografias";
-
 // Imports Components 
 @import "../scss/components/imagenes";
 @import "../scss/components/logos";
 @import "../scss/components/botones";
-
 // Imports Components ESTRUCTURAS
 @import "../scss/components/sharedStructures";
 @import "../scss/components/indexMain";

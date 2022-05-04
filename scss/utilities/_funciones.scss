@@ -1,12 +1,13 @@
 // FUNCIONES
 // Mixins 
-
-// Función básica
 @mixin medidasGlobal ($widthG, $heightG) {
     width: $widthG;
     height: $heightG;
 }
-
+@mixin marginAndPadding ($marginVar, $paddingVar){
+    margin: $marginVar;
+    padding: $paddingVar;
+}
 @mixin displayFlex ($displayF, $directionF, $wrapF, $alignIF, $justifyCF) {
     display: $displayF;
     flex-direction: $directionF;
@@ -14,7 +15,6 @@
     align-items: $alignIF;
     justify-content: $justifyCF;
 }
-
 // Se ejecuta en las secciones Carrito / Hombres / Mujeres
 // Ajustes Boton + Enlaces
 @mixin settingsBtnEns ($widthSett, $heightSett, $marginSett, $colorSett){

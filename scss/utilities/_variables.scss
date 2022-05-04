@@ -1,39 +1,57 @@
 // VARIABLES
+$zero: 0;
 // Logo
-
 $sizeLogoB: 60px;
 $sizeLogoM: 48px;
 $sizeLogoS: 30px;
 // Imágenes
-
 $sizeImgB: 220px;
 $sizeImgM: 160px;
 $sizeImgS: 100px;
-// Anchos 
-
-$widthMax: 100%; 
+// Medidas en REM
+$remBig: 20rem;
+$remSemiBig: 15rem;
+$remSeven: 7rem;
+$remFour: 4rem;
+$remOne: 1rem;
+// Porcentajes 
+$sizeMax: 100%; 
+$sizeBig: 80%;
+$sizeSev: 75%;
+$sizeSixty: 60%;
+$sizeHalf: 50%;
+$sizeSmall: 30%;
+$sizeCuarter: 25%;
+$sizeFift: 15%;
 // Estilos con Maps 
-
 $styleBoxs:(
     margiN: 3% 1%,
+    halfPercent: 0.5%,
     onePercent: 1%,
-    widthSmall: 30%,
-    widthMed: 50%,
-    widthSixty: 60%,
-    widhBig: 75%,
+    twoPercent: 2%,
+    threePercent: 3%,
+    fivePercent: 5%,
     shadowBoxCoral: 0 0 0.6rem $coral,
-    shadowBoxMorado: 0 0 1rem $morado
+    shadowBoxMorado: 0 0 1rem $morado,
 );
-
 $stylesFont:(
+    textJustify: justify,
     textCentro: center,
     textRight: right,
     fontWeight: bold,
     fontBolder: bolder,
     fontLighter: lighter,
-    colorM: $morado,
-    colorS: $snow,
     letterSpaceBig: 0.75rem,
     letterSpaceSmall: 0.18rem,
     letterSpaceXS: 0.08rem,
+);
+$sizeFont:(
+    titleMedium: 2.5rem,
+    titleBig: 4.5rem,
+    mediumV: medium,
+    largeV: large,
+    xlargeV: x-large,
+    xxlargeV: xx-large,
+    uppercaseV: uppercase,
+    petiteCapsV: petite-caps,
 );

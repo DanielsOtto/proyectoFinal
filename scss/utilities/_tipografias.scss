@@ -1,5 +1,4 @@
 /* Detalles gráficos 
-
 tipografías:
     font-family: 'Righteous', cursive
     font-family: 'Kanit', sans-serif
@@ -13,31 +12,31 @@ tipografías:
     font-family: Kanit;
     src: url(../assets/fonts/Kanit-Italic.ttf);
 }
-
 // Variables TIPOGRAFIA
 $Righteous: Righteous;
 $Kanit: Kanit;
-
-
 // H1 -- Titulo Empresa
 .tituloEmpresa{
     margin: 1% 2%;
-    font-size: 4.5rem;
-    color: map-get($stylesFont, colorM) 
+    font-size: map-get($sizeFont, titleBig);
+    color: $morado; 
 }
-h2, h4{
-    color: map-get($stylesFont, colorM);
-    width: 100%;
-    padding: 1%;
+h2{
+    color: $morado;
+    width: $sizeMax;
+    padding: map-get($styleBoxs, onePercent);
+}
+h4{
+    @extend h2;
 }
 // PARRAFO
 p{
-    padding: 2%;
-    width: 100%;
+    padding: map-get($styleBoxs, twoPercent);
+    width: $sizeMax;
     letter-spacing:  map-get($stylesFont, letterSpaceSmall);
     font-weight: map-get($stylesFont, fontWeight);
-    text-align: justify;
-    font-size: 1rem;
+    text-align: map-get($stylesFont, textJustify);
+    font-size: map-get($sizeFont, mediumV);
 }
 //Seccion Hombres y mujeres
 .shirt__info{
@@ -47,14 +46,14 @@ p{
     }
 }
 // seccion carrito
-.shopping{
+.shoppingT{
     @include displayFlex (flex, row, wrap, center, center);
-    color: map-get($stylesFont, colorM);
-    font-size: 2.5rem;
+    color: $morado;
+    font-size: map-get($sizeFont, titleMedium);
 }
 .secondRow{
     h3{
-        font-size: large;
+        font-size: map-get($sizeFont, largeV);
         letter-spacing:  map-get($stylesFont, letterSpaceXS);
     }
 }
@@ -62,15 +61,15 @@ p{
     div{
         form{
             input{
-                width: 50%;
+                width: $sizeHalf;
                 text-align: map-get($stylesFont, textCentro);
-                background-color: map-get($stylesFont, colorM);
-                color: map-get($stylesFont, colorS);
+                background-color: $morado;
+                color: $snow;
             }
         }
         p{
             width: auto;
-            font-size: large;
+            font-size: map-get($sizeFont, largeV);
             font-weight: map-get($stylesFont, fontWeight);
             letter-spacing: map-get($stylesFont, letterSpaceXS);
         }
@@ -78,25 +77,25 @@ p{
 }
 .buying{
     h4{
-        width: 83%;
+        width: $sizeBig;
         align-items: map-get($stylesFont, textCentro);
-        margin-left: 2%;
-        font-size: large;
-        text-transform: uppercase;
+        margin-left: map-get($styleBoxs, twoPercent);
+        font-size: map-get($sizeFont, largeV);
+        text-transform: map-get($sizeFont, uppercaseV);
         letter-spacing:  map-get($stylesFont, letterSpaceSmall);
     }
 }
 .purchase{
     .purchase__total{
-        font-size: xx-large;
+        font-size: map-get($sizeFont, xxlargeV);
         font-weight: map-get($stylesFont, fontBolder);
         letter-spacing:  map-get($stylesFont, letterSpaceXS);
         width: auto;
         text-align: map-get($stylesFont, textRight);
-        margin: 1%;
+        margin: map-get($styleBoxs, onePercent);
     }
     .purchase__selling{
-        font-size: x-large;
+        font-size: map-get($sizeFont, xlargeV);
         font-weight: map-get($stylesFont, fontBolder);
         letter-spacing:  map-get($stylesFont, letterSpaceSmall);
         width: auto;
@@ -107,7 +106,7 @@ p{
 footer{
     p{
         font-family: $Kanit;
-        color: map-get($stylesFont, colorS);
+        color: $snow;
         font-weight: map-get($stylesFont, fontLighter);
     }
 }

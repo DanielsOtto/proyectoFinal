@@ -1,4 +1,3 @@
-
 /*AFECTA SECCION INDEX*/
 .imageBox{
     @include displayFlex (flex, column, wrap, center, center);
@@ -11,7 +10,7 @@
 }
 aside{
     box-shadow: map-get($styleBoxs, shadowBoxCoral);
-    margin: 2.5%;
+    margin:  map-get($styleBoxs, twoPercent);
 }
 .colCarouselTitle{
     @include displayFlex (flex, row, nowrap, center, center);
@@ -22,11 +21,11 @@ aside{
 }
 .colCarouselTitle{
     h2{
-        width: map-get($styleBoxs, widthMed);
-        text-transform: uppercase;
+        width: $sizeHalf;
+        text-transform: map-get($sizeFont, uppercaseV);
         font-weight: 100;
     }
 }
 .editCarousel{
-    width: map-get($styleBoxs, widthSmall);
+    width: $sizeSmall;
 }

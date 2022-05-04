@@ -1,11 +1,9 @@
 /* MEDIA QUERYS */
-
 // MEDIA QUERY  x  768px
-
 @media ( max-width: 768px){
     // Afecta Inicio
     .editCarousel{
-        width: map-get($styleBoxs, widthMed);
+        width: $sizeHalf;
     }
     // Afecta Hombre|Mujer
     .rowShirts{
@@ -29,18 +27,16 @@
         }
     }
 }
-
 // MEDIA QUERY  x  480px 
-
 @media ( max-width: 480px){
     // Afecta Inicio
     .editCarousel{
-        width: map-get($styleBoxs, widthSixty);
+        width: $sizeSixty;
     }
     .colCarouselTitle{
         h2{
-            width: map-get($styleBoxs, widhBig);
-            font-size: large;
+            width: $sizeSev;
+            font-size: map-get($sizeFont, largeV);
         }
     }
     // Afecta Hombre|Mujer
@@ -50,16 +46,14 @@
         // Afecta carro de compras
         .columnB{
             form{
-                width: $widthMax;
+                width: $sizeMax;
             }
             svg{
                 @include medidasGlobal ($sizeLogoS, $sizeLogoS);
             }
         }
-
         //  Afecta footer 
-
         .payment{
-            margin: 3% 0.5%;
+            margin: map-get($styleBoxs, threePercent) map-get($styleBoxs, halfPercent);
         }
 }

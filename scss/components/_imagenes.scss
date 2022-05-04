@@ -5,7 +5,7 @@
 }
 // AFECTA SECCION INDEX
 .imagenHombre{
-    margin: 2%;
+    margin: map-get($styleBoxs, twoPercent);
     &:hover{
         animation: lateralH 3s;
         animation-delay: 2s;
@@ -17,14 +17,14 @@
     }
     50%{
         transform: scale(1.2);
-        border: $coral 1rem double;
+        border: $coral $remOne double;
     }
     75%{
         transform: translateX(100px);
     }
 }
 .imagenMujer{
-    margin: 2%;
+    margin: map-get($styleBoxs, twoPercent);
     &:hover{
         animation: lateralM 3s;
         animation-delay: 2s;
@@ -36,13 +36,12 @@
     }
     50%{
         transform: scale(1.2);
-        border: $morado 1.2rem double;
+        border: $morado $remOne double;
     }
     75%{
         transform: translateX(-100px);
     }
 }
-
 // AFECTA SECCIONES HOMBRES Y MUJERES
 .imgRopa{
     @include medidasGlobal($sizeImgB, $sizeImgB);
@@ -50,7 +49,6 @@
         transform: scale(1.7);
     }
 }
-
 // AFECTA SECCION  CARRO DE COMPRAS
 .sellRow{
     div{

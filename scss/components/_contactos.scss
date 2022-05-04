@@ -5,18 +5,18 @@
 .rowContact{
     div{
         article{
-            margin: 2%;
+            margin: map-get($styleBoxs, twoPercent);
         }
     }
 }
 .message{
     textarea{
         font-weight: map-get($stylesFont, fontWeight);
-        font-variant-caps: petite-caps;
+        font-variant-caps: map-get($sizeFont, petiteCapsV);
         letter-spacing: map-get($stylesFont, letterSpaceXS);
     }
 }
 .ubication{
     text-align: map-get($stylesFont, textCentro);
-    margin: 5%;
+    margin: map-get($styleBoxs, fivePercent);
 }

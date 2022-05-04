@@ -24,16 +24,16 @@ header{
 .navbar-nav{
     li{
         a{
-            text-transform: uppercase;
+            text-transform: map-get($sizeFont, uppercaseV);
             font-weight:  map-get($stylesFont, fontWeight);
-            font-size: 1rem;
+            font-size: map-get($sizeFont, largeV);
         }
     }
 }
 // FOOTER
 footer{
     background-color: $morado;
-    bottom: 0;
+    bottom: $zero;
     margin-top: auto;
 }
 .delivery{

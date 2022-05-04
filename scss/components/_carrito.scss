@@ -1,12 +1,11 @@
-
 /* Seccion CARRITO*/
 .carrito__fila{
     margin: map-get($styleBoxs, onePercent);
-    padding: 2%;
-    height: 7rem;
+    padding: map-get($styleBoxs, twoPercent);
+    height: $remSeven;
 }
 .secondRow{
-    height: 4rem;
+    height: $remFour;
     .colItem{
         @include displayFlex (flex, row, nowrap, center, center);
     }
@@ -18,12 +17,12 @@
     }
 }
 .sellRow{
-    height: 15rem;
+    height: $remSemiBig;
     box-shadow: map-get($styleBoxs, shadowBoxMorado);
     margin: map-get($styleBoxs, margiN);
 }
 .lastRow{
-    @include medidasGlobal ($widthMax, 20rem);
+    @include medidasGlobal ($sizeMax, $remBig);
     @include displayFlex (flex, row, nowrap, center, space-between);
 }
 .columnA{
@@ -40,7 +39,7 @@
     @include displayFlex (flex, row, nowrap, center, center);
 }
 .purchase{
-    @include medidasGlobal ($widthMax, $widthMax);
+    @include medidasGlobal ($sizeMax, $sizeMax);
     @include displayFlex (flex, column, wrap, center, space-around);
 }
 .buying{
