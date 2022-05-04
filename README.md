@@ -21,3 +21,4 @@
 - Version 3.0b → Ajustes.
 - Version 3.0c → Comprimida la imágen de la marca. 
 - Version 3.0d → Reducida la cantidad de variables. Los maps dejaron de estar en el fragmento _funciones y pasaron al de _variables.
+- Version 3.0e → Modificados todos los archivos de la carpeta SCSS. Agregadas variables al fragmento _variables, y agregado el mixin "marginAndPadding" al fragmento _funciones. Modificado el orden de los imports en el archivo origen.scss.  
