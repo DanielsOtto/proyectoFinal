@@ -22,3 +22,8 @@
 - Version 3.0c → Comprimida la imágen de la marca. 
 - Version 3.0d → Reducida la cantidad de variables. Los maps dejaron de estar en el fragmento _funciones y pasaron al de _variables.
 - Version 3.0e → Modificados todos los archivos de la carpeta SCSS. Agregadas variables al fragmento _variables, y agregado el mixin "marginAndPadding" al fragmento _funciones. Modificado el orden de los imports en el archivo origen.scss.  
+- Version 3.1  → Modificado los fragmentos:
+                      ▬ _variables, se ajustaron los mapas (tenían una ´,´ de más)
+                      ▬ _mediaQuerys, las cuales afectan las secciones Hombre y Mujer (ahora las imágenes tienen el mismo tamaño cuando se achica la pantalla).
+                      ▬ _imágenes (se modificó el tamaño del mapa que muestra la ubicación).
+                      ▬ _tipografías, en la clase .shirt__info se agregó ´&:last-of-type´ (ahora el precio del producto aparece centrado, mientras que el detalle se mantiene justificado a la izquierda). 
