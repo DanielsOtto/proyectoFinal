@@ -43,13 +43,17 @@ p{
     p{
         color: map-get($stylesFont, colorM);
         letter-spacing: map-get($stylesFont, letterSpaceXS);
+        &:last-of-type{
+            text-align: map-get($stylesFont, textCentro);
+        }
     }
 }
 // seccion carrito
 .shoppingT{
     @include displayFlex (flex, row, wrap, center, center);
-    color: $morado;
     font-size: map-get($sizeFont, titleMedium);
+    text-transform: map-get($sizeFont, uppercaseV);
+    letter-spacing: map-get($stylesFont, letterSpaceSmall);
 }
 .secondRow{
     h3{

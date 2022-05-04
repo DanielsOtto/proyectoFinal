@@ -49,7 +49,10 @@ p {
 }
 
 .shirt__info p {
-  letter-spacing: 0.08rem;
+  letter-spacing: 0.05rem;
+}
+.shirt__info p:last-of-type {
+  text-align: center;
 }
 
 .shoppingT {
@@ -58,13 +61,14 @@ p {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  color: #470147;
   font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
 }
 
 .secondRow h3 {
   font-size: large;
-  letter-spacing: 0.08rem;
+  letter-spacing: 0.05rem;
 }
 
 .sellRow div form input {
@@ -77,7 +81,7 @@ p {
   width: auto;
   font-size: large;
   font-weight: bold;
-  letter-spacing: 0.08rem;
+  letter-spacing: 0.05rem;
 }
 
 .buying h4 {
@@ -92,7 +96,7 @@ p {
 .purchase .purchase__total, .buying .purchase__total {
   font-size: xx-large;
   font-weight: bolder;
-  letter-spacing: 0.08rem;
+  letter-spacing: 0.05rem;
   width: auto;
   text-align: right;
   margin: 1%;
@@ -168,6 +172,12 @@ footer p {
 .sellRow div img {
   width: 160px;
   height: 160px;
+}
+
+.ubication__map {
+  margin: 3%;
+  width: 60%;
+  height: 220px;
 }
 
 /* | LOGOS | */
@@ -485,7 +495,7 @@ aside {
 
 /* AFECTA SECCION CONTACTO*/
 .formContacto {
-  margin: 1%;
+  margin: 3%;
 }
 
 .rowContact div article {
@@ -495,10 +505,11 @@ aside {
 .message textarea {
   font-weight: bold;
   font-variant-caps: petite-caps;
-  letter-spacing: 0.08rem;
+  letter-spacing: 0.05rem;
 }
 
 .ubication {
+  width: 100%;
   text-align: center;
   margin: 5%;
 }
@@ -518,7 +529,7 @@ aside {
   }
 
   .imgRopa {
-    width: 160px;
+    width: 130px;
     height: 160px;
   }
 

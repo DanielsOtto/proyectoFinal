@@ -10,7 +10,7 @@
         @include displayFlex (flex, row, wrap, center, center);
     }
     .imgRopa{
-        @include medidasGlobal ($sizeImgM, $sizeImgM)
+        @include medidasGlobal ($sizeImgN, $sizeImgM)
     }
     .btnCompras{
         @include settingsBtnEns (35%, 28%, 1%, $snow);

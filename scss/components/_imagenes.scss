@@ -57,3 +57,9 @@
         }
     }
 }
+// AFECTA CONTACTOS
+.ubication__map{
+    margin: map-get($styleBoxs, threePercent);
+    width: $sizeSixty;
+    height: $sizeImgB;
+}
