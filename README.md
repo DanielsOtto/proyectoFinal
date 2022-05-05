@@ -8,3 +8,4 @@ En esta actualización las paginas Index + Sección Hombres fueron modificadas.E
 - V 4.22a > Modificadas las secciones H/M, cambiados márgenes y anchos.
 - V 4.3 > Actualizado el nombre de la empresa.
 - V 4.4 > Agregado el carousel a la sección inicio.
+- V 4.4b → Se han agregado varias etiquetas semánticas (section) en el archivo carrito.html.
