@@ -37,7 +37,7 @@
 }
 .purchase__btn{
     @include settingsBtnEns (auto, $sizeFift, 2%, $snow);
-    background-color: $morado
+    background-color: $morado;
 }
 //AFECTA CONTACTOS
 .btnCajita{
