@@ -27,3 +27,6 @@
                       ▬ _mediaQuerys, las cuales afectan las secciones Hombre y Mujer (ahora las imágenes tienen el mismo tamaño cuando se achica la pantalla).
                       ▬ _imágenes (se modificó el tamaño del mapa que muestra la ubicación).
                       ▬ _tipografías, en la clase .shirt__info se agregó  ´&:last-of-type´ (ahora el precio del producto aparece centrado, mientras que el detalle se mantiene justificado a la izquierda). 
+
+//Version 4.0
+- Version 4.0
