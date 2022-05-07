@@ -4,42 +4,38 @@
     @include medidasGlobal ($sizeLogoB, $sizeLogoB);
 }
 // AFECTA SECCION INDEX
-.imagenHombre{
-    margin: map-get($styleBoxs, twoPercent);
-    &:hover{
-        animation: lateralH 3s;
-        animation-delay: 2s;
+.cont-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.imgSize{
+    width: $indexWidth;
+    height: $indexHeight;
+    box-shadow: map-get($styleBoxs, shadowIndex)
+}
+.cont-img__h{
+    width: $sizeBig;
+    height: auto;
+    position: absolute;
+    top: $sizeSev;
+    display: flex;
+    flex-direction: column;
+    h2{
+        @include linkStyles ($sizeLogoM, map-get($sizeFont, uppercaseV), $coral);
+        &:hover{
+            color: $mocasin;
+        }
+    }
+    p{
+        @include linkStyles (map-get($sizeFont, twoRem), map-get($sizeFont, petiteCapsV), $snow);
+        text-align: end;
     }
 }
-@keyframes lateralH{
-    25%{
-        transform: scale(0.5);
-    }
-    50%{
-        transform: scale(1.2);
-        border: $coral $remOne double;
-    }
-    75%{
-        transform: translateX(100px);
-    }
-}
-.imagenMujer{
-    margin: map-get($styleBoxs, twoPercent);
-    &:hover{
-        animation: lateralM 3s;
-        animation-delay: 2s;
-    }
-}
-@keyframes lateralM{
-    25%{
-        transform: scale(0.5);
-    }
-    50%{
-        transform: scale(1.2);
-        border: $morado $remOne double;
-    }
-    75%{
-        transform: translateX(-100px);
+.cont-img__m{
+    @extend .cont-img__h;
+    p{
+        color: $morado;
     }
 }
 // AFECTA SECCIONES HOMBRES Y MUJERES

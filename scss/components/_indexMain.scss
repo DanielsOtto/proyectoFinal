@@ -1,5 +1,6 @@
 /*AFECTA SECCION INDEX*/
 .imageBox{
+    padding: map-get($styleBoxs, twoPercent);
     @include displayFlex (flex, column, wrap, center, center);
 }
 .articleMan{
@@ -8,24 +9,14 @@
 .articleWoman{
     @extend .articleMan;
 }
-aside{
-    box-shadow: map-get($styleBoxs, shadowBoxCoral);
-    margin:  map-get($styleBoxs, twoPercent);
-}
-.colCarouselTitle{
-    @include displayFlex (flex, row, nowrap, center, center);
-    margin: map-get($styleBoxs, onePercent);
-}
-.colCarousel{
-    @extend .colCarouselTitle;
-}
-.colCarouselTitle{
-    h2{
-        width: $sizeHalf;
-        text-transform: map-get($sizeFont, uppercaseV);
-        font-weight: 100;
+.aside-carl__cont-img{
+    box-shadow: 0 5px 15px 0 $black;
+    margin-bottom: map-get($styleBoxs, threePercent);
+    div{
+        img{
+            object-fit: scale-down;
+            height: 45vh;
+            width: $sizeMax;
+        }
     }
-}
-.editCarousel{
-    width: $sizeSmall;
 }

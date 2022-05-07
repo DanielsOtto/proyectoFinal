@@ -68,6 +68,13 @@ p{
         }
     }
 }
+.carouselTitle{
+    width: $sizeSev;
+    h2{
+        font-size: $sizeLogoS;
+        text-align: map-get($stylesFont, textCentro);
+    }
+}
 // seccion carrito
 .shoppingT{
     h2{
@@ -138,6 +145,7 @@ p{
 .contactBtn{
     font-size: map-get($sizeFont, twoRem);
     text-transform: map-get($sizeFont, uppercaseV);
+    letter-spacing: map-get($stylesFont, letterSpaceSmall);
 }
 //FOOTER 
 footer{
