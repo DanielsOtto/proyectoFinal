@@ -507,11 +507,15 @@ footer {
 
 /* AFECTA SECCION CONTACTO*/
 .formContacto {
-  margin: 3%;
+  margin: 2% 0;
 }
 
 .rowContact div article {
-  margin: 2%;
+  margin: 2% 0;
+}
+
+.font__options {
+  margin-bottom: 2%;
 }
 
 .ubication {

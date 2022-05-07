@@ -1,13 +1,16 @@
 /* AFECTA SECCION CONTACTO*/
 .formContacto{
-    margin: map-get($styleBoxs, threePercent);
+    margin: map-get($styleBoxs, twoPercent) $zero;
 }
 .rowContact{
     div{
         article{
-            margin: map-get($styleBoxs, twoPercent);
+            margin: map-get($styleBoxs, twoPercent) $zero;
         }
     }
+}
+.font__options{
+    margin-bottom: map-get($styleBoxs, twoPercent);
 }
 .ubication{
     width: $sizeMax;

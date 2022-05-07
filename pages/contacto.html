@@ -86,37 +86,43 @@
 	<main>
 		<form class="container-fluid formContacto">
 			<div class="row rowContact ">
-				<div class="offset-lg-1 col-lg-5 col-md-6">
-					<article class="form-floating mb-3">
-						<input type="text" class="form-control font__options " id="floatingInput" placeholder="Nombre/s" required>
+				<div class="offset-lg-1 col-lg-4 offset-md-1 col-md-4">
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control font__options " id="floatingInput" placeholder="Nombre/s"
+							required>
 						<label for="floatingInput">Nombre/s</label>
-					</article>
+					</div>
 				</div>
-				<div class="col-lg-5 col-md-6">
-					<article class="form-floating mb-3">
-						<input type="text" class="form-control font__options " id="floatingInput" placeholder="Apellido/s" required>
+				<div class="col-lg-4 offset-lg-1 col-md-4 offset-md-1">
+					<div class="form-floating mb-3">
+						<input type="text" class="form-control font__options " id="floatingInput"
+							placeholder="Apellido/s" required>
 						<label for="floatingInput">Apellido/s</label>
-					</article>
+					</div>
 				</div>
-				<div class="offset-lg-1 col-lg-5 col-md-6">
-					<article class="form-floating mb-3">
-						<input type="email" class="form-control font__options " id="floatingInput" placeholder="name@example.com"
-							required>
+			</div> <!-- CIERRO PRIMERA FILA-->
+			<div class="row rowContact">
+				<div class="offset-lg-1 col-lg-4 offset-md-1 col-md-4">
+					<div class="form-floating mb-3">
+						<input type="email" class="form-control font__options " id="floatingInput"
+							placeholder="name@example.com" required>
 						<label for="floatingInput">Correo: ejemplo@gmail.com</label>
-					</article>
+					</div>
 				</div>
-				<div class="col-lg-5 col-md-6">
-					<article class="form-floating">
-						<input type="number" class="form-control font__options " id="floatingPassword" placeholder="223 5 123456"
-							required>
+				<div class="col-lg-4 offset-lg-1 col-md-4 offset-md-1">
+					<div class="form-floating">
+						<input type="number" class="form-control font__options " id="floatingPassword"
+							placeholder="223 5 123456" required>
 						<label for="floatingPassword">Telefono</label>
-					</article>
+					</div>
 				</div>
-				<div class="offset-lg-2 col-lg-8 col-md-8 offset-md-2">
-					<article >
-						<label >Seleccione el tipo de consulta:</label>
-						<select class="form-select font__options " id="floatingSelect" aria-label="Floating label select example"
-							name="seleccion" title="seleccionDeOpciones">
+			</div><!-- CIERRO SEGUNDA FILA-->
+			<div class="row rowContact rowSelect">
+				<div class="offset-lg-3 col-lg-6 offset-md-1 col-md-9">
+					<div>
+						<label for="floatingSelect">Seleccione el tipo de consulta:</label>
+						<select class="form-select font__options " id="floatingSelect"
+							aria-label="Floating label select example" name="seleccion" title="seleccionDeOpciones">
 							<option value="consulta">Consulta de producto (disponibilidad, características, etc)
 							</option>
 							<option value="estado">Estado de mi pedido</option>
@@ -126,29 +132,30 @@
 							<option value="prob_pago">Problemas con el pago</option>
 							<option value="otro">Otro</option>
 						</select>
-					</article>
+					</div>
 				</div>
-				<div class="offset-lg-4 col-lg-4 col-md-6 offset-md-3">
-					<article class="form-floating mb-3">
+				<div class="offset-lg-3 col-lg-6 col-md-9 offset-md-1">
+					<div class="form-floating mb-3">
 						<input type="number" class="form-control font__options" id="floatingInput" name="numero_pedido"
 							placeholder="135246 (Opcional)" value="135246 (Opcional)" />
 						<label for="floatingInput">Número del pedido (Opcional)</label>
-					</article>
+					</div>
 				</div>
-				<div class="col-lg-10 offset-lg-1">
-					<article class="message mb-3">
-						<label for="mensaje"></label>
-						<textarea name="mensaje" class="form-control font__options"
-							placeholder="Escribe aquí tus comentarios.."></textarea>
-					</article>
+			</div> <!-- CIERRO TERCERA FILA-->
+			<div class="row rowContact">
+				<div class="offset-lg-1 col-lg-9 offset-md-1 col-md-9">
+					<div class="form-floating message mb-3">
+						<textarea name="mensaje" class="form-control font__options" id="floatingTextarea"></textarea>
+						<label for="floatingTextarea">Escribe aquí tus comentarios..</label>
+					</div>
 				</div>
-				<div class="col-lg-4 offset-lg-4">
+				<div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10">
 					<article class="btnCajita btn__form">
 						<input class="contactBtn btn-outline-warning btn-lg" type="reset" value="Borrar" />
 						<input class="contactBtn btn-outline-success btn-lg" type="submit" value="Enviar" />
 					</article>
 				</div>
-			</div>
+			</div> <!-- CIERRO CUARTA FILA-->
 		</form>
 		<div class="row rowContact">
 			<div class="col-lg-12 col-md-12 col-sm-12">
