@@ -9,13 +9,6 @@
         }
     }
 }
-.message{
-    textarea{
-        font-weight: map-get($stylesFont, fontWeight);
-        font-variant-caps: map-get($sizeFont, petiteCapsV);
-        letter-spacing: map-get($stylesFont, letterSpaceXS);
-    }
-}
 .ubication{
     width: $sizeMax;
     text-align: map-get($stylesFont, textCentro);

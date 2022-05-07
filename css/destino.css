@@ -13,6 +13,10 @@ colores HEXA:
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 /* Detalles gráficos 
 tipografías:
     font-family: 'Righteous', cursive
@@ -29,7 +33,7 @@ tipografías:
 }
 .tituloEmpresa {
   margin: 1% 2%;
-  font-size: 4.5rem;
+  font-size: 7.2rem;
   color: #470147;
 }
 
@@ -39,36 +43,49 @@ h2, h4 {
   padding: 1%;
 }
 
+.btnNav, .navbar-nav li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: large;
+  letter-spacing: 0.08rem;
+}
+
+.btnGeneral, .listaTalles {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.288rem;
+}
+
 p {
   padding: 2%;
   width: 100%;
-  letter-spacing: 0.18rem;
+  letter-spacing: 0.288rem;
   font-weight: bold;
   text-align: justify;
   font-size: medium;
 }
 
 .shirt__info p {
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.08rem;
 }
 .shirt__info p:last-of-type {
   text-align: center;
 }
 
-.shoppingT {
+.shoppingT h2, .shoppingT h4 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 4rem;
   text-transform: uppercase;
-  letter-spacing: 0.18rem;
+  letter-spacing: 0.288rem;
 }
 
 .secondRow h3 {
   font-size: large;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.08rem;
 }
 
 .sellRow div form input {
@@ -81,7 +98,7 @@ p {
   width: auto;
   font-size: large;
   font-weight: bold;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.08rem;
 }
 
 .buying h4 {
@@ -90,13 +107,13 @@ p {
   margin-left: 2%;
   font-size: large;
   text-transform: uppercase;
-  letter-spacing: 0.18rem;
+  letter-spacing: 0.288rem;
 }
 
 .purchase .purchase__total, .buying .purchase__total {
   font-size: xx-large;
   font-weight: bolder;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.08rem;
   width: auto;
   text-align: right;
   margin: 1%;
@@ -104,9 +121,20 @@ p {
 .purchase .purchase__selling, .buying .purchase__selling {
   font-size: x-large;
   font-weight: bolder;
-  letter-spacing: 0.18rem;
+  letter-spacing: 0.288rem;
   width: auto;
   text-align: right;
+}
+
+.font__options {
+  font-size: 2rem;
+  font-variant-caps: petite-caps;
+  letter-spacing: 0.08rem;
+}
+
+.contactBtn {
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 footer p {
@@ -117,8 +145,8 @@ footer p {
 
 /* | IMAGENES | */
 .logoEmpresa {
-  width: 60px;
-  height: 60px;
+  width: 6rem;
+  height: 6rem;
 }
 
 .imagenHombre {
@@ -135,7 +163,7 @@ footer p {
   }
   50% {
     transform: scale(1.2);
-    border: #FF7F50 1rem double;
+    border: #FF7F50 1.6rem double;
   }
   75% {
     transform: translateX(100px);
@@ -155,29 +183,29 @@ footer p {
   }
   50% {
     transform: scale(1.2);
-    border: #470147 1rem double;
+    border: #470147 1.6rem double;
   }
   75% {
     transform: translateX(-100px);
   }
 }
 .imgRopa {
-  width: 220px;
-  height: 220px;
+  width: 22rem;
+  height: 22rem;
 }
 .imgRopa:hover {
   transform: scale(1.7);
 }
 
 .sellRow div img {
-  width: 160px;
-  height: 160px;
+  width: 16rem;
+  height: 16rem;
 }
 
 .ubication__map {
   margin: 3%;
   width: 60%;
-  height: 220px;
+  height: 22rem;
 }
 
 /* | LOGOS | */
@@ -229,21 +257,22 @@ footer p {
 }
 
 /* | BOTONES | */
-.btnNav {
-  width: 30%;
-  text-transform: uppercase;
-  font-weight: bolder;
-  letter-spacing: 0.18rem;
+.btnGeneral, .listaTalles {
+  background-color: #470147;
+  color: #FFFAFA;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  padding: 0.5%;
+}
+.btnGeneral:hover, .listaTalles:hover {
+  background-color: #FF7F50;
+  color: #470147;
+  border-color: #FFDEB5;
+  box-shadow: 0 0 1.6rem #470147;
+  border-radius: 0.7rem;
 }
 
-.btnCompras, .listaTalles {
-  width: 25%;
-  height: 25%;
-  margin: 1%;
-  color: #FFFAFA;
-  padding: 0.6%;
-  background-color: #470147;
-  font-size: 0.75rem;
+.listaTalles {
   text-align: center;
 }
 
@@ -253,7 +282,7 @@ footer p {
   text-align: center;
 }
 .upBtn svg:hover {
-  transform: scale(1.7);
+  transform: scale(1.8);
 }
 
 .buying__a {
@@ -265,15 +294,7 @@ footer p {
   text-decoration: none;
   font-size: large;
   font-weight: bolder;
-  letter-spacing: 0.18rem;
-}
-
-.purchase__btn {
-  width: auto;
-  height: 15%;
-  margin: 2%;
-  color: #FFFAFA;
-  background-color: #470147;
+  letter-spacing: 0.288rem;
 }
 
 .btnCajita {
@@ -288,6 +309,7 @@ footer p {
 
 /* ESTRUCTURAS GLOBALES */
 body {
+  font-size: 1.6rem;
   overflow-x: hidden;
   font-family: Righteous, sans-serif;
   background-color: #FFDEB5;
@@ -307,12 +329,6 @@ header {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-}
-
-.navbar-nav li a {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: large;
 }
 
 footer {
@@ -340,7 +356,7 @@ footer {
 }
 
 aside {
-  box-shadow: 0 0 0.6rem #FF7F50;
+  box-shadow: 0 0 0.96rem #FF7F50;
   margin: 2%;
 }
 
@@ -366,7 +382,7 @@ aside {
 /* AFECTA SECCIONES HOMBRES Y MUJERES */
 .rowShirts {
   margin: 3% 1%;
-  box-shadow: 0 0 0.6rem #FF7F50;
+  box-shadow: 0 0 0.96rem #FF7F50;
 }
 
 .shirt {
@@ -402,11 +418,11 @@ aside {
 .carrito__fila {
   margin: 1%;
   padding: 2%;
-  height: 7rem;
+  height: 11.2rem;
 }
 
 .secondRow {
-  height: 4rem;
+  height: 6.4rem;
 }
 .secondRow .colItem {
   display: flex;
@@ -431,14 +447,14 @@ aside {
 }
 
 .sellRow {
-  height: 15rem;
-  box-shadow: 0 0 1rem #470147;
+  height: 24rem;
+  box-shadow: 0 0 1.6rem #470147;
   margin: 3% 1%;
 }
 
 .lastRow {
   width: 100%;
-  height: 20rem;
+  height: 32rem;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -502,12 +518,6 @@ aside {
   margin: 2%;
 }
 
-.message textarea {
-  font-weight: bold;
-  font-variant-caps: petite-caps;
-  letter-spacing: 0.05rem;
-}
-
 .ubication {
   width: 100%;
   text-align: center;
@@ -529,11 +539,11 @@ aside {
   }
 
   .imgRopa {
-    width: 130px;
-    height: 160px;
+    width: 13rem;
+    height: 16rem;
   }
 
-  .btnCompras, .listaTalles {
+  .btnCompras {
     width: 35%;
     height: 28%;
     margin: 1%;
@@ -556,8 +566,8 @@ aside {
     margin: 5px;
   }
   .columnB svg {
-    width: 30px;
-    height: 100px;
+    width: 3rem;
+    height: 10rem;
   }
 }
 @media (max-width: 480px) {
@@ -582,8 +592,8 @@ aside {
     width: 100%;
   }
   .columnB svg {
-    width: 30px;
-    height: 30px;
+    width: 3rem;
+    height: 3rem;
   }
 
   .payment {

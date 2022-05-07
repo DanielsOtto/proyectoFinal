@@ -29,6 +29,26 @@ h2{
 h4{
     @extend h2;
 }
+// AFECTA NAV
+.btnNav{
+    text-transform: map-get($sizeFont, uppercaseV);
+    font-weight:  map-get($stylesFont, fontWeight);
+    font-size: map-get($sizeFont, largeV);
+    letter-spacing: map-get($stylesFont, letterSpaceXS);
+}
+.navbar-nav{
+    li{
+        a{
+            @extend .btnNav;
+        }
+    }
+}
+// Botones generales
+.btnGeneral{
+    font-size: map-get($sizeFont, twoRem);
+    text-transform: map-get($sizeFont, uppercaseV);
+    letter-spacing: map-get($stylesFont, letterSpaceSmall);
+}
 // PARRAFO
 p{
     padding: map-get($styleBoxs, twoPercent);
@@ -50,10 +70,12 @@ p{
 }
 // seccion carrito
 .shoppingT{
-    @include displayFlex (flex, row, wrap, center, center);
-    font-size: map-get($sizeFont, titleMedium);
-    text-transform: map-get($sizeFont, uppercaseV);
-    letter-spacing: map-get($stylesFont, letterSpaceSmall);
+    h2{
+        @include displayFlex (flex, row, wrap, center, center);
+        font-size: map-get($sizeFont, titleMedium);
+        text-transform: map-get($sizeFont, uppercaseV);
+        letter-spacing: map-get($stylesFont, letterSpaceSmall);
+    }
 }
 .secondRow{
     h3{
@@ -105,6 +127,17 @@ p{
         width: auto;
         text-align: map-get($stylesFont, textRight);
     }
+}
+// SECCION CONTACTO y NAV (inputs)
+.font__options{
+    font-size: map-get($sizeFont, twoRem);
+    font-variant-caps: map-get($sizeFont, petiteCapsV);
+    letter-spacing: map-get($stylesFont, letterSpaceXS);
+}
+// seccion Contacto
+.contactBtn{
+    font-size: map-get($sizeFont, twoRem);
+    text-transform: map-get($sizeFont, uppercaseV);
 }
 //FOOTER 
 footer{

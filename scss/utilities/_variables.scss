@@ -1,20 +1,20 @@
 // VARIABLES
 $zero: 0;
 // Logo
-$sizeLogoB: 60px;
-$sizeLogoM: 48px;
-$sizeLogoS: 30px;
+$sizeLogoB: 6rem;
+$sizeLogoM: 4.8rem;
+$sizeLogoS: 3rem;
 // Imágenes
-$sizeImgB: 220px;
-$sizeImgM: 160px;
-$sizeImgN: 130px;
-$sizeImgS: 100px;
+$sizeImgB: 22rem;
+$sizeImgM: 16rem;
+$sizeImgN: 13rem;
+$sizeImgS: 10rem;
 // Medidas en REM
-$remBig: 20rem;
-$remSemiBig: 15rem;
-$remSeven: 7rem;
-$remFour: 4rem;
-$remOne: 1rem;
+$remBig: 32rem;
+$remSemiBig: 24rem;
+$remSeven: 11.2rem;
+$remFour: 6.4rem;
+$remOne: 1.6rem;
 // Porcentajes 
 $sizeMax: 100%; 
 $sizeBig: 80%;
@@ -32,8 +32,8 @@ $styleBoxs:(
     twoPercent: 2%,
     threePercent: 3%,
     fivePercent: 5%,
-    shadowBoxCoral: 0 0 0.6rem $coral,
-    shadowBoxMorado: 0 0 1rem $morado
+    shadowBoxCoral: 0 0 0.96rem $coral,
+    shadowBoxMorado: 0 0 1.6rem $morado
 );
 $stylesFont:(
     textJustify: justify,
@@ -42,13 +42,14 @@ $stylesFont:(
     fontWeight: bold,
     fontBolder: bolder,
     fontLighter: lighter,
-    letterSpaceBig: 0.75rem,
-    letterSpaceSmall: 0.18rem,
-    letterSpaceXS: 0.05rem
+    letterSpaceBig: 1.2rem,
+    letterSpaceSmall: 0.288rem,
+    letterSpaceXS: 0.08rem
 );
 $sizeFont:(
-    titleMedium: 2.5rem,
-    titleBig: 4.5rem,
+    twoRem: 2rem,
+    titleMedium: 4rem,
+    titleBig: 7.2rem,
     mediumV: medium,
     largeV: large,
     xlargeV: x-large,

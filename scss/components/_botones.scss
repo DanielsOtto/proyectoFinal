@@ -1,28 +1,30 @@
 /* | BOTONES | */
-// AFECTA NAV
-.btnNav{
-    width: $sizeSmall;
-    text-transform: map-get($sizeFont, uppercaseV);
-    font-weight:  map-get($stylesFont, fontBolder);
-    letter-spacing:  map-get($stylesFont, letterSpaceSmall);
+// Botones
+.btnGeneral{
+    background-color: $morado;
+    color: $snow;
+    font-size:  $remOne;
+    border-radius: 0.5rem;
+    padding: map-get($styleBoxs,halfPercent);
+    &:hover{
+        background-color: $coral;
+        color: $morado;
+        border-color: $mocasin;
+        box-shadow: map-get($styleBoxs,shadowBoxMorado);
+        border-radius: 0.7rem;
+    }
 }
 // AFECTA SECCIONES HOMBRES Y MUJERES
-.btnCompras{
-    @include settingsBtnEns ($sizeCuarter, $sizeCuarter, 1%, $snow);
-    padding: 0.6%;
-    background-color: $morado;
-    font-size:  map-get($stylesFont, letterSpaceBig);
-    text-align:  map-get($stylesFont, textCentro);
-}
 .listaTalles{
-    @extend .btnCompras;
+    @extend .btnGeneral;
+    text-align: center;
 }
 .upBtn{
     @include marginAndPadding (map-get($styleBoxs, onePercent), map-get($styleBoxs, threePercent));
     text-align:  map-get($stylesFont, textCentro);
     svg{
         &:hover{
-        transform: scale(1.7);
+        transform: scale(1.8);
         }
     }
 }
@@ -34,10 +36,6 @@
     font-size: map-get($sizeFont, largeV);
     font-weight:  map-get($stylesFont, fontBolder);
     letter-spacing:  map-get($stylesFont, letterSpaceSmall);
-}
-.purchase__btn{
-    @include settingsBtnEns (auto, $sizeFift, 2%, $snow);
-    background-color: $morado
 }
 //AFECTA CONTACTOS
 .btnCajita{

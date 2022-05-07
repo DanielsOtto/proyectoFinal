@@ -2,6 +2,7 @@
 
 // BODY
 body{
+    font-size: $remOne;
     overflow-x: hidden;
     font-family: $Righteous, sans-serif;
     background-color: $mocasin;
@@ -18,17 +19,6 @@ header{
 }
 .logoBox{
     @extend .titleBox;
-}
-// NAV deberia ir en tipografias, pero lo dejo aca para mantener cierto orden
-// NAV
-.navbar-nav{
-    li{
-        a{
-            text-transform: map-get($sizeFont, uppercaseV);
-            font-weight:  map-get($stylesFont, fontWeight);
-            font-size: map-get($sizeFont, largeV);
-        }
-    }
 }
 // FOOTER
 footer{
