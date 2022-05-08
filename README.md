@@ -34,4 +34,5 @@
                → Reducción de líneas de código. 
 - Version 4.0a → Cambios en la página Inicio: antes, las imágenes traían por defecto textos incluidos y posicionados / ahora, las imágenes estan ´limpias´ y sus textos estan agregados mediante HTML y posicionados usando CSS || Agregué un nuevo estilo de BoxShadow, utilizando la herramienta "Box Shadow CSS Generator | CSSmatic". Esta nueva sombra se utiliza en las imágenes de inicio y en el carousel || Modifiqué el tamaño del carousel, y se mantiene centrado usando las clases de Bootstrap para la columna en la que se encuentra (tamaño de columna + offset)  ///  En la página Carrito: en los botones ENVIAR / BORRAR aumenté la distancia entre las letras usando el atributo "letter-spacing". 
 - Version 4.0b → Borrada la imágen que estaba de más ya fue eliminada, pendiente de la actualización. || Sección Contactos: mejorado el responsiv en el formulario. 
-          4.0c → Sección Contactos: Hice modificaciones en el formulario y en el mapa, no me gustaba como quedaba. 
+         - 4.0c → Sección Contactos: Hice modificaciones en el formulario y en el mapa, no me gustaba como quedaba. 
+         - 4.0d → Sección Inicio: la nueva imágen no estaba comprimida, ahora si. || Ordené y limpié el código SCSS. 
