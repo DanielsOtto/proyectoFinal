@@ -21,21 +21,17 @@
     top: $sizeSev;
     display: flex;
     flex-direction: column;
-    h2{
-        @include linkStyles ($sizeLogoM, map-get($sizeFont, uppercaseV), $coral);
-        &:hover{
-            color: $mocasin;
-        }
-    }
-    p{
-        @include linkStyles (map-get($sizeFont, twoRem), map-get($sizeFont, petiteCapsV), $snow);
-        text-align: end;
-    }
 }
 .cont-img__m{
     @extend .cont-img__h;
-    p{
-        color: $morado;
+}
+.aside-carl__cont-img{
+    div{
+        img{
+            object-fit: scale-down;
+            height: 45vh;
+            width: $sizeMax;
+        }
     }
 }
 // AFECTA SECCIONES HOMBRES Y MUJERES
@@ -53,9 +49,3 @@
         }
     }
 }
-// // AFECTA CONTACTOS
-// .ubication__map{
-//     margin: map-get($styleBoxs, threePercent);
-//     width: $sizeSixty;
-//     height: $sizeImgB;
-// }

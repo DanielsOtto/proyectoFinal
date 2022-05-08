@@ -20,13 +20,18 @@ html {
 
 /* Detalles gráficos 
 tipografías:
-    font-family: 'Righteous', cursive
-    font-family: 'Kanit', sans-serif
+    font-family: 'Kanit', Italic
+    font-family: 'Lato', Regular
+    font-family: 'Lato', Black 
 */
 /* | TIPOGRAFÍA | */
 @font-face {
-  font-family: Righteous;
-  src: url(../assets/fonts/Righteous-Regular.ttf);
+  font-family: Lato;
+  src: url(../assets/fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: LatoBlack;
+  src: url(../assets/fonts/Lato-Black.ttf);
 }
 @font-face {
   font-family: Kanit;
@@ -36,6 +41,7 @@ tipografías:
   margin: 1% 2%;
   font-size: 7.2rem;
   color: #470147;
+  font-family: LatoBlack, sans-serif;
 }
 
 h2, h4 {
@@ -51,10 +57,18 @@ h2, h4 {
   letter-spacing: 0.08rem;
 }
 
+.navbar-nav li a {
+  font-family: LatoBlack, sans-serif;
+}
+
 .btnGeneral, .listaTalles {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  color: #FFFAFA;
   text-transform: uppercase;
   letter-spacing: 0.288rem;
+}
+.btnGeneral:hover, .listaTalles:hover {
+  color: #470147;
 }
 
 p {
@@ -66,11 +80,26 @@ p {
   font-size: medium;
 }
 
-.shirt__info p {
-  letter-spacing: 0.08rem;
+body {
+  font-size: 1.6rem;
+  font-family: Lato, sans-serif;
 }
-.shirt__info p:last-of-type {
-  text-align: center;
+
+.cont-img__h h2, .cont-img__m h2, .cont-img__h h4, .cont-img__m h4 {
+  font-family: LatoBlack, sans-serif;
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  color: #FF7F50;
+}
+.cont-img__h h2:hover, .cont-img__m h2:hover, .cont-img__h h4:hover, .cont-img__m h4:hover {
+  color: #FFDEB5;
+}
+.cont-img__h p, .cont-img__m p {
+  font-family: LatoBlack, sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #FFFAFA;
+  text-align: end;
 }
 
 .carouselTitle {
@@ -81,12 +110,22 @@ p {
   text-align: center;
 }
 
+.shirt__info p {
+  letter-spacing: 0.08rem;
+}
+.shirt__info p:last-of-type {
+  text-align: center;
+}
+
+.listaTalles {
+  text-align: center;
+}
+
+.upBtn {
+  text-align: center;
+}
+
 .shoppingT h2, .shoppingT h4 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 0.288rem;
@@ -98,9 +137,7 @@ p {
 }
 
 .sellRow div form input, .sellRow div form .boxContact textarea, .boxContact .sellRow div form textarea, .sellRow div form .boxContact select, .boxContact .sellRow div form select {
-  width: 50%;
   text-align: center;
-  background-color: #470147;
   color: #FFFAFA;
 }
 .sellRow div p {
@@ -112,26 +149,33 @@ p {
 
 .buying h4 {
   width: 80%;
-  align-items: center;
   margin-left: 2%;
+  align-items: center;
   font-size: large;
   text-transform: uppercase;
   letter-spacing: 0.288rem;
 }
+.buying .buying__a {
+  text-align: center;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bolder;
+  letter-spacing: 0.288rem;
+}
 
 .purchase .purchase__total, .buying .purchase__total {
+  width: auto;
+  margin: 1%;
   font-size: xx-large;
   font-weight: bolder;
   letter-spacing: 0.08rem;
-  width: auto;
   text-align: right;
-  margin: 1%;
 }
 .purchase .purchase__selling, .buying .purchase__selling {
+  width: auto;
   font-size: x-large;
   font-weight: bolder;
   letter-spacing: 0.288rem;
-  width: auto;
   text-align: right;
 }
 
@@ -141,6 +185,10 @@ p {
   letter-spacing: 0.08rem;
 }
 
+.boxContact input, .boxContact textarea, .boxContact select {
+  text-align: center;
+}
+
 .contactBtn {
   font-size: 2rem;
   text-transform: uppercase;
@@ -148,9 +196,13 @@ p {
 }
 
 footer p {
-  font-family: Kanit;
+  font-family: Kanit, sans-serif;
   color: #FFFAFA;
   font-weight: lighter;
+}
+
+.delivery, .payment, .socialMedia, .createdBy {
+  text-align: center;
 }
 
 /* | IMAGENES | */
@@ -179,23 +231,11 @@ footer p {
   display: flex;
   flex-direction: column;
 }
-.cont-img__h h2, .cont-img__m h2, .cont-img__h h4, .cont-img__m h4 {
-  font-size: 4.8rem;
-  text-transform: uppercase;
-  color: #FF7F50;
-}
-.cont-img__h h2:hover, .cont-img__m h2:hover, .cont-img__h h4:hover, .cont-img__m h4:hover {
-  color: #FFDEB5;
-}
-.cont-img__h p, .cont-img__m p {
-  font-size: 2rem;
-  text-transform: petite-caps;
-  color: #FFFAFA;
-  text-align: end;
-}
 
-.cont-img__m p {
-  color: #470147;
+.aside-carl__cont-img div img {
+  object-fit: scale-down;
+  height: 45vh;
+  width: 100%;
 }
 
 .imgRopa {
@@ -262,49 +302,39 @@ footer p {
 /* | BOTONES | */
 .btnGeneral, .listaTalles {
   background-color: #470147;
-  color: #FFFAFA;
-  font-size: 1.6rem;
   border-radius: 0.5rem;
   padding: 0.5%;
 }
 .btnGeneral:hover, .listaTalles:hover {
   background-color: #FF7F50;
-  color: #470147;
   border-color: #FFDEB5;
   box-shadow: 0 0 1.6rem #470147;
   border-radius: 0.7rem;
 }
 
-.listaTalles {
-  text-align: center;
-}
-
 .upBtn {
   margin: 1%;
   padding: 3%;
-  text-align: center;
 }
 .upBtn svg:hover {
   transform: scale(1.8);
 }
 
-.buying__a {
+.sellRow div form input, .sellRow div form .boxContact textarea, .boxContact .sellRow div form textarea, .sellRow div form .boxContact select, .boxContact .sellRow div form select {
+  width: 50%;
+  background-color: #470147;
+}
+
+.buying .buying__a {
   width: 60%;
   height: 15%;
   margin: 1% 2%;
   color: #470147;
-  text-align: center;
-  text-decoration: none;
-  font-size: large;
-  font-weight: bolder;
-  letter-spacing: 0.288rem;
 }
 
 /* ESTRUCTURAS GLOBALES */
 body {
-  font-size: 1.6rem;
   overflow-x: hidden;
-  font-family: Righteous, sans-serif;
   background-color: #FFDEB5;
 }
 
@@ -331,7 +361,6 @@ footer {
 }
 
 .delivery, .payment, .socialMedia, .createdBy {
-  text-align: center;
   margin: 5% 2%;
 }
 
@@ -352,11 +381,6 @@ footer {
 .aside-carl__cont-img {
   box-shadow: 0 5px 15px 0 #000000;
   margin-bottom: 3%;
-}
-.aside-carl__cont-img div img {
-  object-fit: scale-down;
-  height: 45vh;
-  width: 100%;
 }
 
 /* AFECTA SECCIONES HOMBRES Y MUJERES */
@@ -504,6 +528,8 @@ footer {
 .ubication {
   grid-area: mapa;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: 3%;
@@ -526,7 +552,6 @@ footer {
 .boxContact input, .boxContact textarea, .boxContact select {
   width: 50%;
   margin: 0.5%;
-  text-align: center;
 }
 .boxContact textarea {
   width: 80%;

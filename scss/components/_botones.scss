@@ -2,13 +2,10 @@
 // Botones
 .btnGeneral{
     background-color: $morado;
-    color: $snow;
-    font-size:  $remOne;
     border-radius: 0.5rem;
     padding: map-get($styleBoxs,halfPercent);
     &:hover{
         background-color: $coral;
-        color: $morado;
         border-color: $mocasin;
         box-shadow: map-get($styleBoxs,shadowBoxMorado);
         border-radius: 0.7rem;
@@ -17,11 +14,9 @@
 // AFECTA SECCIONES HOMBRES Y MUJERES
 .listaTalles{
     @extend .btnGeneral;
-    text-align: center;
 }
 .upBtn{
     @include marginAndPadding (map-get($styleBoxs, onePercent), map-get($styleBoxs, threePercent));
-    text-align:  map-get($stylesFont, textCentro);
     svg{
         &:hover{
         transform: scale(1.8);
@@ -29,16 +24,18 @@
     }
 }
 // AFECTA A CARRITO
-.buying__a{
-    @include settingsBtnEns ($sizeSixty, $sizeFift, 1% 2%, $morado);
-    text-align:  map-get($stylesFont, textCentro);
-    text-decoration: none;
-    font-size: map-get($sizeFont, largeV);
-    font-weight:  map-get($stylesFont, fontBolder);
-    letter-spacing:  map-get($stylesFont, letterSpaceSmall);
+.sellRow{
+    div{
+        form{
+            input{
+                width: $sizeHalf;
+                background-color: $morado;
+            }
+        }
+    }
 }
-//AFECTA CONTACTOS
-// .btnCajita{
-//     @include medidasGlobal ($sizeMax, $sizeMax);
-//     @include displayFlex (flex, row, nowrap, center, space-around);
-// }
+.buying{
+    .buying__a{
+        @include settingsBtnEns ($sizeSixty, $sizeFift, 1% 2%, $morado);
+    }
+}

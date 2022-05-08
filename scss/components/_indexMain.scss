@@ -12,11 +12,4 @@
 .aside-carl__cont-img{
     box-shadow: 0 5px 15px 0 $black;
     margin-bottom: map-get($styleBoxs, threePercent);
-    div{
-        img{
-            object-fit: scale-down;
-            height: 45vh;
-            width: $sizeMax;
-        }
-    }
 }

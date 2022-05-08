@@ -1,10 +1,7 @@
 /* ESTRUCTURAS GLOBALES */
-
 // BODY
 body{
-    font-size: $remOne;
     overflow-x: hidden;
-    font-family: $Righteous, sans-serif;
     background-color: $mocasin;
 }
 // HEADER
@@ -27,7 +24,6 @@ footer{
     margin-top: auto;
 }
 .delivery{
-    text-align: map-get($stylesFont, textCentro);
     margin: 5% 2%;
 }
 .createdBy{

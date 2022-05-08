@@ -12,9 +12,7 @@
 }
 .ubication{
     grid-area: mapa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include displayFlex(flex, row, wrap, center, center);
     margin: map-get($styleBoxs, threePercent);
 }
 .ubication__map{
@@ -27,7 +25,6 @@
     input{
         width: $sizeHalf;
         margin: map-get($styleBoxs, halfPercent);
-        text-align: map-get($stylesFont, textCentro);
     }
     select{
         @extend input;
