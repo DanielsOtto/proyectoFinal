@@ -83,90 +83,45 @@
 		</section>
 	</nav>
 	<!-- FIN nav // INICIO main-->
-	<main>
-		<form class="container-fluid formContacto">
-			<div class="row rowContact ">
-				<div class="offset-lg-1 col-lg-4 offset-md-1 col-md-4">
-					<div class="form-floating mb-3">
-						<input type="text" class="form-control font__options " id="floatingInput" placeholder="Nombre/s"
-							required>
-						<label for="floatingInput">Nombre/s</label>
-					</div>
-				</div>
-				<div class="col-lg-4 offset-lg-1 col-md-4 offset-md-1">
-					<div class="form-floating mb-3">
-						<input type="text" class="form-control font__options " id="floatingInput"
-							placeholder="Apellido/s" required>
-						<label for="floatingInput">Apellido/s</label>
-					</div>
-				</div>
-			</div> <!-- CIERRO PRIMERA FILA-->
-			<div class="row rowContact">
-				<div class="offset-lg-1 col-lg-4 offset-md-1 col-md-4">
-					<div class="form-floating mb-3">
-						<input type="email" class="form-control font__options " id="floatingInput"
-							placeholder="name@example.com" required>
-						<label for="floatingInput">Correo: ejemplo@gmail.com</label>
-					</div>
-				</div>
-				<div class="col-lg-4 offset-lg-1 col-md-4 offset-md-1">
-					<div class="form-floating">
-						<input type="number" class="form-control font__options " id="floatingPassword"
-							placeholder="223 5 123456" required>
-						<label for="floatingPassword">Telefono</label>
-					</div>
-				</div>
-			</div><!-- CIERRO SEGUNDA FILA-->
-			<div class="row rowContact rowSelect">
-				<div class="offset-lg-3 col-lg-6 offset-md-1 col-md-9">
-					<div>
-						<label for="floatingSelect">Seleccione el tipo de consulta:</label>
-						<select class="form-select font__options " id="floatingSelect"
-							aria-label="Floating label select example" name="seleccion" title="seleccionDeOpciones">
-							<option value="consulta">Consulta de producto (disponibilidad, características, etc)
-							</option>
-							<option value="estado">Estado de mi pedido</option>
-							<option value="cambios">Cambios y devoluciones</option>
-							<option value="anulacion">Anulación de pedido</option>
-							<option value="error">Error/conflicto con el pedido</option>
-							<option value="prob_pago">Problemas con el pago</option>
-							<option value="otro">Otro</option>
-						</select>
-					</div>
-				</div>
-				<div class="offset-lg-3 col-lg-6 col-md-9 offset-md-1">
-					<div class="form-floating mb-3">
-						<input type="number" class="form-control font__options" id="floatingInput" name="numero_pedido"
-							placeholder="135246 (Opcional)" value="135246 (Opcional)" />
-						<label for="floatingInput">Número del pedido (Opcional)</label>
-					</div>
-				</div>
-			</div> <!-- CIERRO TERCERA FILA-->
-			<div class="row rowContact">
-				<div class="offset-lg-1 col-lg-9 offset-md-1 col-md-9">
-					<div class="form-floating message mb-3">
-						<textarea name="mensaje" class="form-control font__options" id="floatingTextarea"></textarea>
-						<label for="floatingTextarea">Escribe aquí tus comentarios..</label>
-					</div>
-				</div>
-				<div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10">
-					<article class="btnCajita btn__form">
-						<input class="contactBtn btn-outline-warning btn-lg" type="reset" value="Borrar" />
-						<input class="contactBtn btn-outline-success btn-lg" type="submit" value="Enviar" />
-					</article>
-				</div>
-			</div> <!-- CIERRO CUARTA FILA-->
-		</form>
-		<div class="row rowContact">
-			<div class="col-lg-12 col-md-12 col-sm-12">
-				<article class="ubication container-fluid">
-					<iframe class="ubication__map"
-						src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50293.511853061216!2d-57.545621385998544!3d-38.	01574766265546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1648236568437!5m2!1ses-419!2sar"
-						style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-					</iframe>
+	<main class="contenedor-contacto">
+		<form class="formContacto">
+			<section class="boxContact">
+				<input type="text" class="form-control font__options" placeholder="Nombre/s" required>
+				<input type="text" class="form-control font__options" placeholder="Apellido/s" required>
+			</section>
+			<section class="boxContact">
+				<input type="email" class="form-control font__options" placeholder="name@example.com" required>
+				<input type="number" class="form-control font__options" placeholder="223 5 123456" required>
+			</section>
+			<section class="boxContact">
+				<label for="floatingSelect">Seleccione el tipo de consulta:</label>
+				<select class="form-select font__options " aria-label="Floating label select example" name="seleccion" title="seleccionDeOpciones">
+					<option value="consulta">Consulta de producto (disponibilidad, características, etc)
+					</option>
+					<option value="estado">Estado de mi pedido</option>
+					<option value="cambios">Cambios y devoluciones</option>
+					<option value="anulacion">Anulación de pedido</option>
+					<option value="error">Error/conflicto con el pedido</option>
+					<option value="prob_pago">Problemas con el pago</option>
+					<option value="otro">Otro</option>
+				</select>
+				<label>Número del pedido (Opcional)</label>
+				<input type="number" class="form-control font__options" name="numero_pedido" placeholder="135246"/>
+			</section>
+			<section class="boxContact">
+				<textarea name="mensaje" class="form-control font__options" placeholder="Escribre aquí tus comentarios..."></textarea>
+				<article class="btnCajita">
+					<input class="contactBtn btn-outline-warning sizeBtn" type="reset" value="Borrar" />
+					<input class="contactBtn btn-outline-success sizeBtn" type="submit" value="Enviar" />
 				</article>
-			</div>
-		</div>
+			</section>
+		</form>
+		<article class="ubication">
+			<iframe class="ubication__map"
+				src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50293.511853061216!2d-57.545621385998544!3d-38.	01574766265546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1648236568437!5m2!1ses-419!2sar"
+				style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+			</iframe>
+		</article>
 	</main>
 	<!-- INICIO DE FOOTER -->
 	<footer class="container-fluid">

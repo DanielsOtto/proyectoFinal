@@ -97,7 +97,7 @@ p {
   letter-spacing: 0.08rem;
 }
 
-.sellRow div form input {
+.sellRow div form input, .sellRow div form .boxContact textarea, .boxContact .sellRow div form textarea, .sellRow div form .boxContact select, .boxContact .sellRow div form select {
   width: 50%;
   text-align: center;
   background-color: #470147;
@@ -211,12 +211,6 @@ footer p {
   height: 16rem;
 }
 
-.ubication__map {
-  margin: 3%;
-  width: 60%;
-  height: 22rem;
-}
-
 /* | LOGOS | */
 .logoCompra {
   margin: 5%;
@@ -304,16 +298,6 @@ footer p {
   font-size: large;
   font-weight: bolder;
   letter-spacing: 0.288rem;
-}
-
-.btnCajita {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-around;
 }
 
 /* ESTRUCTURAS GLOBALES */
@@ -506,22 +490,59 @@ footer {
 }
 
 /* AFECTA SECCION CONTACTO*/
+.contenedor-contacto {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "contacto mapa";
+}
+
 .formContacto {
-  margin: 2% 0;
-}
-
-.rowContact div article {
-  margin: 2% 0;
-}
-
-.font__options {
-  margin-bottom: 2%;
+  grid-area: contacto;
+  margin: 2%;
 }
 
 .ubication {
+  grid-area: mapa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3%;
+}
+
+.ubication__map {
   width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 15px 0 #000000;
+}
+
+.boxContact {
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.boxContact input, .boxContact textarea, .boxContact select {
+  width: 50%;
+  margin: 0.5%;
   text-align: center;
-  margin: 5%;
+}
+.boxContact textarea {
+  width: 80%;
+}
+
+.btnCajita {
+  margin: 1%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.btnCajita input, .btnCajita .boxContact select, .boxContact .btnCajita select, .btnCajita .boxContact textarea, .boxContact .btnCajita textarea {
+  width: 15%;
 }
 
 /* MEDIA QUERYS */
@@ -569,6 +590,19 @@ footer {
     width: 3rem;
     height: 10rem;
   }
+
+  .boxContact input, .boxContact select, .boxContact textarea {
+    width: 75%;
+  }
+
+  .btnCajita {
+    margin: 2%;
+    width: 75%;
+  }
+  .btnCajita input, .btnCajita .boxContact select, .boxContact .btnCajita select, .btnCajita .boxContact textarea, .boxContact .btnCajita textarea {
+    width: 50%;
+    margin: 1%;
+  }
 }
 @media (max-width: 480px) {
   .editCarousel {
@@ -594,6 +628,23 @@ footer {
   .columnB svg {
     width: 3rem;
     height: 3rem;
+  }
+
+  .contenedor-contacto {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "contacto" "mapa";
+  }
+
+  .boxContact input, .boxContact select, .boxContact textarea {
+    width: 75%;
+  }
+
+  .btnCajita {
+    width: 75%;
+  }
+  .btnCajita input, .btnCajita .boxContact select, .boxContact .btnCajita select, .btnCajita .boxContact textarea, .boxContact .btnCajita textarea {
+    width: 60%;
   }
 
   .payment {

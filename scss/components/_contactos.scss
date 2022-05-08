@@ -1,19 +1,47 @@
 /* AFECTA SECCION CONTACTO*/
+.contenedor-contacto{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "contacto mapa"
+    ;
+}
 .formContacto{
-    margin: map-get($styleBoxs, twoPercent) $zero;
-}
-.rowContact{
-    div{
-        article{
-            margin: map-get($styleBoxs, twoPercent) $zero;
-        }
-    }
-}
-.font__options{
-    margin-bottom: map-get($styleBoxs, twoPercent);
+    grid-area: contacto;
+    margin: map-get($styleBoxs, twoPercent);
 }
 .ubication{
+    grid-area: mapa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: map-get($styleBoxs, threePercent);
+}
+.ubication__map{
+    @include medidasGlobal ($sizeMax,$sizeMax);
+    box-shadow: map-get($styleBoxs, shadowIndex);
+}
+.boxContact{
+    margin: map-get($styleBoxs, onePercent);
+    @include displayFlex(flex, column, wrap, center, center);
+    input{
+        width: $sizeHalf;
+        margin: map-get($styleBoxs, halfPercent);
+        text-align: map-get($stylesFont, textCentro);
+    }
+    select{
+        @extend input;
+    }
+    textarea{
+        @extend input;
+        width: $sizeBig;
+    }
+}
+.btnCajita{
+    margin: map-get($styleBoxs, onePercent);
     width: $sizeMax;
-    text-align: map-get($stylesFont, textCentro);
-    margin: map-get($styleBoxs, fivePercent);
+    @include displayFlex (flex, row, wrap, center, space-around);
+    input{
+        width: $sizeFift;
+    }
 }

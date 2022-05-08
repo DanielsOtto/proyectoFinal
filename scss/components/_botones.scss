@@ -38,7 +38,7 @@
     letter-spacing:  map-get($stylesFont, letterSpaceSmall);
 }
 //AFECTA CONTACTOS
-.btnCajita{
-    @include medidasGlobal ($sizeMax, $sizeMax);
-    @include displayFlex (flex, row, nowrap, center, space-around);
-}
+// .btnCajita{
+//     @include medidasGlobal ($sizeMax, $sizeMax);
+//     @include displayFlex (flex, row, nowrap, center, space-around);
+// }

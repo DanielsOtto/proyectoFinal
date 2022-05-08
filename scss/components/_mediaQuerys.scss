@@ -1,5 +1,5 @@
 /* MEDIA QUERYS */
-// MEDIA QUERY  x  768px
+// MEDIA QUERY  por  768px
 @media ( max-width: 768px){
     // Afecta Inicio
     .editCarousel{
@@ -26,8 +26,22 @@
             @include medidasGlobal ($sizeLogoS, $sizeImgS);
         }
     }
+    // AFECTA CONTACTOS
+    .boxContact{
+        input{
+            width: $sizeSev;
+        }
+    }
+    .btnCajita{
+        margin: map-get($styleBoxs, twoPercent);
+        width: $sizeSev;
+        input{
+            width: $sizeHalf;
+            margin: map-get($styleBoxs, onePercent);
+        }
+    }
 }
-// MEDIA QUERY  x  480px 
+// MEDIA QUERY  por  480px 
 @media ( max-width: 480px){
     // Afecta Inicio
     .editCarousel{
@@ -43,17 +57,36 @@
     .shirt{
         @include displayFlex (flex, column, wrap, center, center);
     }
-        // Afecta carro de compras
-        .columnB{
-            form{
-                width: $sizeMax;
-            }
-            svg{
-                @include medidasGlobal ($sizeLogoS, $sizeLogoS);
-            }
+    // Afecta carro de compras
+    .columnB{
+        form{
+            width: $sizeMax;
         }
-        //  Afecta footer 
-        .payment{
-            margin: map-get($styleBoxs, threePercent) map-get($styleBoxs, halfPercent);
+        svg{
+            @include medidasGlobal ($sizeLogoS, $sizeLogoS);
         }
+    }
+    // AFECTA CONTACTOS
+    .contenedor-contacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: 
+        "contacto"
+        "mapa";
+    }
+    .boxContact{
+        input{
+            width: $sizeSev;
+        }
+    }
+    .btnCajita{
+        width: $sizeSev;
+        input{
+            width: $sizeSixty;
+        }
+    }
+    //  Afecta footer 
+    .payment{
+        margin: map-get($styleBoxs, threePercent) map-get($styleBoxs, halfPercent);
+    }
 }
