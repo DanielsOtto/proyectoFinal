@@ -29,9 +29,6 @@
 .logoEmpresa{
     border-radius: $sizeHalf;
     margin: map-get($styleBoxs, fivePercent);
-    &:hover{
-        transform: translate(-43%,28%);
-    }
 }
 // FOOTER
 .socialMedia{

@@ -5,8 +5,7 @@
 }
 .shirt{
     @include displayFlex (flex, row, nowrap, center, space-around);
-    margin: map-get($styleBoxs, threePercent);
-    padding: map-get($styleBoxs, onePercent);
+    @include marginAndPadding (map-get($styleBoxs, threePercent),map-get($styleBoxs, onePercent));
 }
 .shirt__info{
     width: $sizeMax;

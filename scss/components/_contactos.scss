@@ -1,22 +1,16 @@
 /* AFECTA SECCION CONTACTO*/
 .contenedor-contacto{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: 
-    "contacto mapa"
-    ;
+    @include displayFlex(flex, row, nowrap, center, space-around);
 }
 .formContacto{
-    grid-area: contacto;
+    @include medidasGlobal($sizeSixty,$sizeMax);
     margin: map-get($styleBoxs, twoPercent);
 }
 .ubication{
-    grid-area: mapa;
-    @include displayFlex(flex, row, wrap, center, center);
     margin: map-get($styleBoxs, threePercent);
 }
 .ubication__map{
-    @include medidasGlobal ($sizeMax,$sizeMax);
+    @include medidasGlobal ($indexWidth, $indexWidth);
     box-shadow: map-get($styleBoxs, shadowIndex);
 }
 .boxContact{

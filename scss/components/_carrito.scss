@@ -1,18 +1,11 @@
 /* Seccion CARRITO*/
 .carrito__fila{
-    margin: map-get($styleBoxs, onePercent);
-    padding: map-get($styleBoxs, twoPercent);
+    @include marginAndPadding (map-get($styleBoxs, onePercent),map-get($styleBoxs, twoPercent));
     height: $remSeven;
 }
 .secondRow{
     height: $remFour;
-    .colItem{
-        @include displayFlex (flex, row, nowrap, center, center);
-    }
-    .colCant{
-        @include displayFlex (flex, row, nowrap, center, center);
-    }
-    .colSbt{
+    .colum-title{
         @include displayFlex (flex, row, nowrap, center, center);
     }
 }

@@ -122,9 +122,13 @@ body{
     }
 }
 .secondRow{
-    h3{
-        font-size: map-get($sizeFont, largeV);
-        letter-spacing:  map-get($stylesFont, letterSpaceXS);
+    div{
+        section{
+            h3{
+                font-size: map-get($sizeFont, largeV);
+                letter-spacing:  map-get($stylesFont, letterSpaceXS);
+            }
+        }
     }
 }
 .sellRow{

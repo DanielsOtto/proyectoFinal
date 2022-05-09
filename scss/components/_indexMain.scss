@@ -3,11 +3,8 @@
     padding: map-get($styleBoxs, twoPercent);
     @include displayFlex (flex, column, wrap, center, center);
 }
-.articleMan{
-    padding: map-get($styleBoxs, onePercent);
-}
-.articleWoman{
-    @extend .articleMan;
+.cont-inicio{
+    padding: map-get($styleBoxs, twoPercent);
 }
 .aside-carl__cont-img{
     box-shadow: 0 5px 15px 0 $black;

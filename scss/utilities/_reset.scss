@@ -1,7 +1,6 @@
 /* RESET: AFECTA TODAS LAS PAGINAS*/
 *{
-    margin: $zero;
-    padding: $zero;
+    @include marginAndPadding ($zero, $zero);
     box-sizing: border-box;
 }
 html{
