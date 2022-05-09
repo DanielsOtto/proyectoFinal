@@ -10,7 +10,7 @@
         @include displayFlex (flex, row, wrap, center, center);
     }
     .imgRopa{
-        @include medidasGlobal ($sizeImgN, $sizeImgM);
+        @include medidasGlobal ($sizeImgN, $sizeImgN);
     }
     .btnCompras{
         @include settingsBtnEns (35%, 28%, 1%, $snow);
@@ -44,6 +44,9 @@
 // MEDIA QUERY  por  480px 
 @media ( max-width: 480px){
     // Afecta Inicio
+    .imgSize{
+        height: $indexHeightMQ;
+    }
     .editCarousel{
         width: $sizeSixty;
     }

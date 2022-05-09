@@ -220,7 +220,7 @@ footer p {
 .imgSize {
   width: 50rem;
   height: 84.5rem;
-  box-shadow: 0 5px 15px 0 #000000;
+  box-shadow: 0 0.5rem 1.5rem 0 #000000;
 }
 
 .cont-img__h, .cont-img__m {
@@ -308,7 +308,7 @@ footer p {
 .btnGeneral:hover, .listaTalles:hover {
   background-color: #FF7F50;
   border-color: #FFDEB5;
-  box-shadow: 0 0 1.6rem #470147;
+  box-shadow: 0 0 0.8rem #470147;
   border-radius: 0.7rem;
 }
 
@@ -386,7 +386,7 @@ footer {
 /* AFECTA SECCIONES HOMBRES Y MUJERES */
 .rowShirts {
   margin: 3% 1%;
-  box-shadow: 0 0 0.96rem #FF7F50;
+  box-shadow: 0 0 0.4rem #FF7F50;
 }
 
 .shirt {
@@ -452,7 +452,7 @@ footer {
 
 .sellRow {
   height: 24rem;
-  box-shadow: 0 0 1.6rem #470147;
+  box-shadow: 0 0 0.8rem #470147;
   margin: 3% 1%;
 }
 
@@ -538,7 +538,7 @@ footer {
 .ubication__map {
   width: 100%;
   height: 100%;
-  box-shadow: 0 5px 15px 0 #000000;
+  box-shadow: 0 0.5rem 1.5rem 0 #000000;
 }
 
 .boxContact {
@@ -586,7 +586,7 @@ footer {
 
   .imgRopa {
     width: 13rem;
-    height: 16rem;
+    height: 13rem;
   }
 
   .btnCompras {
@@ -630,6 +630,10 @@ footer {
   }
 }
 @media (max-width: 480px) {
+  .imgSize {
+    height: 70rem;
+  }
+
   .editCarousel {
     width: 60%;
   }

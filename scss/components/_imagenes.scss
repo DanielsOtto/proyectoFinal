@@ -10,9 +10,8 @@
     justify-content: center;
 }
 .imgSize{
-    width: $indexWidth;
-    height: $indexHeight;
-    box-shadow: map-get($styleBoxs, shadowIndex)
+    @include medidasGlobal ($indexWidth,$indexHeight);
+    box-shadow: map-get($styleBoxs, shadowIndex);
 }
 .cont-img__h{
     width: $sizeBig;

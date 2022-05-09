@@ -1,7 +1,7 @@
 {
   "name": "latiendita_daniels",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tienda online de venta de ropa en la localidad de Mar del Plata, marca SKREEP.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/DanielsOtto/proyectoFinal.git"
   },
-  "author": "",
+  "author": "Otto Daniels",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DanielsOtto/proyectoFinal/issues"

@@ -7,6 +7,7 @@ $sizeLogoS: 3rem;
 // Imágenes
 $indexWidth: 50rem;
 $indexHeight: 84.5rem;
+$indexHeightMQ: 70rem;
 $sizeImgB: 22rem;
 $sizeImgM: 16rem;
 $sizeImgN: 13rem;
@@ -34,9 +35,9 @@ $styleBoxs:(
     twoPercent: 2%,
     threePercent: 3%,
     fivePercent: 5%,
-    shadowBoxCoral: 0 0 0.96rem $coral,
-    shadowBoxMorado: 0 0 1.6rem $morado,
-    shadowIndex: 0 5px 15px 0 $black
+    shadowBoxCoral: 0 0 0.4rem $coral,
+    shadowBoxMorado: 0 0 0.8rem $morado,
+    shadowIndex: 0 0.5rem 1.5rem 0 $black
 );
 $stylesFont:(
     textJustify: justify,
