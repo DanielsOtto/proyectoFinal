@@ -40,3 +40,6 @@
 - Versión 4.1a → Sección Contactos: Había utilizado GRID para estructurar el main de esa sección, y lo modifiqué por un FLEXBOX, menos líneas por el mismo resultado. || El logo de la marca tenía un transform (translate), lo había puesto para un ejercicio anterior, lo quité porque no me gusta.
 - Versión 4.1b → Modificaciones: Creadas nuevas variables. || Eliminadas las clases: logoBox y titleBox (que se encontraban en el Header y hacían lo mismo mediante un @extend), ahora existe una sola clase: boxHeader // eliminadas: cont-img__h y cont-img__m (se encontraban en la sección Inicio, y estaban vínculadas mediante un @extend), ahora existe cont-img__text. 
 - Versión 4.1c → Modificaciones en el fragmento tipografías, le agregué a los @font-face el descriptor font-display con el valor fallback. Lo cual establece un tiempo de bloqueo muy pequeño y un período de intercambio corto, permitiendo que se muestren las fuentes cuándo este descargada y lista para usarse.
+
+
+→ MERGE -- UNIÓN entre main (rama principal) y sassSecond (última rama actualizada).
