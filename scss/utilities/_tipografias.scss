@@ -76,7 +76,7 @@ body{
     font-family: $Righteous, sans-serif;
 }
 // Seccion Inicio
-.cont-img__h{
+.cont-img__text{
     h2{
         font-family: $LatoBlack, sans-serif;
         @include linkStyles ($sizeLogoM, map-get($sizeFont, uppercaseV), $coral);

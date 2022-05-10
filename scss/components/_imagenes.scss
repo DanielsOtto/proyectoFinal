@@ -13,16 +13,13 @@
     @include medidasGlobal ($indexWidth,$indexHeight);
     box-shadow: map-get($styleBoxs, shadowIndex);
 }
-.cont-img__h{
+.cont-img__text{
     width: $sizeBig;
     height: auto;
     position: absolute;
     top: $sizeSev;
     display: flex;
     flex-direction: column;
-}
-.cont-img__m{
-    @extend .cont-img__h;
 }
 .aside-carl__cont-img{
     div{

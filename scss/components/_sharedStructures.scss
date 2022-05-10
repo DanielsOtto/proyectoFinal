@@ -11,11 +11,8 @@ header{
 .backg-nav{
     background-color: $coral;
 }
-.titleBox{
+.boxHeader{
     @include displayFlex (flex, row, nowrap, center, center);
-}
-.logoBox{
-    @extend .titleBox;
 }
 // FOOTER
 footer{
@@ -24,7 +21,7 @@ footer{
     margin-top: auto;
 }
 .delivery{
-    margin: 5% 2%;
+    margin: map-get($styleBoxs, bigMargin);
 }
 .createdBy{
     @extend .delivery;

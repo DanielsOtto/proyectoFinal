@@ -2,13 +2,12 @@
 // Botones
 .btnGeneral{
     background-color: $morado;
-    border-radius: 0.5rem;
+    border-radius: $remHalf;
     padding: map-get($styleBoxs,halfPercent);
     &:hover{
         background-color: $coral;
         border-color: $mocasin;
         box-shadow: map-get($styleBoxs,shadowBoxMorado);
-        border-radius: 0.7rem;
     }
 }
 // AFECTA SECCIONES HOMBRES Y MUJERES

@@ -85,16 +85,16 @@ body {
   font-family: Lato, sans-serif;
 }
 
-.cont-img__h h2, .cont-img__m h2, .cont-img__h h4, .cont-img__m h4 {
+.cont-img__text h2, .cont-img__text h4 {
   font-family: LatoBlack, sans-serif;
   font-size: 4.8rem;
   text-transform: uppercase;
   color: #FF7F50;
 }
-.cont-img__h h2:hover, .cont-img__m h2:hover, .cont-img__h h4:hover, .cont-img__m h4:hover {
+.cont-img__text h2:hover, .cont-img__text h4:hover {
   color: #FFDEB5;
 }
-.cont-img__h p, .cont-img__m p {
+.cont-img__text p {
   font-family: LatoBlack, sans-serif;
   font-size: 2rem;
   text-transform: uppercase;
@@ -223,7 +223,7 @@ footer p {
   box-shadow: 0 0.5rem 1.5rem 0 #000000;
 }
 
-.cont-img__h, .cont-img__m {
+.cont-img__text {
   width: 80%;
   height: auto;
   position: absolute;
@@ -306,7 +306,6 @@ footer p {
   background-color: #FF7F50;
   border-color: #FFDEB5;
   box-shadow: 0 0 0.8rem #470147;
-  border-radius: 0.7rem;
 }
 
 .upBtn {
@@ -343,7 +342,7 @@ header {
   background-color: #FF7F50;
 }
 
-.titleBox, .logoBox {
+.boxHeader {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -376,7 +375,7 @@ footer {
 }
 
 .aside-carl__cont-img {
-  box-shadow: 0 5px 15px 0 #000000;
+  box-shadow: 0 0.5rem 1.5rem 0 #000000;
   margin-bottom: 3%;
 }
 
@@ -589,7 +588,7 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 5px;
+    margin: 0.5rem;
   }
   .columnB svg {
     width: 3rem;

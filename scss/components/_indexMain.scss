@@ -7,6 +7,6 @@
     padding: map-get($styleBoxs, twoPercent);
 }
 .aside-carl__cont-img{
-    box-shadow: 0 5px 15px 0 $black;
+    box-shadow: map-get($styleBoxs, shadowIndex);
     margin-bottom: map-get($styleBoxs, threePercent);
 }

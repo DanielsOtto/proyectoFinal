@@ -20,7 +20,7 @@
         @include displayFlex (flex, column, wrap, center, space-around);
         form{
             @include displayFlex (flex, row, wrap, center, center);
-            margin: 5px;
+            margin: $remHalf;
         }
         svg{
             @include medidasGlobal ($sizeLogoS, $sizeImgS);
