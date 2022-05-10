@@ -7,10 +7,12 @@ tipografías:
 @font-face {
     font-family: Righteous;
     src: url(../assets/fonts/Righteous-Regular.ttf); 
+    font-display: fallback;
 }
 @font-face {
     font-family: Kanit;
     src: url(../assets/fonts/Kanit-Italic.ttf);
+    font-display: fallback;
 }
 // Variables TIPOGRAFIA
 $Righteous: Righteous;
