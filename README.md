@@ -27,4 +27,8 @@
                       ▬ _mediaQuerys, las cuales afectan las secciones Hombre y Mujer (ahora las imágenes tienen el mismo tamaño cuando se achica la pantalla).
                       ▬ _imágenes (se modificó el tamaño del mapa que muestra la ubicación).
                       ▬ _tipografías, en la clase .shirt__info se agregó  ´&:last-of-type´ (ahora el precio del producto aparece centrado, mientras que el detalle se mantiene justificado a la izquierda). 
+<<<<<<< HEAD
 - Versión 3.1a → Correción de errores: faltaban 2 ´;´, agregados, solucionados (en los archivos _variables y _mediaQuerys).
+=======
+- Version 3.1a → Correción de errores: faltaban 2 ´;´, agregados, solucionados (en los archivos _variables y _mediaQuerys).
+>>>>>>> a096c4d (Update README.md)
