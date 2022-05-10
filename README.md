@@ -42,4 +42,4 @@
 - Versión 4.1c → Modificaciones en el fragmento tipografías, le agregué a los @font-face el descriptor font-display con el valor fallback. Lo cual establece un tiempo de bloqueo muy pequeño y un período de intercambio corto, permitiendo que se muestren las fuentes cuándo este descargada y lista para usarse.
 
 
-→ MERGE -- UNIÓN entre main (rama principal) y sassSecond (última rama actualizada).
+→ MERGE -- Entre main (rama principal) y sassSecond (última rama actualizada).
