@@ -1,0 +1,686 @@
+@charset "UTF-8";
+/*Detalles gráficos
+colores HEXA:
+    coral: #FF7F50
+    moccasin: #FFDEB5
+    morado: #470147
+    blanco: #FFFAFA
+    black: #000000
+*/
+/* RESET: AFECTA TODAS LAS PAGINAS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Detalles gráficos 
+tipografías:
+    font-family: 'Kanit', Italic
+    font-family: 'Lato', Regular
+    font-family: 'Lato', Black 
+*/
+/* | TIPOGRAFÍA | */
+@font-face {
+  font-family: Lato;
+  src: url(../assets/fonts/Lato-Regular.ttf);
+  font-display: fallback;
+}
+@font-face {
+  font-family: LatoBlack;
+  src: url(../assets/fonts/Lato-Black.ttf);
+  font-display: fallback;
+}
+@font-face {
+  font-family: Kanit;
+  src: url(../assets/fonts/Kanit-Italic.ttf);
+  font-display: fallback;
+}
+.tituloEmpresa {
+  margin: 1% 2%;
+  font-size: 7.2rem;
+  color: #470147;
+  font-family: LatoBlack, sans-serif;
+}
+
+h2, h4 {
+  color: #470147;
+  width: 100%;
+  padding: 1%;
+}
+
+.btnNav, .navbar-nav li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: large;
+  letter-spacing: 0.08rem;
+}
+
+.navbar-nav li a {
+  font-family: LatoBlack, sans-serif;
+}
+
+.btnGeneral, .listaTalles {
+  font-size: 1.6rem;
+  color: #FFFAFA;
+  text-transform: uppercase;
+  letter-spacing: 0.288rem;
+}
+.btnGeneral:hover, .listaTalles:hover {
+  color: #470147;
+}
+
+p {
+  padding: 2%;
+  width: 100%;
+  letter-spacing: 0.288rem;
+  font-weight: bold;
+  text-align: justify;
+  font-size: medium;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Lato, sans-serif;
+}
+
+.cont-img__text h2, .cont-img__text h4 {
+  font-family: LatoBlack, sans-serif;
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  color: #FF7F50;
+}
+.cont-img__text h2:hover, .cont-img__text h4:hover {
+  color: #FFDEB5;
+}
+.cont-img__text p {
+  font-family: LatoBlack, sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #FFFAFA;
+  text-align: end;
+}
+
+.carouselTitle {
+  width: 75%;
+}
+.carouselTitle h2, .carouselTitle h4 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.shirt__info p {
+  letter-spacing: 0.08rem;
+}
+.shirt__info p:last-of-type {
+  text-align: center;
+}
+
+.listaTalles {
+  text-align: center;
+}
+
+.upBtn {
+  text-align: center;
+}
+
+.shoppingT h2, .shoppingT h4 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.288rem;
+}
+
+.secondRow div section h3 {
+  font-size: large;
+  letter-spacing: 0.08rem;
+}
+
+.sellRow div form input, .sellRow div form .boxContact textarea, .boxContact .sellRow div form textarea, .sellRow div form .boxContact select, .boxContact .sellRow div form select {
+  text-align: center;
+  color: #FFFAFA;
+}
+.sellRow div p {
+  width: auto;
+  font-size: large;
+  font-weight: bold;
+  letter-spacing: 0.08rem;
+}
+
+.buying h4 {
+  width: 80%;
+  margin-left: 2%;
+  align-items: center;
+  font-size: large;
+  text-transform: uppercase;
+  letter-spacing: 0.288rem;
+}
+.buying .buying__a {
+  text-align: center;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bolder;
+  letter-spacing: 0.288rem;
+}
+
+.purchase .purchase__total, .buying .purchase__total {
+  width: auto;
+  margin: 1%;
+  font-size: xx-large;
+  font-weight: bolder;
+  letter-spacing: 0.08rem;
+  text-align: right;
+}
+.purchase .purchase__selling, .buying .purchase__selling {
+  width: auto;
+  font-size: x-large;
+  font-weight: bolder;
+  letter-spacing: 0.288rem;
+  text-align: right;
+}
+
+.font__options {
+  font-size: 2rem;
+  font-variant-caps: petite-caps;
+  letter-spacing: 0.08rem;
+}
+
+.boxContact input, .boxContact textarea, .boxContact select {
+  text-align: center;
+}
+
+.contactBtn {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.288rem;
+}
+
+footer p {
+  font-family: Kanit, sans-serif;
+  color: #FFFAFA;
+  font-weight: lighter;
+}
+
+.delivery, .payment, .socialMedia, .createdBy {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* | IMAGENES | */
+.logoEmpresa {
+  width: 6rem;
+  height: 6rem;
+}
+
+.cont-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.imgSize {
+  width: 50rem;
+  height: 84.5rem;
+  box-shadow: 0 0.5rem 1.5rem 0 #000000;
+}
+
+.cont-img__text {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  top: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-carl__cont-img div img {
+  object-fit: scale-down;
+  height: 45vh;
+  width: 100%;
+}
+
+.imgRopa {
+  width: 22rem;
+  height: 22rem;
+}
+.imgRopa:hover {
+  transform: scale(1.7);
+}
+
+.sellRow div img {
+  width: 16rem;
+  height: 16rem;
+}
+
+/* | LOGOS | */
+.logoCompra {
+  margin: 5%;
+  animation: desaparecer 4s;
+}
+
+@keyframes desaparecer {
+  25% {
+    animation-timing-function: ease-out;
+    transform: translate(400%);
+  }
+  45% {
+    transform: translate(400%);
+  }
+  60% {
+    transform: translate(400%);
+  }
+  80% {
+    animation-timing-function: cubic-bezier(0, 0, 0.6, 1);
+    transform: rotate(-360deg);
+    opacity: 0.2;
+  }
+  100% {
+    animation-timing-function: linear;
+    opacity: 0.8;
+    transform: rotate(360deg);
+  }
+}
+.logoEmpresa {
+  border-radius: 50%;
+  margin: 5%;
+}
+
+.socialMedia a {
+  margin: 1%;
+  text-decoration: none;
+}
+.socialMedia svg:hover {
+  transform: scale(2);
+}
+
+.payment img {
+  margin-right: 0.5%;
+}
+
+/* | BOTONES | */
+.btnGeneral, .listaTalles {
+  background-color: #470147;
+  border-radius: 0.5rem;
+  padding: 0.5%;
+}
+.btnGeneral:hover, .listaTalles:hover {
+  background-color: #FF7F50;
+  border-color: #FFDEB5;
+  box-shadow: 0 0 0.8rem #470147;
+}
+
+.upBtn {
+  margin: 1%;
+  padding: 3%;
+}
+.upBtn svg:hover {
+  transform: scale(1.8);
+}
+
+.sellRow div form input, .sellRow div form .boxContact textarea, .boxContact .sellRow div form textarea, .sellRow div form .boxContact select, .boxContact .sellRow div form select {
+  width: 50%;
+  background-color: #470147;
+}
+
+.buying .buying__a {
+  width: 60%;
+  height: 15%;
+  margin: 1% 2%;
+  color: #470147;
+}
+
+/* ESTRUCTURAS GLOBALES */
+body {
+  overflow-x: hidden;
+  background-color: #FFDEB5;
+}
+
+header {
+  background-color: #FF7F50;
+}
+
+.backg-nav {
+  background-color: #FF7F50;
+}
+
+.boxHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  background-color: #470147;
+  bottom: 0;
+  margin-top: auto;
+}
+
+.delivery, .payment, .socialMedia, .createdBy {
+  margin: 5% 2%;
+}
+
+/*AFECTA SECCION INDEX*/
+.imageBox {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.cont-inicio {
+  padding: 2%;
+}
+
+.aside-carl__cont-img {
+  box-shadow: 0 0.5rem 1.5rem 0 #000000;
+  margin-bottom: 3%;
+}
+
+/* AFECTA SECCIONES HOMBRES Y MUJERES */
+.rowShirts {
+  margin: 3% 1%;
+  box-shadow: 0 0 0.4rem #FF7F50;
+}
+
+.shirt {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 3%;
+  padding: 1%;
+}
+
+.shirt__info {
+  width: 100%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.shirt__info form {
+  width: 100%;
+  margin-left: 3%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Seccion CARRITO*/
+.carrito__fila {
+  margin: 1%;
+  padding: 2%;
+  height: 11.2rem;
+}
+
+.secondRow {
+  height: 6.4rem;
+}
+.secondRow .colum-title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.sellRow {
+  height: 24rem;
+  box-shadow: 0 0 0.8rem #470147;
+  margin: 3% 1%;
+}
+
+.lastRow {
+  width: 100%;
+  height: 32rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.columnA {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.columnB {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.columnB form {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.columnC {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.purchase, .buying {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buying {
+  justify-content: space-evenly;
+}
+
+/* AFECTA SECCION CONTACTO*/
+.contenedor-contacto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.formContacto {
+  width: 60%;
+  height: 100%;
+  margin: 2%;
+}
+
+.ubication {
+  margin: 3%;
+}
+
+.ubication__map {
+  width: 50rem;
+  height: 50rem;
+  box-shadow: 0 0.5rem 1.5rem 0 #000000;
+}
+
+.boxContact {
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.boxContact input, .boxContact textarea, .boxContact select {
+  width: 50%;
+  margin: 0.5%;
+}
+.boxContact textarea {
+  width: 80%;
+}
+
+.btnCajita {
+  margin: 1%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.btnCajita input, .btnCajita .boxContact select, .boxContact .btnCajita select, .btnCajita .boxContact textarea, .boxContact .btnCajita textarea {
+  width: 15%;
+}
+
+/* MEDIA QUERYS */
+@media (max-width: 768px) {
+  .editCarousel {
+    width: 50%;
+  }
+
+  .rowShirts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imgRopa {
+    width: 13rem;
+    height: 13rem;
+  }
+
+  .btnCompras {
+    width: 35%;
+    height: 28%;
+    margin: 1%;
+    color: #FFFAFA;
+  }
+
+  .columnB {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .columnB form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+  }
+  .columnB svg {
+    width: 3rem;
+    height: 10rem;
+  }
+
+  .contenedor-contacto {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .boxContact input, .boxContact select, .boxContact textarea {
+    width: 75%;
+  }
+
+  .btnCajita {
+    margin: 2%;
+    width: 75%;
+  }
+  .btnCajita input, .btnCajita .boxContact select, .boxContact .btnCajita select, .btnCajita .boxContact textarea, .boxContact .btnCajita textarea {
+    width: 50%;
+    margin: 1%;
+  }
+}
+@media (max-width: 480px) {
+  .imgSize {
+    height: 70rem;
+  }
+
+  .editCarousel {
+    width: 60%;
+  }
+
+  .colCarouselTitle h2, .colCarouselTitle h4 {
+    width: 75%;
+    font-size: large;
+  }
+
+  .shirt {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .firstRow {
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: baseline;
+  }
+  .firstRow .shoppingT h2, .firstRow .shoppingT h4 {
+    font-size: 3rem;
+  }
+
+  .columnB form {
+    width: 100%;
+  }
+  .columnB svg {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .boxContact input, .boxContact select, .boxContact textarea {
+    width: 100%;
+  }
+
+  .btnCajita {
+    width: 75%;
+  }
+  .btnCajita input, .btnCajita .boxContact select, .boxContact .btnCajita select, .btnCajita .boxContact textarea, .boxContact .btnCajita textarea {
+    width: 60%;
+  }
+
+  .ubication__map {
+    width: 32rem;
+    height: 32rem;
+  }
+
+  .payment {
+    margin: 3% 0.5%;
+  }
+}
+
+/*# sourceMappingURL=destino.css.map */

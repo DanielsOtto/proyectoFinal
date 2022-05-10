@@ -1,0 +1,47 @@
+/* | IMAGENES | */
+// AFECTA HEADER
+.logoEmpresa{
+    @include medidasGlobal ($sizeLogoB, $sizeLogoB);
+}
+// AFECTA SECCION INDEX
+.cont-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.imgSize{
+    @include medidasGlobal ($indexWidth,$indexHeight);
+    box-shadow: map-get($styleBoxs, shadowIndex);
+}
+.cont-img__text{
+    width: $sizeBig;
+    height: auto;
+    position: absolute;
+    top: $sizeSev;
+    display: flex;
+    flex-direction: column;
+}
+.aside-carl__cont-img{
+    div{
+        img{
+            object-fit: scale-down;
+            height: 45vh;
+            width: $sizeMax;
+        }
+    }
+}
+// AFECTA SECCIONES HOMBRES Y MUJERES
+.imgRopa{
+    @include medidasGlobal($sizeImgB, $sizeImgB);
+    &:hover{
+        transform: scale(1.7);
+    }
+}
+// AFECTA SECCION  CARRO DE COMPRAS
+.sellRow{
+    div{
+        img{
+            @include medidasGlobal($sizeImgM, $sizeImgM);
+        }
+    }
+}

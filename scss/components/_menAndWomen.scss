@@ -1,0 +1,19 @@
+/* AFECTA SECCIONES HOMBRES Y MUJERES */
+.rowShirts{
+    margin: map-get($styleBoxs, margiN);
+    box-shadow: map-get($styleBoxs, shadowBoxCoral);
+}
+.shirt{
+    @include displayFlex (flex, row, nowrap, center, space-around);
+    @include marginAndPadding (map-get($styleBoxs, threePercent),map-get($styleBoxs, onePercent));
+}
+.shirt__info{
+    width: $sizeMax;
+    padding: map-get($styleBoxs, onePercent);
+    @include displayFlex (flex, column, wrap, center, flex-start);
+    form{
+        width: $sizeMax;
+        margin-left:  map-get($styleBoxs, threePercent);
+        @include displayFlex (flex, row, wrap, center, space-evenly);
+    }
+}

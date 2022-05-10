@@ -1,0 +1,40 @@
+/* | BOTONES | */
+// Botones
+.btnGeneral{
+    background-color: $morado;
+    border-radius: $remHalf;
+    padding: map-get($styleBoxs,halfPercent);
+    &:hover{
+        background-color: $coral;
+        border-color: $mocasin;
+        box-shadow: map-get($styleBoxs,shadowBoxMorado);
+    }
+}
+// AFECTA SECCIONES HOMBRES Y MUJERES
+.listaTalles{
+    @extend .btnGeneral;
+}
+.upBtn{
+    @include marginAndPadding (map-get($styleBoxs, onePercent), map-get($styleBoxs, threePercent));
+    svg{
+        &:hover{
+        transform: scale(1.8);
+        }
+    }
+}
+// AFECTA A CARRITO
+.sellRow{
+    div{
+        form{
+            input{
+                width: $sizeHalf;
+                background-color: $morado;
+            }
+        }
+    }
+}
+.buying{
+    .buying__a{
+        @include settingsBtnEns ($sizeSixty, $sizeFift, 1% 2%, $morado);
+    }
+}

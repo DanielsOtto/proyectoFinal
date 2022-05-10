@@ -1,0 +1,34 @@
+/* ESTRUCTURAS GLOBALES */
+// BODY
+body{
+    overflow-x: hidden;
+    background-color: $mocasin;
+}
+// HEADER
+header{
+    background-color: $coral; 
+}
+.backg-nav{
+    background-color: $coral;
+}
+.boxHeader{
+    @include displayFlex (flex, row, nowrap, center, center);
+}
+// FOOTER
+footer{
+    background-color: $morado;
+    bottom: $zero;
+    margin-top: auto;
+}
+.delivery{
+    margin: map-get($styleBoxs, bigMargin);
+}
+.createdBy{
+    @extend .delivery;
+}
+.socialMedia{
+    @extend .delivery;
+}
+.payment{
+    @extend .delivery;
+}

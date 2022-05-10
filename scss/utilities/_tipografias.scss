@@ -1,0 +1,215 @@
+/* Detalles gráficos 
+tipografías:
+    font-family: 'Kanit', Italic
+    font-family: 'Lato', Regular
+    font-family: 'Lato', Black 
+*/
+/* | TIPOGRAFÍA | */
+@font-face {
+    font-family: Lato;
+    src: url(../assets/fonts/Lato-Regular.ttf); 
+    font-display: fallback;
+}
+@font-face {
+    font-family: LatoBlack;
+    src: url(../assets/fonts/Lato-Black.ttf); 
+    font-display: fallback;
+}
+@font-face {
+    font-family: Kanit;
+    src: url(../assets/fonts/Kanit-Italic.ttf);
+    font-display: fallback;
+}
+// Variables TIPOGRAFIA
+$Righteous: Lato;
+$Kanit: Kanit;
+$LatoBlack: LatoBlack;
+// H1 -- Titulo Empresa
+.tituloEmpresa{
+    margin: 1% 2%;
+    font-size: map-get($sizeFont, titleBig);
+    color: $morado; 
+    font-family: $LatoBlack, sans-serif;
+}
+h2{
+    color: $morado;
+    width: $sizeMax;
+    padding: map-get($styleBoxs, onePercent);
+}
+h4{
+    @extend h2;
+}
+// AFECTA NAV
+.btnNav{
+    text-transform: map-get($sizeFont, uppercaseV);
+    font-weight:  map-get($stylesFont, fontWeight);
+    font-size: map-get($sizeFont, largeV);
+    letter-spacing: map-get($stylesFont, letterSpaceXS);
+}
+.navbar-nav{
+    li{
+        a{
+            @extend .btnNav;
+            font-family: $LatoBlack, sans-serif;
+        }
+    }
+}
+// Botones generales
+.btnGeneral{
+    font-size: $remOne;
+    color: $snow;
+    text-transform: map-get($sizeFont, uppercaseV);
+    letter-spacing: map-get($stylesFont, letterSpaceSmall);
+    &:hover{
+        color: $morado;
+    }
+}
+// PARRAFO
+p{
+    padding: map-get($styleBoxs, twoPercent);
+    width: $sizeMax;
+    letter-spacing:  map-get($stylesFont, letterSpaceSmall);
+    font-weight: map-get($stylesFont, fontWeight);
+    text-align: map-get($stylesFont, textJustify);
+    font-size: map-get($sizeFont, mediumV);
+}
+// BODY
+body{
+    font-size: $remOne;
+    font-family: $Righteous, sans-serif;
+}
+// Seccion Inicio
+.cont-img__text{
+    h2{
+        font-family: $LatoBlack, sans-serif;
+        @include linkStyles ($sizeLogoM, map-get($sizeFont, uppercaseV), $coral);
+        &:hover{
+            color: $mocasin;
+        }
+    }
+    p{  
+        font-family: $LatoBlack, sans-serif;
+        @include linkStyles (map-get($sizeFont, twoRem), map-get($sizeFont, uppercaseV), $snow);
+        text-align: end;
+    }
+}
+.carouselTitle{
+    width: $sizeSev;
+    h2{
+        font-size: $sizeLogoS;
+        text-align: map-get($stylesFont, textCentro);
+    }
+}
+//Seccion Hombres y mujeres
+.shirt__info{
+    p{
+        color: map-get($stylesFont, colorM);
+        letter-spacing: map-get($stylesFont, letterSpaceXS);
+        &:last-of-type{
+            text-align: map-get($stylesFont, textCentro);
+        }
+    }
+}
+.listaTalles{
+    text-align: map-get($stylesFont, textCentro);
+}
+.upBtn{
+    text-align: map-get($stylesFont, textCentro);
+}
+// seccion carrito
+.shoppingT{
+    h2{
+        font-size: map-get($sizeFont, titleMedium);
+        text-transform: map-get($sizeFont, uppercaseV);
+        letter-spacing: map-get($stylesFont, letterSpaceSmall);
+    }
+}
+.secondRow{
+    div{
+        section{
+            h3{
+                font-size: map-get($sizeFont, largeV);
+                letter-spacing:  map-get($stylesFont, letterSpaceXS);
+            }
+        }
+    }
+}
+.sellRow{
+    div{
+        form{
+            input{
+                text-align: map-get($stylesFont, textCentro);
+                color: $snow;
+            }
+        }
+        p{
+            width: auto;
+            font-size: map-get($sizeFont, largeV);
+            font-weight: map-get($stylesFont, fontWeight);
+            letter-spacing: map-get($stylesFont, letterSpaceXS);
+        }
+    }
+}
+.buying{
+    h4{
+        width: $sizeBig;
+        margin-left: map-get($styleBoxs, twoPercent);
+        align-items: map-get($stylesFont, textCentro);
+        font-size: map-get($sizeFont, largeV);
+        text-transform: map-get($sizeFont, uppercaseV);
+        letter-spacing:  map-get($stylesFont, letterSpaceSmall);
+    }
+    .buying__a{
+        text-align:  map-get($stylesFont, textCentro);
+        text-decoration: none;
+        font-size: map-get($sizeFont, largeV);
+        font-weight:  map-get($stylesFont, fontBolder);
+        letter-spacing:  map-get($stylesFont, letterSpaceSmall);
+    }
+}
+.purchase{
+    .purchase__total{
+        width: auto;
+        margin: map-get($styleBoxs, onePercent);
+        font-size: map-get($sizeFont, xxlargeV);
+        font-weight: map-get($stylesFont, fontBolder);
+        letter-spacing:  map-get($stylesFont, letterSpaceXS);
+        text-align: map-get($stylesFont, textRight);
+    }
+    .purchase__selling{
+        width: auto;
+        font-size: map-get($sizeFont, xlargeV);
+        font-weight: map-get($stylesFont, fontBolder);
+        letter-spacing:  map-get($stylesFont, letterSpaceSmall);
+        text-align: map-get($stylesFont, textRight);
+    }
+}
+// SECCION CONTACTO y NAV (inputs)
+.font__options{
+    font-size: map-get($sizeFont, twoRem);
+    font-variant-caps: map-get($sizeFont, petiteCapsV);
+    letter-spacing: map-get($stylesFont, letterSpaceXS);
+}
+// seccion Contacto
+.boxContact{
+    input{
+        text-align: map-get($stylesFont, textCentro);
+    }
+}
+.contactBtn{
+    font-size: map-get($sizeFont, twoRem);
+    text-transform: map-get($sizeFont, uppercaseV);
+    letter-spacing: map-get($stylesFont, letterSpaceSmall);
+}
+//FOOTER 
+footer{
+    p{
+        font-family: $Kanit, sans-serif;
+        color: $snow;
+        font-weight: map-get($stylesFont, fontLighter);
+    }
+}
+.delivery{
+    text-align: map-get($stylesFont, textCentro);
+    text-transform: map-get($sizeFont, uppercaseV);
+}

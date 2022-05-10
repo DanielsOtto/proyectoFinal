@@ -1,0 +1,105 @@
+/* MEDIA QUERYS */
+// MEDIA QUERY  por  768px
+@media ( max-width: 768px){
+    // Afecta Inicio
+    .editCarousel{
+        width: $sizeHalf;
+    }
+    // Afecta Hombre|Mujer
+    .rowShirts{
+        @include displayFlex (flex, row, wrap, center, center);
+    }
+    .imgRopa{
+        @include medidasGlobal ($sizeImgN, $sizeImgN);
+    }
+    .btnCompras{
+        @include settingsBtnEns (35%, 28%, 1%, $snow);
+    }
+    // Afecta carro de compras
+    .columnB{
+        @include displayFlex (flex, column, wrap, center, space-around);
+        form{
+            @include displayFlex (flex, row, wrap, center, center);
+            margin: $remHalf;
+        }
+        svg{
+            @include medidasGlobal ($sizeLogoS, $sizeImgS);
+        }
+    }
+    // AFECTA CONTACTOS
+    .contenedor-contacto{
+        @include displayFlex(flex, column, wrap, center, center);
+    }
+    .boxContact{
+        input{
+            width: $sizeSev;
+        }
+    }
+    .btnCajita{
+        margin: map-get($styleBoxs, twoPercent);
+        width: $sizeSev;
+        input{
+            width: $sizeHalf;
+            margin: map-get($styleBoxs, onePercent);
+        }
+    }
+}
+// MEDIA QUERY  por  480px 
+@media ( max-width: 480px){
+    // Afecta Inicio
+    .imgSize{
+        height: $indexHeightMQ;
+    }
+    .editCarousel{
+        width: $sizeSixty;
+    }
+    .colCarouselTitle{
+        h2{
+            width: $sizeSev;
+            font-size: map-get($sizeFont, largeV);
+        }
+    }
+    // Afecta Hombre|Mujer
+    .shirt{
+        @include displayFlex (flex, column, wrap, center, center);
+    }
+    // Afecta carro de compras
+    .firstRow{
+        height: $sizeEight;
+        @include displayFlex (flex, row, wrap, center, baseline);
+        .shoppingT{
+            h2{
+                font-size: $sizeLogoS;
+                text-align: map-get($stylesFont, center);
+            }
+        }
+    }
+    
+    .columnB{
+        form{
+            width: $sizeMax;
+        }
+        svg{
+            @include medidasGlobal ($sizeLogoS, $sizeLogoS);
+        }
+    }
+    // AFECTA CONTACTOS
+    .boxContact{
+        input{
+            width: $sizeMax;
+        }
+    }
+    .btnCajita{
+        width: $sizeSev;
+        input{
+            width: $sizeSixty;
+        }
+    }
+    .ubication__map{
+        @include medidasGlobal($remBig, $remBig);
+    }
+    //  Afecta footer 
+    .payment{
+        margin: map-get($styleBoxs, threePercent) map-get($styleBoxs, halfPercent);
+    }
+}

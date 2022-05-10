@@ -1,0 +1,12 @@
+/*AFECTA SECCION INDEX*/
+.imageBox{
+    padding: map-get($styleBoxs, twoPercent);
+    @include displayFlex (flex, column, wrap, center, center);
+}
+.cont-inicio{
+    padding: map-get($styleBoxs, twoPercent);
+}
+.aside-carl__cont-img{
+    box-shadow: map-get($styleBoxs, shadowIndex);
+    margin-bottom: map-get($styleBoxs, threePercent);
+}

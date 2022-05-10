@@ -1,0 +1,38 @@
+/* AFECTA SECCION CONTACTO*/
+.contenedor-contacto{
+    @include displayFlex(flex, row, nowrap, center, space-around);
+}
+.formContacto{
+    @include medidasGlobal($sizeSixty,$sizeMax);
+    margin: map-get($styleBoxs, twoPercent);
+}
+.ubication{
+    margin: map-get($styleBoxs, threePercent);
+}
+.ubication__map{
+    @include medidasGlobal ($indexWidth, $indexWidth);
+    box-shadow: map-get($styleBoxs, shadowIndex);
+}
+.boxContact{
+    margin: map-get($styleBoxs, onePercent);
+    @include displayFlex(flex, column, wrap, center, center);
+    input{
+        width: $sizeHalf;
+        margin: map-get($styleBoxs, halfPercent);
+    }
+    select{
+        @extend input;
+    }
+    textarea{
+        @extend input;
+        width: $sizeBig;
+    }
+}
+.btnCajita{
+    margin: map-get($styleBoxs, onePercent);
+    width: $sizeMax;
+    @include displayFlex (flex, row, wrap, center, space-around);
+    input{
+        width: $sizeFift;
+    }
+}

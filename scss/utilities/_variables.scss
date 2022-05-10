@@ -1,0 +1,66 @@
+// VARIABLES
+$zero: 0;
+// Logo
+$sizeLogoB: 6rem;
+$sizeLogoM: 4.8rem;
+$sizeLogoS: 3rem;
+// Imágenes
+$indexWidth: 50rem;
+$indexHeight: 84.5rem;
+$indexHeightMQ: 70rem;
+$sizeImgB: 22rem;
+$sizeImgM: 16rem;
+$sizeImgN: 13rem;
+$sizeImgS: 10rem;
+$sizeEight: 8rem;
+// Medidas en REM
+$remBig: 32rem;
+$remSemiBig: 24rem;
+$remSeven: 11.2rem;
+$remFour: 6.4rem;
+$remOne: 1.6rem;
+$remHalf: 0.5rem;
+// Porcentajes 
+$sizeMax: 100%; 
+$sizeBig: 80%;
+$sizeSev: 75%;
+$sizeSixty: 60%;
+$sizeHalf: 50%;
+$sizeSmall: 30%;
+$sizeCuarter: 25%;
+$sizeFift: 15%;
+// Estilos con Maps 
+$styleBoxs:(
+    margiN: 3% 1%,
+    bigMargin: 5% 2%,
+    halfPercent: 0.5%,
+    onePercent: 1%,
+    twoPercent: 2%,
+    threePercent: 3%,
+    fivePercent: 5%,
+    shadowBoxCoral: 0 0 0.4rem $coral,
+    shadowBoxMorado: 0 0 0.8rem $morado,
+    shadowIndex: 0 0.5rem 1.5rem 0 $black
+);
+$stylesFont:(
+    textJustify: justify,
+    textCentro: center,
+    textRight: right,
+    fontWeight: bold,
+    fontBolder: bolder,
+    fontLighter: lighter,
+    letterSpaceBig: 1.2rem,
+    letterSpaceSmall: 0.288rem,
+    letterSpaceXS: 0.08rem
+);
+$sizeFont:(
+    twoRem: 2rem,
+    titleMedium: 4rem,
+    titleBig: 7.2rem,
+    mediumV: medium,
+    largeV: large,
+    xlargeV: x-large,
+    xxlargeV: xx-large,
+    uppercaseV: uppercase,
+    petiteCapsV: petite-caps
+);
