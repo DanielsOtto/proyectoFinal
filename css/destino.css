@@ -206,6 +206,7 @@ footer p {
 
 .delivery, .payment, .socialMedia, .createdBy {
   text-align: center;
+  text-transform: uppercase;
 }
 
 /* | IMAGENES | */
@@ -639,6 +640,18 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+
+  .firstRow {
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: baseline;
+  }
+  .firstRow .shoppingT h2, .firstRow .shoppingT h4 {
+    font-size: 3rem;
   }
 
   .columnB form {

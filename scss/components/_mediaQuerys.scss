@@ -64,6 +64,17 @@
         @include displayFlex (flex, column, wrap, center, center);
     }
     // Afecta carro de compras
+    .firstRow{
+        height: $sizeEight;
+        @include displayFlex (flex, row, wrap, center, baseline);
+        .shoppingT{
+            h2{
+                font-size: $sizeLogoS;
+                text-align: map-get($stylesFont, center);
+            }
+        }
+    }
+    
     .columnB{
         form{
             width: $sizeMax;

@@ -211,4 +211,5 @@ footer{
 }
 .delivery{
     text-align: map-get($stylesFont, textCentro);
+    text-transform: map-get($sizeFont, uppercaseV);
 }
