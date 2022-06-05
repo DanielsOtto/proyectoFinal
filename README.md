@@ -46,3 +46,4 @@
 ~ → BRANCH JS 
 ~ Version 1.0 ~ Agregue la carpeta js, y en ella, el archivo main.js. Y en el archivo index.html, agregue la etiqueta <script> para vincularla con el archivo main.js.
               ~ En el archivo main.js, cree la clase "articulo" que va a almacenar las propiedades de cada prenda que este en venta.
+~ Version 1.0a → Arreglando errores. 
