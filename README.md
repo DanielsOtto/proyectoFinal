@@ -41,5 +41,8 @@
 - Versión 4.1b → Modificaciones: Creadas nuevas variables. || Eliminadas las clases: logoBox y titleBox (que se encontraban en el Header y hacían lo mismo mediante un @extend), ahora existe una sola clase: boxHeader // eliminadas: cont-img__h y cont-img__m (se encontraban en la sección Inicio, y estaban vínculadas mediante un @extend), ahora existe cont-img__text. 
 - Versión 4.1c → Modificaciones en el fragmento tipografías, le agregué a los @font-face el descriptor font-display con el valor fallback. Lo cual establece un tiempo de bloqueo muy pequeño y un período de intercambio corto, permitiendo que se muestren las fuentes cuándo este descargada y lista para usarse.
 
-
 → MERGE -- Entre main (rama principal) y sassSecond (última rama actualizada).
+
+~ → BRANCH JS 
+~ Version 1.0 ~ Agregue la carpeta js, y en ella, el archivo main.js. Y en el archivo index.html, agregue la etiqueta <script> para vincularla con el archivo main.js.
+              ~ En el archivo main.js, cree la clase "articulo" que va a almacenar las propiedades de cada prenda que este en venta.
