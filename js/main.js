@@ -34,7 +34,7 @@ const articulo3 = new Articulo("CAMPERA RUNNING", "skreep", "runner", 'S', "gris
 let seguirComprando = 'NO';
 
 
-function comprobarStock(stock) { // funcion 2 
+function comprobarStock(stock) { 
     if (stock > 0) {
         return true;
     } else {
@@ -42,30 +42,27 @@ function comprobarStock(stock) { // funcion 2
     } // revisa si hay stock suficiente para realizar la venta ANDA BIEN
 }
 
-function mostrarArticulo(article) { // funcion 3
+function mostrarArticulo(article) { 
     article.precioFinal();
     alert("Disponemos de:" + "\nProducto: " + article.tipo + "\nCantidad: " + article.stock + "\nColor: " + article.color + "\nTalle: " + article.talle + "\nEl precio por unidad es de: " + article.precio + ", y con los impuestos queda en: " + article.finalPrice);
+    // calcula el precio del producto con impuestos y muestra los detalles del producto
 }
 
-function precioTotal(cant, article) { // Funcion 4 - A
+function precioTotal(cant, article) { 
     //calcula el total de la operacion al multiplicar el precio final del articulo con la cantidad de articulos a comprar.
     let precioTotal = 0;
 
-    precioTotal = article.finalPrice * cant;
+    precioTotal = article.finalPrice * cant; // aca se puede ahorrar mas codigo?
     return precioTotal;
 }
 
-function comprando(article) { // funcion 4
-    let cantidad = Number(prompt("Cuantas " + article.tipo + " desea comprar ?"));
+function comprando(article) {     
+    let cantidad = Number(prompt("Cuantas " + article.tipo + " desea comprar ?")); // NACE CANTIDAD
     let priceTotal = 0;
 
-    console.log(cantidad);
-    console.log(article.stock);
     if (cantidad <= article.stock) { // revisa si la cantidad a comprar es mayor al stock del producto
         article.hayStock(cantidad);
-        priceTotal = precioTotal(cantidad, article); // funcion 4 A
-        console.log("sirve precio final ?? " + precioTotal);
-        console.log("sirve precio final funcion ? " + precioTotal(cantidad, article));
+        priceTotal = precioTotal(cantidad, article); // aca se puede ahorrar mas codigo?
         return priceTotal;
     } else {
         alert("No disponemos de tantos items");
@@ -73,21 +70,47 @@ function comprando(article) { // funcion 4
     }
 }
 
+function quieroComprar(article){
+    let answerPrice = 0;
+    let quiero = "";
+    // 
+    quiero = prompt("Desea comprar ? \n1- SI\n2- NO").toUpperCase();
+    if ((quiero === 'SI') || (quiero == '1')) {
+        answerPrice = Number(comprando(article)); // aca se puede ahorrar mas codigo?
+        if (answerPrice > 0) {
+            alert("El monto a pagar es de " + answerPrice);
+            opcionesDePago(article);
+        } else {
+            alert("No se puede realizar la venta, stock insuficiente");
+        }
+    } else {
+        alert("Usted decidio no comprar nada.");
+    }
+}
+
+function lessCode(article){
+    if (comprobarStock(article.stock)) { 
+        mostrarArticulo(article); 
+        quieroComprar(article); 
+    } else {
+        alert("No quedan mas " + article.tipo + " en nuestro stock."); 
+    }
+}
+
 // function opcionesDePago(article) {
-//     let paymentOption = '';
 //     let quotaOption = 0;
 
-//     paymentOption = prompt("Con que desea abonar: \n1) Efectivo o Débito (Obtendrás un 10% de descuento)\n2) Visa (Podrás elegir entre 3 cuotas sin interes ó 12 cuotas con interés(10%))\n3) Cancelar".toUpperCase();
+//     let paymentOption= prompt("Con que desea abonar: \n1) Efectivo o Débito (Obtendrás un 10% de descuento)\n2) Visa (Podrás elegir entre 3 cuotas sin interes ó 12 cuotas con interés(10%))\n3) Cancelar".toUpperCase());
 
-//     switch(paymentOption) {
+//     switch(paymentOption){
 //         case '1':
 //         case 'EFECTIVO':
-//         case 'DEBITO':
+//         case 'DÉBITO':
 //             article.fifteenOff();
 //             alert("Has elegido efectivo/débito, el importe a pagar era de: " + article.finalPrice + " y ahora es de: " + article.newPrice + "\n Gracias por su compra !!");
 //             break;
 //         case '2':
-//         case 'Visa':
+//         case 'VISA':
 //             quotaOption = prompt("Has elegido Visa. Cuantas cuotas deseas? (Ingrese 1, 2, 3) \n\t1- 3 cuotas s/i \n\t2- 12 cuotas c/i (+10%) \n\t3- Salir");
 //             if (quotaOption === 1) {
 //                 article.threeWithoutI();
@@ -103,7 +126,7 @@ function comprando(article) { // funcion 4
 //             break;
 //         case '3':
 //         case 'CANCELAR':
-//             alert("Has ingresado Cancelar. La operación se cancela.")
+//             alert("Has ingresado Cancelar. La operación se cancela.");
 //             break;
 //         default:
 //             alert("El dato ingresado es incorrecto. Operación cancelada.");
@@ -111,72 +134,21 @@ function comprando(article) { // funcion 4
 //     }
 // }
 
-function realizarPedido() {// funcion 1
+function realizarPedido() {
     let compra = prompt("Que tipo de prenda buscabas ? \n1) REMERA\n2) CAMISA\n3) CAMPERA RUNNING").toUpperCase();
-    let answerPrice = 0;
-    let quiero = "";
 
     switch (compra) {
         case '1':
         case articulo1.tipo:
-            if (comprobarStock(articulo1.stock)) { // comprobarStock 2
-                mostrarArticulo(articulo1); // mostrarArticulo 3
-
-                    // quieroComprar(); --- 
-
-                quiero = prompt("Desea comprar ? \n1- SI\n2- NO").toUpperCase();
-                if ((quiero === 'SI') || (quiero == '1')) {
-                    answerPrice = Number(comprando(articulo1)); // comprando 4  → 3 A
-                    console.log("que muestra answerPrice ?" + answerPrice);
-                    if (answerPrice > 0) {
-                        alert("El monto a pagar es de " + answerPrice);
-                    } else {
-                        alert("No se puede realizar la venta, stock insuficiente");
-                    }
-                } else {
-                    alert("Usted decidio no comprar nada.");
-                }
-            } else {
-                alert("No quedan mas " + articulo1.tipo + " en nuestro stock."); // ANDA BIEN
-            }
+            lessCode(articulo1);
             break;
         case '2':
         case articulo2.tipo:
-            if (comprobarStock(articulo2.stock)) {
-                mostrarArticulo(articulo2);
-                quiero = prompt("Desea comprar ? \n1- SI\n2- NO").toUpperCase();
-                if ((quiero === 'SI') || (quiero == '1')) {
-                    answerPrice = Number(comprando(articulo2));
-                    if (answerPrice > 0) {
-                        alert("El monto a pagar es de " + answerPrice);
-                    } else {
-                        alert("No se puede realizar la venta, stock insuficiente");
-                    }
-                } else {
-                    alert("Usted decidio no comprar nada.");
-                }
-            } else {
-                alert("No quedan mas " + articulo2.tipo);
-            }
+            lessCode(articulo2);
             break;
         case '3':
         case articulo3.tipo:
-            if (comprobarStock(articulo3.stock)) {
-                mostrarArticulo(articulo3);
-                quiero = prompt("Desea comprar ? \n1- SI\n2- NO").toUpperCase();
-                if ((quiero === 'SI') || (quiero == '1')) {
-                    answerPrice = Number(comprando(articulo3));
-                    if (answerPrice > 0) {
-                        alert("El monto a pagar es de " + answerPrice);
-                    } else {
-                        alert("No se puede realizar la venta, stock insuficiente");
-                    }
-                } else {
-                    alert("Usted decidio no comprar nada.");
-                }
-            } else {
-                alert("No quedan mas " + articulo3.tipo);
-            }
+            lessCode(articulo3);
             break;
         default:
             alert("Objeto no encontrado.")
@@ -185,7 +157,7 @@ function realizarPedido() {// funcion 1
 }
 
 do {
-    realizarPedido(); // funcion 1
+    realizarPedido(); 
 
     seguirComprando = prompt("Desea seguir comprando ?? \n1- SI \n2- NO").toUpperCase();
 } while (seguirComprando === 'SI' || seguirComprando == '1');
