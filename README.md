@@ -48,3 +48,4 @@
                 ~ En el archivo main.js, cree la clase "articulo" que va a almacenar las propiedades de cada prenda que este en venta.
 - Versión 1.0a  ~ Arreglando errores. 
 - Versión 1.0b  ~ Las funciones comprobarStock() - precioTotal() - comprando() - realizarCompra(), funcionan correctamente.   
+- Versión 1.0c  ~ Agregadas las funciones mostrarArticle()/opcionesDePago(). La funcion realizarCompra(), ahora se llama realizarPedido().
