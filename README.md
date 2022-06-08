@@ -8,8 +8,6 @@
               → Agregados estilos con MAPS, creados: styleBoxs y stileFonts. Se utilizan en las fragmentos: _tipografía, _botones, _carrito, _contactos, _menAndWomen y _sharedStructures. 
 - Versión 2.1 → Arreglado un error en la seccion Carrito, con la posición de la ubicación.
 - Versión 2.2 → Arreglado los errores en las carpetas components y utilities.
-
-// Entrega SASS II + SEO 
 - Versión 2.3 → Cambio de nombre de la marca. 
               → Agregado icono de tacho de basura en la sección Carro de compras. Futuro botón para cancelar la compra.
               → Imágenes comprimidas. 
@@ -27,8 +25,6 @@
                       ▬ _mediaQuerys, las cuales afectan las secciones Hombre y Mujer (ahora las imágenes tienen el mismo tamaño cuando se achica la pantalla).
                       ▬ _imágenes (se modificó el tamaño del mapa que muestra la ubicación).
                       ▬ _tipografías, en la clase .shirt__info se agregó  ´&:last-of-type´ (ahora el precio del producto aparece centrado, mientras que el detalle se mantiene justificado a la izquierda). 
-
-//Versión 4.0
 - Versión 4.0  → Agregadas etiquetas section, ahora todos las etiquetas H1~6 tienen un TAG section. En lás paginas Inicio/Carrito, sus respectivos Hx se encuentran dentro de TAGs section. 
                →  Reconfigurado el valor de REM, antes 1rem valio 16px // ahora 1rem = 10px. Todas las variables que tenían valores en pxs, ahora tienen valores en rem. Todas las variables que tenían valores en rem, sus valores fueron actualizados, debido a la reconfiguración del valor de 1rem. 
                → Reducción de líneas de código. 
@@ -40,7 +36,6 @@
 - Versión 4.1a → Sección Contactos: Había utilizado GRID para estructurar el main de esa sección, y lo modifiqué por un FLEXBOX, menos líneas por el mismo resultado. || El logo de la marca tenía un transform (translate), lo había puesto para un ejercicio anterior, lo quité porque no me gusta.
 - Versión 4.1b → Modificaciones: Creadas nuevas variables. || Eliminadas las clases: logoBox y titleBox (que se encontraban en el Header y hacían lo mismo mediante un @extend), ahora existe una sola clase: boxHeader // eliminadas: cont-img__h y cont-img__m (se encontraban en la sección Inicio, y estaban vínculadas mediante un @extend), ahora existe cont-img__text. 
 - Versión 4.1c → Modificaciones en el fragmento tipografías, le agregué a los @font-face el descriptor font-display con el valor fallback. Lo cual establece un tiempo de bloqueo muy pequeño y un período de intercambio corto, permitiendo que se muestren las fuentes cuándo este descargada y lista para usarse.
-
 → MERGE -- Entre main (rama principal) y sassSecond (última rama actualizada).
 
 - → → BRANCH JS 
@@ -49,3 +44,5 @@
 - Versión 1.0a  ~ Arreglando errores. 
 - Versión 1.0b  ~ Las funciones comprobarStock() - precioTotal() - comprando() - realizarCompra(), funcionan correctamente.   
 - Versión 1.0c  ~ Agregadas las funciones mostrarArticle()/opcionesDePago(). La funcion realizarCompra(), ahora se llama realizarPedido().
+- Versión 1.0d  ~ Quité la función opcionesDePago().
+- Versión 1.0d  ~ Eliminada la función precioTotal(), su contenido la reduje a una sola linea, y la agregué a la función comprando(). Modificadas las funciones comprando(), quieroComprar(), comprobarStock() y opcionesDePago(), reducí líneas y arreglé todos los errores. Agregué nuevas propiedades → cantidad/multiplePrecio, agregué el método multiplePriceE() y modifiqué todos los métodos que había.
