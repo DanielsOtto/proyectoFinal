@@ -1,3 +1,6 @@
+// hacer 2 variables globales ?? una de cantidad de objetos vendidos, y otra de precioMultiple ??
+// no mezclar ingles con español -- se enoja juan 
+
 class Articulo {
     constructor(tipo, marca, modelo, talle, color, stock, precio) {
         this.tipo = tipo;
@@ -31,12 +34,53 @@ class Articulo {
         this.newPrice = Math.round((this.multiplePrice * 1.10) / 12);
     }
 }
+const productos = [];
 
-const articulo1 = new Articulo("REMERA", "skreep", "manga corta", 'L', "negra", 10, 2500);
-const articulo2 = new Articulo("CAMISA", "skreep", "manga carga", 'M', "blanca", 4, 2500);
-const articulo3 = new Articulo("CAMPERA RUNNING", "skreep", "runner", 'S', "gris", 7, 8000);
+// const articuloR1 = new Articulo("REMERA", "skreep", "manga corta", 'L', "negra", 10, 4000);
+// const articuloR2 = new Articulo("REMERA", "skreep", "manga corta", 'L', "negra", 10, 4000);
+// const articuloR3 = new Articulo("REMERA", "skreep", "manga corta", 'L', "negra", 10, 4000);
+// const articuloR4 = new Articulo("REMERA", "skreep", "manga corta", 'L', "negra", 10, 4000);
+// const articuloC1 = new Articulo("CAMISA", "skreep", "manga carga", 'M', "blanca", 4, 9000);
+// const articuloC2 = new Articulo("CAMISA", "skreep", "manga carga", 'M', "blanca", 4, 9000);
+// const articuloC3 = new Articulo("CAMISA", "skreep", "manga carga", 'M', "blanca", 4, 9000);
+// const articuloC4 = new Articulo("CAMISA", "skreep", "manga carga", 'M', "blanca", 4, 9000);
+// const articuloCR1 = new Articulo("CAMPERA RUNNING", "skreep", "runner", 'S', "gris", 7, 18000);
+// const articuloCR2 = new Articulo("CAMPERA RUNNING", "skreep", "runner", 'S', "gris", 7, 18000);
+// const articuloCR3 = new Articulo("CAMPERA RUNNING", "skreep", "runner", 'S', "gris", 7, 18000);
+// const articuloCR4 = new Articulo("CAMPERA RUNNING", "skreep", "runner", 'S', "gris", 7, 18000);
+
+// productos.push(articuloR1);
+// productos.push(articuloR2);
+// productos.push(articuloR3);
+// productos.push(articuloR4);
+// productos.push(articuloC1);
+// productos.push(articuloC2);
+// productos.push(articuloC3);
+// productos.push(articuloC4);
+// productos.push(articuloCR1);
+// productos.push(articuloCR2);
+// productos.push(articuloCR3);
+// productos.push(articuloCR4);
+
+productos.push(new Articulo("REMERA", "SKREEP", "MANGA CORTA", 'L', "NEGRA", 10, 4000));
+productos.push(new Articulo("REMERA", "SKREEP", "MANGA CORTA", 'M', "ROJA", 10, 4000));
+productos.push(new Articulo("REMERA", "SKREEP", "MANGA CORTA", 'S', "BLANCA", 10, 4000));
+productos.push(new Articulo("REMERA", "SKREEP", "MANGA CORTA", 'S', "BLANCA", 10, 4000));
+productos.push(new Articulo("CAMISA", "SKREEP", "MANGA LARGA", 'L', "GRIS", 4, 9000));
+productos.push(new Articulo("CAMISA", "SKREEP", "MANGA LARGA", 'L', "GRIS", 4, 9000));
+productos.push(new Articulo("CAMISA", "SKREEP", "MANGA LARGA", 'M', "ROJA", 4, 9000));
+productos.push(new Articulo("CAMISA", "SKREEP", "MANGA LARGA", 'M', "BLANCA", 4, 9000));
+productos.push(new Articulo("CAMPERA RUNNING", "SKREEP", "RUNNER", 'L', "NEGRA", 7, 18000));
+productos.push(new Articulo("CAMPERA RUNNING", "SKREEP", "RUNNER", 'L', "ROJA", 7, 18000));
+productos.push(new Articulo("CAMPERA RUNNING", "SKREEP", "RUNNER", 'M', "AZUL", 7, 18000));
+productos.push(new Articulo("CAMPERA RUNNING", "SKREEP", "RUNNER", 'S', "GRIS", 7, 18000));
 
 let seguirComprando = 'NO';
+
+
+// HAY QUE CAMBIAR TODO XQ AHORA HAY Q TRABAJAR SOBRE ARREGLO, NO SOBRE OBJETOS
+
+
 
 
 function comprobarStock(article) { 
@@ -131,23 +175,33 @@ function opcionesDePago(article) {
 function realizarPedido() {
     let compra = prompt("Que tipo de prenda buscabas ? \n1) REMERA\n2) CAMISA\n3) CAMPERA RUNNING").toUpperCase();
 
-    switch (compra) {
-        case '1':
-        case articulo1.tipo:
-            lessCode(articulo1);
-            break;
-        case '2':
-        case articulo2.tipo:
-            lessCode(articulo2);
-            break;
-        case '3':
-        case articulo3.tipo:
-            lessCode(articulo3);
-            break;
-        default:
-            alert("Objeto no encontrado.")
-            break;
+    const resultado = productos.filter((el) => el.tipo.includes(compra));
+
+    if(resultado.length > 0){
+        resultado.forEach((el)=> alert("Artículos encontrados: "+el.tipo+"\nMarca: "+el.marca+"\nModelo: "+el.modelo+"\nTalle: "+el.talle+"\nColor: "+el.color+"\nStock: "+el.stock+"\nPrecio: "+el.precio));
+    }else{
+        console.log("No disponemos de ese artículo");
     }
+    
+    // switch (compra) {
+    //     case '1':
+    //     case articulo1.tipo:
+    //         lessCode(articulo1);
+    //         break;
+    //     case '2':
+    //     case articulo2.tipo:
+    //         lessCode(articulo2);
+    //         break;
+    //     case '3':
+    //     case articulo3.tipo:
+    //         lessCode(articulo3);
+    //         break;
+    //     default:
+    //         alert("Objeto no encontrado.")
+    //         break;
+    // }
+
+
 }
 
 do {
