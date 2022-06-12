@@ -33,6 +33,7 @@
 // AFECTA SECCIONES HOMBRES Y MUJERES
 .imgRopa{
     @include medidasGlobal($sizeImgB, $sizeImgB);
+    max-width: $sizeSev;
     &:hover{
         transform: scale(1.7);
     }

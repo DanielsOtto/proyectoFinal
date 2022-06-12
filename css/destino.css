@@ -47,6 +47,10 @@ tipografías:
   font-family: LatoBlack, sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 h2, h4 {
   color: #470147;
   width: 100%;
@@ -245,6 +249,7 @@ footer p {
 .imgRopa {
   width: 22rem;
   height: 22rem;
+  max-width: 75%;
 }
 .imgRopa:hover {
   transform: scale(1.7);
@@ -310,6 +315,11 @@ footer p {
   background-color: #FF7F50;
   border-color: #FFDEB5;
   box-shadow: 0 0 0.8rem #470147;
+}
+
+.listaTalles {
+  width: 25%;
+  appearance: none;
 }
 
 .upBtn {

@@ -1,6 +1,7 @@
-// hacer 2 variables globales ?? una de cantidad de objetos vendidos, y otra de precioMultiple ??
-
-// no mezclar ingles con español -- se enoja juan 
+let cantidad = 0;
+let precioXCant = 0;
+const productos = [];  // este arreglo va a tener los objetos en venta
+let seguirComprando = 'NO';
 
 class Articulo {
     constructor(tipo, marca, modelo, talle, color, stock, precio) {
@@ -9,34 +10,30 @@ class Articulo {
         this.modelo = modelo;
         this.talle = talle;
         this.color = color;
-        this.cantidad = stock;
         this.stock = stock;
         this.precio = precio;
         this.finalPrice = precio;
-        this.multiplePrice = precio;
         this.newPrice = precio;
     }
     hayStock() {
-        this.stock = this.stock - this.cantidad;
+        this.stock = this.stock - cantidad;
     }
     precioFinal() {
         this.finalPrice = Math.round(this.precio * 1.21);
     }
     multiplePriceE() {
-        this.multiplePrice = this.finalPrice * this.cantidad;
+        precioXCant = this.finalPrice * cantidad;
     }
     fifteenOff() {
-        this.newPrice = Math.round(this.multiplePrice - (this.multiplePrice * 0.10));
+        this.newPrice = Math.round(precioXCant - (precioXCant * 0.10));
     }
     threeWithoutI() {
-        this.newPrice = Math.round(this.multiplePrice / 3);
+        this.newPrice = Math.round(precioXCant / 3);
     }
     twelveWithI() {
-        this.newPrice = Math.round((this.multiplePrice * 1.10) / 12);
+        this.newPrice = Math.round((precioXCant * 1.10) / 12);
     }
 }
-const productos = [];  // este arreglo va a tener los objetos en venta
-let seguirComprando = 'NO';
 
 productos.push(new Articulo("REMERA", "SKREEP", "MANGA LARGA", 'L', "NEGRA", 10, 4000));
 productos.push(new Articulo("REMERA", "SKREEP", "MANGA CORTA", 'M', "ROJA", 8, 4000));
@@ -51,50 +48,29 @@ productos.push(new Articulo("CAMPERA RUNNING", "SKREEP", "RUNNER", 'L', "ROJA", 
 productos.push(new Articulo("CAMPERA RUNNING", "SKREEP", "RUNNER", 'M', "AZUL", 1, 18000));
 productos.push(new Articulo("CAMPERA RUNNING", "SKREEP", "RUNNER", 'S', "GRIS", 3, 18000));
 
-// HAY QUE CAMBIAR TODO XQ AHORA HAY Q TRABAJAR SOBRE ARREGLO, NO SOBRE OBJETOS
+function arregloCargado(arreglo){ // con esta funcion corroboramos que el arreglo tenga elementos
+    if(arreglo.length > 0){
+        return true;
+    }else{
+        return false;
+    }
+}
 
-
-
-
-
-
-
-
-// function comprando(article) {
-//     article.cantidad = Number(prompt("Cuantas " + article.tipo + " desea comprar ?"));
-
-//     if (article.cantidad <= article.stock) { // revisa si la cantidad a comprar es menor al stock del producto
-//         article.multiplePriceE();
-//         return true;
-//     } else {
-//         alert("No disponemos de tantos items");
-//         return false;
-//     }
-// }
-
-// function quieroComprar(article) {
-//     let quiero = "";
-//     quiero = prompt("Desea comprar ? \n1- SI\n2- NO").toUpperCase();
-//     if ((quiero === 'SI') || (quiero == '1')) {  // averigua si el usuario desea comprar el producto
-//         if (comprando(article)) {
-//             alert("El monto a pagar es de " + article.multiplePrice);
-//             opcionesDePago(article);
-//         } else {
-//             alert("No se puede realizar la venta, stock insuficiente");
-//         }
-//     } else {
-//         alert("Usted decidio no comprar nada.");
-//     }
-// }
-//--------
+function cuantosDesea(arreglo) {
+    while(cantidad === 0){
+        cantidad = Number(prompt("Cuantos desea comprar ?"));
+    }
+    arreglo.forEach((el) => el.hayStock(cantidad));
+    arreglo.forEach((el) => el.multiplePriceE());
+    arreglo.forEach((el) => alert("Usted ha elegido comprar "+cantidad+" de "+el.tipo+", las cuáles tienen un costo final de "+precioXCant));
+}
 
 function mostrarArticulo(arreglo) {
-
-    if(arreglo.length > 0){
+    if(arregloCargado(arreglo)){
         for (const articulos of arreglo) {
             articulos.precioFinal();
-            alert("Los articulos filtrados son: " + "\nProdcuto " + articulos.tipo + "\nColor " + articulos.color + "\nTalle " + articulos.talle + "\nPrecio sin impuestos " + articulos.precio + "\n, con impuestos " + articulos.finalPrice);
-        } // ANDA
+            alert("Los articulos filtrados son: "+"\nProducto "+articulos.tipo+"\nColor "+articulos.color+"\nTalle "+articulos.talle+"\nPrecio sin impuestos "+articulos.precio+"\nPrecio con impuestos "+articulos.finalPrice);
+        } 
     }else {
         alert("No se han encontrado objetos que cumplan con sus condiciones");
     }
@@ -102,7 +78,7 @@ function mostrarArticulo(arreglo) {
 
 function comprobarStock(arreglo) {
     let otroArreglo = arreglo.filter((c) =>c.stock > 0);
-    return otroArreglo; // ahora si ANDA esto  -- hay que comparar arreglo.length a 0 para corrobar q el arreglo esta cargado
+    return otroArreglo; 
 }
 
 function revisarColores(arreglo) {
@@ -110,14 +86,16 @@ function revisarColores(arreglo) {
     let muchosColores = ""; // va a concatenar los colores que se pueden elegir de los objetos elegidos
     let arregloColor = [];
 
-    if (arreglo.length > 1) {
+    if (arregloCargado(arreglo)) {
         for (const color of arreglo) {
             muchosColores += color.color + "\n";
         }
     } else {
         alert("No disponemos de ese articulo");
     }
-    elegirColor = prompt("Cual de los siguientes colores desea ?? \n" + muchosColores).toUpperCase();
+    while(elegirColor === ""){
+        elegirColor=prompt("Cual de los siguientes colores desea ?? \n" + muchosColores).toUpperCase();
+    }
 
     arregloColor = arreglo.filter((el) => el.color == elegirColor);
     return comprobarStock(arregloColor);
@@ -125,25 +103,37 @@ function revisarColores(arreglo) {
 
 function busquedaPorTalle(arreglo) {
     let arregloRegresa = [];
-    let talle = prompt("Que talle buscaba ?\nL\nM\nS").toUpperCase();
-    let otraBusqueda = arreglo.filter((o) => o.talle.includes(talle)); // este arreglo lo utiliza para la busqueda de elementos a partir del talle
+    let talle = "";
 
-    arregloRegresa = revisarColores(otraBusqueda);
-    if (arregloRegresa.length === 0) {
-        alert("function busquedaPorTalle ERROR");
+    while(talle === ""){
+        talle = prompt("Que talle buscaba ?\nL\nM\nS").toUpperCase();
+    }
+
+    let otraBusqueda = arreglo.filter((o) => o.talle.includes(talle)); // este arreglo lo utiliza para la busqueda de elementos a partir del talle
+    if(arregloCargado(otraBusqueda)){
+        arregloRegresa = revisarColores(otraBusqueda);
+        return arregloRegresa;
+    }else{
+        alert("Talle incorrecto");
     }
     return arregloRegresa;
 }
 
 function realizarPedido() {
-    let busqueda = prompt("Que tipo de prenda buscabas ? \n REMERA\n CAMISA\n CAMPERA RUNNING").toUpperCase();
+    let busqueda = "";
+    let arregloFinal = [];
+    let nuevoArreglo = [];
 
-    let nuevoArreglo = productos.filter((el) => el.tipo.includes(busqueda));  // este arreglo lo voy a utilizar para la busqueda de elementos a partir del tipo
+    while (busqueda === ""){
+        busqueda = prompt("Que tipo de prenda buscabas ? \n REMERA\n CAMISA\n CAMPERA RUNNING").toUpperCase();
+    }
+    nuevoArreglo = productos.filter((el) => el.tipo.includes(busqueda));  // este arreglo lo voy a utilizar para la busqueda de elementos a partir del tipo
 
-    if (nuevoArreglo.length > 0) {
+    if (arregloCargado(nuevoArreglo)) {
         nuevoArreglo.forEach((el) => alert("Artículos encontrados: " + el.tipo + "\nMarca: " + el.marca + "\nModelo: " + el.modelo + "\nTalle: " + el.talle + "\nColor: " + el.color + "\nStock: " + el.stock + "\nPrecio: " + el.precio));
-        let arregloFinal = busquedaPorTalle(nuevoArreglo);
-        mostrarArticulo(arregloFinal); // ANDA
+        arregloFinal = busquedaPorTalle(nuevoArreglo);
+        mostrarArticulo(arregloFinal);
+        cuantosDesea(arregloFinal);
     } else {
         alert("No disponemos de ese artículo");
     }
@@ -151,6 +141,7 @@ function realizarPedido() {
 
 do {
     realizarPedido();
+
     seguirComprando = prompt("Desea seguir comprando ?? \n1- SI \n2- NO").toUpperCase();
 } while (seguirComprando === 'SI' || seguirComprando == '1');
 

@@ -13,6 +13,8 @@
 // AFECTA SECCIONES HOMBRES Y MUJERES
 .listaTalles{
     @extend .btnGeneral;
+    width: $sizeCuarter;
+    appearance: none;  
 }
 .upBtn{
     @include marginAndPadding (map-get($styleBoxs, onePercent), map-get($styleBoxs, threePercent));
