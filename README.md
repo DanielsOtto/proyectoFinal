@@ -10,3 +10,5 @@
 
 ~ → → BRANCH jsSecond
 - Versión 2.0  ~ Agregué un arreglo de objetos e incluí los métodos filter() y forEach() en una función, en la cuál compara el valor ingresado con la propiedad "tipo" de los objetos del arreglo, si encuentra una similitud me devuelve un arreglo con esos elementos, sino, me devuelve un alert comunicando que no se encontro nada.
+- Versión 2.0a ~ Objetivo hacer un filtro para la búsqueda de objetos.
+- Versión 2.0b ~ Agregué nuevas funciones (comprobarStock y mostrarArticulos). Me falta preguntar cuantas quiere y realizar la venta, ademas disminuir el stock de dicho producto (como hago esto último ?? )
