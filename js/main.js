@@ -1,6 +1,6 @@
+const productos = [];  // este arreglo va a tener los objetos en venta
 let cantidad = 0;
 let precioXCant = 0;
-const productos = [];  // este arreglo va a tener los objetos en venta
 let seguirComprando = 'NO';
 
 class Articulo {
@@ -48,37 +48,50 @@ productos.push(new Articulo("CAMPERA RUNNING", "SKREEP", "RUNNER", 'L', "ROJA", 
 productos.push(new Articulo("CAMPERA RUNNING", "SKREEP", "RUNNER", 'M', "AZUL", 1, 18000));
 productos.push(new Articulo("CAMPERA RUNNING", "SKREEP", "RUNNER", 'S', "GRIS", 3, 18000));
 
-function arregloCargado(arreglo){ // con esta funcion corroboramos que el arreglo tenga elementos
-    if(arreglo.length > 0){
+function arregloCargado(arreglo) { // con esta funcion corroboramos que el arreglo tenga elementos
+    if (arreglo.length > 0) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }
 
+function suficienteStock(arreglo, cantidad) {
+    return arreglo.filter((el) => el.stock >= cantidad);
+}
+
 function cuantosDesea(arreglo) {
-    while(cantidad === 0){
+    let arregloLocal = [];
+    cantidad = 0; // como es una variable global hay q reiniciarla cada vez q entramos a la funcion
+    while (cantidad === 0) {
         cantidad = Number(prompt("Cuantos desea comprar ?"));
     }
-    arreglo.forEach((el) => el.hayStock(cantidad));
-    arreglo.forEach((el) => el.multiplePriceE());
-    arreglo.forEach((el) => alert("Usted ha elegido comprar "+cantidad+" de "+el.tipo+", las cuáles tienen un costo final de "+precioXCant));
+    arregloLocal = suficienteStock(arreglo, cantidad);
+
+    if (arregloCargado(arregloLocal)) { // esto revisa si stock es > 0  mal -- tengo que revisar si cantidad es > a stock
+        arregloLocal.forEach((el) => el.hayStock(cantidad));
+        arregloLocal.forEach((el) => el.multiplePriceE());
+        arregloLocal.forEach((el) => alert("Usted ha elegido comprar " + cantidad + " de " + el.tipo + ", las cuáles tienen un costo final de " + precioXCant));
+    } else {
+        alert("No disponemos de tantas unidades.");
+    }
 }
 
 function mostrarArticulo(arreglo) {
-    if(arregloCargado(arreglo)){
+    if (arregloCargado(arreglo)) {
         for (const articulos of arreglo) {
             articulos.precioFinal();
-            alert("Los articulos filtrados son: "+"\nProducto "+articulos.tipo+"\nColor "+articulos.color+"\nTalle "+articulos.talle+"\nPrecio sin impuestos "+articulos.precio+"\nPrecio con impuestos "+articulos.finalPrice);
-        } 
-    }else {
+            alert("Los articulos filtrados son: " + "\nProducto " + articulos.tipo + "\nColor " + articulos.color + "\nTalle " + articulos.talle + "\nCon un stock de: " + articulos.stock + "\nPrecio sin impuestos: "+articulos.precio+"\nPrecio con impuestos: "+articulos.finalPrice);
+            cuantosDesea(arreglo);
+        }
+    } else {
         alert("No se han encontrado objetos que cumplan con sus condiciones");
     }
 }
 
 function comprobarStock(arreglo) {
-    let otroArreglo = arreglo.filter((c) =>c.stock > 0);
-    return otroArreglo; 
+    let otroArreglo = arreglo.filter((c) => c.stock > 0);
+    return otroArreglo;
 }
 
 function revisarColores(arreglo) {
@@ -93,8 +106,8 @@ function revisarColores(arreglo) {
     } else {
         alert("No disponemos de ese articulo");
     }
-    while(elegirColor === ""){
-        elegirColor=prompt("Cual de los siguientes colores desea ?? \n" + muchosColores).toUpperCase();
+    while (elegirColor === "") {
+        elegirColor = prompt("Cual de los siguientes colores desea ?? \n" + muchosColores).toUpperCase();
     }
 
     arregloColor = arreglo.filter((el) => el.color == elegirColor);
@@ -105,26 +118,26 @@ function busquedaPorTalle(arreglo) {
     let arregloRegresa = [];
     let talle = "";
 
-    while(talle === ""){
+    while (talle === "") {
         talle = prompt("Que talle buscaba ?\nL\nM\nS").toUpperCase();
     }
 
     let otraBusqueda = arreglo.filter((o) => o.talle.includes(talle)); // este arreglo lo utiliza para la busqueda de elementos a partir del talle
-    if(arregloCargado(otraBusqueda)){
+    if (arregloCargado(otraBusqueda)) {
         arregloRegresa = revisarColores(otraBusqueda);
         return arregloRegresa;
-    }else{
+    } else {
         alert("Talle incorrecto");
     }
     return arregloRegresa;
 }
 
-function realizarPedido() {
+function busquedaPorTipo() {
     let busqueda = "";
     let arregloFinal = [];
     let nuevoArreglo = [];
 
-    while (busqueda === ""){
+    while (busqueda === "") {
         busqueda = prompt("Que tipo de prenda buscabas ? \n REMERA\n CAMISA\n CAMPERA RUNNING").toUpperCase();
     }
     nuevoArreglo = productos.filter((el) => el.tipo.includes(busqueda));  // este arreglo lo voy a utilizar para la busqueda de elementos a partir del tipo
@@ -133,14 +146,13 @@ function realizarPedido() {
         nuevoArreglo.forEach((el) => alert("Artículos encontrados: " + el.tipo + "\nMarca: " + el.marca + "\nModelo: " + el.modelo + "\nTalle: " + el.talle + "\nColor: " + el.color + "\nStock: " + el.stock + "\nPrecio: " + el.precio));
         arregloFinal = busquedaPorTalle(nuevoArreglo);
         mostrarArticulo(arregloFinal);
-        cuantosDesea(arregloFinal);
     } else {
         alert("No disponemos de ese artículo");
     }
 }
 
 do {
-    realizarPedido();
+    busquedaPorTipo();
 
     seguirComprando = prompt("Desea seguir comprando ?? \n1- SI \n2- NO").toUpperCase();
 } while (seguirComprando === 'SI' || seguirComprando == '1');
