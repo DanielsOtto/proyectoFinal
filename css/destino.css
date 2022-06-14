@@ -117,6 +117,28 @@ body {
   text-align: center;
 }
 
+.offcanvas-header h2, .offcanvas-header h4 {
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 0.288rem;
+}
+
+.filterArticle .tituloFiltro {
+  color: #470147;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: center;
+}
+.filterArticle .filterArticle__talle, .filterArticle .filterArticle__precio {
+  color: #470147;
+  text-transform: capitalize;
+  letter-spacing: 0.288rem;
+  font-weight: bolder;
+}
+.filterArticle .filterArticle__precio {
+  text-transform: lowercase;
+}
+
 .shirt__info p {
   letter-spacing: 0.08rem;
 }
@@ -310,11 +332,20 @@ footer p {
   background-color: #470147;
   border-radius: 0.5rem;
   padding: 0.5%;
+  font-weight: bolder;
 }
 .btnGeneral:hover, .listaTalles:hover {
   background-color: #FF7F50;
   border-color: #FFDEB5;
   box-shadow: 0 0 0.8rem #470147;
+}
+
+.filtroFondo {
+  background-color: #FFDEB5;
+}
+
+.btnFiltro {
+  width: 10%;
 }
 
 .listaTalles {
@@ -394,8 +425,35 @@ footer {
 }
 
 /* AFECTA SECCIONES HOMBRES Y MUJERES */
+.rowFilter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: end;
+  margin: 1%;
+}
+.rowFilter form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.rowFilter form article {
+  box-shadow: 0 0 0.4rem #FF7F50;
+  width: 45%;
+  height: 100%;
+  margin: 1%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .rowShirts {
-  margin: 3% 1%;
+  margin: 2.5% 1%;
   box-shadow: 0 0 0.4rem #FF7F50;
 }
 
@@ -449,7 +507,7 @@ footer {
 .sellRow {
   height: 24rem;
   box-shadow: 0 0 0.8rem #470147;
-  margin: 3% 1%;
+  margin: 2.5% 1%;
 }
 
 .lastRow {
@@ -567,6 +625,17 @@ footer {
 @media (max-width: 768px) {
   .editCarousel {
     width: 50%;
+  }
+
+  .rowFilter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .rowFilter .btnFiltro {
+    width: 30%;
   }
 
   .rowShirts {

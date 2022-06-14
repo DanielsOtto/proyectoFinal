@@ -26,12 +26,14 @@ $sizeBig: 80%;
 $sizeSev: 75%;
 $sizeSixty: 60%;
 $sizeHalf: 50%;
+$sizeFortyFive: 45%;
 $sizeSmall: 30%;
 $sizeCuarter: 25%;
 $sizeFift: 15%;
+$sizeTenP: 10%;
 // Estilos con Maps 
 $styleBoxs:(
-    margiN: 3% 1%,
+    margiN: 2.5% 1%,
     bigMargin: 5% 2%,
     halfPercent: 0.5%,
     onePercent: 1%,
@@ -61,6 +63,8 @@ $sizeFont:(
     largeV: large,
     xlargeV: x-large,
     xxlargeV: xx-large,
+    capiV: capitalize,
     uppercaseV: uppercase,
+    lowercaseV: lowercase,
     petiteCapsV: petite-caps
 );

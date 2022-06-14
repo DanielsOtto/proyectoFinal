@@ -23,7 +23,9 @@
 	<header class="container-fluid">
 		<div class="row">
 			<div class="col-md-7 col-12 boxHeader">
-				<a href="../index.html"><h1 class="tituloEmpresa">SKREEP</h1></a>
+				<a href="../index.html">
+					<h1 class="tituloEmpresa">SKREEP</h1>
+				</a>
 			</div>
 			<div class="col-md-3 col-6 boxHeader">
 				<a href="../index.html"> <img class="logoEmpresa" src="../assets/images/logo/skreep.png"
@@ -85,15 +87,69 @@
 	<!-- FIN nav // INICIO main-->
 	<main class="indumentaria container-fluid">
 		<section class="container-fluid indumentaria__h">
+			<div class="row rowFilter">
+				<button class="btn btnGeneral btnFiltro" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">filtrar</button>
+				<div class="offcanvas offcanvas-top filtroFondo" tabindex="-1" id="offcanvasTop"
+					aria-labelledby="offcanvasTopLabel">
+					<div class="offcanvas-header">
+						<h2 id="offcanvasTopLabel">filtros</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<form>
+							<article class="filterArticle">
+								<h2 class="tituloFiltro">talle</h2>
+								<div class="filterArticle__talle">
+									<input class="radioFiltro" type="radio" name="talle" value="xlarge" id="filtroXL">
+									<label form="filtroXL" class="labelFiltro" for="tipoBuzo">xlarge (45)</label>
+								</div>
+								<div class="filterArticle__talle">
+									<input class="radioFiltro" type="radio" name="talle" value="large" id="filtroL">
+									<label form="filtroL" class="labelFiltro" for="tipoBuzo">large (44)</label>
+								</div>
+								<div class="filterArticle__talle">
+									<input class="radioFiltro" type="radio" name="talle" value="medium" id="filtroM">
+									<label form="filtroM" class="labelFiltro" for="tipoBuzo">medium (43)</label>
+								</div>
+								<div class="filterArticle__talle">
+									<input class="radioFiltro" type="radio" name="talle" value="small" id="filtroS">
+									<label form="filtroS" class="labelFiltro" for="tipoBuzo">small (42)</label>
+								</div>
+							</article>
+							<article class="filterArticle">
+								<h2 class="tituloFiltro">precio</h2>
+								<div class="filterArticle__precio">
+									<input class="radioFiltro" type="radio" name="precio" value="poco"
+										id="filtroP010">
+									<label form="filtroP010" class="labelFiltro" for="tipoBuzo">$ 1 a $ 15.000</label>
+								</div>
+								<div class="filterArticle__precio">
+									<input class="radioFiltro" type="radio" name="precio" value="medio"
+										id="filtroP1020">
+									<label form="filtroP1020" class="labelFiltro" for="tipoBuzo">$ 15.001 a
+										$ 30.000</label>
+								</div>
+								<div class="filterArticle__precio">
+									<input class="radioFiltro" type="radio" name="precio" value="mucho"
+										id="filtroP2030">
+									<label form="filtroP2030" class="labelFiltro" for="tipoBuzo">$ 30.001 o
+										más</label>
+								</div>
+							</article>
+						</form>
+					</div>
+				</div>
+			</div>
 			<div class="row rowShirts">
-				<div class="col-lg-6 col-md-10 col-12">
+				<div class="col-lg-6 col-md-10 col-sm-12">
 					<article class="shirt">
 						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/hombre/remera_california.jpg"
 							alt="remera masculina de manga corta, azul oscuro, con la leyenda: california republic"
 							title="remera estilo california">
 						<article class="shirt__info">
 							<p>Remera California.</p>
-							<p>$2.400</p>
+							<p>$7.400</p>
 							<form>
 								<select class="listaTalles" title="talle" name="talles" required>
 									<option value="XL">XLarge</option>
@@ -114,7 +170,7 @@
 								title="remera skater">
 							<article class="shirt__info">
 								<p>Remera skater.</p>
-								<p>$2.300</p>
+								<p>$7.300</p>
 								<form>
 									<select class="listaTalles" title="talle" name="talles" required>
 										<option value="XL">XLarge</option>
@@ -137,7 +193,7 @@
 							title="remera estilo futbol">
 						<article class="shirt__info">
 							<p>Remera decorada con pelotas de futbol.</p>
-							<p>$2.200</p>
+							<p>$6.200</p>
 							<form>
 								<select class="listaTalles" title="talle" name="talles" required>
 									<option value="XL">XLarge</option>
@@ -157,7 +213,7 @@
 							title="remera espacial">
 						<article class="shirt__info">
 							<p>Remera con un gran diseño de un astronauta en la luna.</p>
-							<p>$3.200</p>
+							<p>$8.200</p>
 							<form>
 								<select class="listaTalles" title="talle" name="talles" required>
 									<option value="XL">XLarge</option>
@@ -178,7 +234,7 @@
 							alt="remera masculina de manga corta, color crema, lisa" title="remera lisa">
 						<article class="shirt__info">
 							<p>Remera lisa.</p>
-							<p>$2.500</p>
+							<p>$7.500</p>
 							<form>
 								<select class="listaTalles" title="talle" name="talles" required>
 									<option value="XL">XLarge</option>
@@ -199,7 +255,7 @@
 						<article class="shirt__info">
 							<p>Campera de microfibia, ideal para entrenar en
 								climas templados o con fuertes viento.</p>
-							<p>$27.000</p>
+							<p>$37.000</p>
 							<form>
 								<select class="listaTalles" title="talle" name="talles" required>
 									<option value="XL">XLarge</option>
@@ -221,7 +277,7 @@
 							title="remera con un skate caricaturizado">
 						<article class="shirt__info">
 							<p>Remera con tabla de skate fantasmagórica.</p>
-							<p>$2.350</p>
+							<p>$6.350</p>
 							<form>
 								<select class="listaTalles" title="talle" name="talles" required>
 									<option value="XL">XLarge</option>

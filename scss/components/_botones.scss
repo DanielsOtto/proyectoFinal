@@ -1,42 +1,56 @@
 /* | BOTONES | */
 // Botones
-.btnGeneral{
+.btnGeneral {
     background-color: $morado;
     border-radius: $remHalf;
-    padding: map-get($styleBoxs,halfPercent);
-    &:hover{
+    padding: map-get($styleBoxs, halfPercent);
+    font-weight: map-get($stylesFont, fontBolder);
+
+    &:hover {
         background-color: $coral;
         border-color: $mocasin;
-        box-shadow: map-get($styleBoxs,shadowBoxMorado);
+        box-shadow: map-get($styleBoxs, shadowBoxMorado);
     }
 }
+
 // AFECTA SECCIONES HOMBRES Y MUJERES
-.listaTalles{
+.filtroFondo{
+    background-color: $mocasin;
+}
+.btnFiltro {
+    width: $sizeTenP;
+}
+
+.listaTalles {
     @extend .btnGeneral;
     width: $sizeCuarter;
-    appearance: none;  
+    appearance: none;
 }
-.upBtn{
+
+.upBtn {
     @include marginAndPadding (map-get($styleBoxs, onePercent), map-get($styleBoxs, threePercent));
-    svg{
-        &:hover{
-        transform: scale(1.8);
+
+    svg {
+        &:hover {
+            transform: scale(1.8);
         }
     }
 }
+
 // AFECTA A CARRITO
-.sellRow{
-    div{
-        form{
-            input{
+.sellRow {
+    div {
+        form {
+            input {
                 width: $sizeHalf;
                 background-color: $morado;
             }
         }
     }
 }
-.buying{
-    .buying__a{
+
+.buying {
+    .buying__a {
         @include settingsBtnEns ($sizeSixty, $sizeFift, 1% 2%, $morado);
     }
 }

@@ -1,105 +1,136 @@
 /* MEDIA QUERYS */
 // MEDIA QUERY  por  768px
-@media ( max-width: 768px){
+@media (max-width: 768px) {
+
     // Afecta Inicio
-    .editCarousel{
+    .editCarousel {
         width: $sizeHalf;
     }
+
     // Afecta Hombre|Mujer
-    .rowShirts{
+    .rowFilter {
+        @include displayFlex(flex, row, nowrap, center, center);
+        .btnFiltro {
+            width: $sizeSmall;
+        }
+    }
+
+    .rowShirts {
         @include displayFlex (flex, row, wrap, center, center);
     }
-    .imgRopa{
+
+    .imgRopa {
         @include medidasGlobal ($sizeImgN, $sizeImgN);
     }
-    .btnCompras{
+
+    .btnCompras {
         @include settingsBtnEns (35%, 28%, 1%, $snow);
     }
+
     // Afecta carro de compras
-    .columnB{
+    .columnB {
         @include displayFlex (flex, column, wrap, center, space-around);
-        form{
+
+        form {
             @include displayFlex (flex, row, wrap, center, center);
             margin: $remHalf;
         }
-        svg{
+
+        svg {
             @include medidasGlobal ($sizeLogoS, $sizeImgS);
         }
     }
+
     // AFECTA CONTACTOS
-    .contenedor-contacto{
+    .contenedor-contacto {
         @include displayFlex(flex, column, wrap, center, center);
     }
-    .boxContact{
-        input{
+
+    .boxContact {
+        input {
             width: $sizeSev;
         }
     }
-    .btnCajita{
+
+    .btnCajita {
         margin: map-get($styleBoxs, twoPercent);
         width: $sizeSev;
-        input{
+
+        input {
             width: $sizeHalf;
             margin: map-get($styleBoxs, onePercent);
         }
     }
 }
+
 // MEDIA QUERY  por  480px 
-@media ( max-width: 480px){
+@media (max-width: 480px) {
+
     // Afecta Inicio
-    .imgSize{
+    .imgSize {
         height: $indexHeightMQ;
     }
-    .editCarousel{
+
+    .editCarousel {
         width: $sizeSixty;
     }
-    .colCarouselTitle{
-        h2{
+
+    .colCarouselTitle {
+        h2 {
             width: $sizeSev;
             font-size: map-get($sizeFont, largeV);
         }
     }
+
     // Afecta Hombre|Mujer
-    .shirt{
+    .shirt {
         @include displayFlex (flex, column, wrap, center, center);
     }
+
     // Afecta carro de compras
-    .firstRow{
+    .firstRow {
         height: $sizeEight;
         @include displayFlex (flex, row, wrap, center, baseline);
-        .shoppingT{
-            h2{
+
+        .shoppingT {
+            h2 {
                 font-size: $sizeLogoS;
                 text-align: map-get($stylesFont, center);
             }
         }
     }
-    
-    .columnB{
-        form{
+
+    .columnB {
+        form {
             width: $sizeMax;
         }
-        svg{
+
+        svg {
             @include medidasGlobal ($sizeLogoS, $sizeLogoS);
         }
     }
+
     // AFECTA CONTACTOS
-    .boxContact{
-        input{
+    .boxContact {
+        input {
             width: $sizeMax;
         }
     }
-    .btnCajita{
+
+    .btnCajita {
         width: $sizeSev;
-        input{
+
+        input {
             width: $sizeSixty;
         }
     }
-    .ubication__map{
+
+    .ubication__map {
         @include medidasGlobal($remBig, $remBig);
     }
+
     //  Afecta footer 
-    .payment{
+    .payment {
         margin: map-get($styleBoxs, threePercent) map-get($styleBoxs, halfPercent);
     }
 }

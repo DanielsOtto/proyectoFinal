@@ -104,6 +104,32 @@ body{
     }
 }
 //Seccion Hombres y mujeres
+.offcanvas-header{
+    h2{
+        text-transform: map-get($sizeFont, uppercaseV);
+        font-weight: map-get($stylesFont, fontBolder);
+        letter-spacing: map-get($stylesFont, letterSpaceSmall);
+    }
+}
+.filterArticle{
+    .tituloFiltro{
+        color: $morado;
+        text-transform: map-get($sizeFont, uppercaseV);
+        font-weight: map-get($stylesFont, fontBolder);
+        text-align: map-get($stylesFont, textCentro);
+    }
+    .filterArticle__talle{
+        color: $morado;
+        text-transform: map-get($sizeFont, capiV);
+        letter-spacing: map-get($stylesFont, letterSpaceSmall);
+        font-weight: map-get($stylesFont, fontBolder);
+    }
+    .filterArticle__precio{
+        @extend .filterArticle__talle;
+        text-transform: map-get($sizeFont, lowercaseV);
+    }
+}
+
 .shirt__info{
     p{
         color: map-get($stylesFont, colorM);

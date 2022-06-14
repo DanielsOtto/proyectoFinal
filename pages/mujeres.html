@@ -23,7 +23,9 @@
 	<header class="container-fluid">
 		<div class="row">
 			<div class="col-md-7 col-12 boxHeader">
-				<a href="../index.html"><h1 class="tituloEmpresa">SKREEP</h1></a>
+				<a href="../index.html">
+					<h1 class="tituloEmpresa">SKREEP</h1>
+				</a>
 			</div>
 			<div class="col-md-3 col-6 boxHeader">
 				<a href="../index.html"> <img class="logoEmpresa" src="../assets/images/logo/skreep.png"
@@ -85,6 +87,55 @@
 	<!-- FIN nav // INICIO main-->
 	<main class="indumentaria container-fluid">
 		<section class="container-fluid indumentaria__m">
+			<div class="row rowFilter">
+				<button class="btn btnGeneral btnFiltro" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">filtrar</button>
+				<div class="offcanvas offcanvas-top filtroFondo" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+				  <div class="offcanvas-header">
+					<h2 id="offcanvasTopLabel">filtros</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				  </div>
+				  <div class="offcanvas-body">
+					<form>
+						<article class="filterArticle">
+							<h2 class="tituloFiltro">talle</h2>
+							<div class="filterArticle__talle">
+								<input class="radioFiltro" type="radio" name="talle" value="xlarge" id="filtroXL">
+								<label form="filtroXL" class="labelFiltro" for="tipoBuzo">xlarge (45)</label>
+							</div>
+							<div class="filterArticle__talle">
+								<input class="radioFiltro" type="radio" name="talle" value="large" id="filtroL">
+								<label form="filtroL" class="labelFiltro" for="tipoBuzo">large (44)</label>
+							</div>
+							<div class="filterArticle__talle">
+								<input class="radioFiltro" type="radio" name="talle" value="medium" id="filtroM">
+								<label form="filtroM" class="labelFiltro" for="tipoBuzo">medium (43)</label>
+							</div>
+							<div class="filterArticle__talle">
+								<input class="radioFiltro" type="radio" name="talle" value="small" id="filtroS">
+								<label form="filtroS" class="labelFiltro" for="tipoBuzo">small (42)</label>
+							</div>
+						</article>
+						<article class="filterArticle">
+							<h2 class="tituloFiltro">precio</h2>
+							<div class="filterArticle__precio">
+								<input class="radioFiltro" type="radio" name="precio" value="poco" id="filtroP010">
+								<label form="filtroP010" class="labelFiltro" for="tipoBuzo">$ 1 a $ 15.000</label>
+							</div>
+							<div class="filterArticle__precio">
+								<input class="radioFiltro" type="radio" name="precio" value="medio"
+									id="filtroP1020">
+								<label form="filtroP1020" class="labelFiltro" for="tipoBuzo">$ 15.001 a $ 30.000</label>
+							</div>
+							<div class="filterArticle__precio">
+								<input class="radioFiltro" type="radio" name="precio" value="mucho"
+									id="filtroP2030">
+								<label form="filtroP2030" class="labelFiltro" for="tipoBuzo">$ 30.001 o más</label>
+							</div>
+						</article>
+					</form>
+				  </div>
+				</div>
+			</div>
 			<div class="row rowShirts">
 				<div class="col-lg-6 col-md-10 col-12">
 					<article class="shirt">
@@ -93,7 +144,7 @@
 							title="remera de un gato cheshire sonriendo">
 						<article class="shirt__info">
 							<p>Remera con el gato cheshire, de la película Alicia en el país de las maravillas.</p>
-							<p>$4.000</p>
+							<p>$8.000</p>
 							<form>
 								<select class="listaTalles" title="talle" name="talles" required>
 									<option value="L">Large</option>
@@ -113,7 +164,7 @@
 							title="remera de dragon ball">
 						<article class="shirt__info">
 							<p>Remera con dibujo de dragon ball.</p>
-							<p>$2.500</p>
+							<p>$6.500</p>
 							<form>
 								<select class="listaTalles" title="talle" name="talles" required>
 									<option value="L">Large</option>
@@ -136,7 +187,7 @@
 							title="remera de baseball">
 						<article class="shirt__info">
 							<p>Remera con caricatura jugando al baseball.</p>
-							<p>$2.200</p>
+							<p>$6.200</p>
 							<form>
 								<select class="listaTalles" title="talle" name="talles" required>
 									<option value="L">Large</option>
@@ -156,7 +207,7 @@
 							title="remera con un perro rufian">
 						<article class="shirt__info">
 							<p>Remera con caricatura.</p>
-							<p>$2.250</p>
+							<p>$5.250</p>
 							<form>
 								<select class="listaTalles" title="talle" name="talles" required>
 									<option value="L">Large</option>
@@ -178,7 +229,7 @@
 							title="remera con caricatura">
 						<article class="shirt__info">
 							<p>Remera con caricatura.</p>
-							<p>$1.800</p>
+							<p>$5.800</p>
 							<form>
 								<select class="listaTalles" title="talle" name="talles" required>
 									<option value="L">Large</option>
@@ -198,7 +249,7 @@
 							title="campera de abrigo">
 						<article class="shirt__info">
 							<p>Campera térmica, con pluma de ganso.</p>
-							<p>$37.000</p>
+							<p>$57.000</p>
 							<form>
 								<select class="listaTalles" title="talle" name="talles" required>
 									<option value="L">Large</option>
@@ -220,7 +271,7 @@
 							title="zapatillas running">
 						<article class="shirt__info">
 							<p>Zapatillas livianas, ideales para running.</p>
-							<p>$18.000</p>
+							<p>$28.000</p>
 							<form>
 								<select class="listaTalles" title="talle" name="talles" required>
 									<option value="L">39</option>
@@ -240,7 +291,7 @@
 							title="zapatillas running">
 						<article class="shirt__info">
 							<p>Zapatillas ultraboost, para running de alto rendimiento.</p>
-							<p>$25.000</p>
+							<p>$35.000</p>
 							<form>
 								<select class="listaTalles" title="talle" name="talles" required>
 									<option value="L">39</option>
