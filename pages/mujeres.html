@@ -88,52 +88,60 @@
 	<main class="indumentaria container-fluid">
 		<section class="container-fluid indumentaria__m">
 			<div class="row rowFilter">
-				<button class="btn btnGeneral btnFiltro" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">filtrar</button>
-				<div class="offcanvas offcanvas-top filtroFondo" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-				  <div class="offcanvas-header">
-					<h2 id="offcanvasTopLabel">filtros</h2>
-					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-				  </div>
-				  <div class="offcanvas-body">
-					<form>
-						<article class="filterArticle">
-							<h2 class="tituloFiltro">talle</h2>
-							<div class="filterArticle__talle">
-								<input class="radioFiltro" type="radio" name="talle" value="xlarge" id="filtroXL-m">
-								<label form="filtroXL" class="labelFiltro" for="tipoBuzo">xlarge (45)</label>
-							</div>
-							<div class="filterArticle__talle">
-								<input class="radioFiltro" type="radio" name="talle" value="large" id="filtroL-m">
-								<label form="filtroL" class="labelFiltro" for="tipoBuzo">large (44)</label>
-							</div>
-							<div class="filterArticle__talle">
-								<input class="radioFiltro" type="radio" name="talle" value="medium" id="filtroM-m">
-								<label form="filtroM" class="labelFiltro" for="tipoBuzo">medium (43)</label>
-							</div>
-							<div class="filterArticle__talle">
-								<input class="radioFiltro" type="radio" name="talle" value="small" id="filtroS-m">
-								<label form="filtroS" class="labelFiltro" for="tipoBuzo">small (42)</label>
-							</div>
-						</article>
-						<article class="filterArticle">
-							<h2 class="tituloFiltro">precio</h2>
-							<div class="filterArticle__precio">
-								<input class="radioFiltro" type="radio" name="precio" value="poco" id="filtroP010">
-								<label form="filtroP015-m" class="labelFiltro" for="tipoBuzo">$ 1 a $ 15.000</label>
-							</div>
-							<div class="filterArticle__precio">
-								<input class="radioFiltro" type="radio" name="precio" value="medio"
-									id="filtroP1020">
-								<label form="filtroP1530-m" class="labelFiltro" for="tipoBuzo">$ 15.001 a $ 30.000</label>
-							</div>
-							<div class="filterArticle__precio">
-								<input class="radioFiltro" type="radio" name="precio" value="mucho"
-									id="filtroP2030">
-								<label form="filtroP30-m" class="labelFiltro" for="tipoBuzo">$ 30.001 o más</label>
-							</div>
-						</article>
-					</form>
-				  </div>
+				<button class="btn btnGeneral btnFiltro" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">filtrar</button>
+				<div class="offcanvas offcanvas-top filtroFondo" tabindex="-1" id="offcanvasTop"
+					aria-labelledby="offcanvasTopLabel">
+					<div class="offcanvas-header">
+						<h2 id="offcanvasTopLabel">filtros</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<form>
+							<article class="filterArticle">
+								<h2 class="tituloFiltro">talle</h2>
+								<div class="filterArticle__talle">
+									<input class="checkFiltro" type="checkbox" name="talle" value="xlarge"
+										id="filtroXL-m">
+									<label form="filtroXL" class="labelFiltro" for="tipoBuzo">xlarge (45)</label>
+								</div>
+								<div class="filterArticle__talle">
+									<input class="checkFiltro" type="checkbox" name="talle" value="large"
+										id="filtroL-m">
+									<label form="filtroL" class="labelFiltro" for="tipoBuzo">large (44)</label>
+								</div>
+								<div class="filterArticle__talle">
+									<input class="checkFiltro" type="checkbox" name="talle" value="medium"
+										id="filtroM-m">
+									<label form="filtroM" class="labelFiltro" for="tipoBuzo">medium (43)</label>
+								</div>
+								<div class="filterArticle__talle">
+									<input class="checkFiltro" type="checkbox" name="talle" value="small"
+										id="filtroS-m">
+									<label form="filtroS" class="labelFiltro" for="tipoBuzo">small (42)</label>
+								</div>
+							</article>
+							<article class="filterArticle">
+								<h2 class="tituloFiltro">precio</h2>
+								<div class="filterArticle__precio">
+									<input class="checkFiltro" type="checkbox" name="precio" value="poco"
+										id="filtroP010">
+									<label form="filtroP015-m" class="labelFiltro" for="tipoBuzo">$ 1 a $ 15.000</label>
+								</div>
+								<div class="filterArticle__precio">
+									<input class="checkFiltro" type="checkbox" name="precio" value="medio"
+										id="filtroP1020">
+									<label form="filtroP1530-m" class="labelFiltro" for="tipoBuzo">$ 15.001 a $
+										30.000</label>
+								</div>
+								<div class="filterArticle__precio">
+									<input class="checkFiltro" type="checkbox" name="precio" value="mucho"
+										id="filtroP2030">
+									<label form="filtroP30-m" class="labelFiltro" for="tipoBuzo">$ 30.001 o más</label>
+								</div>
+							</article>
+						</form>
+					</div>
 				</div>
 			</div>
 			<div class="row rowShirts">

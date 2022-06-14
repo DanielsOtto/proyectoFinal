@@ -1,9 +1,9 @@
 /* AFECTA SECCIONES HOMBRES Y MUJERES */
 .rowFilter{
-    @include displayFlex(flex,row,nowrap,center, end);
+    @include displayFlex(flex, row, nowrap, center, end);
     margin: map-get($styleBoxs, onePercent);
     form{
-        @include displayFlex(flex, row, nowrap, center, space-evenly);
+        @include displayFlex(flex, row, wrap, center, space-evenly);
         article{
             box-shadow: map-get($styleBoxs, shadowBoxCoral);
             @include medidasGlobal($sizeFortyFive, $sizeMax);

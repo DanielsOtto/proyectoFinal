@@ -35,18 +35,24 @@ class Articulo {
     }
 }
 
-productos.push(new Articulo("REMERA", "SKREEP", "MANGA LARGA", 'L', "NEGRA", 10, 4000));
-productos.push(new Articulo("REMERA", "SKREEP", "MANGA CORTA", 'M', "ROJA", 8, 4000));
-productos.push(new Articulo("REMERA", "SKREEP", "MANGA LARGA", 'S', "AZUL", 0, 4000));
-productos.push(new Articulo("REMERA", "SKREEP", "MANGA CORTA", 'S', "BLANCO", 4, 4000));
-productos.push(new Articulo("CAMISA", "SKREEP", "MANGA LARGA", 'L', "GRIS", 4, 9000));
-productos.push(new Articulo("CAMISA", "SKREEP", "MANGA CORTA", 'L', "AZUL", 2, 9000));
-productos.push(new Articulo("CAMISA", "SKREEP", "MANGA CORTA", 'M', "ROJA", 6, 9000));
-productos.push(new Articulo("CAMISA", "SKREEP", "MANGA LARGA", 'M', "BLANCO", 4, 9000));
-productos.push(new Articulo("CAMPERA RUNNING", "SKREEP", "RUNNER", 'L', "NEGRA", 7, 18000));
-productos.push(new Articulo("CAMPERA RUNNING", "SKREEP", "RUNNER", 'L', "ROJA", 17, 18000));
-productos.push(new Articulo("CAMPERA RUNNING", "SKREEP", "RUNNER", 'M', "AZUL", 1, 18000));
-productos.push(new Articulo("CAMPERA RUNNING", "SKREEP", "RUNNER", 'S', "GRIS", 3, 18000));
+productos.push(new Articulo("REMERA", "CALIFORNIA REPUBLIC", "MANGA CORTA", 'L', "AZUL OSCURA", 10, 7400));
+productos.push(new Articulo("REMERA", "FIVE BORO", "MANGA CORTA", 'M', "NEGRA", 8, 7300));
+productos.push(new Articulo("REMERA", "FUTBOL", "MANGA CORTA", 'S', "BLANCA", 0, 6200));
+productos.push(new Articulo("REMERA", "MOON", "MANGA CORTA", 'S', "AZUL OSCURO", 4, 8200));
+productos.push(new Articulo("REMERA", "SKREEP", "MANGA LARGA", 'XL', "CREMA", 4, 7500));
+productos.push(new Articulo("CAMPERA", "SKREEP", "MANGA LARGA", 'L', "AZUL", 12, 37000));
+productos.push(new Articulo("REMERA", "SKREEP", "MANGA CORTA", 'M', "NEGRA", 6, 6350));
+productos.push(new Articulo("ZAPATILLAS", "SKREEP", "RUNNING", 'M', "ROJAS", 4, 30000));
+productos.push(new Articulo("REMERA", "CHESIRE", "MANGA LARGA", 'L', "GRIS", 7, 8000));
+productos.push(new Articulo("REMERA", "DBZ", "MANGA CORTA", 'L', "NEGRA", 17, 6500));
+productos.push(new Articulo("REMERA", "BASEBALL", "MANGA CORTA", 'M', "AZUL", 1, 6200));
+productos.push(new Articulo("REMERA", "RUFFIAN", "MANGA CORTA", 'S', "CELESTE", 3, 5250));
+productos.push(new Articulo("REMERA", "MOON", "MANGA CORTA", 'L', "NEGRA", 7, 5800));
+productos.push(new Articulo("CAMPERA", "SKREEP", "MANGA LARGA", 'L', "ROJA", 17, 57000));
+productos.push(new Articulo("ZAPATILLAS", "SKREEP", "RUNNING", 'M', "AZUL", 1, 28000));
+productos.push(new Articulo("ZAPATILLAS", "SKREEP", "RUNNING", 'S', "GRIS", 3, 35000));
+
+
 
 function arregloCargado(arreglo) { // con esta funcion corroboramos que el arreglo tenga elementos
     if (arreglo.length > 0) {
@@ -67,6 +73,7 @@ function cuantosDesea(arreglo) {
         cantidad = Number(prompt("Cuantos desea comprar ?"));
     }
     arregloLocal = suficienteStock(arreglo, cantidad);
+    // arregloLocal = (arreglo, cantidad) => {return arreglo.filter((el) => el.stock >= cantidad)};
 
     if (arregloCargado(arregloLocal)) { // esto revisa si stock es > 0  mal -- tengo que revisar si cantidad es > a stock
         arregloLocal.forEach((el) => el.hayStock(cantidad));
