@@ -169,7 +169,6 @@ do {
 
 
 
-
 // function opcionesDePago(article) {
 //     let quotaOption = 0;
 //     let paymentOption= prompt("Con que desea abonar: \n1) Efectivo (Obtendrás un 10% de descuento)\n2) Crédito (Podrás elegir entre 3 cuotas sin interes ó 12 cuotas con interés(10%))\n3) Cancelar".toUpperCase());
