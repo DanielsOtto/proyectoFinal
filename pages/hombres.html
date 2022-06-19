@@ -17,9 +17,12 @@
 	<link rel="stylesheet" href="../css/destino.css">
 	<link rel="SKREEP icon" href="../assets/images/logo/skreep.png">
 
+	<script src="../js/inventario.js" async></script>
+	<script src="../js/estructura.js" async></script>
+
 </head>
 
-<body>
+<body class="galeria">
 	<!-- HEADER -->
 	<header class="container-fluid">
 		<div class="row">
@@ -86,68 +89,17 @@
 		</section>
 	</nav>
 	<!-- FIN nav // INICIO main-->
+
 	<main class="indumentaria container-fluid">
-		<section class="container-fluid indumentaria__h">
-			<div class="row rowFilter">
-				<button class="btn btnGeneral btnFiltro" type="button" data-bs-toggle="offcanvas"
-					data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">filtrar</button>
-				<div class="offcanvas offcanvas-top filtroFondo" tabindex="-1" id="offcanvasTop"
-					aria-labelledby="offcanvasTopLabel">
-					<div class="offcanvas-header">
-						<h2 id="offcanvasTopLabel">filtros</h2>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
-						<form>
-							<article class="filterArticle">
-								<h2 class="tituloFiltro">talle</h2>
-								<div class="filterArticle__talle">
-									<input class="checkFiltro" type="checkbox" name="talle" value="xlarge"
-										id="filtroXL-h">
-									<label form="filtroXL" class="labelFiltro" for="tipoBuzo">xlarge (45)</label>
-								</div>
-								<div class="filterArticle__talle">
-									<input class="checkFiltro" type="checkbox" name="talle" value="large"
-										id="filtroL-h">
-									<label form="filtroL" class="labelFiltro" for="tipoBuzo">large (44)</label>
-								</div>
-								<div class="filterArticle__talle">
-									<input class="checkFiltro" type="checkbox" name="talle" value="medium"
-										id="filtroM-h">
-									<label form="filtroM" class="labelFiltro" for="tipoBuzo">medium (43)</label>
-								</div>
-								<div class="filterArticle__talle">
-									<input class="checkFiltro" type="checkbox" name="talle" value="small"
-										id="filtroS-h">
-									<label form="filtroS" class="labelFiltro" for="tipoBuzo">small (42)</label>
-								</div>
-							</article>
-							<article class="filterArticle">
-								<h2 class="tituloFiltro">precio</h2>
-								<div class="filterArticle__precio">
-									<input class="checkFiltro" type="checkbox" name="precio" value="poco"
-										id="filtroP015-h">
-									<label form="filtroP010" class="labelFiltro" for="tipoBuzo">$ 1 a $ 15.000</label>
-								</div>
-								<div class="filterArticle__precio">
-									<input class="checkFiltro" type="checkbox" name="precio" value="medio"
-										id="filtroP1020">
-									<label form="filtroP1530-h" class="labelFiltro" for="tipoBuzo">$ 15.001 a
-										$ 30.000</label>
-								</div>
-								<div class="filterArticle__precio">
-									<input class="checkFiltro" type="checkbox" name="precio" value="mucho"
-										id="filtroP30-h">
-									<label form="filtroP2030" class="labelFiltro" for="tipoBuzo">$ 30.001 o
-										más</label>
-								</div>
-							</article>
-						</form>
-					</div>
-				</div>
+		<section class="container-fluid" id="contenedor-js">
+			<div class="row rowFilter" id="zonaFiltro__hombres">
+				<!-- ESTE  CONTENIDO ESTA EN  JS  -->
 			</div>
-			<div class="row rowShirts">
-				<div class="col-lg-6 col-md-10 col-sm-12">
+
+
+			<div class="row rowShirts" id="galeria__hombres">
+
+				<div class="col-lg-6 col-md-10 col-sm-12  columnaGaleria">
 					<article class="shirt">
 						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/hombre/remera_california.jpg"
 							alt="remera masculina de manga corta, azul oscuro, con la leyenda: california republic"
@@ -167,6 +119,8 @@
 						</article>
 					</article>
 				</div>
+
+
 				<div class="col-lg-6 col-md-10 col-12">
 					<article>
 						<div class="shirt">
@@ -189,8 +143,6 @@
 						</div>
 					</article>
 				</div>
-			</div>
-			<div class="row rowShirts">
 				<div class="col-lg-6 col-md-10 col-12">
 					<article class="shirt">
 						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/hombre/remera_ball.jpg"
@@ -231,8 +183,6 @@
 						</article>
 					</article>
 				</div>
-			</div>
-			<div class="row rowShirts">
 				<div class="col-lg-6 col-md-10 col-12">
 					<article class="shirt">
 						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/hombre/remera_bird.jpg"
@@ -273,8 +223,6 @@
 						</article>
 					</article>
 				</div>
-			</div>
-			<div class="row rowShirts">
 				<div class="col-lg-6 col-md-10 col-12">
 					<article class="shirt">
 						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/hombre/remera_ghost.jpg"
@@ -317,19 +265,10 @@
 					</article>
 				</div>
 			</div>
+
 			<div class="row">
-				<div class="col-xxl-12 upBtn">
-					<a href="#upH"><svg xmlns="http://www.w3.org/2000/svg"
-							class="icon icon-tabler icon-tabler-arrow-up-circle" width="48" height="48"
-							viewBox="0 0 24 24" stroke-width="1.5" stroke="#470147" fill="none" stroke-linecap="round"
-							stroke-linejoin="round">
-							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-							<circle cx="12" cy="12" r="9" />
-							<line x1="12" y1="8" x2="8" y2="12" />
-							<line x1="12" y1="8" x2="12" y2="16" />
-							<line x1="16" y1="12" x2="12" y2="8" />
-						</svg>
-					</a>
+				<div class="col-xxl-12 upBtn" id="zonaUp__hombres">
+						<!-- CARGADO EN JS-->
 				</div>
 			</div>
 		</section>
