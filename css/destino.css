@@ -68,13 +68,13 @@ h2, h4 {
   font-family: LatoBlack, sans-serif;
 }
 
-.btnGeneral, .listaTalles {
+.btnGeneral, .filtroSelect {
   font-size: 1.6rem;
   color: #FFFAFA;
   text-transform: uppercase;
   letter-spacing: 0.288rem;
 }
-.btnGeneral:hover, .listaTalles:hover {
+.btnGeneral:hover, .filtroSelect:hover {
   color: #470147;
 }
 
@@ -152,6 +152,11 @@ body {
 
 .upBtn {
   text-align: center;
+}
+
+.textoInformativo {
+  text-align: center;
+  color: #470147;
 }
 
 .shoppingT h2, .shoppingT h4 {
@@ -288,28 +293,6 @@ footer p {
   animation: desaparecer 4s;
 }
 
-@keyframes desaparecer {
-  25% {
-    animation-timing-function: ease-out;
-    transform: translate(400%);
-  }
-  45% {
-    transform: translate(400%);
-  }
-  60% {
-    transform: translate(400%);
-  }
-  80% {
-    animation-timing-function: cubic-bezier(0, 0, 0.6, 1);
-    transform: rotate(-360deg);
-    opacity: 0.2;
-  }
-  100% {
-    animation-timing-function: linear;
-    opacity: 0.8;
-    transform: rotate(360deg);
-  }
-}
 .logoEmpresa {
   border-radius: 50%;
   margin: 5%;
@@ -328,16 +311,17 @@ footer p {
 }
 
 /* | BOTONES | */
-.btnGeneral, .listaTalles {
+.btnGeneral, .filtroSelect {
   background-color: #470147;
   border-radius: 0.5rem;
   padding: 0.5%;
   font-weight: bolder;
 }
-.btnGeneral:hover, .listaTalles:hover {
+.btnGeneral:hover, .filtroSelect:hover {
   background-color: #FF7F50;
   border-color: #FFDEB5;
   box-shadow: 0 0 0.8rem #470147;
+  cursor: pointer;
 }
 
 .filtroFondo {
@@ -348,9 +332,20 @@ footer p {
   width: 10%;
 }
 
-.listaTalles {
-  width: 25%;
+.filtroSelect {
+  width: 60%;
   appearance: none;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.opcionFiltroTalle {
+  cursor: pointer;
+}
+
+.labelFiltro {
+  text-transform: capitalize;
+  color: #470147;
 }
 
 .upBtn {
@@ -359,6 +354,10 @@ footer p {
 }
 .upBtn svg:hover {
   transform: scale(1.8);
+}
+
+.agregarCarrito:hover {
+  cursor: pointer;
 }
 
 .sellRow div form input, .sellRow div form .boxContact textarea, .boxContact .sellRow div form textarea, .sellRow div form .boxContact select, .boxContact .sellRow div form select {
@@ -377,6 +376,7 @@ footer p {
 body {
   overflow-x: hidden;
   background-color: #FFDEB5;
+  height: auto;
 }
 
 header {
@@ -485,12 +485,33 @@ footer {
   align-items: center;
   justify-content: space-evenly;
 }
+.shirt__info form .cajitaTalles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 2%;
+  width: 80%;
+}
+.shirt__info form .cajitaTalles .cajitaTalles__ind {
+  font-weight: bolder;
+}
+
+.opcionesCanvas {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
 
 /* Seccion CARRITO*/
 .carrito__fila {
   margin: 1%;
   padding: 2%;
-  height: 11.2rem;
+  height: auto;
 }
 
 .secondRow {
@@ -505,11 +526,30 @@ footer {
 }
 
 .sellRow {
-  height: 24rem;
+  height: auto;
   box-shadow: 0 0 0.8rem #470147;
   margin: 2.5% 1%;
 }
-
+.sellRow .boxCarrito {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 3%;
+}
+.sellRow .boxCarrito .boxCarrito__columnA, .sellRow .boxCarrito .boxCarrito__columnC, .sellRow .boxCarrito .boxCarrito__columnB {
+  padding: 1%;
+}
+.sellRow .boxCarrito .boxCarrito__columnB {
+  width: 30%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
 .lastRow {
   width: 100%;
   height: 32rem;
@@ -719,6 +759,22 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+
+  .talles-caja__form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .talles-caja__form article {
+    width: auto;
+    height: auto;
+  }
+  .talles-caja__form article h2, .talles-caja__form article h4 {
+    font-size: smaller;
   }
 
   .firstRow {

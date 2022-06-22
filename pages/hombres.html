@@ -37,8 +37,8 @@
 				</a>
 			</div>
 			<div class="col-md-2 col-4 boxHeader">
-				<a href="carrito.html"> <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="black"
-						class="bi bi-cart3 logoCompra" viewBox="0 0 16 16">
+				<a href="carrito.html" id="boton-carrito"> <svg xmlns="http://www.w3.org/2000/svg" width="48"
+						height="48" fill="black" class="bi bi-cart3 logoCompra" viewBox="0 0 16 16">
 						<path
 							d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
 					</svg></a>
@@ -93,184 +93,55 @@
 	<main class="indumentaria container-fluid">
 		<section class="container-fluid" id="contenedor-js">
 			<div class="row rowFilter" id="zonaFiltro__hombres">
-				<!-- ESTE  CONTENIDO ESTA EN  JS  -->
+				<aside class="talles-caja">
+					<div class="talles-caja__cuerpo">
+						<form class="talles-caja__form">
+							<article class="filterArticle">
+								<h2 class="tituloFiltro">filtro por tipo de prenda</h2>
+								<select id="opcionTipo" class="filtroSelect" title="seleccionarPrenda">
+									<option value="TODOS">todos</option>
+									<option value="BUZO">buzos</option>
+									<option value="CAMPERA">camperas</option>
+									<option value="REMERA">remeras</option>
+									<option value="ZAPATILLAS">zapatillas</option>
+								</select>
+							</article>
+							<article class="filterArticle">
+								<h2 class="tituloFiltro">filtro por rango de precios</h2>
+								<select id="opcionPrecio" class="filtroSelect" title="sleccionarPrecio">
+									<option value="TODOS">todos</option>
+									<option value='10000'>$1 a $15.000</option>
+									<option value='20000'>$15.001 a $30.000</option>
+									<option value='40000'>$30.001 o más</option>
+								</select>
+							</article>
+						</form>
+					</div>
+				</aside>
 			</div>
-
 
 			<div class="row rowShirts" id="galeria__hombres">
 
-				<div class="col-lg-6 col-md-10 col-sm-12  columnaGaleria">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/hombre/remera_california.jpg"
-							alt="remera masculina de manga corta, azul oscuro, con la leyenda: california republic"
-							title="remera estilo california">
-						<article class="shirt__info">
-							<p>Remera California.</p>
-							<p>$7.400</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="XL">XLarge</option>
-									<option value="L">Large</option>
-									<option value="M">Medium</option>
-									<option value="S">Small</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-				</div>
+				<!-- ESTE CONTENIDO ESTA EN JS -->
 
-
-				<div class="col-lg-6 col-md-10 col-12">
-					<article>
-						<div class="shirt">
-							<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/hombre/remera_skate.jpg"
-								alt="remera masculina de manga corta, negra, con la leyenda: FiveBoro y el dibujo de un skate blanco"
-								title="remera skater">
-							<article class="shirt__info">
-								<p>Remera skater.</p>
-								<p>$7.300</p>
-								<form>
-									<select class="listaTalles" title="talle" name="talles" required>
-										<option value="XL">XLarge</option>
-										<option value="L">Large</option>
-										<option value="M">Medium</option>
-										<option value="S">Small</option>
-									</select>
-									<input class="btnGeneral" type="button" value="COMPRAR">
-								</form>
-							</article>
-						</div>
-					</article>
-				</div>
-				<div class="col-lg-6 col-md-10 col-12">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/hombre/remera_ball.jpg"
-							alt="remera masculina de manga corta, blanca, con un dibujo armado con 3 pelotas de futbol"
-							title="remera estilo futbol">
-						<article class="shirt__info">
-							<p>Remera decorada con pelotas de futbol.</p>
-							<p>$6.200</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="XL">XLarge</option>
-									<option value="L">Large</option>
-									<option value="M">Medium</option>
-									<option value="S">Small</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-				</div>
-				<div class="col-lg-6 col-md-10 col-12">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/hombre/remera_moon.jpg"
-							alt="remera masculina de manga corta, azul oscuro, con un hombre colgado de la luna"
-							title="remera espacial">
-						<article class="shirt__info">
-							<p>Remera con un gran diseño de un astronauta en la luna.</p>
-							<p>$8.200</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="XL">XLarge</option>
-									<option value="L">Large</option>
-									<option value="M">Medium</option>
-									<option value="S">Small</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-				</div>
-				<div class="col-lg-6 col-md-10 col-12">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/hombre/remera_bird.jpg"
-							alt="remera masculina de manga corta, color crema, lisa" title="remera lisa">
-						<article class="shirt__info">
-							<p>Remera lisa.</p>
-							<p>$7.500</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="XL">XLarge</option>
-									<option value="L">Large</option>
-									<option value="M">Medium</option>
-									<option value="S">Small</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-				</div>
-				<div class="col-lg-6 col-md-10 col-12">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail"
-							src="../assets/images/hombre/Campera-microfibra-deportiva.jpg" alt="sports_jacket"
-							title="campera masculina, azul oscuro, de microfibia">
-						<article class="shirt__info">
-							<p>Campera de microfibia, ideal para entrenar en
-								climas templados o con fuertes viento.</p>
-							<p>$37.000</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="XL">XLarge</option>
-									<option value="L">Large</option>
-									<option value="M">Medium</option>
-									<option value="S">Small</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-				</div>
-				<div class="col-lg-6 col-md-10 col-12">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/hombre/remera_ghost.jpg"
-							alt="remera masculina de manga corta, color negro, con una caricatura de un skate"
-							title="remera con un skate caricaturizado">
-						<article class="shirt__info">
-							<p>Remera con tabla de skate fantasmagórica.</p>
-							<p>$6.350</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="XL">XLarge</option>
-									<option value="L">Large</option>
-									<option value="M">Medium</option>
-									<option value="S">Small</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-				</div>
-				<div class="col-lg-6 col-md-10 col-12">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/hombre/ellos_tennis.jpg"
-							alt="zapatillas masculinas, rojas, ideales para hacer deporte" title="zapatillas running">
-						<article class="shirt__info">
-							<p>Estas zapatillas de running tienen una mediasuela
-								Jetboost que proporciona el increíble retorno de
-								energía de Boost.</p>
-							<p>$30.000</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="XL">45</option>
-									<option value="L">44</option>
-									<option value="M">43</option>
-									<option value="S">42</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-xxl-12 upBtn" id="zonaUp__hombres">
-						<!-- CARGADO EN JS-->
+					<a href="#upH"><svg xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-arrow-up-circle" width="48" height="48"
+							viewBox="0 0 24 24" stroke-width="1.5" stroke="#470147" fill="none" stroke-linecap="round"
+							stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+							<circle cx="12" cy="12" r="9" />
+							<line x1="12" y1="8" x2="8" y2="12" />
+							<line x1="12" y1="8" x2="12" y2="16" />
+							<line x1="16" y1="12" x2="12" y2="8" />
+						</svg>
+					</a>
 				</div>
 			</div>
+
 		</section>
 	</main>
 	<!-- INICIO DE FOOTER -->

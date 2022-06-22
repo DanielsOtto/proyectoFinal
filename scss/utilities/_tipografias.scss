@@ -145,6 +145,14 @@ body{
 .upBtn{
     text-align: map-get($stylesFont, textCentro);
 }
+
+// -- esta clase se usa si el filtro no encontro lo solicitado
+.textoInformativo{
+    text-align: map-get($stylesFont, textCentro);
+    color: $morado;
+}
+
+
 // seccion carrito
 .shoppingT{
     h2{

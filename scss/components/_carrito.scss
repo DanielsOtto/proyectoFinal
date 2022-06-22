@@ -1,7 +1,7 @@
 /* Seccion CARRITO*/
 .carrito__fila{
     @include marginAndPadding (map-get($styleBoxs, onePercent),map-get($styleBoxs, twoPercent));
-    height: $remSeven;
+    height: auto;
 }
 .secondRow{
     height: $remFour;
@@ -10,9 +10,28 @@
     }
 }
 .sellRow{
-    height: $remSemiBig;
+    height: auto;
     box-shadow: map-get($styleBoxs, shadowBoxMorado);
     margin: map-get($styleBoxs, margiN);
+ 
+
+    .boxCarrito{
+        @include displayFlex(flex, row, nowrap, center, space-evenly);
+        margin-bottom: map-get($styleBoxs, threePercent);
+
+        .boxCarrito__columnA{
+            padding: map-get($styleBoxs, onePercent);
+        }
+        .boxCarrito__columnB{
+            @extend .boxCarrito__columnA;
+            width: $sizeSmall;
+            height: $sizeSixty;
+            @include displayFlex(flex, row, nowrap, center, center);
+        }   
+        .boxCarrito__columnC{
+            @extend .boxCarrito__columnA;
+        }
+    }
 }
 .lastRow{
     @include medidasGlobal ($sizeMax, $remBig);

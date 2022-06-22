@@ -1,30 +1,30 @@
-const productos = [];  // este arreglo va a tener los objetos en venta
+const productosH = [];  // seccion hombres - este arreglo va a tener los objetos en venta
+const productosM = []; // seccion mujeres
+
 let cantidad = 0;
 let precioXCant = 0;
 
 class Articulo {
-    constructor(id, tipo, marca ,modelo, talle, color, stock, precio, descripcion, img) {
+    constructor(id, tipo, marca ,modelo, talle, precio, descripcion, alt, img) {
         this.id = id;
         this.tipo = tipo;
         this.marca = marca;
         this.modelo = modelo;
-        this.talle = talle;
-        this.color = color;
-        this.stock = stock;
+        this.talles = talle;
         this.precio = precio;
         this.descripcion = descripcion;
+        this.alt = alt;
         this.img = img;
-        this.finalPrice = precio;
+        this.precioConImp = precio;
         this.newPrice = precio;
     }
-    hayStock() {
-        this.stock = this.stock - cantidad;
-    }
+
+  
     precioFinal() {
-        this.finalPrice = Math.round(this.precio * 1.21);
+        this.precioConImp = Math.round(this.precio * 1.21);
     }
     multiplePriceE() {
-        precioXCant = this.finalPrice * cantidad;
+        precioXCant = this.precioConImp * cantidad;
     }
     fifteenOff() {
         this.newPrice = Math.round(precioXCant - (precioXCant * 0.10));
@@ -38,28 +38,101 @@ class Articulo {
 }
 
 class Inventario{
-    constructor(id, talle, color, stock){
-        this.id = id;
+    constructor(talle,stock){
         this.talle = talle;
-        this.color = color;
         this.stock = stock;
     }
+
+    comprobarStock(){
+        if(this.stock <= 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    reducirStock(){
+        this.stock--;
+    }
+
 }
 
-productos.push(new Articulo('1h',"REMERA", "CALIFORNIA REPUBLIC", "MANGA CORTA", 'L', "AZUL OSCURA", 10, 7400,"Remera California","../assets/images/hombre/remera_california.jpg"));
-productos.push(new Articulo('2h',"REMERA", "FIVE BORO", "MANGA CORTA", 'M', "NEGRA", 8, 7300,"Remera skater","../assets/images/hombre/remera_skate.jpg"));
-productos.push(new Articulo('3h',"REMERA", "FUTBOL", "MANGA CORTA", 'S', "BLANCA", 0, 6200,"Remera Brasil 2014","../assets/images/hombre/remera_ball.jpg"));
-productos.push(new Articulo('4h',"REMERA", "MOON", "MANGA CORTA", 'S', "AZUL OSCURO", 4, 8200,"Remera con un gran diseño de un astronauta en la luna","../assets/images/hombre/remera_moon.jpg"));
-productos.push(new Articulo('5h',"REMERA", "SKREEP", "MANGA LARGA", 'XL', "CREMA", 4, 7500,"Remera lisa","../assets/images/hombre/remera_bird.jpg"));
-productos.push(new Articulo('6h',"CAMPERA", "SKREEP", "MANGA LARGA", 'L', "AZUL", 12, 37000,"Campera de microfibia, ideal para entrenar en climas templados o con fuertes viento","../assets/images/hombre/Campera-microfibra-deportiva.jpg"));
-productos.push(new Articulo('7h',"REMERA", "SKREEP", "MANGA CORTA", 'M', "NEGRA", 6, 6350,"Remera con tabla de skate fantasmagórica","../assets/images/hombre/remera_ghost.jpg"));
-productos.push(new Articulo('8h',"ZAPATILLAS", "SKREEP", "RUNNING", 'M', "ROJAS", 4, 30000,"Estas zapatillas de running tienen una mediasuela Jetboost que proporciona el increíble retorno de energía de Boost","../assets/images/hombre/ellos_tennis.jpg"));
-productos.push(new Articulo('1m',"REMERA", "CHESIRE", "MANGA LARGA", 'L', "GRIS", 7, 8000));
-productos.push(new Articulo('2m',"REMERA", "DBZ", "MANGA CORTA", 'L', "NEGRA", 17, 6500));
-productos.push(new Articulo('3m',"REMERA", "BASEBALL", "MANGA CORTA", 'M', "AZUL", 1, 6200));
-productos.push(new Articulo('4m',"REMERA", "RUFFIAN", "MANGA CORTA", 'S', "CELESTE", 3, 5250));
-productos.push(new Articulo('5m',"REMERA", "MOON", "MANGA CORTA", 'L', "NEGRA", 7, 5800));
-productos.push(new Articulo('6m',"CAMPERA", "SKREEP", "MANGA LARGA", 'L', "ROJA", 17, 57000));
-productos.push(new Articulo('7m',"ZAPATILLAS", "SKREEP", "RUNNING", 'M', "AZUL", 1, 28000));
-productos.push(new Articulo('8m',"ZAPATILLAS", "SKREEP", "RUNNING", 'S', "GRIS", 3, 35000));
 
+const tallesH1 = [new Inventario('L',7),('M',4),('S',0)]
+productosH.push(new Articulo(1,"REMERA", "CALIFORNIA REPUBLIC", "MANGA CORTA", tallesH1, 7400,"Remera California", "remera masculina de manga corta","../assets/images/hombre/remera_california.jpg"));
+const tallesH2 = [new Inventario('L',7),('M',4),('S',0)]
+productosH.push(new Articulo(2,"REMERA", "FIVE BORO", "MANGA CORTA",tallesH2, 7300,"Remera skater", "remera masculina de manga corta","../assets/images/hombre/remera_skate.jpg"));
+const tallesH3 = [new Inventario('L',7),('M',0),('S',4)]
+productosH.push(new Articulo(3,"REMERA", "FUTBOL", "MANGA CORTA",tallesH3, 6200,"Remera Brasil 2014", "remera masculina de manga corta","../assets/images/hombre/remera_ball.jpg"));
+const tallesH4 = [new Inventario('L',7),('M',4),('S',2)]
+productosH.push(new Articulo(4,"REMERA", "MOON", "MANGA CORTA",tallesH4, 8200,"Remera con un gran diseño de un astronauta en la luna", "remera masculina de manga corta","../assets/images/hombre/remera_moon.jpg"));
+const tallesH5 = [new Inventario('L',0),('M',4),('S',1)]
+productosH.push(new Articulo(5,"REMERA", "SKREEP", "MANGA LARGA",tallesH5, 7500,"Remera lisa", "remera masculina de manga corta","../assets/images/hombre/remera_bird.jpg"));
+const tallesH6 = [new Inventario('L',7),('M',41),('S',3)]
+productosH.push(new Articulo(6,"CAMPERA", "SKREEP", "MANGA LARGA",tallesH6, 45000,"Campera de microfibia, ideal para entrenar en climas templados o con fuertes viento", "campera masculina microfibia","../assets/images/hombre/Campera-microfibra-deportiva.jpg"));
+const tallesH7 = [new Inventario('L',7),('M',4),('S',7)]
+productosH.push(new Articulo(7,"REMERA", "SKREEP", "MANGA CORTA",tallesH7, 6350,"Remera con tabla de skate fantasmagórica", "remera masculina de manga corta","../assets/images/hombre/remera_ghost.jpg"));
+const tallesH8 = [new Inventario('L',0),('M',4),('S',9)]
+productosH.push(new Articulo(8,"ZAPATILLAS", "SKREEP", "RUNNING",tallesH8, 29000,"Estas zapatillas de running tienen una mediasuela Jetboost que proporciona el increíble retorno de energía de Boost", "zapatillas runnging hombre","../assets/images/hombre/ellos_tennis.jpg"));
+
+
+
+
+
+
+
+productosM.push(new Articulo(1,"BUZO", "CHESIRE", "MANGA LARGA", 'L', 7, 8000));
+productosM.push(new Articulo(2,"REMERA", "DBZ", "MANGA CORTA", 'L', 17, 6500));
+productosM.push(new Articulo(3,"REMERA", "BASEBALL", "MANGA CORTA", 'M', 1, 6200));
+productosM.push(new Articulo(4,"REMERA", "RUFFIAN", "MANGA CORTA", 'S', 3, 5250));
+productosM.push(new Articulo(5,"REMERA", "MOON", "MANGA CORTA", 'L', 7, 5800));
+productosM.push(new Articulo(6,"CAMPERA", "SKREEP", "MANGA LARGA", 'L', 17, 57000));
+productosM.push(new Articulo(7,"ZAPATILLAS", "SKREEP", "RUNNING", 'M', 1, 28000));
+productosM.push(new Articulo(8,"ZAPATILLAS", "SKREEP", "RUNNING", 'S', 3, 35000));
+
+
+
+// class Inventario{
+//     constructor(id, talle, stock){
+//         this.id = id;
+//         this.talle = talle;
+//         this.stock = stock;
+//     }
+
+//     hayStock() {
+//         this.stock = this.stock - cantidad;
+//     }
+
+//     comprobarStock(){
+//         if(this.stock <= 0){
+//             return true;
+//         }else{
+//             return false;
+//         }
+//     }
+
+// }
+
+// inventarioH.push(new Inventario(1,'L',10));
+// inventarioH.push(new Inventario(1,'M',0));
+// inventarioH.push(new Inventario(1,'S',6));
+// inventarioH.push(new Inventario(2,'L',4));
+// inventarioH.push(new Inventario(2,'M',2));
+// inventarioH.push(new Inventario(2,'S',6));
+// inventarioH.push(new Inventario(3,'L',6));
+// inventarioH.push(new Inventario(3,'M',6));
+// inventarioH.push(new Inventario(3,'S',6));
+// inventarioH.push(new Inventario(4,'L',6));
+// inventarioH.push(new Inventario(4,'M',6));
+// inventarioH.push(new Inventario(4,'S',6));
+// inventarioH.push(new Inventario(5,'L',6));
+// inventarioH.push(new Inventario(5,'M',6));
+// inventarioH.push(new Inventario(5,'S',6));
+// inventarioH.push(new Inventario(6,'L',6));
+// inventarioH.push(new Inventario(6,'M',6));
+// inventarioH.push(new Inventario(6,'S',6));
+// inventarioH.push(new Inventario(7,'L',6));
+// inventarioH.push(new Inventario(7,'M',6));
+// inventarioH.push(new Inventario(7,'S',6));
+// inventarioH.push(new Inventario(8,'L',6));
+// inventarioH.push(new Inventario(8,'M',6));
+// inventarioH.push(new Inventario(8,'S',6));

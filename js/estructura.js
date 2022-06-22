@@ -1,116 +1,155 @@
-const section__hombres = document.getElementById("contenedor-js");
-const divRowFiltro__hombres = document.getElementById("zonaFiltro__hombres");
-const divRowUp__hombres = document.getElementById("zonaUp_hombres");
-
-const div__galeria__hombres = document.getElementById("galeria__hombres");
+let carritoDeCompras = [];
+let precioTotalC = 0;
+//-------------------------------
 
 
+// --- galeria ---
+const divRowFiltro__hombres = document.getElementById("zonaFiltro__hombres"); // para el filtro en hombres 
+const div__galeria__hombres = document.getElementById("galeria__hombres"); // para la galeria en seccion Hombres
+//--- carrito ---
+const sectionCarrito = document.getElementById("rowCarrito"); // para la galeria en Carrito
+//---- filtro ---
+const opcionTipo = document.getElementById("opcionTipo");
+const opcionPrecio = document.getElementById("opcionPrecio");
+
+// function habilitarRadioButtons(){
+//     for(const p of productosH){
+//         for()
+
+//     }
+// }
 
 
+function mostrarGaleria (array){  // repetir estructura para seccion mujeres
+        div__galeria__hombres.innerHTML = "";
+        array.forEach( el => {
+            let divGaleria = document.createElement("div");
+            divGaleria.className = "col-lg-6 col-md-10 col-sm-12";
+            divGaleria.innerHTML = `<article class="shirt">
+                                        <img class="imgRopa img-fluid img-thumbnail" src=${el.img}
+                                        alt="remera masculina de manga corta, azul oscuro, con la leyenda: california republic"
+                                        title="remera estilo california">
+                                        <article class="shirt__info">
+                                            <p>${el.descripcion}</p>
+                                            <p>$${el.precio}</p>
+                                            <form>
+                                                <div class="filterArticle__talle">
+                                                    <input id="opcionL" class="opcionFiltroTalle" type="radio" name="talle" value="L">
+                                                    <label form="filtroL" class="labelFiltro" for="tipoBuzo">large(44)</label>
+                                                </div>
+                                                <div class="filterArticle__talle">
+                                                    <input id="opcionM" class="opcionFiltroTalle" type="radio" name="talle" value="M">
+                                                    <label form="filtroM" class="labelFiltro" for="tipoBuzo">medium(43)</label>
+                                                </div>
+                                                <div class="filterArticle__talle">
+                                                    <input id="opcionS" class="opcionFiltroTalle" type="radio" name="talle" value="S">
+                                                    <label form="filtroS" class="labelFiltro" for="tipoBuzo">small(42)</label>
+                                                </div>
+                                                <a id="botonA${el.id}" class="agregarCarrito btn-floating halfway-fab waves-effect waves-light"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black" class="bi bi-cart" viewBox="0 0 16 16">
+                                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                              </svg></i></a>
+                                            </form>
+                                        </article>
+                                    </article>`;
+            div__galeria__hombres.appendChild(divGaleria);
 
+            // let btnAgregar = document.getElementById(`botonA${el.id}`);
+            // btnAgregar.addEventListener('click', () => {
 
+            //     el.precioFinal();
+            //     agregarAlCarrito(el.id, array);
+            // });
 
-
-function mostrarGaleria (){
-
-    div__galeria__hombres.innerHTML = "" 
-        
-        productos.forEach( el => {
-            let div = document.createElement("div");
-            div.getElementsByClassName("columnaGaleria");
-            div.innerHTML = `<article class="shirt">
-                                <img class="imgRopa img-fluid img-thumbnail" src="${el.img}"
-                                alt="remera masculina de manga corta, azul oscuro, con la leyenda: california republic"
-                                title="remera estilo california">
-                                <article class="shirt__info">
-                                    <p>Remera California.</p>
-                                    <p>$7.400</p>
-                                    <form>
-                                        <select class="listaTalles" title="talle" name="talles" required>
-                                            <option value="XL">XLarge</option>
-                                            <option value="L">Large</option>
-                                            <option value="M">Medium</option>
-                                            <option value="S">Small</option>
-                                        </select>
-                                        <input class="btnGeneral" type="button" value="COMPRAR">
-                                    </form>
-                                </article>
-                            </article>`
         })
 }
 
+function agregarAlCarrito(id, array){ // repetir para mujeres 
+
+    let agregandoProducto = array.find( el => el.id === id);
+    carritoDeCompras.push(agregandoProducto);
+    galeriaCarrito(carritoDeCompras);
+    actualizarCarrito();
+}
+
+function galeriaCarrito(array){  // falta un clase para hacerlo andar -- no hace falta repetir ---- carrito 
+
+        let articleCarrito = document.createElement('article');
+        articleCarrito.className = "boxCarrito";
+        articleCarrito.innerHTML = `<div class="boxCarrito__columnA">
+                                        <img src=${array.img}
+                                            alt=${array.alt}>
+                                    </div>
+                                    <div class="boxCarrito__columnB">
+                                        <form>
+                                            <input type="number" class="form-control">
+                                        </form>
+                                        viewBox="0 0 16 16">
+                                        <button id="btnLimpiar${array.id}" class="btn-floating halfway-fab waves-effect waves-light"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black" class="bi bi-trash3-fill"
+                                            <path
+                                                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                                            </svg>
+                                        </button>            
+                                    </div>                                                
+                                    <div class="boxCarrito__columnC">
+                                        <p class="subPrice">${array.precioConImp}</p>
+                                    </div>`;
+        sectionCarrito.appendChild(articleCarrito);
+
+        let btnLimpiar = document.getElementById(`btnLimpiar${array.id}`);
+        btnLimpiar.addEventListener('click', ()=>{
+            btnLimpiar.parentElement.remove();
+            carritoDeCompras.contextText = carritoDeCompras.filter( el => el.id !== articleCarrito.id);
+            actualizarCarrito();
+        })
+}
+
+// function actualizarCarrito(){
+    
+//     precioTotalC.contentText = carritoDeCompras.reduce((acc)=> acc + el.precio , 0);  carrito en otra pagina
+// }
 
 
+function arregloVacio(arreglo){
+    if(arreglo.length == 0){
+        div__galeria__hombres.innerHTML = "";
+        const div = document.createElement('div');
+        div.innerHTML = `<p class="textoInformativo"> No se han encontrado elementos con las características solicitadas. Pruebe nuevamente con otras características. Gracias!</p>`;
+        div__galeria__hombres.appendChild(div);
+    }else{
+        mostrarGaleria(arreglo);
+    }
+}
 
-divRowFiltro__hombres.innerHTML = `
-<button class="btn btnGeneral btnFiltro" type="button" data-bs-toggle="offcanvas"
-data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">filtrar</button>
-<div class="offcanvas offcanvas-top filtroFondo" tabindex="-1" id="offcanvasTop"
-aria-labelledby="offcanvasTopLabel">
-<div class="offcanvas-header">
-    <h2 id="offcanvasTopLabel">filtros</h2>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-</div>
-<div class="offcanvas-body">
-    <form>
-        <article class="filterArticle">
-            <h2 class="tituloFiltro">talle</h2>
-            <div class="filterArticle__talle">
-                <input class="checkFiltro" type="checkbox" name="talle" value="xlarge"
-                    id="filtroXL-h">
-                <label form="filtroXL" class="labelFiltro" for="tipoBuzo">xlarge (45)</label>
-            </div>
-            <div class="filterArticle__talle">
-                <input class="checkFiltro" type="checkbox" name="talle" value="large"
-                    id="filtroL-h">
-                <label form="filtroL" class="labelFiltro" for="tipoBuzo">large (44)</label>
-            </div>
-            <div class="filterArticle__talle">
-                <input class="checkFiltro" type="checkbox" name="talle" value="medium"
-                    id="filtroM-h">
-                <label form="filtroM" class="labelFiltro" for="tipoBuzo">medium (43)</label>
-            </div>
-            <div class="filterArticle__talle">
-                <input class="checkFiltro" type="checkbox" name="talle" value="small"
-                    id="filtroS-h">
-                <label form="filtroS" class="labelFiltro" for="tipoBuzo">small (42)</label>
-            </div>
-        </article>
-        <article class="filterArticle">
-            <h2 class="tituloFiltro">precio</h2>
-            <div class="filterArticle__precio">
-                <input class="checkFiltro" type="checkbox" name="precio" value="poco"
-                    id="filtroP015-h">
-                <label form="filtroP010" class="labelFiltro" for="tipoBuzo">$ 1 a $ 15.000</label>
-            </div>
-            <div class="filterArticle__precio">
-                <input class="checkFiltro" type="checkbox" name="precio" value="medio"
-                    id="filtroP1020">
-                <label form="filtroP1530-h" class="labelFiltro" for="tipoBuzo">$ 15.001 a
-                    $ 30.000</label>
-            </div>
-            <div class="filterArticle__precio">
-                <input class="checkFiltro" type="checkbox" name="precio" value="mucho"
-                    id="filtroP30-h">
-                <label form="filtroP2030" class="labelFiltro" for="tipoBuzo">$ 30.001 o
-                    más</label>
-            </div>
-        </article>
-    </form>
-</div>
-</div> `;
+// -- filtro por tipo de producto
+opcionTipo.addEventListener('change', ()=>{
 
-divRowUp__hombres.innerHTML = `<a href="#upH"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-arrow-up-circle" width="48" height="48"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="#470147" fill="none" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <circle cx="12" cy="12" r="9" />
-                                    <line x1="12" y1="8" x2="8" y2="12" />
-                                    <line x1="12" y1="8" x2="12" y2="16" />
-                                    <line x1="16" y1="12" x2="12" y2="8" />
-                                    </svg> 
-                                </a>`;
+    if(opcionTipo.value === 'TODOS'){
+        mostrarGaleria(productosH);
+    }else{
+        let filtroArreglo = productosH.filter((el)=> el.tipo === opcionTipo.value);
+        arregloVacio(filtroArreglo);
+    }
+})
 
-document.section__hombres.append(divRowFiltro__hombres);
-document.section__hombres.append(divRowUp__hombres);
+// -- filtro por rango de precio
+
+opcionPrecio.addEventListener('change', ()=>{
+
+    if(opcionPrecio.value === 'TODOS'){
+        mostrarGaleria(productosH);    
+    }else if(opcionPrecio.value <= 15000){
+        let filtroArreglo = productosH.filter((el)=> el.precio <= 15000);
+        arregloVacio(filtroArreglo);
+    }else if((opcionPrecio.value<= 30000)&&(opcionPrecio.value > 15000)){
+        let filtroArreglo = productosH.filter((el)=> (el.precio> 15000) && (el.precio<=30000));
+        arregloVacio(filtroArreglo);
+    }else{ 
+        let filtroArreglo = productosH.filter((el)=> el.precio >= 30001);
+        arregloVacio(filtroArreglo);
+    }
+})
+
+
+mostrarGaleria(productosH);
+
+

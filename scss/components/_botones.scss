@@ -5,11 +5,11 @@
     border-radius: $remHalf;
     padding: map-get($styleBoxs, halfPercent);
     font-weight: map-get($stylesFont, fontBolder);
-
     &:hover {
         background-color: $coral;
         border-color: $mocasin;
         box-shadow: map-get($styleBoxs, shadowBoxMorado);
+        cursor: pointer;
     }
 }
 
@@ -20,13 +20,21 @@
 .btnFiltro {
     width: $sizeTenP;
 }
-
-.listaTalles {
+.filtroSelect {
     @extend .btnGeneral;
-    width: $sizeCuarter;
+    width: $sizeSixty;
     appearance: none;
+    text-align: map-get($stylesFont, textCentro);
+    margin-bottom: map-get($styleBoxs, twoPercent);
 }
-
+.opcionFiltroTalle{
+    cursor: pointer;
+    
+}
+.labelFiltro{
+    text-transform: map-get($sizeFont, capiV);
+    color: $morado;
+}
 .upBtn {
     @include marginAndPadding (map-get($styleBoxs, onePercent), map-get($styleBoxs, threePercent));
 
@@ -36,6 +44,14 @@
         }
     }
 }
+//--- clase para el anchor del carrito ---
+
+.agregarCarrito{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
 
 // AFECTA A CARRITO
 .sellRow {

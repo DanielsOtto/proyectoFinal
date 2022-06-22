@@ -29,6 +29,18 @@
         width: $sizeMax;
         margin-left:  map-get($styleBoxs, threePercent);
         @include displayFlex (flex, row, wrap, center, space-evenly);
+        .cajitaTalles{
+            @include displayFlex(flex, row, nowrap, center, space-evenly);
+            margin-bottom: map-get($styleBoxs, twoPercent);
+            width: $sizeBig;
+            .cajitaTalles__ind{
+                font-weight: map-get($stylesFont, fontBolder);
+            }
+        }
     }
 }
 
+.opcionesCanvas{
+    width: $sizeMax;
+    @include displayFlex(flex, row, nowrap, center, space-around);
+}

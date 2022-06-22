@@ -86,7 +86,18 @@
     .shirt {
         @include displayFlex (flex, column, wrap, center, center);
     }
-
+    .talles-caja__form{
+        width: $sizeMax;
+        @include displayFlex(flex, row, wrap, center, center);
+        article{
+            h2{
+                font-size: smaller;
+                text-transform: map-get($stylesFont, capiV);
+            }
+            width: auto;
+            height: auto;
+        }
+    }
     // Afecta carro de compras
     .firstRow {
         height: $sizeEight;
