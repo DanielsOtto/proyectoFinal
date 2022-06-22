@@ -1,23 +1,11 @@
 let carritoDeCompras = [];
-let precioTotalC = 0;
-//-------------------------------
-
 
 // --- galeria ---
 const divRowFiltro__hombres = document.getElementById("zonaFiltro__hombres"); // para el filtro en hombres 
 const div__galeria__hombres = document.getElementById("galeria__hombres"); // para la galeria en seccion Hombres
-//--- carrito ---
-const sectionCarrito = document.getElementById("rowCarrito"); // para la galeria en Carrito
 //---- filtro ---
 const opcionTipo = document.getElementById("opcionTipo");
 const opcionPrecio = document.getElementById("opcionPrecio");
-
-// function habilitarRadioButtons(){
-//     for(const p of productosH){
-//         for()
-
-//     }
-// }
 
 
 function mostrarGaleria (array){  // repetir estructura para seccion mujeres
@@ -52,63 +40,10 @@ function mostrarGaleria (array){  // repetir estructura para seccion mujeres
                                         </article>
                                     </article>`;
             div__galeria__hombres.appendChild(divGaleria);
-
-            // let btnAgregar = document.getElementById(`botonA${el.id}`);
-            // btnAgregar.addEventListener('click', () => {
-
-            //     el.precioFinal();
-            //     agregarAlCarrito(el.id, array);
-            // });
-
         })
 }
 
-function agregarAlCarrito(id, array){ // repetir para mujeres 
-
-    let agregandoProducto = array.find( el => el.id === id);
-    carritoDeCompras.push(agregandoProducto);
-    galeriaCarrito(carritoDeCompras);
-    actualizarCarrito();
-}
-
-function galeriaCarrito(array){  // falta un clase para hacerlo andar -- no hace falta repetir ---- carrito 
-
-        let articleCarrito = document.createElement('article');
-        articleCarrito.className = "boxCarrito";
-        articleCarrito.innerHTML = `<div class="boxCarrito__columnA">
-                                        <img src=${array.img}
-                                            alt=${array.alt}>
-                                    </div>
-                                    <div class="boxCarrito__columnB">
-                                        <form>
-                                            <input type="number" class="form-control">
-                                        </form>
-                                        viewBox="0 0 16 16">
-                                        <button id="btnLimpiar${array.id}" class="btn-floating halfway-fab waves-effect waves-light"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black" class="bi bi-trash3-fill"
-                                            <path
-                                                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
-                                            </svg>
-                                        </button>            
-                                    </div>                                                
-                                    <div class="boxCarrito__columnC">
-                                        <p class="subPrice">${array.precioConImp}</p>
-                                    </div>`;
-        sectionCarrito.appendChild(articleCarrito);
-
-        let btnLimpiar = document.getElementById(`btnLimpiar${array.id}`);
-        btnLimpiar.addEventListener('click', ()=>{
-            btnLimpiar.parentElement.remove();
-            carritoDeCompras.contextText = carritoDeCompras.filter( el => el.id !== articleCarrito.id);
-            actualizarCarrito();
-        })
-}
-
-// function actualizarCarrito(){
-    
-//     precioTotalC.contentText = carritoDeCompras.reduce((acc)=> acc + el.precio , 0);  carrito en otra pagina
-// }
-
-
+// -- funcion llamada por los filtros --- 
 function arregloVacio(arreglo){
     if(arreglo.length == 0){
         div__galeria__hombres.innerHTML = "";
