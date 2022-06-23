@@ -55,24 +55,53 @@ class Inventario{
     }
 
 }
+let talleH1 = new Inventario('L',1);
+let talleH2 = new Inventario('M',0);
+let talleH3 = new Inventario('S',3);
+let arrayTalle = [talleH1,talleH2,talleH3];
+productosH.push(new Articulo(1,"REMERA", "CALIFORNIA REPUBLIC", "MANGA CORTA", arrayTalle, 7400,"Remera California", "remera masculina de manga corta","../assets/images/hombre/remera_california.jpg"));
 
+talleH1 = new Inventario('L',0);
+talleH2 = new Inventario('M',7);
+talleH3 = new Inventario('S',3);
+arrayTalle = [talleH1,talleH2,talleH3];
+productosH.push(new Articulo(2,"REMERA", "FIVE BORO", "MANGA CORTA",arrayTalle, 7300,"Remera skater", "remera masculina de manga corta","../assets/images/hombre/remera_skate.jpg"));
 
-const tallesH1 = [new Inventario('L',7),('M',4),('S',0)]
-productosH.push(new Articulo(1,"REMERA", "CALIFORNIA REPUBLIC", "MANGA CORTA", tallesH1, 7400,"Remera California", "remera masculina de manga corta","../assets/images/hombre/remera_california.jpg"));
-const tallesH2 = [new Inventario('L',7),('M',4),('S',0)]
-productosH.push(new Articulo(2,"REMERA", "FIVE BORO", "MANGA CORTA",tallesH2, 7300,"Remera skater", "remera masculina de manga corta","../assets/images/hombre/remera_skate.jpg"));
-const tallesH3 = [new Inventario('L',7),('M',0),('S',4)]
-productosH.push(new Articulo(3,"REMERA", "FUTBOL", "MANGA CORTA",tallesH3, 6200,"Remera Brasil 2014", "remera masculina de manga corta","../assets/images/hombre/remera_ball.jpg"));
-const tallesH4 = [new Inventario('L',7),('M',4),('S',2)]
-productosH.push(new Articulo(4,"REMERA", "MOON", "MANGA CORTA",tallesH4, 8200,"Remera con un gran diseño de un astronauta en la luna", "remera masculina de manga corta","../assets/images/hombre/remera_moon.jpg"));
-const tallesH5 = [new Inventario('L',0),('M',4),('S',1)]
-productosH.push(new Articulo(5,"REMERA", "SKREEP", "MANGA LARGA",tallesH5, 7500,"Remera lisa", "remera masculina de manga corta","../assets/images/hombre/remera_bird.jpg"));
-const tallesH6 = [new Inventario('L',7),('M',41),('S',3)]
-productosH.push(new Articulo(6,"CAMPERA", "SKREEP", "MANGA LARGA",tallesH6, 45000,"Campera de microfibia, ideal para entrenar en climas templados o con fuertes viento", "campera masculina microfibia","../assets/images/hombre/Campera-microfibra-deportiva.jpg"));
-const tallesH7 = [new Inventario('L',7),('M',4),('S',7)]
-productosH.push(new Articulo(7,"REMERA", "SKREEP", "MANGA CORTA",tallesH7, 6350,"Remera con tabla de skate fantasmagórica", "remera masculina de manga corta","../assets/images/hombre/remera_ghost.jpg"));
-const tallesH8 = [new Inventario('L',0),('M',4),('S',9)]
-productosH.push(new Articulo(8,"ZAPATILLAS", "SKREEP", "RUNNING",tallesH8, 29000,"Estas zapatillas de running tienen una mediasuela Jetboost que proporciona el increíble retorno de energía de Boost", "zapatillas runnging hombre","../assets/images/hombre/ellos_tennis.jpg"));
+talleH1 = new Inventario('L',3);
+talleH2 = new Inventario('M',1);
+talleH3 = new Inventario('S',0);
+arrayTalle = [talleH1,talleH2,talleH3];
+productosH.push(new Articulo(3,"REMERA", "FUTBOL", "MANGA CORTA",arrayTalle, 6200,"Remera Brasil 2014", "remera masculina de manga corta","../assets/images/hombre/remera_ball.jpg"));
+
+talleH1 = new Inventario('L',2);
+talleH2 = new Inventario('M',1);
+talleH3 = new Inventario('S',7);
+arrayTalle = [talleH1,talleH2,talleH3];
+productosH.push(new Articulo(4,"REMERA", "MOON", "MANGA CORTA",arrayTalle, 8200,"Remera con un gran diseño de un astronauta en la luna", "remera masculina de manga corta","../assets/images/hombre/remera_moon.jpg"));
+
+talleH1 = new Inventario('L',1);
+talleH2 = new Inventario('M',7);
+talleH3 = new Inventario('S',4);
+arrayTalle = [talleH1,talleH2,talleH3];
+productosH.push(new Articulo(5,"REMERA", "SKREEP", "MANGA LARGA",arrayTalle, 7500,"Remera lisa", "remera masculina de manga corta","../assets/images/hombre/remera_bird.jpg"));
+
+talleH1 = new Inventario('L',0);
+talleH2 = new Inventario('M',7);
+talleH3 = new Inventario('S',2);
+arrayTalle = [talleH1,talleH2,talleH3];
+productosH.push(new Articulo(6,"CAMPERA", "SKREEP", "MANGA LARGA",arrayTalle, 45000,"Campera de microfibia, ideal para entrenar en climas templados o con fuertes viento", "campera masculina microfibia","../assets/images/hombre/Campera-microfibra-deportiva.jpg"));
+
+talleH1 = new Inventario('L',0);
+talleH2 = new Inventario('M',0);
+talleH3 = new Inventario('S',71);
+arrayTalle = [talleH1,talleH2,talleH3];
+productosH.push(new Articulo(7,"REMERA", "SKREEP", "MANGA CORTA",arrayTalle, 6350,"Remera con tabla de skate fantasmagórica", "remera masculina de manga corta","../assets/images/hombre/remera_ghost.jpg"));
+
+talleH1 = new Inventario('L',7);
+talleH2 = new Inventario('M',2);
+talleH3 = new Inventario('S',3);
+arrayTalle = [talleH1,talleH2,talleH3];
+productosH.push(new Articulo(8,"ZAPATILLAS", "SKREEP", "RUNNING",arrayTalle, 29000,"Estas zapatillas de running tienen una mediasuela Jetboost que proporciona el increíble retorno de energía de Boost", "zapatillas runnging hombre","../assets/images/hombre/ellos_tennis.jpg"));
 
 
 
@@ -88,51 +117,3 @@ productosM.push(new Articulo(5,"REMERA", "MOON", "MANGA CORTA", 'L', 7, 5800));
 productosM.push(new Articulo(6,"CAMPERA", "SKREEP", "MANGA LARGA", 'L', 17, 57000));
 productosM.push(new Articulo(7,"ZAPATILLAS", "SKREEP", "RUNNING", 'M', 1, 28000));
 productosM.push(new Articulo(8,"ZAPATILLAS", "SKREEP", "RUNNING", 'S', 3, 35000));
-
-
-
-// class Inventario{
-//     constructor(id, talle, stock){
-//         this.id = id;
-//         this.talle = talle;
-//         this.stock = stock;
-//     }
-
-//     hayStock() {
-//         this.stock = this.stock - cantidad;
-//     }
-
-//     comprobarStock(){
-//         if(this.stock <= 0){
-//             return true;
-//         }else{
-//             return false;
-//         }
-//     }
-
-// }
-
-// inventarioH.push(new Inventario(1,'L',10));
-// inventarioH.push(new Inventario(1,'M',0));
-// inventarioH.push(new Inventario(1,'S',6));
-// inventarioH.push(new Inventario(2,'L',4));
-// inventarioH.push(new Inventario(2,'M',2));
-// inventarioH.push(new Inventario(2,'S',6));
-// inventarioH.push(new Inventario(3,'L',6));
-// inventarioH.push(new Inventario(3,'M',6));
-// inventarioH.push(new Inventario(3,'S',6));
-// inventarioH.push(new Inventario(4,'L',6));
-// inventarioH.push(new Inventario(4,'M',6));
-// inventarioH.push(new Inventario(4,'S',6));
-// inventarioH.push(new Inventario(5,'L',6));
-// inventarioH.push(new Inventario(5,'M',6));
-// inventarioH.push(new Inventario(5,'S',6));
-// inventarioH.push(new Inventario(6,'L',6));
-// inventarioH.push(new Inventario(6,'M',6));
-// inventarioH.push(new Inventario(6,'S',6));
-// inventarioH.push(new Inventario(7,'L',6));
-// inventarioH.push(new Inventario(7,'M',6));
-// inventarioH.push(new Inventario(7,'S',6));
-// inventarioH.push(new Inventario(8,'L',6));
-// inventarioH.push(new Inventario(8,'M',6));
-// inventarioH.push(new Inventario(8,'S',6));
