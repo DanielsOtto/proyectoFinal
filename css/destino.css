@@ -360,6 +360,12 @@ footer p {
   cursor: pointer;
 }
 
+.fondoBoton {
+  background-color: #FFDEB5;
+  border: none;
+  color: #470147;
+}
+
 .sellRow div form input, .sellRow div form .boxContact textarea, .boxContact .sellRow div form textarea, .sellRow div form .boxContact select, .boxContact .sellRow div form select {
   width: 50%;
   background-color: #470147;

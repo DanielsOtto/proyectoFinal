@@ -17,8 +17,11 @@
 	<link rel="stylesheet" href="../css/destino.css">
 	<link rel="SKREEP icon" href="../assets/images/logo/skreep.png">
 
-	<!-- <script src="../js/inventario.js" async></script>
-	<script src="../js/estructura.js" async></script> -->
+	<!--SCRIPTS-->
+
+	<script src="../js/inventarios.js" async></script> 
+	<script src="../js/estructuras.js" async></script>
+	<script src="../js/appCarrito.js" async></script>
 </head>
 
 <body>
@@ -97,7 +100,7 @@
 			</div>
 		</div>
 		<div class="row carrito__fila secondRow">
-			<div class="colum-title col-lg-6 col-6">
+			<div class="colum-title col-lg-4 col-4">
 				<section>
 					<h3>Items</h3>
 				</section>
@@ -116,51 +119,6 @@
 
 		<section class="row sellRow carrito__fila" id="rowCarrito">
 
-			<article class="boxCarrito">
-				<div class="boxCarrito__columnA">
-					<img src="../assets/images/hombre/remera_moon.jpg"
-						alt="remera masculina de manga corta, azul oscuro, con un hombre colgado de la luna">
-				</div>
-				<div class="boxCarrito__columnB">
-					<form>
-						<input type="number" class="form-control" value="3">
-					</form>
-					<button class="btn-floating halfway-fab waves-effect waves-light">
-						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black" class="bi bi-trash3-fill"
-							viewBox="0 0 16 16">
-							<path
-								d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
-						</svg>
-					</button>
-				</div>
-				<div class="boxCarrito__columnC">
-					<p class="subPrice">$9.400</p>
-				</div>
-			</article>
-
-			<article class="boxCarrito">
-				<div class="boxCarrito__columnA">
-					<img src="../assets/images/hombre/remera_moon.jpg"
-						alt="remera masculina de manga corta, azul oscuro, con un hombre colgado de la luna">
-				</div>
-				<div class="boxCarrito__columnB">
-					<form>
-						<input type="number" class="form-control" value="3">
-					</form>
-					<button class="btn-floating halfway-fab waves-effect waves-light">
-						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black" class="bi bi-trash3-fill"
-							viewBox="0 0 16 16">
-							<path
-								d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
-						</svg>
-					</button>
-				</div>
-				<div class="boxCarrito__columnC">
-					<p class="subPrice">$9.400</p>
-				</div>
-			</article>
-			</article>
-
 		</section>
 
 
@@ -173,9 +131,9 @@
 				</section>
 			</div>
 			<div class="col-lg-4 col-4 ">
-				<section class="purchase">
-					<h4 class="purchase__total">TOTAL</h2>
-						<p class="purchase__selling"> $17.400 </p>
+				<section id="cajaValor" class="purchase">
+					<h4 class="purchase__total">TOTAL</h4>
+						<p id="valorTotal" class="purchase__selling">  </p>
 						<button class="btnGeneral">FINALIZAR PEDIDO</button>
 				</section>
 			</div>

@@ -1,8 +1,7 @@
 const productosH = [];  // seccion hombres - este arreglo va a tener los objetos en venta
 const productosM = []; // seccion mujeres
+let arrayTalle = [];
 
-let cantidad = 0;
-let precioXCant = 0;
 
 class Articulo {
     constructor(id, tipo, marca ,modelo, talle, precio, descripcion, alt, img) {
@@ -16,31 +15,27 @@ class Articulo {
         this.alt = alt;
         this.img = img;
         this.precioConImp = precio;
+        this.precioXCantidad = (this.precioConImp * 1.21); // se usa en carrito
+        
         this.newPrice = precio;
     }
-
   
-    precioFinal() {
+    precioFinal(){
         this.precioConImp = Math.round(this.precio * 1.21);
     }
-    multiplePriceE() {
-        precioXCant = this.precioConImp * cantidad;
+    multiplePriceE(c){
+        this.precioXCantidad = this.precioConImp * c; //  mal 
     }
-    fifteenOff() {
-        this.newPrice = Math.round(precioXCant - (precioXCant * 0.10));
-    }
-    threeWithoutI() {
-        this.newPrice = Math.round(precioXCant / 3);
-    }
-    twelveWithI() {
-        this.newPrice = Math.round((precioXCant * 1.10) / 12);
-    }
+
 }
 
 class Inventario{
     constructor(talle,stock){
         this.talle = talle;
         this.stock = stock;
+
+        this.cantidad = 0; // se usa en carrito -- lo usaba en Inventario
+        this.vendido = false; // se usa en carrito -- lo usaba en Inventario
     }
 
     comprobarStock(){
@@ -50,57 +45,78 @@ class Inventario{
             return false;
         }
     }
+    objetoVendido(){ 
+        this.vendido = true;
+    }
+    quieroUnoMas(){  
+        this.cantidad++;
+    }
+    quieroUnoMenos(){ 
+        this.cantidad--;
+    }
     reducirStock(){
-        this.stock--;
+        if((this.stock >= this.cantidad)&&(this.stock > 0)){
+            this.stock--;
+        }
     }
 
 }
-let talleH1 = new Inventario('L',1);
-let talleH2 = new Inventario('M',0);
-let talleH3 = new Inventario('S',3);
-let arrayTalle = [talleH1,talleH2,talleH3];
+
+
+arrayTalle =[
+    new Inventario('L',1),
+    new Inventario('M',0),
+    new Inventario('S',3)
+];
 productosH.push(new Articulo(1,"REMERA", "CALIFORNIA REPUBLIC", "MANGA CORTA", arrayTalle, 7400,"Remera California", "remera masculina de manga corta","../assets/images/hombre/remera_california.jpg"));
 
-talleH1 = new Inventario('L',0);
-talleH2 = new Inventario('M',7);
-talleH3 = new Inventario('S',3);
-arrayTalle = [talleH1,talleH2,talleH3];
+arrayTalle =[
+    new Inventario('L',0),
+    new Inventario('M',7),
+    new Inventario('S',3)
+];
 productosH.push(new Articulo(2,"REMERA", "FIVE BORO", "MANGA CORTA",arrayTalle, 7300,"Remera skater", "remera masculina de manga corta","../assets/images/hombre/remera_skate.jpg"));
 
-talleH1 = new Inventario('L',3);
-talleH2 = new Inventario('M',1);
-talleH3 = new Inventario('S',0);
-arrayTalle = [talleH1,talleH2,talleH3];
+arrayTalle =[
+    new Inventario('L',3),
+    new Inventario('M',1),
+    new Inventario('S',0)
+];
 productosH.push(new Articulo(3,"REMERA", "FUTBOL", "MANGA CORTA",arrayTalle, 6200,"Remera Brasil 2014", "remera masculina de manga corta","../assets/images/hombre/remera_ball.jpg"));
 
-talleH1 = new Inventario('L',2);
-talleH2 = new Inventario('M',1);
-talleH3 = new Inventario('S',7);
-arrayTalle = [talleH1,talleH2,talleH3];
+arrayTalle =[
+    new Inventario('L',2),
+    new Inventario('M',1),
+    new Inventario('S',7)
+];
 productosH.push(new Articulo(4,"REMERA", "MOON", "MANGA CORTA",arrayTalle, 8200,"Remera con un gran diseño de un astronauta en la luna", "remera masculina de manga corta","../assets/images/hombre/remera_moon.jpg"));
 
-talleH1 = new Inventario('L',1);
-talleH2 = new Inventario('M',7);
-talleH3 = new Inventario('S',4);
-arrayTalle = [talleH1,talleH2,talleH3];
+arrayTalle =[
+    new Inventario('L',1),
+    new Inventario('M',7),
+    new Inventario('S',4)
+];
 productosH.push(new Articulo(5,"REMERA", "SKREEP", "MANGA LARGA",arrayTalle, 7500,"Remera lisa", "remera masculina de manga corta","../assets/images/hombre/remera_bird.jpg"));
 
-talleH1 = new Inventario('L',0);
-talleH2 = new Inventario('M',7);
-talleH3 = new Inventario('S',2);
-arrayTalle = [talleH1,talleH2,talleH3];
+arrayTalle =[
+    new Inventario('L',4),
+    new Inventario('M',20),
+    new Inventario('S',0)
+];
 productosH.push(new Articulo(6,"CAMPERA", "SKREEP", "MANGA LARGA",arrayTalle, 45000,"Campera de microfibia, ideal para entrenar en climas templados o con fuertes viento", "campera masculina microfibia","../assets/images/hombre/Campera-microfibra-deportiva.jpg"));
 
-talleH1 = new Inventario('L',0);
-talleH2 = new Inventario('M',0);
-talleH3 = new Inventario('S',71);
-arrayTalle = [talleH1,talleH2,talleH3];
+arrayTalle =[
+    new Inventario('L',0),
+    new Inventario('M',0),
+    new Inventario('S',33)
+];
 productosH.push(new Articulo(7,"REMERA", "SKREEP", "MANGA CORTA",arrayTalle, 6350,"Remera con tabla de skate fantasmagórica", "remera masculina de manga corta","../assets/images/hombre/remera_ghost.jpg"));
 
-talleH1 = new Inventario('L',7);
-talleH2 = new Inventario('M',2);
-talleH3 = new Inventario('S',3);
-arrayTalle = [talleH1,talleH2,talleH3];
+arrayTalle =[
+    new Inventario('L',11),
+    new Inventario('M',0),
+    new Inventario('S',23)
+];
 productosH.push(new Articulo(8,"ZAPATILLAS", "SKREEP", "RUNNING",arrayTalle, 29000,"Estas zapatillas de running tienen una mediasuela Jetboost que proporciona el increíble retorno de energía de Boost", "zapatillas runnging hombre","../assets/images/hombre/ellos_tennis.jpg"));
 
 

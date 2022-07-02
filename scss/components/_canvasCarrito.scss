@@ -1,0 +1,38 @@
+.tituloCarrito{
+    text-align: center;
+    color: $morado; 
+    font-weight: 700;
+}
+
+.bodyCarrito{
+    @include displayFlex (flex, row, wrap, start, center);
+    background-color: $coral;
+    .cajaCarrito{
+        @include displayFlex (flex, row, wrap, center, center);
+        width: $sizeSev;
+        background-color: $mocasin;
+        img{
+            
+            width: 50%;
+            height: 50%;
+        }
+        .cajaCarrito__info{
+            padding: 1%;
+            margin: 1%;
+            text-align: center;
+            .cajaCarrito__info-detalles{
+                @include displayFlex (flex, column, nowrap, center, center);
+                text-transform: uppercase;
+                
+                p{
+                    // background-color: mediumorchid;
+                    font-size: small;
+                    text-align: center;
+                }
+            }
+            .cajaCarrito__info-precios{
+                @extend .cajaCarrito__info-detalles;
+            }
+        }
+    }
+}

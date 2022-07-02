@@ -1,6 +1,7 @@
 let carritoDeCompras = [];
-//-------------------------------
 
+
+//-------------------------------
 // --- galeria ---
 const divRowFiltro__hombres = document.getElementById("zonaFiltro__hombres"); // para el filtro en hombres 
 const div__galeria__hombres = document.getElementById("galeria__hombres"); // para la galeria en seccion Hombres
@@ -9,26 +10,62 @@ const opcionTipo = document.getElementById("opcionTipo");
 const opcionPrecio = document.getElementById("opcionPrecio");
 
 
-function habilitarRadioButtons(arreglo, opcL, opcM, opcS) {
-    for (let x = 0; x < arreglo.length; x++) { // hasta aca va bien
-        if ((arreglo[x].comprobarStock()) && (arreglo[x].talle == 'L')) {
+
+
+
+const habilitarRadioButtons = (arreglo, opcL, opcM, opcS) => {
+    for (let x = 0; x < arreglo.length; x++) { // filtro
+        if ((arreglo[x].talle == 'L') && (arreglo[x].comprobarStock())) {
             opcL.disabled = true;
-        }else if ((arreglo[x].comprobarStock()) && (arreglo[x].talle == 'M')) {
+        } else if ((arreglo[x].talle == 'M') && (arreglo[x].comprobarStock())) {
             opcM.disabled = true;
-        }else if ((arreglo[x].comprobarStock()) && (arreglo[x].talle == 'S')) {
+        } else if ((arreglo[x].talle == 'S') && (arreglo[x].comprobarStock())) {
             opcS.disabled = true;
         }
     }
 
 }
 
+// const reducirStock = (elemento) => {
 
+//     for(let y = 0; y<3; y++){
 
+//         if(elemento.talles[y].vendido === true){
+//             elemento.talles[y].reducirStock();
+//             console.log("stock como andas ? "+ elemento.talles[y].stock);
+//         }
+//     }
+// }
 
-function mostrarGaleria(array) {  // repetir estructura para seccion mujeres
+const agregarAlCarrito = (elemento, x) => { // repetir para mujeres ??
+    
+    if(carritoDeCompras.length === 0){
+
+        elemento.talles[x].quieroUnoMas();
+        elemento.talles[x].reducirStock(); 
+        carritoDeCompras.push(elemento);
+        localStorage.setItem("carrito", JSON.stringify(carritoDeCompras));
+    }else{
+        if(carritoDeCompras.find((el)=> el.id == elemento.id)){
+
+            let obj = carritoDeCompras.find((el)=> el.id == elemento.id);
+            obj.talles[x].quieroUnoMas();
+            obj.talles[x].reducirStock(); 
+            obj.multiplePriceE(obj.talles[x].cantidad);
+            localStorage.setItem("carrito", JSON.stringify(carritoDeCompras));
+        }else{
+
+            elemento.talles[x].quieroUnoMas();
+            elemento.talles[x].reducirStock();
+            carritoDeCompras.push(elemento);
+            localStorage.setItem("carrito", JSON.stringify(carritoDeCompras));
+        }
+    } // anda perfecto, 
+}
+
+const mostrarGaleria = (array) => {  // repetir estructura para seccion mujeres
     div__galeria__hombres.innerHTML = "";
     array.forEach(el => {
-
         let divGaleria = document.createElement("div");
         divGaleria.className = "col-lg-6 col-md-10 col-sm-12";
         divGaleria.innerHTML = `<article class="shirt">
@@ -58,65 +95,49 @@ function mostrarGaleria(array) {  // repetir estructura para seccion mujeres
                                         </article>
                                     </article>`;
         div__galeria__hombres.appendChild(divGaleria);
+    
         let opcL = document.getElementById(`opcionL${el.id}`);
         let opcM = document.getElementById(`opcionM${el.id}`);
         let opcS = document.getElementById(`opcionS${el.id}`);
 
+        
+        habilitarRadioButtons(el.talles, opcL, opcM, opcS);
 
-        habilitarRadioButtons(el.talles,opcL, opcM, opcS);
 
-        // let btnAgregar = document.getElementById(`botonA${el.id}`);
-        // btnAgregar.addEventListener('click', () => {
+        let btnAgregar = document.getElementById(`botonA${el.id}`);
+        btnAgregar.addEventListener('click', () => {
 
-        //     el.precioFinal();
-        //     agregarAlCarrito(el.id, array);
-        // });
+            // debugger;
+            while((opcL.checked !== false)||(opcM.checked !== false)||(opcS.checked !== false)){
+                el.precioFinal();
+
+                let pos = 5; 
+
+                if(opcL.checked == true){
+                    console.log("pero antes quiero ver el stock "+el.talles[0].stock);
+                    opcL.checked = false;  
+                    console.log("quiero ver que pasa con cantidad "+ el.talles[0].cantidad); 
+                    pos = 0;
+                }else if(opcM.checked == true){
+                    opcM.checked = false;
+                    pos = 1;
+                }else{
+                    opcS.checked = false;
+                    pos = 2;
+                }
+
+                el.talles[pos].objetoVendido();
+                agregarAlCarrito(el, pos);
+                
+                // revisar como deshabilitar el boton si no hay stock
+            }
+        });
 
     })
 }
 
-function agregarAlCarrito(id, array) { // repetir para mujeres 
 
-    let agregandoProducto = array.find(el => el.id === id);
-    carritoDeCompras.push(agregandoProducto);
-    galeriaCarrito(carritoDeCompras);
-    actualizarCarrito();
-}
-
-function galeriaCarrito(array) {  // falta un clase para hacerlo andar -- no hace falta repetir ---- carrito 
-
-    let articleCarrito = document.createElement('article');
-    articleCarrito.className = "boxCarrito";
-    articleCarrito.innerHTML = `<div class="boxCarrito__columnA">
-                                        <img src=${array.img}
-                                            alt=${array.alt}>
-                                    </div>
-                                    <div class="boxCarrito__columnB">
-                                        <form>
-                                            <input type="number" class="form-control">
-                                        </form>
-                                        viewBox="0 0 16 16">
-                                        <button id="btnLimpiar${array.id}" class="btn-floating halfway-fab waves-effect waves-light"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black" class="bi bi-trash3-fill"
-                                            <path
-                                                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
-                                            </svg>
-                                        </button>            
-                                    </div>                                                
-                                    <div class="boxCarrito__columnC">
-                                        <p class="subPrice">${array.precioConImp}</p>
-                                    </div>`;
-    sectionCarrito.appendChild(articleCarrito);
-
-    let btnLimpiar = document.getElementById(`btnLimpiar${array.id}`);
-    btnLimpiar.addEventListener('click', () => {
-        btnLimpiar.parentElement.remove();
-        carritoDeCompras.contextText = carritoDeCompras.filter(el => el.id !== articleCarrito.id);
-        actualizarCarrito();
-    })
-}
-
-
-function arregloVacio(arreglo) {
+const arregloVacio = (arreglo) => { // verifica que el arreglo nuevo tenga valores
     if (arreglo.length == 0) {
         div__galeria__hombres.innerHTML = "";
         const div = document.createElement('div');
@@ -127,10 +148,8 @@ function arregloVacio(arreglo) {
     }
 }
 
-
-// -- filtro por tipo de producto
 opcionTipo.addEventListener('change', () => {
-
+    // -- filtro por tipo de producto
     if (opcionTipo.value === 'TODOS') {
         mostrarGaleria(productosH);
     } else {
@@ -139,10 +158,8 @@ opcionTipo.addEventListener('change', () => {
     }
 })
 
-
-// -- filtro por rango de precio
 opcionPrecio.addEventListener('change', () => {
-
+    // -- filtro por rango de precio
     if (opcionPrecio.value === 'TODOS') {
         mostrarGaleria(productosH);
     } else if (opcionPrecio.value <= 15000) {
@@ -157,5 +174,6 @@ opcionPrecio.addEventListener('change', () => {
     }
 })
 
-
 mostrarGaleria(productosH);
+
+
