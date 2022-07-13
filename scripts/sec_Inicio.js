@@ -49,6 +49,4 @@ section__carousel.innerHTML = `<div class="col-lg-12">
                                 </div>`;
 
 
-main__inicio.append(article__ellos);
-main__inicio.append(article__ellas);
 main__inicio.append(section__carousel);

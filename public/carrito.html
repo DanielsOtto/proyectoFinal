@@ -13,15 +13,23 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous"></script>
+	<!--  Toastify -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+	
 	<title>Carrito de compras || SKREEP</title>
 	<link rel="stylesheet" href="../css/destino.css">
 	<link rel="SKREEP icon" href="../assets/images/logo/skreep.png">
 
 	<!--SCRIPTS-->
+	<script src="../scripts/inventarios.js" async></script> 
+	<script src="../scripts/estructuras.js" async></script>
+	<script src="../scripts/estructuraM.js" async></script>
+	<script src="../scripts/appCarrito.js" async></script>
 
-	<script src="../js/inventarios.js" async></script> 
-	<script src="../js/estructuras.js" async></script>
-	<script src="../js/appCarrito.js" async></script>
+	<!-- <script src="../terns/inventarios.js" async></script> 
+	<script src="../terns/estructuras.js" async></script>
+	<script src="../terns/estructuraM.js"></script>
+	<script src="../terns/appCarrito.js" async></script> -->
 </head>
 
 <body>
@@ -91,7 +99,7 @@
 		</section>
 	</nav>
 	<!-- FIN nav // INICIO main-->
-	<main class="container">
+	<main id="mainCarrito" class="container">
 		<div class="row carrito__fila firstRow">
 			<div class="col-lg-12 col-12">
 				<section class="shoppingT">
@@ -131,10 +139,10 @@
 				</section>
 			</div>
 			<div class="col-lg-4 col-4 ">
+				<h4 class="titulo-compra">TOTAL</h4>
 				<section id="cajaValor" class="purchase">
-					<h4 class="purchase__total">TOTAL</h4>
 						<p id="valorTotal" class="purchase__selling">  </p>
-						<button class="btnGeneral">FINALIZAR PEDIDO</button>
+						<button id="realizarCompra" class="btnGeneral">FINALIZAR PEDIDO</button>
 				</section>
 			</div>
 		</div>
@@ -183,6 +191,10 @@
 		</div>
 	</footer>
 	<!-- FINAL DE FOOTER-->
+	<!-- Sweet Alert -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<!-- Toastify JS-->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 	<!-- JS Bootstrap local-->
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 		integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

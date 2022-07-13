@@ -16,6 +16,15 @@
 	<title>Ropa de mujer || SKREEP</title>
 	<link rel="stylesheet" href="../css/destino.css">
 	<link rel="SKREEP icon" href="../assets/images/logo/skreep.png">
+	<!--  Toastify -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+	
+	<!-- SCRIPTS -->
+	<script src="../scripts/inventarios.js" async></script>
+	<script src="../scripts/estructuraM.js" async></script>
+
+	<!-- <script src="../terns/inventarios.js" async></script>
+	<script src="../terns/estructuraM.js" async></script> -->
 </head>
 
 <body>
@@ -101,11 +110,6 @@
 							<article class="filterArticle">
 								<h2 class="tituloFiltro">talle</h2>
 								<div class="filterArticle__talle">
-									<input class="checkFiltro" type="checkbox" name="talle" value="xlarge"
-										id="filtroXL-m">
-									<label form="filtroXL" class="labelFiltro" for="tipoBuzo">xlarge (45)</label>
-								</div>
-								<div class="filterArticle__talle">
 									<input class="checkFiltro" type="checkbox" name="talle" value="large"
 										id="filtroL-m">
 									<label form="filtroL" class="labelFiltro" for="tipoBuzo">large (44)</label>
@@ -140,179 +144,18 @@
 									<label form="filtroP30-m" class="labelFiltro" for="tipoBuzo">$ 30.001 o más</label>
 								</div>
 							</article>
+							<button>buscar</button>
 						</form>
 					</div>
 				</div>
 			</div>
-			<div class="row rowShirts">
-				<div class="col-lg-6 col-md-10 col-12">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/mujer/cheshire.jpg"
-							alt="remera femenina de manga larga, femenina, a dos tonos, con un gato cheshire"
-							title="remera de un gato cheshire sonriendo">
-						<article class="shirt__info">
-							<p>Remera con el gato cheshire, de la película Alicia en el país de las maravillas.</p>
-							<p>$8.000</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="L">Large</option>
-									<option value="M">Medium</option>
-									<option value="S">Small</option>
-									<option value="XS">XSmall</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-				</div>
-				<div class="col-lg-6 col-md-10 col-12">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/mujer/ella_goku.jpg"
-							alt="remera femenina de manga corta, negra, con la leyenda: BLACK LEVEL, y con el dibujo de goku versión niño"
-							title="remera de dragon ball">
-						<article class="shirt__info">
-							<p>Remera con dibujo de dragon ball.</p>
-							<p>$6.500</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="L">Large</option>
-									<option value="M">Medium</option>
-									<option value="S">Small</option>
-									<option value="XS">XSmall</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-					</article>
-				</div>
+
+			<div class="row rowShirts" id="galeria__mujeres">
+
+				<!-- ESTE CONTENIDO ESTA EN JS-->
+
 			</div>
-			<div class="row rowShirts">
-				<div class="col-lg-6 col-md-10 col-12">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/mujer/ella_bbal.jpg"
-							alt="remera femenina de manga corta, azul claro, con una caricatura de un oso jugando al baseball"
-							title="remera de baseball">
-						<article class="shirt__info">
-							<p>Remera con caricatura jugando al baseball.</p>
-							<p>$6.200</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="L">Large</option>
-									<option value="M">Medium</option>
-									<option value="S">Small</option>
-									<option value="XS">XSmall</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-				</div>
-				<div class="col-lg-6 col-md-10 col-12">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/mujer/ella_dog.jpg"
-							alt="remera femenina de manga corta, color celeste, con la leyenda: ruffian y la caricatura de un perro delincuente"
-							title="remera con un perro rufian">
-						<article class="shirt__info">
-							<p>Remera con caricatura.</p>
-							<p>$5.250</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="L">Large</option>
-									<option value="M">Medium</option>
-									<option value="S">Small</option>
-									<option value="XS">XSmall</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-				</div>
-			</div>
-			<div class="row rowShirts">
-				<div class="col-lg-6 col-md-10 col-12">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/mujer/ella_rubio.jpg"
-							alt="remera femenina de manga corta, negra, con una caricatura de un hombre vestido de traje"
-							title="remera con caricatura">
-						<article class="shirt__info">
-							<p>Remera con caricatura.</p>
-							<p>$5.800</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="L">Large</option>
-									<option value="M">Medium</option>
-									<option value="S">Small</option>
-									<option value="XS">XSmall</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-				</div>
-				<div class="col-lg-6 col-md-10 col-12">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/mujer/campera_ella.jpg"
-							alt="campera femenina, de color negra con detalles en rosa, muy abrigada, ideal para climas fríos"
-							title="campera de abrigo">
-						<article class="shirt__info">
-							<p>Campera térmica, con pluma de ganso.</p>
-							<p>$57.000</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="L">Large</option>
-									<option value="M">Medium</option>
-									<option value="S">Small</option>
-									<option value="XS">XSmall</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-				</div>
-			</div>
-			<div class="row rowShirts">
-				<div class="col-lg-6 col-md-10 col-12">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/mujer/ellas_orange.jpg"
-							alt="zapatillas femeninas, de color naranja claro, muy livianas, ideales para running"
-							title="zapatillas running">
-						<article class="shirt__info">
-							<p>Zapatillas livianas, ideales para running.</p>
-							<p>$28.000</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="L">39</option>
-									<option value="M">38</option>
-									<option value="S">37</option>
-									<option value="XS">36</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-				</div>
-				<div class="col-lg-6 col-md-10 col-12">
-					<article class="shirt">
-						<img class="imgRopa img-fluid img-thumbnail" src="../assets/images/mujer/ella_fila.jpg"
-							alt="zapatillas femeninas, colores: violeta, celeste y rosa, livianas, ideales para entrenar"
-							title="zapatillas running">
-						<article class="shirt__info">
-							<p>Zapatillas ultraboost, para running de alto rendimiento.</p>
-							<p>$35.000</p>
-							<form>
-								<select class="listaTalles" title="talle" name="talles" required>
-									<option value="L">39</option>
-									<option value="M">38</option>
-									<option value="S">37</option>
-									<option value="XS">36</option>
-								</select>
-								<input class="btnGeneral" type="button" value="COMPRAR">
-							</form>
-						</article>
-					</article>
-				</div>
-			</div class="row">
+
 			<div class="row">
 				<div class="col-xxl-12 upBtn">
 					<a href="#upM"><svg xmlns="http://www.w3.org/2000/svg"
@@ -381,6 +224,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
 		integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
 		crossorigin="anonymous"></script>
+	<!-- Toastify JS-->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>

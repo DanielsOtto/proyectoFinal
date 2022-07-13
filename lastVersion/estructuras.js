@@ -1,7 +1,4 @@
 let carritoDeCompras = [];
-
-
-//-------------------------------
 // --- galeria ---
 const divRowFiltro__hombres = document.getElementById("zonaFiltro__hombres"); // para el filtro en hombres 
 const div__galeria__hombres = document.getElementById("galeria__hombres"); // para la galeria en seccion Hombres
@@ -10,53 +7,48 @@ const opcionTipo = document.getElementById("opcionTipo");
 const opcionPrecio = document.getElementById("opcionPrecio");
 
 
+const addClass = (rButton, label) => {
 
-
-
-const habilitarRadioButtons = (arreglo, opcL, opcM, opcS) => {
-    for (let x = 0; x < arreglo.length; x++) { // filtro
-        if ((arreglo[x].talle == 'L') && (arreglo[x].comprobarStock())) {
-            opcL.disabled = true;
-        } else if ((arreglo[x].talle == 'M') && (arreglo[x].comprobarStock())) {
-            opcM.disabled = true;
-        } else if ((arreglo[x].talle == 'S') && (arreglo[x].comprobarStock())) {
-            opcS.disabled = true;
-        }
-    }
-
+    rButton.className = "rButtonOff ";
+    rButton.disabled = true;
+    label.className = "filtroOff";
 }
 
-// const reducirStock = (elemento) => {
 
-//     for(let y = 0; y<3; y++){
+const habilitarRadioButtons = (arreglo, opcL, opcM, opcS, labL, labM, labS) => {
+    for (let x = 0; x < arreglo.length; x++) { // filtro
+        if ((arreglo[x].talle == 'L') && (arreglo[x].comprobarStock())) {
+            addClass(opcL, labL);
+        } else if ((arreglo[x].talle == 'M') && (arreglo[x].comprobarStock())) {
+            addClass(opcM, labM);
+        } else if ((arreglo[x].talle == 'S') && (arreglo[x].comprobarStock())) {
+            addClass(opcS, labS);
+        }
+    }
+}
 
-//         if(elemento.talles[y].vendido === true){
-//             elemento.talles[y].reducirStock();
-//             console.log("stock como andas ? "+ elemento.talles[y].stock);
-//         }
-//     }
-// }
+const cantidadTotal = (arreglo)=> {
+     
+    return arreglo.reduce((acc, el) => acc + el.cantidad, 0);
+}
 
 const agregarAlCarrito = (elemento, x) => { // repetir para mujeres ??
     
     if(carritoDeCompras.length === 0){
 
         elemento.talles[x].quieroUnoMas();
-        elemento.talles[x].reducirStock(); 
         carritoDeCompras.push(elemento);
         localStorage.setItem("carrito", JSON.stringify(carritoDeCompras));
     }else{
         if(carritoDeCompras.find((el)=> el.id == elemento.id)){
 
             let obj = carritoDeCompras.find((el)=> el.id == elemento.id);
-            obj.talles[x].quieroUnoMas();
-            obj.talles[x].reducirStock(); 
-            obj.multiplePriceE(obj.talles[x].cantidad);
+            obj.talles[x].quieroUnoMas();  
+            // obj.precioXCant( cantidadTotal(obj.talles) );    
             localStorage.setItem("carrito", JSON.stringify(carritoDeCompras));
         }else{
 
             elemento.talles[x].quieroUnoMas();
-            elemento.talles[x].reducirStock();
             carritoDeCompras.push(elemento);
             localStorage.setItem("carrito", JSON.stringify(carritoDeCompras));
         }
@@ -78,15 +70,15 @@ const mostrarGaleria = (array) => {  // repetir estructura para seccion mujeres
                                             <form>
                                                 <div class="filterArticle__talle">
                                                     <input id="opcionL${el.id}" class="opcionFiltroTalle" type="radio" name="talle" value="L">
-                                                    <label form="filtroL" class="labelFiltro" for="tipoBuzo">large(44)</label>
+                                                    <label id="labL${el.id}" form="filtroL" class="labelFiltro" for="tipoBuzo">large(44)</label>
                                                 </div>
                                                 <div class="filterArticle__talle">
                                                     <input id="opcionM${el.id}" class="opcionFiltroTalle" type="radio" name="talle" value="M">
-                                                    <label form="filtroM" class="labelFiltro" for="tipoBuzo">medium(43)</label>
+                                                    <label id="labM${el.id}" form="filtroM" class="labelFiltro" for="tipoBuzo">medium(43)</label>
                                                 </div>
                                                 <div class="filterArticle__talle">
                                                     <input id="opcionS${el.id}" class="opcionFiltroTalle" type="radio" name="talle" value="S">
-                                                    <label form="filtroS" class="labelFiltro" for="tipoBuzo">small(42)</label>
+                                                    <label id="labS${el.id}" form="filtroS" class="labelFiltro" for="tipoBuzo">small(42)</label>
                                                 </div>
                                                 <a id="botonA${el.id}" class="agregarCarrito btn-floating halfway-fab waves-effect waves-light"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black" class="bi bi-cart" viewBox="0 0 16 16">
                                                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
@@ -99,24 +91,25 @@ const mostrarGaleria = (array) => {  // repetir estructura para seccion mujeres
         let opcL = document.getElementById(`opcionL${el.id}`);
         let opcM = document.getElementById(`opcionM${el.id}`);
         let opcS = document.getElementById(`opcionS${el.id}`);
+        let labL = document.getElementById(`labL${el.id}`);
+        let labM = document.getElementById(`labM${el.id}`);
+        let labS = document.getElementById(`labS${el.id}`);
 
         
-        habilitarRadioButtons(el.talles, opcL, opcM, opcS);
-
+        habilitarRadioButtons(el.talles, opcL, opcM, opcS, labL, labM, labS);
+        // habilitarCompra(opcL, opcM, opcS);
 
         let btnAgregar = document.getElementById(`botonA${el.id}`);
-        btnAgregar.addEventListener('click', () => {
+        btnAgregar.addEventListener('click', () => {  // aca voy a utilizar Toastify
 
-            // debugger;
+
             while((opcL.checked !== false)||(opcM.checked !== false)||(opcS.checked !== false)){
-                el.precioFinal();
+                // el.precioFinal(); 
 
                 let pos = 5; 
 
                 if(opcL.checked == true){
-                    console.log("pero antes quiero ver el stock "+el.talles[0].stock);
                     opcL.checked = false;  
-                    console.log("quiero ver que pasa con cantidad "+ el.talles[0].cantidad); 
                     pos = 0;
                 }else if(opcM.checked == true){
                     opcM.checked = false;
@@ -128,8 +121,9 @@ const mostrarGaleria = (array) => {  // repetir estructura para seccion mujeres
 
                 el.talles[pos].objetoVendido();
                 agregarAlCarrito(el, pos);
-                
-                // revisar como deshabilitar el boton si no hay stock
+
+                Toastify({ text: "Agregado al carrito!", duration: 1000, gravity: 'bottom', position: 'center', addClass: 'myToast',
+                        style: { background: 'linear-gradient(to right, #f2f4f5, #cccecf)', color: 'green', }}).showToast();
             }
         });
 

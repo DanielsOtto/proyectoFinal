@@ -146,6 +146,12 @@ body{
     text-align: map-get($stylesFont, textCentro);
 }
 
+.myToast{
+    font-weight: 900;
+    border-radius: 45%;
+    opacity: 1;
+}
+
 // -- esta clase se usa si el filtro no encontro lo solicitado
 .textoInformativo{
     text-align: map-get($stylesFont, textCentro);
@@ -170,6 +176,13 @@ body{
             }
         }
     }
+}
+.subPrice{
+    text-align: map-get($stylesFont, textCentro);
+}
+.desC{
+    color: $morado;
+    font-weight: 900;
 }
 .sellRow{
     div{
@@ -204,15 +217,15 @@ body{
         letter-spacing:  map-get($stylesFont, letterSpaceSmall);
     }
 }
+.titulo-compra{
+    width: auto;
+    margin: map-get($styleBoxs, onePercent);
+    font-size: map-get($sizeFont, xxlargeV);
+    font-weight: map-get($stylesFont, fontBolder);
+    letter-spacing:  map-get($stylesFont, letterSpaceXS);
+}
 .purchase{
-    .purchase__total{
-        width: auto;
-        margin: map-get($styleBoxs, onePercent);
-        font-size: map-get($sizeFont, xxlargeV);
-        font-weight: map-get($stylesFont, fontBolder);
-        letter-spacing:  map-get($stylesFont, letterSpaceXS);
-        text-align: map-get($stylesFont, textRight);
-    }
+
     .purchase__selling{
         width: auto;
         font-size: map-get($sizeFont, xlargeV);

@@ -32,8 +32,17 @@
     
 }
 .labelFiltro{
-    text-transform: map-get($sizeFont, capiV);
+    text-transform: map-get($sizeFont, uppercaseV);
     color: $morado;
+}
+.filtroOff{
+    color: red;
+    text-decoration: line-through;
+}
+.rButtonOff{
+    &:hover{
+        pointer-events: not-allowed;
+    }
 }
 .upBtn {
     @include marginAndPadding (map-get($styleBoxs, onePercent), map-get($styleBoxs, threePercent));
@@ -47,8 +56,11 @@
 //--- clase para el anchor del carrito ---
 
 .agregarCarrito{
+    border-radius: 25%;
+    padding: 1.5%;
     &:hover{
         cursor: pointer;
+        background-color: greenyellow; 
     }
 }
 
@@ -73,5 +85,12 @@
 .buying {
     .buying__a {
         @include settingsBtnEns ($sizeSixty, $sizeFift, 1% 2%, $morado);
+    }
+}
+
+.btnElimina{
+    @extend .agregarCarrito;
+    &:hover{
+        background-color: red;
     }
 }

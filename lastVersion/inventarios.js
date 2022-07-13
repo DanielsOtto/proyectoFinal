@@ -15,17 +15,30 @@ class Articulo {
         this.alt = alt;
         this.img = img;
         this.precioConImp = precio;
-        this.precioXCantidad = (this.precioConImp * 1.21); // se usa en carrito
-        
-        this.newPrice = precio;
+        this.precioPorCantidad = this.precioConImp; // nuevo
+        this.cantidad = 0;
     }
   
     precioFinal(){
         this.precioConImp = Math.round(this.precio * 1.21);
     }
-    multiplePriceE(c){
-        this.precioXCantidad = this.precioConImp * c; //  mal 
+    reiniciarCantidad(){
+        this.cantidad = 0;
     }
+    descontarCantidad(b){
+        this.cantidad -= b;
+    }
+    cantidadTotal(a){
+        this.cantidad += a;
+    }
+    cantidadReducida(b){
+        this.cantidad -= b;
+    }
+    precioXCant(){
+        this.precioPorCantidad = this.precioConImp * this.cantidad; // nuevo
+    }
+
+
 
 }
 
@@ -55,9 +68,7 @@ class Inventario{
         this.cantidad--;
     }
     reducirStock(){
-        if((this.stock >= this.cantidad)&&(this.stock > 0)){
-            this.stock--;
-        }
+        this.stock--;
     }
 
 }

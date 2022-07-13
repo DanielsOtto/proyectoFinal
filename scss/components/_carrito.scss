@@ -26,10 +26,11 @@
             @extend .boxCarrito__columnA;
             width: $sizeSmall;
             height: $sizeSixty;
-            @include displayFlex(flex, row, nowrap, center, center);
+            @include displayFlex(flex, column, nowrap, center, center);
         }   
         .boxCarrito__columnC{
             @extend .boxCarrito__columnA;
+            width: 20%;
         }
     }
 }
