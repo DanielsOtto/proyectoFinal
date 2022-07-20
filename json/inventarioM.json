@@ -1,0 +1,266 @@
+[
+    {
+      "id": 2,
+      "tipo": "BUZO",
+      "marca": "CHESIRE",
+      "modelo": "MANGA LARGA",
+      "talles": [
+        {
+          "talle": "L",
+          "stock": 1,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "M",
+          "stock": 9,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "S",
+          "stock": 3,
+          "cantidad": 0,
+          "vendido": false
+        }
+      ],
+      "precio": 8000,
+      "descripcion": "Buzo con el gato cheshire, de la película Alicia en el país de las maravillas.",
+      "alt": "remera femenina de manga larga, femenina, a dos tonos, con un gato cheshire",
+      "img": "../assets/images/mujer/cheshire.jpg",
+      "precioConImp": 8000,
+      "precioPorCantidad": 8000,
+      "cantidad": 0
+    },
+    {
+      "id": 4,
+      "tipo": "REMERA",
+      "marca": "DBZ",
+      "modelo": "MANGA CORTA",
+      "talles": [
+        {
+          "talle": "L",
+          "stock": 0,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "M",
+          "stock": 0,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "S",
+          "stock": 3,
+          "cantidad": 0,
+          "vendido": false
+        }
+      ],
+      "precio": 6500,
+      "descripcion": "Remera con dibujo de dragon ball.",
+      "alt": "remera femenina de manga corta, negra, con la leyenda: BLACK LEVEL, y con el dibujo de goku versión niño",
+      "img": "../assets/images/mujer/ella_goku.jpg",
+      "precioConImp": 6500,
+      "precioPorCantidad": 6500,
+      "cantidad": 0
+    },
+    {
+      "id": 6,
+      "tipo": "REMERA",
+      "marca": "BASEBALL",
+      "modelo": "MANGA CORTA",
+      "talles": [
+        {
+          "talle": "L",
+          "stock": 1,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "M",
+          "stock": 0,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "S",
+          "stock": 0,
+          "cantidad": 0,
+          "vendido": false
+        }
+      ],
+      "precio": 6200,
+      "descripcion": "Remera con caricatura jugando al baseball.",
+      "alt": "remera femenina de manga corta, azul claro, con una caricatura de un oso jugando al baseball",
+      "img": "../assets/images/mujer/ella_bbal.jpg",
+      "precioConImp": 6200,
+      "precioPorCantidad": 6200,
+      "cantidad": 0
+    },
+    {
+      "id": 8,
+      "tipo": "REMERA",
+      "marca": "RUFFIAN",
+      "modelo": "MANGA CORTA",
+      "talles": [
+        {
+          "talle": "L",
+          "stock": 21,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "M",
+          "stock": 10,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "S",
+          "stock": 0,
+          "cantidad": 0,
+          "vendido": false
+        }
+      ],
+      "precio": 5250,
+      "descripcion": "Remera con caricatura.",
+      "alt": "remera femenina de manga corta, color celeste, con la leyenda: ruffian y la caricatura de un perro delincuente",
+      "img": "../assets/images/mujer/ella_dog.jpg",
+      "precioConImp": 5250,
+      "precioPorCantidad": 5250,
+      "cantidad": 0
+    },
+    {
+      "id": 10,
+      "tipo": "REMERA",
+      "marca": "MOON",
+      "modelo": "MANGA CORTA",
+      "talles": [
+        {
+          "talle": "L",
+          "stock": 0,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "M",
+          "stock": 0,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "S",
+          "stock": 0,
+          "cantidad": 0,
+          "vendido": false
+        }
+      ],
+      "precio": 5800,
+      "descripcion": "Remera con caricatura.",
+      "alt": "remera femenina de manga corta, negra, con una caricatura de un hombre vestido de traje",
+      "img": "../assets/images/mujer/ella_rubio.jpg",
+      "precioConImp": 5800,
+      "precioPorCantidad": 5800,
+      "cantidad": 0
+    },
+    {
+      "id": 12,
+      "tipo": "CAMPERA",
+      "marca": "SKREEP",
+      "modelo": "MANGA LARGA",
+      "talles": [
+        {
+          "talle": "L",
+          "stock": 1,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "M",
+          "stock": 10,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "S",
+          "stock": 3,
+          "cantidad": 0,
+          "vendido": false
+        }
+      ],
+      "precio": 57000,
+      "descripcion": "Campera térmica, con pluma de ganso.",
+      "alt": "campera femenina, de color negra con detalles en rosa, muy abrigada, ideal para climas fríos",
+      "img": "../assets/images/mujer/campera_ella.jpg",
+      "precioConImp": 57000,
+      "precioPorCantidad": 57000,
+      "cantidad": 0
+    },
+    {
+      "id": 14,
+      "tipo": "ZAPATILLAS",
+      "marca": "SKREEP",
+      "modelo": "RUNNING",
+      "talles": [
+        {
+          "talle": "L",
+          "stock": 0,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "M",
+          "stock": 20,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "S",
+          "stock": 3,
+          "cantidad": 0,
+          "vendido": false
+        }
+      ],
+      "precio": 28000,
+      "descripcion": "Zapatillas livianas, ideales para running.",
+      "alt": "zapatillas femeninas, de color naranja claro, muy livianas, ideales para running",
+      "img": "../assets/images/mujer/ellas_orange.jpg",
+      "precioConImp": 28000,
+      "precioPorCantidad": 28000,
+      "cantidad": 0
+    },
+    {
+      "id": 16,
+      "tipo": "ZAPATILLAS",
+      "marca": "SKREEP",
+      "modelo": "RUNNING",
+      "talles": [
+        {
+          "talle": "L",
+          "stock": 1,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "M",
+          "stock": 0,
+          "cantidad": 0,
+          "vendido": false
+        },
+        {
+          "talle": "S",
+          "stock": 0,
+          "cantidad": 0,
+          "vendido": false
+        }
+      ],
+      "precio": 35000,
+      "descripcion": "Zapatillas ultraboost, para running de alto rendimiento.",
+      "alt": "zapatillas femeninas, colores: violeta, celeste y rosa, livianas, ideales para entrenar",
+      "img": "../assets/images/mujer/ella_fila.jpg",
+      "precioConImp": 35000,
+      "precioPorCantidad": 35000,
+      "cantidad": 0
+    }
+  ]

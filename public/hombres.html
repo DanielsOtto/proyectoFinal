@@ -21,12 +21,13 @@
 	
 	<!-- SCRIPTS -->
 
-	<script src="../scripts/inventarios.js" async></script>
-	<script src="../scripts/estructuras.js" async></script>
+	<!-- <script src="../scripts/inventarios.js" async></script>
+	<script src="../scripts/estructuras.js" async></script> -->
 
-<!-- 	
-	<script src="../terns/inventarios.js" async></script>
-	<script src="../terns/estructuras.js" async></script> -->
+	<script src="../fetch/variables.js" async></script>
+	<script src="../fetch/mainHombres.js" async></script>
+
+	<!-- <script src="../pokemonJS/main.js" async></script> -->
 </head>
 
 <body class="galeria">
@@ -105,21 +106,21 @@
 						<form class="talles-caja__form">
 							<article class="filterArticle">
 								<h2 class="tituloFiltro">filtro por tipo de prenda</h2>
-								<select id="opcionTipo" class="filtroSelect" title="seleccionarPrenda">
-									<option value="TODOS">todos</option>
-									<option value="BUZO">buzos</option>
-									<option value="CAMPERA">camperas</option>
-									<option value="REMERA">remeras</option>
-									<option value="ZAPATILLAS">zapatillas</option>
+								<select id="opcionTipo" class="filtroSelect cursorP" title="seleccionarPrenda">
+									<option class="cursorP" value="TODOS">todos</option>
+									<option class="cursorP" value="BUZO">buzos</option>
+									<option class="cursorP" value="CAMPERA">camperas</option>
+									<option class="cursorP" value="REMERA">remeras</option>
+									<option class="cursorP" value="ZAPATILLAS">zapatillas</option>
 								</select>
 							</article>
 							<article class="filterArticle">
 								<h2 class="tituloFiltro">filtro por rango de precios</h2>
-								<select id="opcionPrecio" class="filtroSelect" title="sleccionarPrecio">
-									<option value="TODOS">todos</option>
-									<option value='10000'>$1 a $15.000</option>
-									<option value='20000'>$15.001 a $30.000</option>
-									<option value='40000'>$30.001 o más</option>
+								<select id="opcionPrecio" class="filtroSelect cursorP" title="sleccionarPrecio">
+									<option class="cursorP" value="TODOS">todos</option>
+									<option class="cursorP" value='10000'>$1 a $15.000</option>
+									<option class="cursorP" value='20000'>$15.001 a $30.000</option>
+									<option class="cursorP" value='40000'>$30.001 o más</option>
 								</select>
 							</article>
 						</form>

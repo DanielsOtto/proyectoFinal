@@ -27,10 +27,10 @@ class Articulo {
     descontarCantidad(b){
         this.cantidad -= b;
     }
-    cantidadTotal(a){
+    cantidadTotal(a){ // si
         this.cantidad += a;
     }
-    cantidadReducida(b){
+    cantidadReducida(b){ // si
         this.cantidad -= b;
     }
     precioXCant(){

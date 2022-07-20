@@ -20,11 +20,12 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 	
 	<!-- SCRIPTS -->
-	<script src="../scripts/inventarios.js" async></script>
-	<script src="../scripts/estructuraM.js" async></script>
+	<!-- <script src="../scripts/inventarios.js" async></script>
+	<script src="../scripts/estructuraM.js" async></script> -->
 
-	<!-- <script src="../terns/inventarios.js" async></script>
-	<script src="../terns/estructuraM.js" async></script> -->
+	<!-- <script src="../fetch/variables.js" async ></script>
+	<script src="../fetch/main.js" async ></script> -->
+	
 </head>
 
 <body>
@@ -102,7 +103,6 @@
 				<div class="offcanvas offcanvas-top filtroFondo" tabindex="-1" id="offcanvasTop"
 					aria-labelledby="offcanvasTopLabel">
 					<div class="offcanvas-header">
-						<h2 id="offcanvasTopLabel">filtros</h2>
 						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					</div>
 					<div class="offcanvas-body">
@@ -110,17 +110,17 @@
 							<article class="filterArticle">
 								<h2 class="tituloFiltro">talle</h2>
 								<div class="filterArticle__talle">
-									<input class="checkFiltro" type="checkbox" name="talle" value="large"
+									<input  class="checkFiltro cursorP" type="checkbox" name="talle" value="L"
 										id="filtroL-m">
 									<label form="filtroL" class="labelFiltro" for="tipoBuzo">large (44)</label>
 								</div>
 								<div class="filterArticle__talle">
-									<input class="checkFiltro" type="checkbox" name="talle" value="medium"
+									<input class="checkFiltro cursorP" type="checkbox" name="talle" value="M"
 										id="filtroM-m">
 									<label form="filtroM" class="labelFiltro" for="tipoBuzo">medium (43)</label>
 								</div>
 								<div class="filterArticle__talle">
-									<input class="checkFiltro" type="checkbox" name="talle" value="small"
+									<input class="checkFiltro cursorP" type="checkbox" name="talle" value="S"
 										id="filtroS-m">
 									<label form="filtroS" class="labelFiltro" for="tipoBuzo">small (42)</label>
 								</div>
@@ -128,23 +128,25 @@
 							<article class="filterArticle">
 								<h2 class="tituloFiltro">precio</h2>
 								<div class="filterArticle__precio">
-									<input class="checkFiltro" type="checkbox" name="precio" value="poco"
+									<input class="checkFiltro cursorP" type="checkbox" name="precio" value="15000"
 										id="filtroP010">
 									<label form="filtroP015-m" class="labelFiltro" for="tipoBuzo">$ 1 a $ 15.000</label>
 								</div>
 								<div class="filterArticle__precio">
-									<input class="checkFiltro" type="checkbox" name="precio" value="medio"
+									<input class="checkFiltro cursorP" type="checkbox" name="precio" value="20000"
 										id="filtroP1020">
 									<label form="filtroP1530-m" class="labelFiltro" for="tipoBuzo">$ 15.001 a $
 										30.000</label>
 								</div>
 								<div class="filterArticle__precio">
-									<input class="checkFiltro" type="checkbox" name="precio" value="mucho"
+									<input class="checkFiltro cursorP" type="checkbox" name="precio" value="40000"
 										id="filtroP2030">
 									<label form="filtroP30-m" class="labelFiltro" for="tipoBuzo">$ 30.001 o más</label>
 								</div>
 							</article>
-							<button>buscar</button>
+							<button id="btnVerTodo" class=" ellaFiltroAll cursorP">ver todo</button>
+							<button id="btnReiniciarFs" class="ellaFiltroClean cursorP">limpiar busquedas</button>
+							<button id="btnBuscarFs" class=" ellaFiltro cursorP">buscar</button>
 						</form>
 					</div>
 				</div>

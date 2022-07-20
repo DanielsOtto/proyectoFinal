@@ -28,11 +28,6 @@ const habilitarRadioButtons = (arreglo, opcL, opcM, opcS, labL, labM, labS) => {
     }
 }
 
-// const cantidadTotal = (arreglo)=> {
-     
-//     return arreglo.reduce((acc, el) => acc + el.cantidad, 0);
-// }
-
 const agregarAlCarrito = (elemento, x) => {
     
     if(carritoDeCompras.length === 0){
@@ -51,10 +46,10 @@ const agregarAlCarrito = (elemento, x) => {
 }
 
 const mostrarGaleria = (array) => { 
-
+    
     div__galeria__hombres.innerHTML = null;
     array.forEach(el => {
-
+        
         const { id, img: imagen, descripcion: desc, precio: precioSinIva, alt: altImg, talles} = el;
         let divGaleria = document.createElement("div");
         divGaleria.className = "col-lg-6 col-md-10 col-sm-12";
@@ -67,15 +62,15 @@ const mostrarGaleria = (array) => {
                                             <p>$${precioSinIva}</p>
                                             <form>
                                                 <div class="filterArticle__talle">
-                                                    <input id="opcionL${id}" class="opcionFiltroTalle" type="radio" name="talle" value="L">
+                                                    <input id="opcionL${id}" class="opcionFiltroTalle cursorP" type="radio" name="talle" value="L">
                                                     <label id="labL${id}" form="filtroL" class="labelFiltro" for="tipoBuzo">large(44)</label>
                                                 </div>
                                                 <div class="filterArticle__talle">
-                                                    <input id="opcionM${id}" class="opcionFiltroTalle" type="radio" name="talle" value="M">
+                                                    <input id="opcionM${id}" class="opcionFiltroTalle cursorP" type="radio" name="talle" value="M">
                                                     <label id="labM${id}" form="filtroM" class="labelFiltro" for="tipoBuzo">medium(43)</label>
                                                 </div>
                                                 <div class="filterArticle__talle">
-                                                    <input id="opcionS${id}" class="opcionFiltroTalle" type="radio" name="talle" value="S">
+                                                    <input id="opcionS${id}" class="opcionFiltroTalle cursorP" type="radio" name="talle" value="S">
                                                     <label id="labS${id}" form="filtroS" class="labelFiltro" for="tipoBuzo">small(42)</label>
                                                 </div>
                                                 <a id="botonA${id}" class="agregarCarrito btn-floating halfway-fab waves-effect waves-light"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black" class="bi bi-cart" viewBox="0 0 16 16">

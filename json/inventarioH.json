@@ -1,0 +1,266 @@
+[
+  {
+    "id": 1,
+    "tipo": "REMERA",
+    "marca": "CALIFORNIA REPUBLIC",
+    "modelo": "MANGA CORTA",
+    "talles": [
+      {
+        "talle": "L",
+        "stock": 1,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "M",
+        "stock": 0,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "S",
+        "stock": 7,
+        "cantidad": 0,
+        "vendido": false
+      }
+    ],
+    "precio": 7400,
+    "descripcion": "Remera California",
+    "alt": "remera masculina de manga corta",
+    "img": "../assets/images/hombre/remera_california.jpg",
+    "precioConImp": 7400,
+    "precioPorCantidad": 7400,
+    "cantidad": 0
+  },
+  {
+    "id": 3,
+    "tipo": "REMERA",
+    "marca": "FIVE BORO",
+    "modelo": "MANGA CORTA",
+    "talles": [
+      {
+        "talle": "L",
+        "stock": 0,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "M",
+        "stock": 7,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "S",
+        "stock": 3,
+        "cantidad": 0,
+        "vendido": false
+      }
+    ],
+    "precio": 7300,
+    "descripcion": "Remera skater",
+    "alt": "remera masculina de manga corta",
+    "img": "../assets/images/hombre/remera_skate.jpg",
+    "precioConImp": 7300,
+    "precioPorCantidad": 7300,
+    "cantidad": 0
+  },
+  {
+    "id": 5,
+    "tipo": "REMERA",
+    "marca": "FUTBOL",
+    "modelo": "MANGA CORTA",
+    "talles": [
+      {
+        "talle": "L",
+        "stock": 3,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "M",
+        "stock": 1,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "S",
+        "stock": 0,
+        "cantidad": 0,
+        "vendido": false
+      }
+    ],
+    "precio": 6200,
+    "descripcion": "Remera Brasil 2014",
+    "alt": "remera masculina de manga corta",
+    "img": "../assets/images/hombre/remera_ball.jpg",
+    "precioConImp": 6200,
+    "precioPorCantidad": 6200,
+    "cantidad": 0
+  },
+  {
+    "id": 7,
+    "tipo": "REMERA",
+    "marca": "MOON",
+    "modelo": "MANGA CORTA",
+    "talles": [
+      {
+        "talle": "L",
+        "stock": 2,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "M",
+        "stock": 1,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "S",
+        "stock": 7,
+        "cantidad": 0,
+        "vendido": false
+      }
+    ],
+    "precio": 8200,
+    "descripcion": "Remera con un gran diseño de un astronauta en la luna",
+    "alt": "remera masculina de manga corta",
+    "img": "../assets/images/hombre/remera_moon.jpg",
+    "precioConImp": 8200,
+    "precioPorCantidad": 8200,
+    "cantidad": 0
+  },
+  {
+    "id": 9,
+    "tipo": "REMERA",
+    "marca": "SKREEP",
+    "modelo": "MANGA LARGA",
+    "talles": [
+      {
+        "talle": "L",
+        "stock": 1,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "M",
+        "stock": 7,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "S",
+        "stock": 4,
+        "cantidad": 0,
+        "vendido": false
+      }
+    ],
+    "precio": 7500,
+    "descripcion": "Remera lisa",
+    "alt": "remera masculina de manga corta",
+    "img": "../assets/images/hombre/remera_bird.jpg",
+    "precioConImp": 7500,
+    "precioPorCantidad": 7500,
+    "cantidad": 0
+  },
+  {
+    "id": 11,
+    "tipo": "CAMPERA",
+    "marca": "SKREEP",
+    "modelo": "MANGA LARGA",
+    "talles": [
+      {
+        "talle": "L",
+        "stock": 4,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "M",
+        "stock": 20,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "S",
+        "stock": 0,
+        "cantidad": 0,
+        "vendido": false
+      }
+    ],
+    "precio": 45000,
+    "descripcion": "Campera de microfibia, ideal para entrenar en climas templados o con fuertes viento",
+    "alt": "campera masculina microfibia",
+    "img": "../assets/images/hombre/Campera-microfibra-deportiva.jpg",
+    "precioConImp": 45000,
+    "precioPorCantidad": 45000,
+    "cantidad": 0
+  },
+  {
+    "id": 13,
+    "tipo": "REMERA",
+    "marca": "SKREEP",
+    "modelo": "MANGA CORTA",
+    "talles": [
+      {
+        "talle": "L",
+        "stock": 0,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "M",
+        "stock": 0,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "S",
+        "stock": 33,
+        "cantidad": 0,
+        "vendido": false
+      }
+    ],
+    "precio": 6500,
+    "descripcion": "Remera con tabla de skate fantasmagórica",
+    "alt": "remera masculina de manga corta",
+    "img": "../assets/images/hombre/remera_ghost.jpg",
+    "precioConImp": 6500,
+    "precioPorCantidad": 6500,
+    "cantidad": 0
+  },
+  {
+    "id": 15,
+    "tipo": "ZAPATILLAS",
+    "marca": "SKREEP",
+    "modelo": "RUNNING",
+    "talles": [
+      {
+        "talle": "L",
+        "stock": 11,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "M",
+        "stock": 0,
+        "cantidad": 0,
+        "vendido": false
+      },
+      {
+        "talle": "S",
+        "stock": 23,
+        "cantidad": 0,
+        "vendido": false
+      }
+    ],
+    "precio": 29000,
+    "descripcion": "Estas zapatillas de running tienen una mediasuela Jetboost que proporciona el increíble retorno de energía de Boost",
+    "alt": "zapatillas runnging hombre",
+    "img": "../assets/images/hombre/ellos_tennis.jpg",
+    "precioConImp": 29000,
+    "precioPorCantidad": 29000,
+    "cantidad": 0
+  }
+]

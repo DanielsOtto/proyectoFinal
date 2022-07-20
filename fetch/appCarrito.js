@@ -1,25 +1,5 @@
-//------------------//
-///--- CARRITO --- ///
-//------------------//
-
-let carroDeCompras = [];
-
-const sectionCarrito = document.getElementById("rowCarrito"); // para la galeria en Carrito
-const divContenedor = document.getElementById("contieneCantidad");
-const cajaValor = document.getElementById("cajaValor"); // contiene a p --
-const precioTotalC = document.getElementById("valorTotal"); // p q muestra el importe a abonar
-
-const btnComprar = document.getElementById("realizarCompra");
-const mainCarrito = document.getElementById("mainCarrito");
-
-let valor = 0;
-
 const recuperarArreglo = () => {
-    return JSON.parse(localStorage.getItem("carrito"));
-}
-
-const recuperarArrEllas = () => { // ellas
-    return JSON.parse(localStorage.getItem("carritoEllas"));
+    return JSON.parse(localStorage.getItem("carritoEllos"));
 }
 
 const recuperarObjeto = (arreglo) => {
@@ -33,17 +13,6 @@ const recuperarObjeto = (arreglo) => {
     })
 }
 
-const recuperaObjEllas = (arreglo) => { // ellas
-
-    arreglo.forEach( el => {
-
-        let elemento = new Articulo(el.id, el.tipo, el.marca, el.modelo, el.talles, el.precio, el.descripcion, el.alt, el.img);
-        elemento.precioFinal();
-
-        carroDeCompras.push(elemento);
-    }) // hasta aca 10 puntos, tengo q revisar el boton eliminar, xq me resta una locura
-}
-
 const precioTotalCompra = (arreglo) => {
 
     valor = arreglo.reduce((acc, el) => acc + el.precioPorCantidad, 0);
@@ -53,12 +22,12 @@ const precioTotalCompra = (arreglo) => {
     cajaValor.prepend(precioTotalC);
 }
 
-const galeriaCarrito = () => {  // -- no hace falta repetir ---- carrito 
+
+const galeriaCarrito = () => {
 
     sectionCarrito.innerHTML = "";
 
     recuperarObjeto(recuperarArreglo());
-    recuperaObjEllas(recuperarArrEllas());
 
     carroDeCompras.forEach(obj => {
         for (let x = 0; x < obj.talles.length; x++) {
@@ -85,11 +54,10 @@ const galeriaCarrito = () => {  // -- no hace falta repetir ---- carrito
                                                 <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
                                                 </svg>
                                             </button>`;
-                // console.log(obj.talles[x].cantidad);
-                // console.log(obj.talles[x].talle);
+         
                 sectionCarrito.appendChild(articuloCarrito);
 
-                let btnLimpiar = document.getElementById(`btnLimpiar${id}${obj.talles[x].talle}`);
+                let btnLimpiar = document.getElementById(`btnLimpiar${id}${tl[x].talle}`);
                 precioTotalCompra(carroDeCompras);
 
 
@@ -132,13 +100,11 @@ const galeriaCarrito = () => {  // -- no hace falta repetir ---- carrito
                         }
                     }).showToast();
                 })
-
             }
         }
     })
 }
 
-galeriaCarrito();
 
 btnComprar.addEventListener('click', () => {
 
@@ -164,3 +130,4 @@ btnComprar.addEventListener('click', () => {
 
 })
 
+galeriaCarrito();

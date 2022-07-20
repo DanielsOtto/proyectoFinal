@@ -305,7 +305,12 @@ footer p {
 /* | LOGOS | */
 .logoCompra {
   margin: 5%;
-  animation: desaparecer 4s;
+  padding: 1%;
+}
+.logoCompra:hover {
+  padding: 5%;
+  border-radius: 10%;
+  background-color: #FFDEB5;
 }
 
 .logoEmpresa {
@@ -329,13 +334,18 @@ footer p {
 .btnGeneral, .filtroSelect {
   background-color: #470147;
   border-radius: 0.5rem;
-  padding: 0.5%;
+  padding: 1%;
   font-weight: bolder;
+  border-style: none;
 }
 .btnGeneral:hover, .filtroSelect:hover {
   background-color: #FF7F50;
   border-color: #FFDEB5;
   box-shadow: 0 0 0.8rem #470147;
+  cursor: pointer;
+}
+
+.cursorP:hover {
   cursor: pointer;
 }
 
@@ -345,6 +355,27 @@ footer p {
 
 .btnFiltro {
   width: 10%;
+}
+
+.ellaFiltro, .ellaFiltroAll, .ellaFiltroClean {
+  width: 10%;
+  padding: 0.3%;
+  text-transform: uppercase;
+  border-style: none;
+  border-radius: 5%;
+  background-color: #470147;
+  color: #FFFAFA;
+}
+.ellaFiltro:hover, .ellaFiltroAll:hover, .ellaFiltroClean:hover {
+  background-color: green;
+}
+
+.ellaFiltroClean:hover {
+  background-color: red;
+}
+
+.ellaFiltroAll:hover {
+  background-color: blue;
 }
 
 .filtroSelect {

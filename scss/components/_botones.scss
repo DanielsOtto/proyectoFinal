@@ -3,12 +3,19 @@
 .btnGeneral {
     background-color: $morado;
     border-radius: $remHalf;
-    padding: map-get($styleBoxs, halfPercent);
+    padding: map-get($styleBoxs, onePercent);
     font-weight: map-get($stylesFont, fontBolder);
+    border-style: none;
     &:hover {
         background-color: $coral;
         border-color: $mocasin;
         box-shadow: map-get($styleBoxs, shadowBoxMorado);
+        cursor: pointer;
+    }
+}
+
+.cursorP{
+    &:hover{
         cursor: pointer;
     }
 }
@@ -19,6 +26,30 @@
 }
 .btnFiltro {
     width: $sizeTenP;
+}
+.ellaFiltro{
+    width: 10%;
+    padding: 0.3%;
+    text-transform: map-get($sizeFont, uppercaseV);
+    border-style: none;
+    border-radius: 5%;
+    background-color: $morado;
+    color: $snow;
+    &:hover{
+        background-color: green;
+    }
+}
+.ellaFiltroClean{
+    @extend .ellaFiltro; 
+    &:hover{
+        background-color: red;
+    }
+}
+.ellaFiltroAll{
+    @extend .ellaFiltro;
+    &:hover{
+        background-color: blue;
+    }
 }
 .filtroSelect {
     @extend .btnGeneral;
