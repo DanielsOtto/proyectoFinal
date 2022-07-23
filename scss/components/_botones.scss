@@ -13,13 +13,43 @@
         cursor: pointer;
     }
 }
-
 .cursorP{
     &:hover{
         cursor: pointer;
     }
 }
-
+// AFECTA CAROUSEL INICIO
+.btnCarousel{
+    margin: 0 1rem;
+    border-radius: 10%;
+    width: 15%;
+    height: 20%;
+    background-color: $morado;
+    color: $snow;
+    text-transform: uppercase;
+    &:hover{
+        opacity: 0.5;
+    }
+}
+.btnCarousel__play{
+    @extend .btnCarousel;
+    width: 40%;
+    height: 100%;
+}
+.deshabilitar{
+    @extend .btnCarousel;
+    background-color: gray;
+    &:hover{
+        cursor: not-allowed; // revisar si es asi
+    }
+}
+.deshabilitar__play{
+    @extend .btnCarousel__play;
+    background-color: gray;
+    &:hover{
+        cursor: not-allowed; // revisar si es asi
+    }
+}
 // AFECTA SECCIONES HOMBRES Y MUJERES
 .filtroFondo{
     background-color: $mocasin;

@@ -1,51 +1,67 @@
-let carroVendido = [];  // --- no anda
-const divPadre = document.getElementById("containCarousel");
-
-
-const recuperarArr = ()=> {
-    
+const recuperarArr = () => {
     return JSON.parse(localStorage.getItem("ultimoCarrito"));
 }
-
-const ordenarPorMasVendido = ()=> {
-
-    carroVendido.length >= 2 && (carroVendido.sort((a, b) => b.cantidad - a.cantidad));
-
-    carroVendido.length > 3 && (carroVendido.length = 3);
-}
-
-const recObj = ()=> {
-
+const recObj = () => {
     carroVendido = recuperarArr();
     ordenarPorMasVendido();
 }
-
-const galeriaCarousel = ()=> {
-    
-    recObj();
-
-
-    let divHijo = document.createElement("div");
-        divHijo.className = "aside-carl";
-        divHijo.innerHTML = `<div class="carousel-item active" data-bs-interval="10000">
-                                <img src=${carroVendido[0].img} class="d-block w-100"
-                                    alt=${carroVendido[0].alt}>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="2000">
-                                <img src=${carroVendido[1].img} class="d-block w-100"
-                                    alt=${carroVendido[1].alt}>
-                            </div>
-                            <div class="carousel-item">
-                                <img src=${carroVendido[2].img} class="d-block w-100"
-                                    alt=${carroVendido[2].alt}>
-                            </div> `;
-    
-    
-        divPadre.append(divHijo);
-
-
-
-
+const ordenarPorMasVendido = () => {
+    carroVendido.length >= 2 && (carroVendido.sort((a, b) => b.cantidad - a.cantidad));
+    carroVendido.length > 3 && (carroVendido.length = 3);
 }
 
-galeriaCarousel();
+const imagenSiguiente = () => {
+    if (posActual >= (carroVendido.length - 1)) {
+        posActual = 0;
+    } else {
+        posActual++;
+    }
+    renderizarImagen();
+}
+const imagenAnterior = () => { // no anda
+    if (posActual <= 0) {
+        posActual = (carroVendido.length - 1);
+    } else {
+        posActual--;
+    }
+    renderizarImagen();
+}
+
+const renderizarImagen = () => {
+    if (posActual <= 2) {
+        contImagen.style.backgroundImage = `url(${carroVendido[posActual].img})`;
+        infoProducto.textContent = carroVendido[posActual].cantidad;
+    }
+}
+
+const playIntervalo = () => {
+    intervalo = setInterval(imagenSiguiente, intervaloMS);
+    btnSiguiente.setAttribute('disabled', true);
+    btnSiguiente.className = 'deshabilitar';
+    btnAtras.setAttribute('disabled', true);
+    btnAtras.className = 'deshabilitar';
+    btnPlay.setAttribute('disabled', true);
+    btnPlay.className = 'deshabilitar__play';
+    btnStop.removeAttribute('disabled');
+    btnStop.className = 'btnCarousel__play';
+}
+
+const stopIntervalo = () => {
+    clearInterval(intervalo);
+    btnSiguiente.removeAttribute('disabled');
+    btnSiguiente.className = 'btnCarousel';
+    btnAtras.removeAttribute('disabled');
+    btnAtras.className = 'btnCarousel';
+    btnPlay.removeAttribute('disabled');
+    btnPlay.className = 'btnCarousel__play';
+    btnStop.setAttribute('disabled', true);
+    btnStop.className = 'deshabilitar__play';
+}
+
+
+recObj();
+btnSiguiente.addEventListener('click', imagenSiguiente);
+btnAtras.addEventListener('click', imagenAnterior);
+btnPlay.addEventListener('click', playIntervalo);
+btnStop.addEventListener('click', stopIntervalo);
+renderizarImagen();

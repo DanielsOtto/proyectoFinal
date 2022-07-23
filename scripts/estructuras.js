@@ -103,17 +103,6 @@ const mostrarGaleria = (array) => {
                 opcM.checked = false;
                 opcS.checked = false;
 
-                // if(opcL.checked == true){
-                //     opcL.checked = false;  
-                //     pos = 0;
-                // }else if(opcM.checked == true){
-                //     opcM.checked = false;
-                //     pos = 1;
-                // }else{
-                //     opcS.checked = false;
-                //     pos = 2;
-                // }
-
                 el.talles[pos].objetoVendido();
                 agregarAlCarrito(el, pos);
 

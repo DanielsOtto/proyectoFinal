@@ -349,6 +349,38 @@ footer p {
   cursor: pointer;
 }
 
+.btnCarousel, .deshabilitar, .btnCarousel__play, .deshabilitar__play {
+  margin: 0 1rem;
+  border-radius: 10%;
+  width: 15%;
+  height: 20%;
+  background-color: #470147;
+  color: #FFFAFA;
+  text-transform: uppercase;
+}
+.btnCarousel:hover, .deshabilitar:hover, .btnCarousel__play:hover, .deshabilitar__play:hover {
+  opacity: 0.5;
+}
+
+.btnCarousel__play, .deshabilitar__play {
+  width: 40%;
+  height: 100%;
+}
+
+.deshabilitar {
+  background-color: gray;
+}
+.deshabilitar:hover {
+  cursor: not-allowed;
+}
+
+.deshabilitar__play {
+  background-color: gray;
+}
+.deshabilitar__play:hover {
+  cursor: not-allowed;
+}
+
 .filtroFondo {
   background-color: #FFDEB5;
 }
@@ -492,6 +524,55 @@ footer {
 .aside-carl__cont-img {
   box-shadow: 0 0.5rem 1.5rem 0 #000000;
   margin-bottom: 3%;
+}
+
+/* carousel */
+.escondido {
+  display: none;
+}
+
+.carousel {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.carousel #imagen {
+  margin: 0 1rem 2rem 1rem;
+  width: 50%;
+  height: 380px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: top;
+  justify-content: right;
+}
+.carousel #imagen .totalVendido {
+  margin: 1rem;
+  background-color: yellow;
+  border-radius: 50%;
+  width: 15%;
+  height: 15%;
+}
+.carousel #imagen .totalVendido p {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.controles {
+  width: 30%;
+  margin: 1rem auto 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* AFECTA SECCIONES HOMBRES Y MUJERES */

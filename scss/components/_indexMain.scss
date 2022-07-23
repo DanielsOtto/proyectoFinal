@@ -10,3 +10,37 @@
     box-shadow: map-get($styleBoxs, shadowIndex);
     margin-bottom: map-get($styleBoxs, threePercent);
 }
+/* carousel */
+.escondido{
+    display: none;
+}
+.carousel{
+    max-width: 800px;
+    margin: 0 auto;
+    @include displayFlex(flex, row, nowrap, center, center);
+    #imagen{
+        margin: 0 1rem 2rem 1rem;
+        width: 50%;
+        height: 380px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: none;
+        @include displayFlex(flex, row, nowrap, top, right);
+        .totalVendido{
+            margin: 1rem;
+            background-color: yellow;
+            border-radius: 50%;
+            width: 15%;
+            height: 15%;
+            p{
+                font-size: xx-large;
+                text-align: center;
+            }
+        }
+    }
+}
+.controles{
+    width: 30%;
+    margin: 1rem auto 4rem;
+    @include displayFlex(flex, row, nowrap, center, space-between)
+}

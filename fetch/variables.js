@@ -1,37 +1,49 @@
-// Variables archivo  main.js
+// ------- variables mainHombres.js  --------
 const url = "../json/inventarioH.json";
-const urlMujeres = "../json/inventarioM.json";
-let carritoDeCompras = [];
-// let productosH = []; no lo estoy usando
-//----------------------------------
 const divGaleriaHombres = document.getElementById("galeria__hombres"); 
+let carritoDeCompras = [];
+let productosH = [];
+const opcionTipo = document.getElementById("opcionTipo");
+const opcionPrecio = document.getElementById("opcionPrecio");
+// ------------------------------------------
+// ------- variables mainMujeres.js  --------
+const urlMujeres = "../json/inventarioM.json";
+let productosM = [];
+let carritoComprasEllas = [];
 const divGaleriaMujeres = document.getElementById("galeria__mujeres"); // para la seccion de Mujeres
-// --------- ellas ----------------- 
-// -- faltan los filtros
 const filtroTalleL = document.getElementById("filtroL-m");
 const filtroTalleM = document.getElementById("filtroM-m");
 const filtroTalleS = document.getElementById("filtroS-m");
 const filtroPrec1 = document.getElementById("filtroP010");
 const filtroPrec2 = document.getElementById("filtroP1020");
 const filtroPrec3 = document.getElementById("filtroP2030");
-//-- btnBuscarFiltros
 const btnBuscarFs = document.getElementById("btnBuscarFs");
 const btnLimpiarFs = document.getElementById("btnReiniciarFs");
 const btnVerTodo = document.getElementById("btnVerTodo");
-//-----------------
-// Variables archivo appCarrito.js
+// ------------------------------------------
+// ---------- variables sec_Inicio.js -------
+const intervaloMS = 3000;
+let carroVendido = [];
+let posActual = 0;
+const carouselContenedor = document.getElementById("carouselBox");
+const btnAtras = document.getElementById("atras");
+const btnSiguiente = document.getElementById("siguiente");
+const contImagen = document.getElementById("imagen");
+const infoProducto = document.getElementById("infoProducto");
+const btnPlay = document.getElementById("play");
+const btnStop = document.getElementById("stop");
+let intervalo;
+// ------------------------------------------
+// ---------- variables appCarrito.js -------
 let carroDeCompras = [];
-
 const sectionCarrito = document.getElementById("rowCarrito"); // para la galeria en Carrito
 const divContenedor = document.getElementById("contieneCantidad");
 const cajaValor = document.getElementById("cajaValor"); // contiene a p --
 const precioTotalC = document.getElementById("valorTotal"); // p q muestra el importe a abonar
 const btnComprar = document.getElementById("realizarCompra");
 const mainCarrito = document.getElementById("mainCarrito");
-
 let valor = 0;
-
-// ----- OBJETOS -----
+// ---------- variables OBJETOS -------------
 class Articulo {
     constructor(id, tipo, marca ,modelo, talle, precio, descripcion, alt, img) {
         this.id = id;
@@ -47,11 +59,9 @@ class Articulo {
         this.precioPorCantidad = this.precioConImp; // nuevo
         this.cantidad = 0;
     }
-
     precioFinal(){
         this.precioConImp = this.precio * 1.21;
     }
-
     cantidadMas(){
         this.cantidad++;
     }
@@ -65,7 +75,6 @@ class Articulo {
         this.cantidad -= b;
     }
 }
-
 class Inventario{
     constructor(talle,stock){
         this.talle = talle;
