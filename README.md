@@ -20,4 +20,5 @@
 
 ~ Versión 2.4b ~ [DESAFÍO AJAX] Creé dos archivos JSON, de los cuales recupero la información que voy a tener en las galerías. Los mismos los recupero mediante la herramienta FETCH, en los archivos "mainHombres.js" y "mainMujeres.js", (línea 148 aprox.).
 ~ Version 2.4c ~ Agregué el carousel dinámico en index.html y esta completa la sección de mujeres con su filtro funcionando perfectamente.
+
 ~ Versión 2.5 ~ Solucioné el problema del carusel con el link de la imágen. También solucioné un pequeño inconveniente que tenía que no se mostraba correctamente el carrito, no me había dado cuenta del mismo por la caché.
