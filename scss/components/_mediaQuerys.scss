@@ -3,8 +3,17 @@
 @media (max-width: 768px) {
 
     // Afecta Inicio
-    .editCarousel {
-        width: $sizeHalf;
+    .caruselResponsivo{
+       .carousel{
+            #imagen{
+                padding: 2%;
+                height: 250px;
+                .totalVendido{
+                    width: 18%;
+                    height: 18%;
+                }
+            }
+       }
     }
 
     // Afecta Hombre|Mujer

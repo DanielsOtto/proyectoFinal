@@ -25,6 +25,7 @@ const btnVerTodo = document.getElementById("btnVerTodo");
 const intervaloMS = 3000;
 let carroVendido = [];
 let posActual = 0;
+const cajaCarusel = document.getElementById("cajaCarusel");
 const carouselContenedor = document.getElementById("carouselBox");
 const btnAtras = document.getElementById("atras");
 const btnSiguiente = document.getElementById("siguiente");

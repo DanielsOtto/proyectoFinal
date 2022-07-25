@@ -1,40 +1,4 @@
-let carritoDeCompras = [];
-// --- galeria ---
-const divRowFiltro__hombres = document.getElementById("zonaFiltro__hombres"); // para el filtro en hombres 
-const div__galeria__hombres = document.getElementById("galeria__hombres"); // para la galeria en seccion Hombres
-//---- filtro ---
-const opcionTipo = document.getElementById("opcionTipo");
-const opcionPrecio = document.getElementById("opcionPrecio");
-
-
-const addClass = (rButton, label) => {
-
-    rButton.className = "rButtonOff ";
-    rButton.disabled = true;
-    label.className = "filtroOff";
-}
-
-const habilitarRadioButtons = (arreglo, opcL, opcM, opcS, labL, labM, labS) => {
-
-    for (let x = 0; x < arreglo.length; x++) { // filtro
-
-        if ((arreglo[x].talle == 'L') && (arreglo[x].comprobarStock())) {
-            addClass(opcL, labL);
-        } else if ((arreglo[x].talle == 'M') && (arreglo[x].comprobarStock())) {
-            addClass(opcM, labM);
-        } else if ((arreglo[x].talle == 'S') && (arreglo[x].comprobarStock())) {
-            addClass(opcS, labS);
-        }
-    }
-}
-
-// const cantidadTotal = (arreglo)=> {
-     
-//     return arreglo.reduce((acc, el) => acc + el.cantidad, 0);
-// }
-
 const agregarAlCarrito = (elemento, x) => {
-    
     if(carritoDeCompras.length === 0){
         elemento.talles[x].quieroUnoMas();
         carritoDeCompras.push(elemento);
@@ -47,35 +11,52 @@ const agregarAlCarrito = (elemento, x) => {
             carritoDeCompras.push(elemento);
         }
     }  
-    localStorage.setItem("carrito", JSON.stringify(carritoDeCompras));
+    localStorage.setItem("carritoEllos", JSON.stringify(carritoDeCompras));
 }
-
-const mostrarGaleria = (array) => { 
-
-    div__galeria__hombres.innerHTML = null;
+const addClass = (rButton, label) => {
+    rButton.className = "rButtonOff ";
+    rButton.disabled = true;
+    label.className = "filtroOff";
+}
+const comprobarStock = (stock)=> {
+    return stock >= 1 ? true : false;
+}
+const habilitarRadioButtons = (arreglo, opcL, opcM, opcS, labL, labM, labS) => {
+    for (let x = 0; x < arreglo.length; x++) { // filtro
+        if ((arreglo[x].talle == 'L') && (!comprobarStock(arreglo[x].stock))) {
+            addClass(opcL, labL);
+        } else if ((arreglo[x].talle == 'M') && (!comprobarStock(arreglo[x].stock))) {
+            addClass(opcM, labM);
+        } else if ((arreglo[x].talle == 'S') && (!comprobarStock(arreglo[x].stock))) {
+            addClass(opcS, labS);
+        } 
+    }
+}
+const mostrarGaleria = (array) => {
+    divGaleriaHombres.innerHTML = null;
     array.forEach(el => {
 
-        const { id, img: imagen, descripcion: desc, precio: precioSinIva, alt: altImg, talles} = el;
-        let divGaleria = document.createElement("div");
-        divGaleria.className = "col-lg-6 col-md-10 col-sm-12";
-        divGaleria.innerHTML = `<article class="shirt">
+        const { id, img: imagen, descripcion: desc, precio, alt: altImg, talles} = el;
+        let divObjeto = document.createElement("div");
+        divObjeto.className = "col-lg-6 col-md-10 col-sm-12";
+        divObjeto.innerHTML = `<article class="shirt">
                                         <img class="imgRopa img-fluid img-thumbnail" src=${imagen}
                                         alt=${altImg}
                                         title="remera estilo california">
                                         <article class="shirt__info">
                                             <p>${desc}</p>
-                                            <p>$${precioSinIva}</p>
+                                            <p>$${precio}</p>
                                             <form>
                                                 <div class="filterArticle__talle">
-                                                    <input id="opcionL${id}" class="opcionFiltroTalle" type="radio" name="talle" value="L">
+                                                    <input id="opcionL${id}" class="opcionFiltroTalle cursorP" type="radio" name="talle" value="L">
                                                     <label id="labL${id}" form="filtroL" class="labelFiltro" for="tipoBuzo">large(44)</label>
                                                 </div>
                                                 <div class="filterArticle__talle">
-                                                    <input id="opcionM${id}" class="opcionFiltroTalle" type="radio" name="talle" value="M">
+                                                    <input id="opcionM${id}" class="opcionFiltroTalle cursorP" type="radio" name="talle" value="M">
                                                     <label id="labM${id}" form="filtroM" class="labelFiltro" for="tipoBuzo">medium(43)</label>
                                                 </div>
                                                 <div class="filterArticle__talle">
-                                                    <input id="opcionS${id}" class="opcionFiltroTalle" type="radio" name="talle" value="S">
+                                                    <input id="opcionS${id}" class="opcionFiltroTalle cursorP" type="radio" name="talle" value="S">
                                                     <label id="labS${id}" form="filtroS" class="labelFiltro" for="tipoBuzo">small(42)</label>
                                                 </div>
                                                 <a id="botonA${id}" class="agregarCarrito btn-floating halfway-fab waves-effect waves-light"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black" class="bi bi-cart" viewBox="0 0 16 16">
@@ -84,8 +65,7 @@ const mostrarGaleria = (array) => {
                                             </form>
                                         </article>
                                     </article>`;
-        div__galeria__hombres.appendChild(divGaleria);
-    
+        divGaleriaHombres.appendChild(divObjeto);
         const opcL = document.getElementById(`opcionL${id}`);
         const opcM = document.getElementById(`opcionM${id}`);
         const opcS = document.getElementById(`opcionS${id}`);
@@ -94,12 +74,9 @@ const mostrarGaleria = (array) => {
         const labS = document.getElementById(`labS${id}`);
 
         habilitarRadioButtons(talles, opcL, opcM, opcS, labL, labM, labS);
-
         const btnAgregar = document.getElementById(`botonA${id}`);
         btnAgregar.addEventListener('click', () => {
-
             while((opcL.checked !== false)||(opcM.checked !== false)||(opcS.checked !== false)){
-
                 let pos = 5; 
                 opcL.checked === true && (pos = 0);
                 opcM.checked === true && (pos = 1);
@@ -107,66 +84,64 @@ const mostrarGaleria = (array) => {
                 opcL.checked = false;
                 opcM.checked = false;
                 opcS.checked = false;
-
-                // if(opcL.checked == true){
-                //     opcL.checked = false;  
-                //     pos = 0;
-                // }else if(opcM.checked == true){
-                //     opcM.checked = false;
-                //     pos = 1;
-                // }else{
-                //     opcS.checked = false;
-                //     pos = 2;
-                // }
-
-                el.talles[pos].objetoVendido();
+                el.talles[pos].vendiendo();
                 agregarAlCarrito(el, pos);
-
                 Toastify({ 
                     text: "Agregado al carrito!", 
                     duration: 1000, 
                     gravity: 'bottom', 
                     position: 'center', 
-                    className: 'myToast',
-                    style: { 
-                        background: 'linear-gradient(to right, #f2f4f5, #cccecf)', 
-                        color: 'green', 
-                    }
+                    addClass: 'myToast',
+                        style:{ 
+                            background: 'linear-gradient(to right, #f2f4f5, #cccecf)', 
+                            color: 'green', 
+                        }
                 }).showToast();
             }
-        });
-
+        })
     })
 }
-
-
+const recuperarObjTalle = (arreglo)=> { 
+    let arregloTalles =[];
+    arreglo.forEach( el => {
+        arregloTalles.push(new Inventario(el.talle, el.stock))
+    })
+    return arregloTalles;
+}
+const transformarEnObjeto = (dato)=> { 
+    let arreglo = [];
+    let talles = [];
+    dato.forEach( el => {
+        talles = recuperarObjTalle(el.talles);
+        arreglo.push(new Articulo(el.id, el.tipo, el.marca, el.modelo, talles, el.precio, el.descripcion, el.alt, el.img))
+    })
+    return arreglo;
+}
+const obtenerDatos = async () => { 
+    const respuesta = await fetch(url);
+    const datos = await respuesta.json();
+    productosH = transformarEnObjeto(datos);
+    mostrarGaleria(productosH);
+}
+obtenerDatos();
 const arregloVacio = (arreglo) => { // verifica que el arreglo nuevo tenga valores
+    console.log("1");
     if (arreglo.length == 0) {
-        div__galeria__hombres.innerHTML = "";
+        divGaleriaHombres.innerHTML = "";
         const div = document.createElement('div');
         div.innerHTML = `<p class="textoInformativo"> No se han encontrado elementos con las características solicitadas. Pruebe nuevamente con otras características. Gracias!</p>`;
-        div__galeria__hombres.appendChild(div);
+        divGaleriaHombres.appendChild(div);
     } else {
         mostrarGaleria(arreglo);
     }
 }
-
-opcionTipo.addEventListener('change', () => {
-    // -- filtro por tipo de producto
-
+opcionTipo.addEventListener('change', () => { // -- filtro por tipo de producto
+    console.log("2");
     (opcionTipo.value === 'TODOS') ? mostrarGaleria(productosH) : arregloVacio(productosH.filter((el) => el.tipo === opcionTipo.value));
-
-    // if (opcionTipo.value === 'TODOS') {
-    //     mostrarGaleria(productosH);
-    // } else {
-    //     let filtroArreglo = productosH.filter((el) => el.tipo === opcionTipo.value);
-    //     arregloVacio(filtroArreglo);
-    // }
 })
-
 const filtroPrecio = (valor) => {
-
     let nuevoArreglo = [];
+    console.log("3")
     if(valor == 10000){
         nuevoArreglo = productosH.filter(e => e.precio <= 15000);
     }else if(valor == 20000){
@@ -174,24 +149,9 @@ const filtroPrecio = (valor) => {
     }else {
         nuevoArreglo = productosH.filter (e => e.precio >= 30001);
     }
-
     nuevoArreglo.length > 0 && arregloVacio(nuevoArreglo);
 }
-
-opcionPrecio.addEventListener('change', () => {
-    // -- filtro por rango de precio
-
+opcionPrecio.addEventListener('change', () => { // -- filtro por rango de precio
+    console.log("4")
     opcionPrecio.value === 'TODOS' ? mostrarGaleria(productosH) : filtroPrecio(opcionPrecio.value);
-
-    // if (opcionPrecio.value === 'TODOS') {
-    //     mostrarGaleria(productosH);
-    // } else if (opcionPrecio.value <= 15000) {
-    //     filtroPrecio(opcionPrecio.value);
-    // } else if ((opcionPrecio.value <= 30000) && (opcionPrecio.value > 15000)) {
-    //     filtroPrecio(opcionPrecio.value);
-    // } else {
-    //     filtroPrecio(opcionPrecio.value);
-    // }
 })
-
-mostrarGaleria(productosH);

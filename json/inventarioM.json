@@ -123,12 +123,12 @@
           "vendido": false
         }
       ],
-      "precio": 5250,
+      "precio": 5500,
       "descripcion": "Remera con caricatura.",
       "alt": "remera femenina de manga corta, color celeste, con la leyenda: ruffian y la caricatura de un perro delincuente",
       "img": "../assets/images/mujer/ella_dog.jpg",
-      "precioConImp": 5250,
-      "precioPorCantidad": 5250,
+      "precioConImp": 5500,
+      "precioPorCantidad": 5500,
       "cantidad": 0
     },
     {

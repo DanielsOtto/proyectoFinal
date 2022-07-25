@@ -527,10 +527,6 @@ footer {
 }
 
 /* carousel */
-.escondido {
-  display: none;
-}
-
 .carousel {
   max-width: 800px;
   margin: 0 auto;
@@ -544,14 +540,12 @@ footer {
   margin: 0 1rem 2rem 1rem;
   width: 50%;
   height: 380px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: none;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: top;
   justify-content: right;
+  position: relative;
 }
 .carousel #imagen .totalVendido {
   margin: 1rem;
@@ -559,6 +553,7 @@ footer {
   border-radius: 50%;
   width: 15%;
   height: 15%;
+  position: absolute;
 }
 .carousel #imagen .totalVendido p {
   font-size: xx-large;
@@ -818,8 +813,13 @@ footer {
 
 /* MEDIA QUERYS */
 @media (max-width: 768px) {
-  .editCarousel {
-    width: 50%;
+  .caruselResponsivo .carousel #imagen {
+    padding: 2%;
+    height: 250px;
+  }
+  .caruselResponsivo .carousel #imagen .totalVendido {
+    width: 18%;
+    height: 18%;
   }
 
   .rowFilter {

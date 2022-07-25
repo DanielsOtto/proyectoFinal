@@ -1,29 +1,26 @@
 const agregarAlCarrito = (elemento, x) => {
-    if(carritoDeCompras.length === 0){
+    if(carritoComprasEllas.length === 0){
         elemento.talles[x].quieroUnoMas();
-        carritoDeCompras.push(elemento);
+        carritoComprasEllas.push(elemento);
     }else{
-        if(carritoDeCompras.find((el)=> el.id == elemento.id)){
-            let obj = carritoDeCompras.find((el)=> el.id == elemento.id);
+        if(carritoComprasEllas.find((el)=> el.id == elemento.id)){
+            let obj = carritoComprasEllas.find((el)=> el.id == elemento.id);
             obj.talles[x].quieroUnoMas();      
         }else{
             elemento.talles[x].quieroUnoMas();
-            carritoDeCompras.push(elemento);
+            carritoComprasEllas.push(elemento);
         }
     }  
-    localStorage.setItem("carritoEllos", JSON.stringify(carritoDeCompras));
+    localStorage.setItem("carritoEllas", JSON.stringify(carritoComprasEllas));
 }
-
 const addClass = (rButton, label) => {
     rButton.className = "rButtonOff ";
     rButton.disabled = true;
     label.className = "filtroOff";
 }
-
 const comprobarStock = (stock)=> {
     return stock >= 1 ? true : false;
 }
-
 const habilitarRadioButtons = (arreglo, opcL, opcM, opcS, labL, labM, labS) => {
     for (let x = 0; x < arreglo.length; x++) { // filtro
         if ((arreglo[x].talle == 'L') && (!comprobarStock(arreglo[x].stock))) {
@@ -35,9 +32,8 @@ const habilitarRadioButtons = (arreglo, opcL, opcM, opcS, labL, labM, labS) => {
         } 
     }
 }
-
 const mostrarGaleria = (array) => {
-    divGaleriaHombres.innerHTML = null;
+    divGaleriaMujeres.innerHTML = null;
     array.forEach(el => {
 
         const { id, img: imagen, descripcion: desc, precio, alt: altImg, talles} = el;
@@ -69,7 +65,7 @@ const mostrarGaleria = (array) => {
                                             </form>
                                         </article>
                                     </article>`;
-        divGaleriaHombres.appendChild(divObjeto);
+        divGaleriaMujeres.appendChild(divObjeto);
         const opcL = document.getElementById(`opcionL${id}`);
         const opcM = document.getElementById(`opcionM${id}`);
         const opcS = document.getElementById(`opcionS${id}`);
@@ -88,6 +84,7 @@ const mostrarGaleria = (array) => {
                 opcL.checked = false;
                 opcM.checked = false;
                 opcS.checked = false;
+
                 el.talles[pos].vendiendo();
                 agregarAlCarrito(el, pos);
                 Toastify({ 
@@ -105,16 +102,14 @@ const mostrarGaleria = (array) => {
         })
     })
 }
-
-const recuperarObjTalle = (arreglo)=> { // funca
+const recuperarObjTalle = (arreglo)=> { 
     let arregloTalles =[];
     arreglo.forEach( el => {
         arregloTalles.push(new Inventario(el.talle, el.stock))
     })
     return arregloTalles;
 }
-
-const transformarEnObjeto = (dato)=> { // funca
+const transformarEnObjeto = (dato)=> { 
     let arreglo = [];
     let talles = [];
     dato.forEach( el => {
@@ -123,47 +118,121 @@ const transformarEnObjeto = (dato)=> { // funca
     })
     return arreglo;
 }
-
-const obtenerDatos = async () => { // funca
-    const respuesta = await fetch(url);
+const obtenerDatos = async () => { 
+    const respuesta = await fetch(urlMujeres);
     const datos = await respuesta.json();
-    productosH = transformarEnObjeto(datos);
-    mostrarGaleria(productosH);
+    productosM = transformarEnObjeto(datos);
+    mostrarGaleria(productosM);
 }
 
 obtenerDatos();
-const arregloVacio = (arreglo) => { // verifica que el arreglo nuevo tenga valores
-    console.log("1");
-    if (arreglo.length == 0) {
-        divGaleriaHombres.innerHTML = "";
-        const div = document.createElement('div');
-        div.innerHTML = `<p class="textoInformativo"> No se han encontrado elementos con las características solicitadas. Pruebe nuevamente con otras características. Gracias!</p>`;
-        divGaleriaHombres.appendChild(div);
-    } else {
-        mostrarGaleria(arreglo);
-    }
+const talleElegido = (botn, pos) => {
+    return productosM.filter(e => e.talles[pos].talle == botn.value && e.talles[pos].stock >= 1);
 }
-
-opcionTipo.addEventListener('change', () => { // -- filtro por tipo de producto
-    console.log("2");
-    (opcionTipo.value === 'TODOS') ? mostrarGaleria(productosH) : arregloVacio(productosH.filter((el) => el.tipo === opcionTipo.value));
+const tallesElegidos = (talleA, posA, talleB, posB)=> {
+    let arreglo = [];
+    productosM.forEach( obj => {
+        if(obj.talles[posA].talle == talleA.value && obj.talles[posA].stock >= 1){
+            if(obj.talles[posB].talle == talleB.value && obj.talles[posB].stock >= 1){
+                arreglo.push(obj);
+            }
+        }
+    })
+    return arreglo;
+}
+const todosLosTalles = (talleA, posA, talleB, posB, talleC, posC)=> {
+    let arreglo = [];
+    productosM.forEach( obj => {
+        if(obj.talles[posA].talle == talleA.value && obj.talles[posA].stock >= 1){
+            if(obj.talles[posB].talle == talleB.value && obj.talles[posB].stock >= 1){
+                if(obj.talles[posC].talle == talleC.value && obj.talles[posC].stock >= 1){
+                    arreglo.push(obj);
+                }
+            }
+        }
+    })
+    return arreglo;
+}
+const filtrosPorTalle = () => {
+    let arreglo = [];    
+    if ((filtroTalleL.checked === true)&&(filtroTalleM.checked === false)&&(filtroTalleS.checked === false)){
+        arreglo = talleElegido(filtroTalleL, 0);
+    }else if ((filtroTalleL.checked === false)&&(filtroTalleM.checked === true)&&(filtroTalleS.checked === false)){
+        arreglo = talleElegido(filtroTalleM, 1);
+    }else if ((filtroTalleL.checked === false)&&(filtroTalleM.checked === false)&&(filtroTalleS.checked === true)){
+        arreglo = talleElegido(filtroTalleS, 2);
+    }else if ((filtroTalleL.checked === true)&&(filtroTalleM.checked === true)&&(filtroTalleS.checked === false)){
+        arreglo = tallesElegidos(filtroTalleL, 0, filtroTalleM, 1);
+    }else if((filtroTalleL.checked === false)&&(filtroTalleM.checked === true)&&(filtroTalleS.checked === true)){
+        arreglo = tallesElegidos(filtroTalleM, 1, filtroTalleS, 2);
+    }else if((filtroTalleL.checked === true)&&(filtroTalleM.checked === false)&&(filtroTalleS.checked === true)){
+        arreglo = tallesElegidos(filtroTalleL, 0, filtroTalleS, 2);
+    }else if((filtroTalleL.checked === true)&&(filtroTalleM.checked === true)&&(filtroTalleS.checked === true)){
+        arreglo = todosLosTalles(filtroTalleL, 0, filtroTalleM, 1, filtroTalleS, 2);
+    }
+    return arreglo;
+}
+const precioElegido = (montoA, montoB) => {
+    return productosM.filter(e => e.precio >= montoA && e.precio <= montoB);
+}
+const filtosPorPrecio = () => {
+    let arreglo = [];
+    if (filtroPrec1.checked === true) {
+        arreglo = precioElegido(1, 15000);
+    } else if (filtroPrec2.checked === true) {
+        arreglo = precioElegido(15001, 30000);
+    } else if (filtroPrec3.checked === true) {
+        arreglo = precioElegido(30001, 100000);
+    }
+    return arreglo;
+}
+const sinResultados = ()=> {
+    divGaleriaMujeres.innerHTML = "";
+    const div = document.createElement('div');
+    div.innerHTML = `<article class="shirt"> <p class="textoInformativo"> No se han encontrado elementos con las características solicitadas. Pruebe nuevamente con otras características. Gracias!</p></article>`;
+    divGaleriaMujeres.appendChild(div);
+}
+const resetFiltros = ()=> {
+    filtroTalleL.checked = false;
+    filtroTalleM.checked = false;
+    filtroTalleS.checked = false;
+    filtroPrec1.checked = false;
+    filtroPrec2.checked = false;
+    filtroPrec3.checked = false;
+}
+btnVerTodo.addEventListener('click', (e)=> {
+    resetFiltros();
+    mostrarGaleria(productosM);
 })
+btnLimpiarFs.addEventListener('click', (e)=> {
+    e.preventDefault();
+    resetFiltros();
+})
+btnBuscarFs.addEventListener('click', (e) => {
+    e.preventDefault();
 
-const filtroPrecio = (valor) => {
-    let nuevoArreglo = [];
-    console.log("3")
-    if(valor == 10000){
-        nuevoArreglo = productosH.filter(e => e.precio <= 15000);
-    }else if(valor == 20000){
-        nuevoArreglo = productosH.filter (el => ((el.precio > 15000) &&(el.precio <= 30000)));
-    }else {
-        nuevoArreglo = productosH.filter (e => e.precio >= 30001);
+    let newA = [];
+    let newB = [];
+    let arrayD = [];
+    newA = filtrosPorTalle();
+    newB = filtosPorPrecio();
+    if((newA.length > 0) && (newB.length > 0)){
+        newA.forEach(obj => {
+            if(newB.find(ele => ele.id === obj.id)){  
+                arrayD.push(obj);
+            }
+        }) 
+        if(arrayD.length > 0){
+
+            mostrarGaleria(arrayD);
+        }else {
+            sinResultados();
+        }
+    }else{
+        if(newA.length > 0){
+            mostrarGaleria(newA);
+        }else if(newB.length > 0){
+            mostrarGaleria(newB);
+        }
     }
-
-    nuevoArreglo.length > 0 && arregloVacio(nuevoArreglo);
-}
-
-opcionPrecio.addEventListener('change', () => { // -- filtro por rango de precio
-    console.log("4")
-    opcionPrecio.value === 'TODOS' ? mostrarGaleria(productosH) : filtroPrecio(opcionPrecio.value);
 })

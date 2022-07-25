@@ -18,8 +18,8 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/destino.css">
 	<link rel="SKREEP icon" href="assets/images/logo/skreep.png">
-
-	<script src="fetch/variables.js" async></script>
+	<!-- SCRIPTS -->
+	<script src="scripts/variables.js" async></script>
 	<script src="scripts/sec_Inicio.js" async></script>
 </head>
 
@@ -71,11 +71,6 @@
 							Carrito
 						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="public/contacto.html">
-							Contacto
-						</a>
-					</li>
 				</ul>
 				<form class="d-flex">
 					<input class="form-control me-2 font__options" type="search" placeholder="Ingrese su busqueda.."
@@ -120,8 +115,8 @@
 			</div>
 		</article>
 
-		<div class="row">
-			<section id="carouselBox">
+		<div id="cajaCarusel" class="row">
+			<section id="carouselBox" class="caruselResponsivo">
 				<div class="col-lg-12">
 					<article class="carouselTitle">
 						<h2>Lo más vendido:</h2>
@@ -130,11 +125,7 @@
 				<div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-12">
 					<div class="carousel">
 						<button id="atras" class="cursorP btnCarousel">atras</button>
-						<div id="imagen">
-							<div class="totalVendido">
-								<p id="infoProducto"></p>
-							</div>
-						</div>
+						<div id="imagen"></div>
 						<button id="siguiente" class="cursorP btnCarousel">siguiente</button>
 					</div>
 					<div class="controles">

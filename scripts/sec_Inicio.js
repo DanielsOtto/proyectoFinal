@@ -9,7 +9,6 @@ const ordenarPorMasVendido = () => {
     carroVendido.length >= 2 && (carroVendido.sort((a, b) => b.cantidad - a.cantidad));
     carroVendido.length > 3 && (carroVendido.length = 3);
 }
-
 const imagenSiguiente = () => {
     if (posActual >= (carroVendido.length - 1)) {
         posActual = 0;
@@ -18,7 +17,7 @@ const imagenSiguiente = () => {
     }
     renderizarImagen();
 }
-const imagenAnterior = () => { // no anda
+const imagenAnterior = () => {
     if (posActual <= 0) {
         posActual = (carroVendido.length - 1);
     } else {
@@ -26,14 +25,18 @@ const imagenAnterior = () => { // no anda
     }
     renderizarImagen();
 }
-
 const renderizarImagen = () => {
+    contImagen.innerText = null;
     if (posActual <= 2) {
-        contImagen.style.backgroundImage = `url(${carroVendido[posActual].img})`;
-        infoProducto.textContent = carroVendido[posActual].cantidad;
+        let div = document.createElement('div');
+        div.className = "totalVendido";
+        let img = document.createElement('img');
+        img.src = carroVendido[posActual].img;
+        div.innerHTML = `<p id="infoProducto">${carroVendido[posActual].cantidad}</p>`;
+        contImagen.appendChild(img);
+        contImagen.appendChild(div);
     }
 }
-
 const playIntervalo = () => {
     intervalo = setInterval(imagenSiguiente, intervaloMS);
     btnSiguiente.setAttribute('disabled', true);
@@ -45,7 +48,6 @@ const playIntervalo = () => {
     btnStop.removeAttribute('disabled');
     btnStop.className = 'btnCarousel__play';
 }
-
 const stopIntervalo = () => {
     clearInterval(intervalo);
     btnSiguiente.removeAttribute('disabled');
@@ -57,7 +59,6 @@ const stopIntervalo = () => {
     btnStop.setAttribute('disabled', true);
     btnStop.className = 'deshabilitar__play';
 }
-
 
 recObj();
 btnSiguiente.addEventListener('click', imagenSiguiente);
