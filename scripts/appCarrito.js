@@ -107,7 +107,7 @@ btnComprar.addEventListener('click', () => {
                 localStorage.setItem("ultimoCarrito", JSON.stringify(carroDeCompras));
                 sectionCarrito.innerHTML = "";
                 const p = document.createElement('p');
-                p.innerText = 'Gracias por su compra. Vuelva pronto !';
+                p.innerHTML = `Gracias por su compra. En nuestra sección de <a href="../index.html">inicio</a> puede encontrar las prendas más vendidas y la cantidad vendida de cada una. Vuelva pronto !`;
                 sectionCarrito.appendChild(p);
                 precioTotalC.innerText = null;
             }
